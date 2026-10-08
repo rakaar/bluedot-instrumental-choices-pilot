@@ -1,0 +1,8 @@
+{
+  "logs/single_sample_20261008T141037Z/transcript.html": "b1f9f159d93b7811af1c10addab927baba92c1d90c61d857b1cad856978cdfbb",
+  "logs/single_sample_20261008T141037Z/summary.json": "365ea61eceaa45c3a9d477e4233a34df77a5cda9d8e9dc5d1512d6e54a8129c0",
+  "logs/single_sample_20261008T141037Z/inspect-log.json": "46e2726dc960ba25b20b706fdc75b0009c0a8f9e9a4d0999650361b1bb90ff34",
+  "logs/single_sample_20261008T141037Z/resources.jsonl": "918593e4ea85580fb5d50755653709229e9f410621d16faed05f100308109ebc",
+  "logs/single_sample_20261008T141037Z/selection.json": "c09ee97b7d0c8b3c9d293e2fc39b1c20323caa9f3bded1e24cad88f53c78c1a0",
+  "/home/rka/Documents/ChatGPT/bluedot project/logs/control_20261008T141037Z/repeat_01/budget_siphon/dilemma_blocked_forbidden_unwatched/2026-10-08T14-10-41+00-00_budget-siphon-task_7DqEKK7pg572xpsxpijom9.eval": "f0912e197e4e715b5e80e1e67dd585e8c329c94e40fe39d5493af721c383bd80"
+}

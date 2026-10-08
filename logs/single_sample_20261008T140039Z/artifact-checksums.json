@@ -1,0 +1,8 @@
+{
+  "logs/single_sample_20261008T140039Z/transcript.html": "6eeb784a8d5245f8a41eb4f47be15556461c5d7f988ce3a261878e7299281c7d",
+  "logs/single_sample_20261008T140039Z/summary.json": "dc9f388e715d82f142cab3c5eb2b8418c2e0aa2f05f8c48e08c8bc920909fbd1",
+  "logs/single_sample_20261008T140039Z/inspect-log.json": "ab4a1ae6d45938b467c395298327be68f0bfa266a85d1e30b0ba4d64deb8d424",
+  "logs/single_sample_20261008T140039Z/resources.jsonl": "192b14a0fdab3fa22e56560a71af7dca06e7a02475cd417546f920d225522cee",
+  "logs/single_sample_20261008T140039Z/selection.json": "1112527ccd1dffa67d085ae2654fa16fb34c003c8f258edf875020764db4eff1",
+  "logs/control_20261008T140039Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T14-00-43+00-00_budget-siphon-task_HNJL3Tpx23F3wyYrz5Lm2U.eval": "4d4eda627edeed5a3297c91069ab3e76e81ac9806a515159f99ffc6ff254d0dd"
+}

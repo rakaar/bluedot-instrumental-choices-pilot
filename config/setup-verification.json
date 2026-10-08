@@ -1,0 +1,21 @@
+{
+  "prepared_date": "2026-10-08",
+  "pod_id": "615p5p9ulf8zr9",
+  "pod_status": "RUNNING",
+  "gpu": "RTX 3090 Ti",
+  "vram_gb": 24,
+  "gpu_rate_usd_per_hour": 0.27,
+  "total_account_rate_usd_per_hour": 0.28,
+  "balance_usd": 8.1940585618,
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "benchmark_preflight_passed": true,
+  "checkpoint_shards_sha256_verified": 4,
+  "inference_package_check_passed": true,
+  "native_extension_import_passed": true,
+  "serving_cli_help_passed": true,
+  "model_loaded": false,
+  "model_generation_executed": false,
+  "benchmark_episodes_executed": 0,
+  "sandbox_containers_started": 0,
+  "pod_lifecycle_schedule": null
+}

@@ -1,0 +1,7 @@
+{
+  "tokenizer_config_sha256": "0553ada6e92b1a29b4431c72782c6e5e6ab675ef0b20ceb2833cd1074c7fb932",
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "adapter_enabled": false,
+  "weights_loaded": false,
+  "model_generation_executed": false
+}

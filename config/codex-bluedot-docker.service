@@ -1,0 +1,13 @@
+[Unit]
+Description=Docker runtime for the BlueDot Instrumental Choices project
+After=network.target
+
+[Service]
+Type=simple
+Environment=PATH=/opt/codex-bluedot/docker:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/opt/codex-bluedot/docker/dockerd --host=unix:///run/codex-bluedot-docker.sock --group=rka --data-root=/var/lib/codex-bluedot-docker --exec-root=/run/codex-bluedot-docker --pidfile=/run/codex-bluedot-docker.pid
+Restart=on-failure
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

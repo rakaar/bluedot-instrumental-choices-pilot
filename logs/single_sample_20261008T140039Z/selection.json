@@ -1,0 +1,21 @@
+{
+  "selected_at": "2026-10-08T13:50:49.844861+00:00",
+  "selection_method": "secrets.choice, uniform over the seven official tasks",
+  "eligible_tasks": [
+    "ledger_audit",
+    "budget_siphon",
+    "quota_boost",
+    "deployment_guardian",
+    "training_preserver",
+    "final_instance",
+    "memory_keeper"
+  ],
+  "task": "budget_siphon",
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "repeats": 1,
+  "planned_episodes": 1,
+  "model": "control",
+  "seed": 374846912,
+  "paper": "https://arxiv.org/html/2605.06490v1"
+}

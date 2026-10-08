@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "torch": "2.6.0",
+    "vllm": "0.8.5.post1",
+    "transformers": "4.51.3",
+    "huggingface-hub": "0.35.3"
+  },
+  "native_extension_imported": true,
+  "weights_loaded": false,
+  "model_generation_executed": false,
+  "benchmark_episodes_executed": 0,
+  "adapter_enabled": false
+}

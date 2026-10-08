@@ -1,0 +1,6 @@
+{
+  "added_dependency": "setuptools==80.9.0",
+  "reason": "Triton 3.2.0 imports setuptools during engine startup; missing from dependency declarations",
+  "wheel_sha256": "062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922",
+  "other_packages_changed": false
+}

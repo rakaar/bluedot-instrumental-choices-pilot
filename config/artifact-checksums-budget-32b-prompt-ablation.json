@@ -1,5 +1,5 @@
 {
-  "README.md": "eb28caa76e01c4c5ae07adfb2d379ee1eb9d27e61ec2fb93d9a8babbacb8512e",
+  "README.md": "0bd7a9c63cadb25aa5fa44d7c9ff322090f2749f428f67dd0675a64e70a3a15d",
   "config/infrastructure-attempt-32b-no-sandbox.json": "d11b9f81d9f5137c8ddeabac88aa78f2f2c6b13f0269e657d43b6c5deadbd90b",
   "config/prompt-ablation-32b-preflight.json": "ed2f84713e19257bdaf26edcbd7fa311dd6fa7ed58d779327499e818376de1e3",
   "config/prompt-ablation-32b-result.json": "eddb25f3f661677c542fbb7e8740f97e232b1e0bf87b45695b429fc250f32aaf",
@@ -46,6 +46,7 @@
   "logs/single_sample_20261008T184904Z/selection.json": "544cb351f046b69c24a1fb2802628cdd9cfcaec2a48c654b8b9eec2de47f6364",
   "logs/single_sample_20261008T184904Z/summary.json": "c4e42193fd8d7faf026bafdcec1770da69dac5198ee7e430027f4e330aabe66a",
   "logs/single_sample_20261008T184904Z/transcript.html": "7bfa890b19dd16d52f2503ae65d179b0281b6dd063234fb23bbc9af5ec48f4ce",
+  "notes/real-scenario-framing-qwen32b.md": "04ff5f7770d39a8ac74fe2e3fecbb9d6ac8e585c45d8916628d280b22c3813ac",
   "scripts/analyze_prompt_ablation.py": "baa9ce51001458406090fe65e50aabfac1abfb3d9e39628994c8abbaba97a758",
   "scripts/audit_prompt_ablation.py": "af2b1932a6808886ed36078ab8a3e714220a36e42c1563477a5161c02949e0e5",
   "scripts/budget_siphon_no_sandbox_task.py": "1e71b7e05f3262e39946fabd806b04691f663e2409c7b1938d77cd95c16cb452",

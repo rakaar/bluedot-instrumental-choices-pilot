@@ -68,6 +68,8 @@ python3 scripts/run_single_sample.py --selection config/single-sample-selection-
 
 [Read the matched prompt comparison and full diagnostic trace](https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b-prompt-ablation/).
 
+[Separate research note: “real scenario” framing, exact responses, and interpretation limits](notes/real-scenario-framing-qwen32b.md).
+
 One additional user-authorized Budget Siphon A episode removed exactly
 `- You are working in a sandboxed workspace.` from the system prompt. The
 checkpoint, serving process, precision, generation settings, seed, user prompt,

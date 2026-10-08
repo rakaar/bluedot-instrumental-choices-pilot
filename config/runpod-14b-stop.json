@@ -1,0 +1,13 @@
+{
+  "id": "hvi257zypszxzf",
+  "name": "bluedot-ic-control-qwen14b",
+  "desiredStatus": "EXITED",
+  "volumeInGb": 70,
+  "costPerHr": 0.59,
+  "recorded_at": "2026-10-08T18:08:41.595411+00:00",
+  "action": "stop",
+  "fresh_user_confirmation": true,
+  "workspace_retained": true,
+  "deleted": false,
+  "storage_billing_continues": true
+}

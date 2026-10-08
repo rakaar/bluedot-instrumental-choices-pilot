@@ -1,0 +1,72 @@
+[
+  {
+    "path": "model-00001-of-00014.safetensors",
+    "size": 4891730992,
+    "sha256": "b2ad09503b7db4d97c3ddb9b9b9d696441e11df2fc6c09f9d1b571bf851b9ce5"
+  },
+  {
+    "path": "model-00002-of-00014.safetensors",
+    "size": 4876059352,
+    "sha256": "b666454c563217fc87b9496f88c41b6c7a4561a3ec20d994a4bb914e5b8ed980"
+  },
+  {
+    "path": "model-00003-of-00014.safetensors",
+    "size": 4876059384,
+    "sha256": "58080e50236c018c06bb5612b8da9c285c991c787e97c3aa731954523370cf30"
+  },
+  {
+    "path": "model-00004-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "d3fd4edb431ce0f0b00a25cb32e12490ff767346091271a6c5f3d798c8624c26"
+  },
+  {
+    "path": "model-00005-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "3e1363bda0c425ae029ec38ae84c9df6e4dd3b055ca2ceadf2afb76b6ac16189"
+  },
+  {
+    "path": "model-00006-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "74dff97bb498a1a81f37a088c97cbd228e9704789ce499b225093c9e2280bf0e"
+  },
+  {
+    "path": "model-00007-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "7d54d4829c4fe9d8b8bba0cc0ba944849e12bed6c5df81f6aca79779e4312bfe"
+  },
+  {
+    "path": "model-00008-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "865758c740df9c4b211b412208bef77dc23f94c4bc6ec89b6d766a748367a96a"
+  },
+  {
+    "path": "model-00009-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "8f78c234cb7320a440d2ff57f2e7914d92e2a2dd44de3396cfee555e8b1bd1e7"
+  },
+  {
+    "path": "model-00010-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "92f8b378b9d2d6850040ebbd361b6e8bbf3008745bb404b3ed6177d9d4eef849"
+  },
+  {
+    "path": "model-00011-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "ed3204214f1354ef4392692edf6ee41b32112351d7440cacc6170889e5704d1f"
+  },
+  {
+    "path": "model-00012-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "79db7d91b46a863cd941da9bc499939dc0ea05f178f51491620b492815df6b25"
+  },
+  {
+    "path": "model-00013-of-00014.safetensors",
+    "size": 4876059416,
+    "sha256": "023776bd4251ae0323a0fb5dab08d569d5d4abb34c2ece71f2c042a351df4c8b"
+  },
+  {
+    "path": "model-00014-of-00014.safetensors",
+    "size": 2123397800,
+    "sha256": "7be8f511307946079b0659264aea97bfab3ba99bd93ba91dc4c1b9b3987ad9c7"
+  }
+]

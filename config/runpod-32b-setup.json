@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-08T18:07:57.699626+00:00",
+  "pod_id": "haiauttb6phha6",
+  "name": "bluedot-ic-control-qwen32b",
+  "status": "RUNNING",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 1,
+  "compute_per_hour_usd": 1.39,
+  "container_disk_gb": 20,
+  "workspace_volume_gb": 120,
+  "model_config": "config/control-32b.json",
+  "scope": "One matched Budget Siphon A control episode. No hints or tool/harness changes.",
+  "model_generation_executed": true,
+  "lifecycle_schedule": null,
+  "gpu_memory_reported_mib": 81920,
+  "runtime": "vLLM 0.8.5.post1, torch 2.6.0, transformers 4.51.3",
+  "weights_size_bytes": 65527841688,
+  "old_14b_pod_status": "EXITED",
+  "current_total_account_spend_per_hour_usd": 1.429,
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "cloud_type": "COMMUNITY",
+  "checkpoint_repository": "https://huggingface.co/unsloth/Qwen2.5-32B-Instruct",
+  "checkpoint_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "served_model_name": "qwen-control-32b",
+  "checkpoint_shards_verified": 14,
+  "all_weight_tensor_dtypes": [
+    "BF16"
+  ],
+  "dependency_check": "155 packages; compatible",
+  "executed_model_episodes": 1,
+  "unscored_infrastructure_attempts": 1,
+  "episode": "logs/single_sample_20261008T182710Z"
+}

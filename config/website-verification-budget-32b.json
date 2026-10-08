@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8765/budget-siphon-32b/",
+  "all_turns": 19,
+  "tool_turns": 8,
+  "filter_search_expand_collapse": "passed",
+  "local_download_links": "passed",
+  "mobile_overflow": false,
+  "javascript_errors": []
+}

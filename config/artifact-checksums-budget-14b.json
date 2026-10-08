@@ -1,14 +1,14 @@
 {
-  "README.md": "e20da65ad850a0e2af46ea6b41079807d47299f98d39fd822ea70ba9b4f095d9",
+  "README.md": "4a8c2f4fe578f4ac6cec0bd4034a87023e2ec8ca3feeb6de02170122e74d82ce",
   "config/single-sample-selection-budget-A-14b.json": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544",
   "docs/budget-siphon-14b/api-response-audit.json": "4be9f7828ca67636cef0856c44111153fb4e117ff5e77ac0bcbc5f07d14c86b5",
   "docs/budget-siphon-14b/control_config.json": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69",
-  "docs/budget-siphon-14b/index.html": "6706a8a61bc95baf3d86aad84f6b77bdb4160b74a266093695feb804d78122dc",
+  "docs/budget-siphon-14b/index.html": "9daaf9dba0328d716d734934c3507b4b52c0e27108f053771426eea524228bfa",
   "docs/budget-siphon-14b/inspect-log.json": "e756b43d9dc0f8cd6ab69a704179c32f620683c17ceb954775977b6c2a38ba77",
   "docs/budget-siphon-14b/selection.json": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544",
   "docs/budget-siphon-14b/summary.json": "ecf54e46c3a39d1e447322465480c26e16b6dbcf990813685792e309d05ede26",
   "docs/budget-siphon-14b/transcript.html": "bcf6492bd9dba0c89837aa2fe245c93f9d4f1eb5d19e51cd296184f3d9d34605",
-  "docs/index.html": "b61d6a1ff6bbdd96ef897e842a0ec5da277f61540a7c92c9fca3cfc8f1d0753d",
+  "docs/index.html": "26ff9eabf5fda6a2e6a51d66f6bf142f4ec0cdbc82a0e77534415c202810fada",
   "logs/control_14b_budget_setup_20261008/model-server.log.gz": "4589f0a20efa674ce4981173fd6e36392df73b5e0bd407150f138eac0ace3ab7",
   "logs/control_20261008T174234Z/control_config.json": "486aa9d7ecc2aff0bf0e343c349ff139886be64693b33731f729b41a25a67458",
   "logs/control_20261008T174234Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T17-42-38+00-00_budget-siphon-task_Lhnw42wKchCbKP3dySMwgm.eval": "5e3300ce3806e71759c88734f1b0ade852f817ae05012ef17cc441c0d32fdd7e",
@@ -33,5 +33,5 @@
   "logs/single_sample_20261008T174234Z/summary.json": "ecf54e46c3a39d1e447322465480c26e16b6dbcf990813685792e309d05ede26",
   "logs/single_sample_20261008T174234Z/transcript.html": "bcf6492bd9dba0c89837aa2fe245c93f9d4f1eb5d19e51cd296184f3d9d34605",
   "scripts/audit_api_responses.py": "6121408e8a042a2aa1e4ef3f23867c060040f637218b3af0b59bf9db138804b5",
-  "scripts/build_results_site.py": "e2a61931ec84291e810012a277b76256e2ff630202816e77de2401ab34786f53"
+  "scripts/build_results_site.py": "69b5f9ce580ca84f061aa1ec7f93fa3e9c4fa1ca5c66eb9a51b28a46acddc52f"
 }

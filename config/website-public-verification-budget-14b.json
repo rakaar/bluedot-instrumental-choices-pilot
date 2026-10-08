@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-10-08T17:55:06.545682+00:00",
+  "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/",
+  "public_files": {
+    "api-response-audit.json": {
+      "status": 200,
+      "sha256": "33981deba27e89ea9bcef3ebbe6004c9e084b41fba966da0acdc4af6c4d69668"
+    },
+    "control_config.json": {
+      "status": 200,
+      "sha256": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69"
+    },
+    "index.html": {
+      "status": 200,
+      "sha256": "b61d6a1ff6bbdd96ef897e842a0ec5da277f61540a7c92c9fca3cfc8f1d0753d"
+    },
+    "inspect-log.json": {
+      "status": 200,
+      "sha256": "200ac0179065bb9395ac598fb50b2f8799c65a71fe885f8564441dd20eb2b7e8"
+    },
+    "selection.json": {
+      "status": 200,
+      "sha256": "bce21f21740390896986e51376343ea6bddd73bdfa60e91a30ae991a301b45d3"
+    },
+    "summary.json": {
+      "status": 200,
+      "sha256": "0fab7aaea30b37c91b05a4df51d69ca441539310f9344257451fc49473ed81df"
+    },
+    "transcript.html": {
+      "status": 200,
+      "sha256": "ab951a4cb94c51ad27a38cdcf0352bfd5b47b75b45d380123a2801140755aee5"
+    },
+    "budget-siphon-14b/api-response-audit.json": {
+      "status": 200,
+      "sha256": "4be9f7828ca67636cef0856c44111153fb4e117ff5e77ac0bcbc5f07d14c86b5"
+    },
+    "budget-siphon-14b/control_config.json": {
+      "status": 200,
+      "sha256": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69"
+    },
+    "budget-siphon-14b/index.html": {
+      "status": 200,
+      "sha256": "6706a8a61bc95baf3d86aad84f6b77bdb4160b74a266093695feb804d78122dc"
+    },
+    "budget-siphon-14b/inspect-log.json": {
+      "status": 200,
+      "sha256": "e756b43d9dc0f8cd6ab69a704179c32f620683c17ceb954775977b6c2a38ba77"
+    },
+    "budget-siphon-14b/selection.json": {
+      "status": 200,
+      "sha256": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544"
+    },
+    "budget-siphon-14b/summary.json": {
+      "status": 200,
+      "sha256": "ecf54e46c3a39d1e447322465480c26e16b6dbcf990813685792e309d05ede26"
+    },
+    "budget-siphon-14b/transcript.html": {
+      "status": 200,
+      "sha256": "bcf6492bd9dba0c89837aa2fe245c93f9d4f1eb5d19e51cd296184f3d9d34605"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "recorded_at": "2026-10-08T19:36:08.132120+00:00",
+  "action": "delete_both_pods_and_host_local_workspace_storage",
+  "user_confirmation": "Fresh yes in response to the specific deletion request naming both pods.",
+  "pod_ids": [
+    "haiauttb6phha6",
+    "hvi257zypszxzf"
+  ],
+  "workspace_gb_deleted": 190,
+  "public_backup_commit": "f2bb0b54bdb22647017408e72da260ce26e836f2",
+  "public_backup_verified_before_deletion": true,
+  "fresh_clone_verification_record": "config/github-backup-verification-quota-32b.json",
+  "before": {
+    "account": {
+      "clientBalance": 5.1386133116,
+      "currentSpendPerHr": 1.429,
+      "spendLimit": 80
+    },
+    "activePods": [
+      {
+        "id": "haiauttb6phha6",
+        "name": "bluedot-ic-control-qwen32b",
+        "desiredStatus": "RUNNING",
+        "gpuCount": 1,
+        "costPerHr": 1.39,
+        "volumeInGb": 120
+      }
+    ],
+    "allPods": [
+      {
+        "id": "haiauttb6phha6",
+        "name": "bluedot-ic-control-qwen32b",
+        "desiredStatus": "RUNNING",
+        "gpuCount": 1,
+        "costPerHr": 1.39,
+        "volumeInGb": 120
+      },
+      {
+        "id": "hvi257zypszxzf",
+        "name": "bluedot-ic-control-qwen14b",
+        "desiredStatus": "EXITED",
+        "gpuCount": 1,
+        "costPerHr": 0.59,
+        "volumeInGb": 70
+      }
+    ],
+    "networkVolumes": [],
+    "serverlessEndpoints": [],
+    "recorded_at": "2026-10-08T19:30:07.955529+00:00"
+  },
+  "delete_results": [
+    {
+      "pod_id": "haiauttb6phha6",
+      "deleted_at": "2026-10-08T19:33:42.462444+00:00",
+      "returncode": 0,
+      "provider_response": {
+        "deleted": true,
+        "id": "haiauttb6phha6"
+      }
+    },
+    {
+      "pod_id": "hvi257zypszxzf",
+      "deleted_at": "2026-10-08T19:33:43.361839+00:00",
+      "returncode": 0,
+      "provider_response": {
+        "deleted": true,
+        "id": "hvi257zypszxzf"
+      }
+    }
+  ],
+  "after_snapshots": [
+    {
+      "account": {
+        "clientBalance": 5.0183739542,
+        "currentSpendPerHr": 0,
+        "spendLimit": 80
+      },
+      "activePods": [],
+      "allPods": [],
+      "networkVolumes": [],
+      "serverlessEndpoints": [],
+      "checked_at": "2026-10-08T19:34:20.973032+00:00"
+    }
+  ],
+  "zero_billing_verified": true,
+  "final_account_balance_usd": 5.0183739542,
+  "project_connection_files_archived": true,
+  "archive_directory": ".runpod/deleted-14b-32b",
+  "deleted_pods_are_recoverable": false,
+  "public_checkpoint_weights_can_be_downloaded_again": true,
+  "additional_model_episodes_executed_during_cleanup": 0
+}

@@ -1,5 +1,14 @@
 # Instrumental Choices: Qwen control pilot
 
+Both the 32B A100 pod and the stopped 14B A40 pod were permanently deleted,
+including their host-local workspace disks, after fresh user confirmation on
+9 October 2026. RunPod reports **$0/hour** with no pods, network volumes or
+serverless endpoints remaining. The balance at verification was $5.0184.
+Code, results and runtime records were backed up and verified from a fresh
+public GitHub clone before deletion. See
+[the deletion and zero-billing record](config/runpod-teardown-14b-32b.json).
+The pods cannot be recovered; public model weights can be downloaded again.
+
 ## 32B control: Quota Boost A, 9 October 2026
 
 [Read the result, 7B/14B comparison and complete trace](https://rakaar.github.io/bluedot-instrumental-choices-pilot/quota-boost-32b/).
@@ -30,9 +39,9 @@ API calls match Inspect on all turns. Records are under
 `logs/single_sample_20261008T191919Z/` and `logs/control_20261008T191920Z/`.
 Remote code, configuration, setup logs and package versions were copied to
 `logs/remote_final_32b_20261008T191919Z/` and checked against remote SHA-256
-digests. Three actual 32B episodes have now run; no additional episodes or
-lifecycle actions are scheduled. RunPod cleanup is pending fresh explicit
-confirmation; retaining a stopped pod's storage would continue billing.
+digests. Three actual 32B episodes ran. Both pods and their workspace storage
+were subsequently deleted after fresh explicit confirmation, and zero billing
+was verified. No additional episodes or lifecycle actions are scheduled.
 
 ## 32B control: Budget Siphon A
 
@@ -77,22 +86,24 @@ The sampled sandbox peak was 1,042 MiB; minimum laptop available RAM was 4.71 Gi
 Global swap-out increased about 115 MiB and does not isolate benchmark activity
 from other processes. Inspect removed the sandbox when the episode ended.
 
-The 14B A40 pod `hvi257zypszxzf` was stopped after fresh user confirmation. Its
-70 GB workspace is retained and storage charges continue. The 32B A100 pod
-`haiauttb6phha6` remains running at $1.39/hour for compute. RunPod reports total
-account billing of $1.429/hour including storage. No lifecycle action is scheduled
-and no additional episodes are queued. Current status is recorded in
-`config/runpod-billing-32b.json`; weights remain on the A100.
+After this episode, the 14B A40 pod `hvi257zypszxzf` was stopped while retaining
+its 70 GB workspace, and the 32B A100 pod `haiauttb6phha6` was running at
+$1.39/hour for compute. The historical snapshot in `config/runpod-billing-32b.json`
+records total billing of $1.429/hour including storage. Both pods and their
+workspace disks were subsequently deleted; the latest teardown record at the
+top of this README verifies zero billing.
 
-The 32B server uses the separate SSH configuration `.runpod/ssh-config-32b` and
-local tunnel port 18001. To verify that pod without changing provider state:
+The deleted 32B server used local tunnel port 18001. Its SSH configuration,
+pod ID and pinned host key are archived under `.runpod/deleted-14b-32b/`.
+The historical read-only connection check was:
 
 ```bash
 python3 scripts/check_pod.py --pod-id-file .runpod/pod-id-32b --ssh-config-file .runpod/ssh-config-32b
 ```
 
-To reproduce the sample, which will run another episode, first establish that
-tunnel and set `CONTROL_BASE_URL=http://127.0.0.1:18001/v1`:
+Reproduction requires separately authorized provisioning and serving of a new
+pod. After establishing its tunnel, set
+`CONTROL_BASE_URL=http://127.0.0.1:18001/v1`. This command runs another episode:
 
 ```bash
 python3 scripts/run_single_sample.py --selection config/single-sample-selection-budget-A-32b.json --config config/control-32b.json --execute
@@ -148,9 +159,10 @@ unchanged. The plan-only and sample runners accept the recorded selection:
 CONTROL_BASE_URL=http://127.0.0.1:18001/v1 python3 scripts/run_single_sample.py --selection config/single-sample-selection-budget-A-32b-no-sandbox.json --config config/control-32b.json
 ```
 
-Adding `--execute` runs another episode and requires authorization. Two actual
-32B episodes have now been run: the original prompt and this single diagnostic.
-The A100 remains running; no further episodes or lifecycle actions are scheduled.
+Adding `--execute` runs another episode and requires authorization and a newly
+provisioned model endpoint. At this stage there were two actual 32B episodes:
+the original prompt and this single diagnostic. Quota Boost A was run later,
+then both pods were deleted and zero billing was verified.
 
 ## 14B control diagnostics, 8 October 2026
 
@@ -185,10 +197,13 @@ Records are in `logs/single_sample_20261008T172140Z/` and
 all six BF16 shard hashes match Hugging Face's pinned checkpoint metadata.
 Runtime packages passed the dependency check. At the time of this sample the
 RunPod A40 pod `hvi257zypszxzf` was running at $0.603/hour including storage.
-It was subsequently stopped after fresh user confirmation; its workspace is
-retained. The earlier zero-billing teardown below concerns the old 7B pod only.
+It was subsequently stopped after fresh user confirmation, then permanently
+deleted with its workspace after the 32B experiments. The latest teardown
+record at the top of this README covers both pods. The earlier zero-billing
+teardown below concerns the old 7B pod only.
 
-To reproduce the selected sample, which will run another episode:
+To reproduce the selected sample after separately authorized setup of a new
+14B endpoint, which will run another episode:
 
 ```bash
 python3 scripts/run_single_sample.py --selection config/single-sample-selection-quota-A-14b.json --config config/control-14b.json --execute

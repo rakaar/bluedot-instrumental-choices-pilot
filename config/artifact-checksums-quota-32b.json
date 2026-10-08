@@ -1,9 +1,10 @@
 {
-  "README.md": "bc80d2ef81467d7d55cf72fad9733f64319ba202301ad4aa3efab9f30496413e",
+  "README.md": "9149b4e571dcdf1ac80405891c9b12dd83fd00c7205af70b7c5a15637575db6f",
   "config/github-backup-verification-quota-32b.json": "44ac2fdc991d47371398956fd2e86e92601e61f07536dee21e7a1492f8136637",
   "config/quota-32b-preflight.json": "eceb100f2cf07841ae4c6ddf4ac10d4450b1cec8c91d5a63f8019c2ae455a1d7",
   "config/quota-32b-result.json": "d441d28fd6de0b0b66b314d6c39438f149200dcd7bed85a74d36272ba620b027",
   "config/runpod-billing-quota-32b-before-cleanup.json": "2d2ffb80d51bfab76310bca03182efa5f1a91cb4b66735906e287d45ad4a8071",
+  "config/runpod-teardown-14b-32b.json": "35b038c2800511146a4fcd75660a6707ff7bb859716619605f93d69dd1b1a0f6",
   "config/single-sample-selection-quota-A-32b.json": "4c00a7cc11727ae3e8b1fcfba028471f808c3db0c188dd890cd37dcd367d26ea",
   "config/website-public-verification-quota-32b.json": "5c61e2e43372060c8f666ce698eb0f758b8cbc44e295563a299ee25f2054746e",
   "config/website-verification-quota-32b.json": "668517103e5be7cdc2da5c04fe6890f8ceee6ed0aea6fa623eaba2249ecc4d39",

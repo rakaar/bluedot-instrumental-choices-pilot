@@ -1,5 +1,5 @@
 {
-  "README.md": "bc80d2ef81467d7d55cf72fad9733f64319ba202301ad4aa3efab9f30496413e",
+  "README.md": "9149b4e571dcdf1ac80405891c9b12dd83fd00c7205af70b7c5a15637575db6f",
   "config/infrastructure-attempt-32b-no-sandbox.json": "d11b9f81d9f5137c8ddeabac88aa78f2f2c6b13f0269e657d43b6c5deadbd90b",
   "config/prompt-ablation-32b-preflight.json": "ed2f84713e19257bdaf26edcbd7fa311dd6fa7ed58d779327499e818376de1e3",
   "config/prompt-ablation-32b-result.json": "eddb25f3f661677c542fbb7e8740f97e232b1e0bf87b45695b429fc250f32aaf",

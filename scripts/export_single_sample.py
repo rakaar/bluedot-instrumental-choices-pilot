@@ -28,6 +28,8 @@ def main() -> None:
     args = parser.parse_args()
     directory = args.monitor_directory.resolve()
     selection = json.loads((directory / 'selection.json').read_text())
+    config_path = directory / 'control_config.json'
+    control_config = json.loads(config_path.read_text()) if config_path.exists() else {'model_id':'unsloth/Qwen2.5-7B-Instruct','dtype':'bfloat16','adapter_enabled':False}
     log = read_eval_log(str(args.eval_file))
     assert log.samples is not None and len(log.samples) == 1
     sample = log.samples[0]
@@ -55,6 +57,7 @@ def main() -> None:
         'decision_point_reached': metadata.get('decision_point_reached'),
         'task': selection['task'], 'variant': selection['variant_letter'],
         'selection': selection,
+        'control_config': control_config,
         'trace_review': args.observation,
         'minimum_laptop_available_ram_gib': min(row['mem_available_bytes'] for row in rows) / 1024**3,
         'maximum_laptop_swap_used_gib': max(row['swap_used_bytes'] for row in rows) / 1024**3,
@@ -105,6 +108,7 @@ body{font:16px/1.55 system-ui,sans-serif;background:#f5f4ef;color:#232923;margin
         f'Swap pages in/out during monitoring: {summary["swap_in_pages_delta"]}/{summary["swap_out_pages_delta"]}. '
         'Values were sampled about every 5–7 seconds; brief peaks between samples may be higher.'
     ) + '''</p><h2>Full observable transcript</h2><p>Model responses, tool calls and tool results are retained below. These are visible outputs, not access to hidden reasoning.</p><p><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button></p>''' + ''.join(turns) + '</main></html>'
+    page = page.replace('BF16 Qwen2.5-7B-Instruct', 'BF16 ' + escaped(control_config['model_id'].split('/')[-1]))
     page = page.replace('$TASK_NAME', escaped(selection['task'])).replace('$VARIANT_LABEL', escaped(selection['variant_letter'])).replace('$OBSERVATIONS', escaped(observations))
     (directory / 'transcript.html').write_text(page)
     print(json.dumps(summary, indent=2, ensure_ascii=False))

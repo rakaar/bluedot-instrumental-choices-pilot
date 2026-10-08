@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-08T17:09:59.631380+00:00",
+  "pod_id": "hvi257zypszxzf",
+  "name": "bluedot-ic-control-qwen14b",
+  "status": "RUNNING",
+  "gpu": "NVIDIA A40",
+  "gpu_memory_reported_mib": 46068,
+  "compute_per_hour_usd": 0.59,
+  "container_disk_gb": 20,
+  "workspace_volume_gb": 70,
+  "image": "runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04",
+  "scope": "One Quota Boost A control episode, then review before any second benchmark sample.",
+  "model_config": "config/control-14b.json",
+  "runtime": "vLLM 0.8.5.post1, torch 2.6.0, transformers 4.51.3",
+  "model_generation_executed": true,
+  "lifecycle_schedule": null,
+  "checkpoint_shards_verified": 6,
+  "all_weight_tensor_dtypes": [
+    "BF16"
+  ],
+  "dependency_check": "155 packages; compatible",
+  "download_note": "One slow shard was resumed with verified HTTP byte ranges; its complete SHA-256 and all other shard hashes match upstream.",
+  "executed_episodes": 1,
+  "episode": "logs/single_sample_20261008T172140Z",
+  "second_episode_executed": false,
+  "current_total_spend_per_hour_usd": 0.603
+}

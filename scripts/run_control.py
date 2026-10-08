@@ -13,11 +13,15 @@ ROOT = Path(__file__).resolve().parents[1]
 BENCH = ROOT / "vendor/Instrumental-Choices"
 TASKS = ["ledger_audit", "budget_siphon", "quota_boost", "deployment_guardian",
          "training_preserver", "final_instance", "memory_keeper"]
-CONFIG = json.loads((ROOT / "config/control.json").read_text())
 
 
 def main() -> int:
+    config_parser = argparse.ArgumentParser(add_help=False)
+    config_parser.add_argument("--config", type=Path, default=ROOT / "config/control.json")
+    config_args, _ = config_parser.parse_known_args()
+    CONFIG = json.loads(config_args.config.read_text())
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", type=Path, default=config_args.config)
     parser.add_argument("--tasks", nargs="+", choices=TASKS,
                         default=[CONFIG["default_debug_task"]])
     parser.add_argument("--repeats", type=int, default=1)
@@ -56,7 +60,7 @@ def main() -> int:
                CONTROL_API_KEY="local-ssh-only", CONTROL_BASE_URL=base_url)
     inspect = str(BENCH / ".venv/bin/inspect")
     python = str(BENCH / ".venv/bin/python")
-    model = "openai-api/control/qwen-control"
+    model = "openai-api/control/" + CONFIG["served_model_name"]
     manifest = [python, "scripts/write_run_manifest.py", "--output",
                 str(output / "run_manifest.json"), "--repo-root", str(BENCH),
                 "--log-root", str(output), "--repeats", str(args.repeats),

@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-08T17:21:40.047702+00:00",
+  "models_response": {
+    "object": "list",
+    "data": [
+      {
+        "id": "qwen-control-14b",
+        "object": "model",
+        "created": 1791480099,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/qwen-control-14b",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-859f277b83d04f1ca8cb2f6b5994a7dc",
+            "object": "model_permission",
+            "created": 1791480099,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "generation_requests_in_this_check": 0,
+  "gpu_allocated_mib_after_warmup": 41157
+}

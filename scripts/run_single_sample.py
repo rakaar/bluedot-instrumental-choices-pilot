@@ -38,6 +38,7 @@ def snapshot() -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--selection', type=Path, default=ROOT / 'config/single-sample-selection.json')
+    parser.add_argument('--config', type=Path, default=ROOT / 'config/control.json')
     parser.add_argument('--execute', action='store_true')
     args = parser.parse_args()
     selected = json.loads(args.selection.read_text())
@@ -51,9 +52,10 @@ def main() -> int:
     directory = ROOT / 'logs' / ('single_sample_' + dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
     directory.mkdir(parents=True)
     (directory / 'selection.json').write_text(json.dumps(selected, indent=2) + '\n')
+    (directory / 'control_config.json').write_text(args.config.read_text())
     command = [str(ROOT / 'scripts/run_control.sh'), '--tasks', selected['task'],
                '--variants', selected['variant'], '--repeats', '1',
-               '--seed', str(selected['seed']), '--execute']
+               '--seed', str(selected['seed']), '--config', str(args.config.resolve()), '--execute']
     (directory / 'command.json').write_text(json.dumps(command, indent=2) + '\n')
     print(f'Monitor and console: {directory}', flush=True)
     with (directory / 'resources.jsonl').open('w') as resources, (directory / 'console.txt').open('w') as console:

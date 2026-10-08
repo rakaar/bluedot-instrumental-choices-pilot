@@ -1,14 +1,23 @@
 """Verify downloaded file sizes, hashes and tensor headers without loading weights."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
 import struct
 
 root = Path(__file__).resolve().parents[1]
-files = json.loads((root / "config/checkpoint_files.json").read_text())
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--config', type=Path, default=root / 'config/control.json')
+parser.add_argument('--files', type=Path, default=root / 'config/checkpoint_files.json')
+parser.add_argument('--output-dir', type=Path, default=root)
+args = parser.parse_args()
+config = json.loads(args.config.read_text())
+files = json.loads(args.files.read_text())
+model_dir = root / config.get('model_directory', 'models/qwen-control')
+args.output_dir.mkdir(parents=True, exist_ok=True)
 report = []
 for item in files:
-    path = root / "models/qwen-control" / item["path"]
+    path = model_dir / item["path"]
     assert path.stat().st_size == item["size"], f"Wrong file size: {path.name}"
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -22,8 +31,8 @@ for item in files:
     report.append({"path": path.name, "sha256": digest.hexdigest(),
                    "size": path.stat().st_size, "tensor_dtypes": dtypes})
     print(f"Verified {path.name}: SHA-256 matches, tensor types {dtypes}")
-(root / "checkpoint-verification.json").write_text(json.dumps(report, indent=2) + "\n")
-tokenizer_config = root / "models/qwen-control/tokenizer_config.json"
+(args.output_dir / "checkpoint-verification.json").write_text(json.dumps(report, indent=2) + "\n")
+tokenizer_config = model_dir / "tokenizer_config.json"
 tokenizer = json.loads(tokenizer_config.read_text())
 assert tokenizer.get("chat_template"), "No tokenizer chat template"
 metadata = {
@@ -33,5 +42,5 @@ metadata = {
     "weights_loaded": False,
     "model_generation_executed": False,
 }
-(root / "tokenizer-verification.json").write_text(json.dumps(metadata, indent=2) + "\n")
+(args.output_dir / "tokenizer-verification.json").write_text(json.dumps(metadata, indent=2) + "\n")
 print("Tokenizer and chat-template fingerprints saved; no weights loaded.")

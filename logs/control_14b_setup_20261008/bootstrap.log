@@ -1,0 +1,26 @@
+Using CPython 3.11.10 interpreter at: /usr/bin/python3.11
+Creating virtual environment at: .bootstrap
+Activate with: source .bootstrap/bin/activate
+Using Python 3.11.10 environment at: .bootstrap
+Resolved 13 packages in 368ms
+Downloading hf-xet (4.0MiB)
+ Downloaded hf-xet
+Prepared 13 packages in 1.35s
+Installed 13 packages in 519ms
+ + certifi==2026.7.22
+ + charset-normalizer==3.5.2
+ + filelock==4.0.12
+ + fsspec==2026.9.0
+ + hf-xet==1.7.0
+ + huggingface-hub==0.35.3
+ + idna==3.20
+ + packaging==26.3
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + tqdm==4.70.1
+ + typing-extensions==4.16.0
+ + urllib3==2.8.0
+Using CPython 3.11.10 interpreter at: /usr/bin/python3.11
+Creating virtual environment at: inference/.venv
+Activate with: source inference/.venv/bin/activate
+Download exit: 143; packages exit: 0

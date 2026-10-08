@@ -104,7 +104,9 @@ one prompt line and adds diagnostic metadata.
 Records are in `logs/control_20261008T184904Z/` and
 `logs/single_sample_20261008T184904Z/`. The latter contains
 `prompt-ablation-audit.json`, the API audit, native JSON, transcript and resource
-measurements. The plan-only and sample runners accept the recorded selection:
+measurements. For derived tool-trace tables, the official analyzer is reused with
+the diagnostic task name aliased to `budget_siphon`; native logs and scores are
+unchanged. The plan-only and sample runners accept the recorded selection:
 
 ```bash
 CONTROL_BASE_URL=http://127.0.0.1:18001/v1 python3 scripts/run_single_sample.py --selection config/single-sample-selection-budget-A-32b-no-sandbox.json --config config/control-32b.json

@@ -105,7 +105,9 @@ def main() -> int:
                                "--log-model-api",
                                "--log-format", "eval", "--log-dir", str(episode_dir)]
                     subprocess.run(command, cwd=BENCH, env=env, check=True)
-        subprocess.run([python, "scripts/analyze_tool_traces.py", str(output),
+        analysis_script = (os.path.relpath(ROOT / "scripts/analyze_prompt_ablation.py", BENCH)
+                           if args.prompt_ablation else "scripts/analyze_tool_traces.py")
+        subprocess.run([python, analysis_script, str(output),
                         "--output-dir", str(output / "tool_analysis")],
                        cwd=BENCH, env=env, check=True)
         subprocess.run([python, "scripts/render_tool_trace_report.py",

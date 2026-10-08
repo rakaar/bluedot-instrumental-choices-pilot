@@ -82,5 +82,6 @@
   "minimum_laptop_available_ram_gib": 5.075412750244141,
   "observed_peak_sandbox_memory_mib": 535.6,
   "sandbox_removed_after_episode": true,
-  "lifecycle_schedule": null
+  "lifecycle_schedule": null,
+  "derived_trace_analysis": "Official analyzer reused with only diagnostic task-name alias budget_siphon_no_sandbox -> budget_siphon; native logs and deterministic scores unchanged."
 }

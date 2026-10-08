@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-08T18:36:44.629213+00:00",
+  "public_report_url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/",
+  "public_http_file_hashes_match": {
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/control_config.json": "bd80531b1ea2dc804fac797373de1832ce5a337a215215ccfae1886586654834",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/index.html": "b9301ed4960eb7ff96b68e73fc139a1d294a7f40e7b1b6bb6760cf2c546d0614",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/selection.json": "fe883fc1b34384a2bb88a9f20d61d481419a5ea67e34b924a85c5207fe910667",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/transcript.html": "636e5b228ad36bb686fc1bf28e2579405ac45d83bbe272e391134595de95dd87",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/summary.json": "0b958931c2770827330a7ad450f0d6e792444fa2a48b47d2c0f076cce87be679",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/inspect-log.json": "cc36d837c2771b2c6c0462e62fcf30a54c60b99f12295430d3c947b6fe3d7f82",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/api-response-audit.json": "4a84e8369e2e1679a18df56442d97bc52ef00fb0a19e32afaccf1ab2012f761c",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/control_config.json": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/index.html": "9daaf9dba0328d716d734934c3507b4b52c0e27108f053771426eea524228bfa",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/selection.json": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/transcript.html": "bcf6492bd9dba0c89837aa2fe245c93f9d4f1eb5d19e51cd296184f3d9d34605",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/summary.json": "ecf54e46c3a39d1e447322465480c26e16b6dbcf990813685792e309d05ede26",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/inspect-log.json": "e756b43d9dc0f8cd6ab69a704179c32f620683c17ceb954775977b6c2a38ba77",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-14b/api-response-audit.json": "4be9f7828ca67636cef0856c44111153fb4e117ff5e77ac0bcbc5f07d14c86b5",
+    "https://rakaar.github.io/bluedot-instrumental-choices-pilot/index.html": "26ff9eabf5fda6a2e6a51d66f6bf142f4ec0cdbc82a0e77534415c202810fada"
+  },
+  "files_verified": 15,
+  "browser_checks": {
+    "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/budget-siphon-32b/",
+    "all_turns": 19,
+    "tool_turns": 8,
+    "filter_search_expand_collapse": "passed",
+    "local_download_links": "passed",
+    "mobile_overflow": false,
+    "javascript_errors": []
+  },
+  "pages_build_commit": "1091495bd26ad5c2638a3e166d54cebf5cb7e44d"
+}

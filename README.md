@@ -26,8 +26,8 @@ The paper and checkpoint are linked below and can be downloaded again.
 
 The public backup was verified from a fresh GitHub clone before RunPod pod
 `615p5p9ulf8zr9` was permanently deleted on 8 October 2026. RunPod reports
-**$0/hour** with no pods, network volumes or serverless endpoints. Final balance:
-**$7.750965018**. Evidence is recorded in `config/runpod-teardown.json`, and the
+**$0/hour** with no pods, network volumes or serverless endpoints. Balance at the final check:
+**$7.7381895421**. Evidence is recorded in `config/runpod-teardown.json`, and the
 pre-deletion GitHub backup checks are in `config/github-backup-verification.json`.
 The deleted pod cannot be recovered; the archived source and traces remain
 available. The sections below preserve historical setup and experiment details.

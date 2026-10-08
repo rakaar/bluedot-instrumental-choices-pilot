@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "public": true,
+  "commit": "f0465320980a70a709a77a6a1025a298b2f0a865",
+  "verified_at": "2026-10-08T14:49:54.217261+00:00",
+  "verification_clone": "/tmp/bluedot-public-backup-vgnovrkg/repo",
+  "archive_sha256": "3cfe4992ff243c40481a4ce3912616428d682f5a79afe44c2bb7af3dfebe272f",
+  "archive_member_count": 290,
+  "all_published_file_hashes_match_local": true,
+  "verification_method": "Unauthenticated GitHub API plus fresh HTTPS clone and SHA-256 verification of every archive member and tracked file."
+}

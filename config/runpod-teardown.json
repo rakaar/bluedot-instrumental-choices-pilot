@@ -1,0 +1,86 @@
+{
+  "pod_id": "615p5p9ulf8zr9",
+  "pod_name": "bluedot-ic-control-qwen7b",
+  "action": "delete",
+  "authorized_scope": "User requested public backup first, then kill the GPU and ensure zero RunPod billing.",
+  "public_backup_commit": "f0465320980a70a709a77a6a1025a298b2f0a865",
+  "public_backup_verified_before_deletion": true,
+  "before": {
+    "account": {
+      "clientBalance": 7.750965018,
+      "currentSpendPerHr": 0.28,
+      "spendLimit": 80
+    },
+    "activePods": [
+      {
+        "id": "615p5p9ulf8zr9",
+        "name": "bluedot-ic-control-qwen7b",
+        "desiredStatus": "RUNNING",
+        "gpuCount": 1,
+        "costPerHr": 0.27,
+        "volumeInGb": 40
+      }
+    ],
+    "allPods": [
+      {
+        "id": "615p5p9ulf8zr9",
+        "name": "bluedot-ic-control-qwen7b",
+        "desiredStatus": "RUNNING",
+        "gpuCount": 1,
+        "costPerHr": 0.27,
+        "volumeInGb": 40
+      }
+    ],
+    "networkVolumes": [],
+    "serverlessEndpoints": []
+  },
+  "delete_requested_at": "2026-10-08T14:50:32.762181+00:00",
+  "delete_response": {
+    "deleted": true,
+    "id": "615p5p9ulf8zr9"
+  },
+  "delete_response_at": "2026-10-08T14:50:33.793325+00:00",
+  "after_snapshots": [
+    {
+      "checked_at": "2026-10-08T14:51:23.508213+00:00",
+      "account": {
+        "clientBalance": 7.750965018,
+        "currentSpendPerHr": 0.28,
+        "spendLimit": 80
+      },
+      "activePods": [],
+      "allPods": [],
+      "networkVolumes": [],
+      "serverlessEndpoints": []
+    },
+    {
+      "checked_at": "2026-10-08T14:52:16.963779+00:00",
+      "account": {
+        "clientBalance": 7.750965018,
+        "currentSpendPerHr": 0,
+        "spendLimit": 80
+      },
+      "activePods": [],
+      "allPods": [],
+      "networkVolumes": [],
+      "serverlessEndpoints": []
+    },
+    {
+      "checked_at": "2026-10-08T14:54:18.098751+00:00",
+      "account": {
+        "clientBalance": 7.7381895421,
+        "currentSpendPerHr": 0,
+        "spendLimit": 80
+      },
+      "activePods": [],
+      "allPods": [],
+      "networkVolumes": [],
+      "serverlessEndpoints": []
+    }
+  ],
+  "zero_billing_verified": true,
+  "final_account_balance_usd": 7.7381895421,
+  "project_connection_files_archived": true,
+  "local_report_servers_closed": true,
+  "deleted_pod_is_recoverable": false
+}

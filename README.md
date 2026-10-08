@@ -20,12 +20,17 @@ tool call, result and deterministic outcome. Open them locally in a browser;
 the adjacent JSON and native `.eval` files preserve the underlying evidence.
 `backups/public-experiment-backup.tar.gz` includes the experiment files and the
 MIT-licensed benchmark source at the pinned revision, with per-file SHA-256
-verification. Original downloaded paper copies, installed environments, model
-weights, SSH configuration and credentials are retained outside the public repo.
+verification. Downloaded paper copies are retained locally. Installed environments,
+model weights, SSH configuration and credentials are excluded from the public repo.
 The paper and checkpoint are linked below and can be downloaded again.
 
-RunPod teardown is performed only after the public backup is verified. Its
-final resource and billing evidence will be recorded in `config/runpod-teardown.json`.
+The public backup was verified from a fresh GitHub clone before RunPod pod
+`615p5p9ulf8zr9` was permanently deleted on 8 October 2026. RunPod reports
+**$0/hour** with no pods, network volumes or serverless endpoints. Final balance:
+**$7.750965018**. Evidence is recorded in `config/runpod-teardown.json`, and the
+pre-deletion GitHub backup checks are in `config/github-backup-verification.json`.
+The deleted pod cannot be recovered; the archived source and traces remain
+available. The sections below preserve historical setup and experiment details.
 
 Prepared on 8 October 2026. The initial preparation did not load or run the model.
 Three user-authorized control samples have now been run: one A and one H for
@@ -72,8 +77,8 @@ The first server startup found an undeclared Triton dependency on setuptools.
 `setuptools==80.9.0` was added, with its wheel verified against the PyPI SHA-256.
 The dependency check and engine startup then passed. Other inference packages,
 weights, precision, and generation settings were unchanged. The GPU pod and
-model server remain running; benchmark containers were automatically removed
-by Inspect after the sample.
+model server remained running after this sample; the pod was later deleted
+after the public backup. Inspect automatically removed the benchmark containers.
 
 ## Variant H follow-up, 8 October 2026
 
@@ -105,7 +110,8 @@ H artifacts: `logs/single_sample_20261008T141037Z/transcript.html`,
 `summary.json`, full `inspect-log.json`, resource observations, and checksums.
 Native logs, manifest, configuration and official trace analysis are under
 `logs/control_20261008T141037Z/`. The A artifacts remain unchanged. The pod
-and model server remain running; Inspect removed the H sandbox on completion.
+and model server remained running at that point; the pod was later deleted.
+Inspect removed the H sandbox on completion.
 
 To plan another explicitly authorized single-sample run with a saved selection:
 
@@ -160,7 +166,7 @@ The three-sample diagnostic is finished; no additional episodes are queued.
 
 For future stronger baseline checks, a hosted API can avoid an idle GPU rental.
 [OpenRouter supports tool calling](https://openrouter.ai/docs/guides/features/tool-calling).
-Our current model is already served through an HTTP API; the rented GPU pays for
+The pilot model was served through an HTTP API; the rented GPU paid for
 hosting that endpoint. A Hugging Face fine-tune can also be served this way, or
 by a provider that supports its checkpoint or adapter. OpenRouter's documented
 [private-model integration](https://openrouter.ai/docs/guides/routing/private-models)
@@ -179,18 +185,17 @@ comparison; the adapter has not been downloaded or enabled.
 
 - RunPod ID: `615p5p9ulf8zr9`, named `bluedot-ic-control-qwen7b`.
 - Community Cloud, one RTX 3090 Ti, 24 GB VRAM, 28 vCPUs, 62 GB allocated RAM.
-- GPU: $0.27/hour. Total current account rate: approximately $0.28/hour with
+- Historical GPU rate: $0.27/hour. Total running account rate: approximately $0.28/hour with
   30 GB container disk and 40 GB host-local `/workspace` storage.
 - Image: `runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04`.
 - SSH: `scripts/ssh_pod.sh`; uses the existing RunPod Ed25519 key and pinned
-  host key. Current endpoint is in ignored `.runpod/ssh-config`.
+  host key. The terminated endpoint was archived in ignored `.runpod/ssh-config.terminated`.
 - Pod directory: `/workspace/bluedot-ic`.
 
-The pod is left running and billing. No stop/deletion schedule has been set.
-Stopping, pausing, resetting, restarting, and deletion each require fresh user
-confirmation under the project's RunPod rules. A stopped pod can lose access
-to its former GPU host; host-local `/workspace` may then need manual transfer
-through RunPod's web interface. Deletion requires separate confirmation.
+The pod was permanently deleted after the user's explicit teardown request and
+verified public backup. No RunPod resources or billing remain. Its project SSH
+connection files were archived locally so the old endpoint cannot be reused by
+the helpers. Existing SSH keys were preserved. Local report servers were closed.
 
 ## Where the benchmark runs
 
@@ -220,12 +225,13 @@ Docker 29.1.3 and Compose 5.6.0 are installed specifically for this setup.
 
 ## Manual launch, when requested
 
-These are the manual launch commands. The model server and tunnel were started
-for the authorized single sample; check for existing processes before starting
-another copy. The example A/H pair below has not been run.
+These are historical manual launch commands. The model server and tunnel were
+used for the authorized samples and are now closed. A new authorized rental,
+fresh connection configuration, and environment setup are required before
+running these commands again. The example A/H pair below was not run.
 
 Before reconnecting on another day, verify that the saved endpoint still belongs
-to this active pod with `.tools/bin/python scripts/check_pod.py`. This read-only
+to the newly configured pod with `python3 scripts/check_pod.py`. This read-only
 check will refuse a stopped pod or changed endpoint and never restart it.
 
 1. In one terminal, start the model server on the pod:

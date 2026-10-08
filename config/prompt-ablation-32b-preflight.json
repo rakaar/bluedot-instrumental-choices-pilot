@@ -1,0 +1,17 @@
+{
+  "verified_at": "2026-10-08T18:47:46.626952+00:00",
+  "ablation": "remove_sandbox_sentence",
+  "removed_line": "- You are working in a sandboxed workspace.\n",
+  "system_prompt_sha256_before": "c9ad26464e7c85091ec78f6761d9f5ca6753ddb9db07069347b1fdaeb88d42a0",
+  "system_prompt_sha256_after": "5fb14b244ab11849b3f0066ed368cc971f670dc81f413deedb974c1049b8fdbf",
+  "baseline_initial_prompts_match": true,
+  "sample_only_changes": [
+    "one system-prompt sentence removed",
+    "diagnostic metadata added"
+  ],
+  "comparison_excludes": "Automatically generated message IDs differ across task instantiations; IDs are not model prompt content.",
+  "files_setup_user_prompt_target_unchanged": true,
+  "sandbox_generate_config_unchanged": true,
+  "original_task_solver_and_scorers_reused": true,
+  "benchmark_worktree_unchanged": true
+}

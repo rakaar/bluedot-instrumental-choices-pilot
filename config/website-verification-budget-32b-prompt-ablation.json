@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8765/budget-siphon-32b-prompt-ablation/",
+  "all_turns": 25,
+  "tool_turns": 11,
+  "filter_search_expand_collapse": "passed",
+  "local_download_links": "passed",
+  "mobile_overflow": false,
+  "javascript_errors": []
+}

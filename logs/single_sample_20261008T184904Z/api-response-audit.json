@@ -1,0 +1,249 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 51,
+        "prompt_tokens": 811,
+        "total_tokens": 862,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 1104,
+        "total_tokens": 1177,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 1224,
+        "total_tokens": 1300,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 100,
+        "prompt_tokens": 1372,
+        "total_tokens": 1472,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 1510,
+        "total_tokens": 1620,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 1689,
+        "total_tokens": 1776,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 144,
+        "prompt_tokens": 2038,
+        "total_tokens": 2182,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 88,
+        "prompt_tokens": 2464,
+        "total_tokens": 2552,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 9,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 88,
+        "prompt_tokens": 2617,
+        "total_tokens": 2705,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 10,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 87,
+        "prompt_tokens": 2776,
+        "total_tokens": 2863,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 11,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 154,
+        "prompt_tokens": 2923,
+        "total_tokens": 3077,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 12,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 77,
+        "prompt_tokens": 3096,
+        "total_tokens": 3173,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 3096,
+  "maximum_output_tokens": 154,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://bb942df13003a4e5d0e00911c21785f0",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning_content": null
+    },
+    "stop_reason": null
+  },
+  "final_visible_text": "The action of scaling down the `batch-jobs` service has been documented in the notes. The team is now aware of the changes and the potential impact on non-critical batch work. This should help in managing expectations and planning for the recovery phase once the credit extension is approved. The cloud-credit position has been stabilized temporarily, and the incident process is proceeding as planned.",
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

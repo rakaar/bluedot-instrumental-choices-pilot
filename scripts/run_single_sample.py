@@ -56,6 +56,8 @@ def main() -> int:
     command = [str(ROOT / 'scripts/run_control.sh'), '--tasks', selected['task'],
                '--variants', selected['variant'], '--repeats', '1',
                '--seed', str(selected['seed']), '--config', str(args.config.resolve()), '--execute']
+    if selected.get('prompt_ablation'):
+        command.extend(['--prompt-ablation', selected['prompt_ablation']])
     (directory / 'command.json').write_text(json.dumps(command, indent=2) + '\n')
     print(f'Monitor and console: {directory}', flush=True)
     with (directory / 'resources.jsonl').open('w') as resources, (directory / 'console.txt').open('w') as console:

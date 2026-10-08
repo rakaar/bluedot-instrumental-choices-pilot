@@ -1,0 +1,291 @@
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 486, in eval_async
+  |     async with anyio.create_task_group() as tg:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/bin/inspect", line 12, in <module>
+    |     sys.exit(main())
+    |              ~~~~^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/main.py", line 56, in main
+    |     inspect(auto_envvar_prefix="INSPECT")  # pylint: disable=no-value-for-parameter
+    |     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1442, in __call__
+    |     return self.main(*args, **kwargs)
+    |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1363, in main
+    |     rv = self.invoke(ctx)
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1830, in invoke
+    |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+    |                            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1226, in invoke
+    |     return ctx.invoke(self.callback, **ctx.params)
+    |            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 794, in invoke
+    |     return callback(*args, **kwargs)
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/common.py", line 45, in wrapper
+    |     return cast(click.Context, func(*args, **kwargs))
+    |                                ~~~~^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/common.py", line 110, in wrapper
+    |     return cast(click.Context, func(*args, **kwargs))
+    |                                ~~~~^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 602, in wrapper
+    |     return cast(click.Context, func(*args, **kwargs))
+    |                                ~~~~^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 701, in eval_command
+    |     eval_exec(
+    |     ~~~~~~~~~^
+    |         tasks=tasks,
+    |         ^^^^^^^^^^^^
+    |     ...<51 lines>...
+    |         **config,
+    |         ^^^^^^^^^
+    |     )
+    |     ^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 1179, in eval_exec
+    |     eval(**params)
+    |     ~~~~^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 297, in eval
+    |     return task_display().run_task_app(with_async_fs(run_task_app))
+    |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_display/plain/display.py", line 50, in run_task_app
+    |     return anyio.run(main, backend=configured_async_backend())
+    |            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_core/_eventloop.py", line 75, in run
+    |     return async_backend.run(func, args, {}, backend_options)
+    |            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2365, in run
+    |     return runner.run(wrapper())
+    |            ~~~~~~~~~~^^^^^^^^^^^
+    |   File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 119, in run
+    |     return self._loop.run_until_complete(task)
+    |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+    |   File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    |     return future.result()
+    |            ~~~~~~~~~~~~~^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2348, in wrapper
+    |     return await func(*args)
+    |            ^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_util/asyncfiles.py", line 418, in wrapper
+    |     return await main()
+    |            ^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 241, in run_task_app
+    |     return await eval_async(
+    |            ^^^^^^^^^^^^^^^^^
+    |     ...<47 lines>...
+    |     )
+    |     ^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 489, in eval_async
+    |     raise inner_exception(ex)
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 432, in run
+    |     result = await _eval_async_inner(
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ...<48 lines>...
+    |     )
+    |     ^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 792, in _eval_async_inner
+    |     raise e
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 597, in _eval_async_inner
+    |     resolved_tasks, approval = eval_resolve_tasks(
+    |                                ~~~~~~~~~~~~~~~~~~^
+    |         tasks,
+    |         ^^^^^^
+    |     ...<6 lines>...
+    |         sample_shuffle,
+    |         ^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 1301, in eval_resolve_tasks
+    |     resolve_tasks(
+    |     ~~~~~~~~~~~~~^
+    |         tasks, task_args, m, resolved_model_roles, sandbox, sample_shuffle
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 137, in resolve_tasks
+    |     return as_resolved_tasks(load_tasks(cast(list[str] | None, tasks), task_args))
+    |                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 302, in load_tasks
+    |     for spec in load_task_spec(task_spec, task_args)
+    |                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 316, in load_task_spec
+    |     return create_tasks([task_spec], task_args)
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 342, in create_tasks
+    |     files = task_files(target, root_dir)
+    |   File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/list.py", line 66, in task_files
+    |     expanded = list(root_dir.glob(glob))
+    |                     ~~~~~~~~~~~~~^^^^^^
+    |   File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/pathlib/_local.py", line 589, in glob
+    |     raise NotImplementedError("Non-relative patterns are unsupported")
+    | NotImplementedError: Non-relative patterns are unsupported
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/bin/inspect", line 12, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/main.py", line 56, in main
+    inspect(auto_envvar_prefix="INSPECT")  # pylint: disable=no-value-for-parameter
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1830, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/common.py", line 45, in wrapper
+    return cast(click.Context, func(*args, **kwargs))
+                               ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/common.py", line 110, in wrapper
+    return cast(click.Context, func(*args, **kwargs))
+                               ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 602, in wrapper
+    return cast(click.Context, func(*args, **kwargs))
+                               ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 701, in eval_command
+    eval_exec(
+    ~~~~~~~~~^
+        tasks=tasks,
+        ^^^^^^^^^^^^
+    ...<51 lines>...
+        **config,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_cli/eval.py", line 1179, in eval_exec
+    eval(**params)
+    ~~~~^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 297, in eval
+    return task_display().run_task_app(with_async_fs(run_task_app))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_display/plain/display.py", line 50, in run_task_app
+    return anyio.run(main, backend=configured_async_backend())
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_core/_eventloop.py", line 75, in run
+    return async_backend.run(func, args, {}, backend_options)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2365, in run
+    return runner.run(wrapper())
+           ~~~~~~~~~~^^^^^^^^^^^
+  File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 2348, in wrapper
+    return await func(*args)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_util/asyncfiles.py", line 418, in wrapper
+    return await main()
+           ^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 241, in run_task_app
+    return await eval_async(
+           ^^^^^^^^^^^^^^^^^
+    ...<47 lines>...
+    )
+    ^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 489, in eval_async
+    raise inner_exception(ex)
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 432, in run
+    result = await _eval_async_inner(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<48 lines>...
+    )
+    ^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 792, in _eval_async_inner
+    raise e
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 597, in _eval_async_inner
+    resolved_tasks, approval = eval_resolve_tasks(
+                               ~~~~~~~~~~~~~~~~~~^
+        tasks,
+        ^^^^^^
+    ...<6 lines>...
+        sample_shuffle,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/eval.py", line 1301, in eval_resolve_tasks
+    resolve_tasks(
+    ~~~~~~~~~~~~~^
+        tasks, task_args, m, resolved_model_roles, sandbox, sample_shuffle
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 137, in resolve_tasks
+    return as_resolved_tasks(load_tasks(cast(list[str] | None, tasks), task_args))
+                             ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 302, in load_tasks
+    for spec in load_task_spec(task_spec, task_args)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 316, in load_task_spec
+    return create_tasks([task_spec], task_args)
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/loader.py", line 342, in create_tasks
+    files = task_files(target, root_dir)
+  File "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/lib/python3.13/site-packages/inspect_ai/_eval/list.py", line 66, in task_files
+    expanded = list(root_dir.glob(glob))
+                    ~~~~~~~~~~~~~^^^^^^
+  File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/pathlib/_local.py", line 589, in glob
+    raise NotImplementedError("Non-relative patterns are unsupported")
+NotImplementedError: Non-relative patterns are unsupported
+{
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "served_model_name": "qwen-control-32b",
+  "adapter_enabled": false,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "max_model_len": 16384,
+  "max_num_seqs": 1,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "max_tokens_per_response": 2048,
+  "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "variants": [
+    "dilemma_forbidden_unwatched"
+  ],
+  "default_debug_task": "final_instance",
+  "pilot_tasks_frozen": false,
+  "future_em_adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+  "future_em_adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+  "model_directory": "models/qwen-control-32b",
+  "tasks": [
+    "budget_siphon"
+  ],
+  "repeats": 1,
+  "planned_episodes": 1,
+  "seed_schedule": "seed + repeat_index * 100 + task_index * 2 + variant_index",
+  "initial_seed": 374846912,
+  "message_limit": 160,
+  "working_limit_seconds": 1800,
+  "log_model_api": true,
+  "prompt_ablation": "remove_sandbox_sentence",
+  "official_prompt_unmodified": false,
+  "ablation_task_file": "scripts/budget_siphon_no_sandbox_task.py"
+}
+Traceback (most recent call last):
+  File "/home/rka/Documents/ChatGPT/bluedot project/scripts/run_control.py", line 124, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/home/rka/Documents/ChatGPT/bluedot project/scripts/run_control.py", line 107, in main
+    subprocess.run(command, cwd=BENCH, env=env, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rka/.local/share/uv/python/cpython-3.13.16-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/bin/inspect', 'eval', '/home/rka/Documents/ChatGPT/bluedot project/scripts/budget_siphon_no_sandbox_task.py', '--model', 'openai-api/control/qwen-control-32b', '--model-base-url', 'http://127.0.0.1:18001/v1', '-M', 'responses_api=false', '-M', 'strict_tools=false', '-T', 'variant_profile=benchmark', '-T', 'variant_id=dilemma_forbidden_unwatched', '--temperature', '0.7', '--top-p', '0.9', '--max-tokens', '2048', '--seed', '374846912', '--max-samples', '1', '--limit', '1', '--max-subprocesses', '1', '--max-connections', '1', '--max-retries', '2', '--timeout', '180', '--display', 'plain', '--message-limit', '160', '--working-limit', '1800', '--log-model-api', '--log-format', 'eval', '--log-dir', '/home/rka/Documents/ChatGPT/bluedot project/logs/control_20261008T184747Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched']' returned non-zero exit status 1.

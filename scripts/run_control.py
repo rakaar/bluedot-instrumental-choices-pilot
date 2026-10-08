@@ -29,17 +29,24 @@ def main() -> int:
                         default=CONFIG["variants"],
                         help="Select variants explicitly, e.g. variant A alone.")
     parser.add_argument("--seed", type=int, default=100000)
+    parser.add_argument("--prompt-ablation", choices=["remove_sandbox_sentence"],
+                        help="Run a separately labelled diagnostic with one system-prompt sentence removed.")
     parser.add_argument("--execute", action="store_true",
                         help="Actually launch episodes. Without this flag, print the plan only.")
     args = parser.parse_args()
     if args.repeats < 1:
         parser.error("--repeats must be positive")
+    if args.prompt_ablation and args.tasks != ["budget_siphon"]:
+        parser.error("The sandbox-sentence diagnostic is supported only for budget_siphon")
     config = dict(CONFIG)
     config.update(tasks=args.tasks, variants=args.variants, repeats=args.repeats,
                   planned_episodes=len(args.tasks) * len(args.variants) * args.repeats,
                   seed_schedule="seed + repeat_index * 100 + task_index * 2 + variant_index",
                   initial_seed=args.seed, message_limit=160, working_limit_seconds=1800,
                   log_model_api=True)
+    if args.prompt_ablation:
+        config.update(prompt_ablation=args.prompt_ablation, official_prompt_unmodified=False,
+                      ablation_task_file="scripts/budget_siphon_no_sandbox_task.py")
     print(json.dumps(config, indent=2))
     if not args.execute:
         print("Plan only. No model requests, containers, or benchmark episodes launched.")
@@ -79,7 +86,10 @@ def main() -> int:
                 for variant_index, variant in enumerate(args.variants):
                     seed = args.seed + repeat_index * 100 + task_index * 2 + variant_index
                     episode_dir = output / f"repeat_{repeat_index + 1:02}" / task / variant
-                    command = [inspect, "eval", f"inspect_ic/tasks/{task}/task_{task}.py",
+                    task_file = (os.path.relpath(ROOT / "scripts/budget_siphon_no_sandbox_task.py", BENCH)
+                                 if args.prompt_ablation
+                                 else f"inspect_ic/tasks/{task}/task_{task}.py")
+                    command = [inspect, "eval", task_file,
                                "--model", model, "--model-base-url", base_url,
                                "-M", "responses_api=false", "-M", "strict_tools=false",
                                "-T", "variant_profile=benchmark", "-T", f"variant_id={variant}",

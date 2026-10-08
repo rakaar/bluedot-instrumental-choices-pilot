@@ -1,0 +1,38 @@
+{
+  "account": {
+    "clientBalance": 5.9709955051,
+    "currentSpendPerHr": 1.429,
+    "spendLimit": 80
+  },
+  "activePods": [
+    {
+      "id": "haiauttb6phha6",
+      "name": "bluedot-ic-control-qwen32b",
+      "desiredStatus": "RUNNING",
+      "gpuCount": 1,
+      "costPerHr": 1.39,
+      "volumeInGb": 120
+    }
+  ],
+  "allPods": [
+    {
+      "id": "haiauttb6phha6",
+      "name": "bluedot-ic-control-qwen32b",
+      "desiredStatus": "RUNNING",
+      "gpuCount": 1,
+      "costPerHr": 1.39,
+      "volumeInGb": 120
+    },
+    {
+      "id": "hvi257zypszxzf",
+      "name": "bluedot-ic-control-qwen14b",
+      "desiredStatus": "EXITED",
+      "gpuCount": 1,
+      "costPerHr": 0.59,
+      "volumeInGb": 70
+    }
+  ],
+  "networkVolumes": [],
+  "serverlessEndpoints": [],
+  "recorded_at": "2026-10-08T18:55:38.123323+00:00"
+}

@@ -1,5 +1,5 @@
 {
-  "README.md": "4a8c2f4fe578f4ac6cec0bd4034a87023e2ec8ca3feeb6de02170122e74d82ce",
+  "README.md": "0a894d07e4c23f366f18f913f7653be5febda64a60413899b2e66e74e5b8254a",
   "config/32b-verification/checkpoint-verification.json": "dc46d521711c0aa6feeb31981bc3277b39afa20fe0fa5c02e807ad6d15fc58d5",
   "config/32b-verification/tokenizer-verification.json": "11af535ec9bfa423637cc0ae8e0722f37ffa4582208ef40642fdbaec56ce0fd6",
   "config/checkpoint-files-32b.json": "5a049161a01894fd69f7657d52e12a465fed1ce62722355c34cb1a87e425f508",
@@ -13,7 +13,7 @@
   "docs/budget-siphon-14b/index.html": "9daaf9dba0328d716d734934c3507b4b52c0e27108f053771426eea524228bfa",
   "docs/budget-siphon-32b/api-response-audit.json": "4a84e8369e2e1679a18df56442d97bc52ef00fb0a19e32afaccf1ab2012f761c",
   "docs/budget-siphon-32b/control_config.json": "bd80531b1ea2dc804fac797373de1832ce5a337a215215ccfae1886586654834",
-  "docs/budget-siphon-32b/index.html": "b9301ed4960eb7ff96b68e73fc139a1d294a7f40e7b1b6bb6760cf2c546d0614",
+  "docs/budget-siphon-32b/index.html": "e297e59e5393a6853bd0dadf0e626ab35a359b1f4c05982098b304eb1595a7d6",
   "docs/budget-siphon-32b/inspect-log.json": "cc36d837c2771b2c6c0462e62fcf30a54c60b99f12295430d3c947b6fe3d7f82",
   "docs/budget-siphon-32b/selection.json": "fe883fc1b34384a2bb88a9f20d61d481419a5ea67e34b924a85c5207fe910667",
   "docs/budget-siphon-32b/summary.json": "0b958931c2770827330a7ad450f0d6e792444fa2a48b47d2c0f076cce87be679",
@@ -65,7 +65,7 @@
   "logs/single_sample_20261008T182710Z/summary.json": "0b958931c2770827330a7ad450f0d6e792444fa2a48b47d2c0f076cce87be679",
   "logs/single_sample_20261008T182710Z/transcript.html": "636e5b228ad36bb686fc1bf28e2579405ac45d83bbe272e391134595de95dd87",
   "scripts/bootstrap_pod.sh": "e873272568827fa831fdf750618b2c6e5fbbdffb04facf4fd795265c332855ab",
-  "scripts/build_results_site.py": "69b5f9ce580ca84f061aa1ec7f93fa3e9c4fa1ca5c66eb9a51b28a46acddc52f",
+  "scripts/build_results_site.py": "5672f9ee3571ee69837771d9a0d757bea41b026847c25cac9a1d4d5f450a2dbd",
   "scripts/check_pod.py": "76f847e8bc26adfaa6bc2fe7f5b0c29a8f4169fd2f7c3530d639869a6a56054a",
   "scripts/environment.sh": "025f2d7e327c186c8a9ce80aa9fd8dd48db3f5c13df64b1533ef58bf48044c10"
 }

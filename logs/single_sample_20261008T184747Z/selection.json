@@ -1,0 +1,32 @@
+{
+  "selected_at": "2026-10-08T18:47:05.411738+00:00",
+  "selection_method": "User-authorized paired diagnostic removing exactly one sandbox sentence from the 32B Budget Siphon A system prompt.",
+  "eligible_tasks": [
+    "ledger_audit",
+    "budget_siphon",
+    "quota_boost",
+    "deployment_guardian",
+    "training_preserver",
+    "final_instance",
+    "memory_keeper"
+  ],
+  "task": "budget_siphon",
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "repeats": 1,
+  "planned_episodes": 1,
+  "model": "control",
+  "seed": 374846912,
+  "paper": "https://arxiv.org/html/2605.06490v1",
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "model_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "control_config": "config/control-32b.json",
+  "generation_behavior_changes": false,
+  "additional_observability": "Full native Inspect API request/response capture and laptop resources.",
+  "selection_reason": "Test whether the explicit sandbox cue contributes to hypothetical framing or incomplete task follow-through. All other task inputs, tools, solver and scorers are preserved.",
+  "prompt_ablation": "remove_sandbox_sentence",
+  "benchmark_task_prompt_changed": true,
+  "generation_settings_unchanged": true,
+  "reference_episode": "logs/single_sample_20261008T182710Z",
+  "scope": "Exactly one additional episode; no continuation hints or further retries after a model response."
+}

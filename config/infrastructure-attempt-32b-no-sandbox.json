@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-08T18:49:04.387190+00:00",
+  "scope": "Sandbox-sentence diagnostic launch",
+  "monitor_directory": "logs/single_sample_20261008T184747Z",
+  "native_directory": "logs/control_20261008T184747Z",
+  "status": "failed_before_task_loading",
+  "cause": "Inspect CLI rejected the absolute task-file path with Non-relative patterns are unsupported.",
+  "fix": "Pass the diagnostic task file relative to the benchmark working directory.",
+  "model_generation_requests": 0,
+  "scored_episode": false
+}

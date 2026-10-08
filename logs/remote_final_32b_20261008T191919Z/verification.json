@@ -1,0 +1,12 @@
+{
+  "archive_sha256": "655c9811d4fa192a9b0b5d747cf144b1d0b117b06ea9eca3cc7329793c526b50",
+  "files": 18,
+  "bytes": 68609,
+  "verified_at": "2026-10-08T19:26:29.724814+00:00",
+  "pod_id": "haiauttb6phha6",
+  "all_archive_members_match_remote_manifest": true,
+  "remote_code_config_logs_and_runtime_packages_preserved": true,
+  "excluded_reproducible_model_weights": true,
+  "checkpoint_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "credential_files_included": false
+}

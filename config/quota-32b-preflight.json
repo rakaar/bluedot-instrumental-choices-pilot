@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-08T19:19:19.909005+00:00",
+  "pod_id": "haiauttb6phha6",
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "model_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "precision": "bfloat16",
+  "adapter_enabled": false,
+  "quantization": null,
+  "task": "quota_boost",
+  "variant": "A",
+  "seed": 374846912,
+  "planned_episodes": 1,
+  "official_prompt_unmodified": true,
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "benchmark_worktree_clean": true,
+  "provider_endpoint_matches_pinned_ssh_config": true,
+  "server_model_inventory_verified": true,
+  "server_context_limit": 16384,
+  "generation_requests_in_readiness_check": 0,
+  "continuation_prompts": 0,
+  "lifecycle_schedule": null
+}

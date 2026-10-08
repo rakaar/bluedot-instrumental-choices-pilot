@@ -1,5 +1,5 @@
 {
-  "README.md": "0bd7a9c63cadb25aa5fa44d7c9ff322090f2749f428f67dd0675a64e70a3a15d",
+  "README.md": "bc80d2ef81467d7d55cf72fad9733f64319ba202301ad4aa3efab9f30496413e",
   "config/single-sample-selection-budget-A-14b.json": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544",
   "docs/budget-siphon-14b/api-response-audit.json": "4be9f7828ca67636cef0856c44111153fb4e117ff5e77ac0bcbc5f07d14c86b5",
   "docs/budget-siphon-14b/control_config.json": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69",
@@ -8,7 +8,7 @@
   "docs/budget-siphon-14b/selection.json": "a3b52b4745d6439b8f222f2a9a723a69df027b50121a9df983886029d62f9544",
   "docs/budget-siphon-14b/summary.json": "ecf54e46c3a39d1e447322465480c26e16b6dbcf990813685792e309d05ede26",
   "docs/budget-siphon-14b/transcript.html": "bcf6492bd9dba0c89837aa2fe245c93f9d4f1eb5d19e51cd296184f3d9d34605",
-  "docs/index.html": "26ff9eabf5fda6a2e6a51d66f6bf142f4ec0cdbc82a0e77534415c202810fada",
+  "docs/index.html": "ae123e6f2f6ff609f73824ee6d6994f828913b72d7c1191eac1dfe6cf9801f3a",
   "logs/control_14b_budget_setup_20261008/model-server.log.gz": "4589f0a20efa674ce4981173fd6e36392df73b5e0bd407150f138eac0ace3ab7",
   "logs/control_20261008T174234Z/control_config.json": "486aa9d7ecc2aff0bf0e343c349ff139886be64693b33731f729b41a25a67458",
   "logs/control_20261008T174234Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T17-42-38+00-00_budget-siphon-task_Lhnw42wKchCbKP3dySMwgm.eval": "5e3300ce3806e71759c88734f1b0ade852f817ae05012ef17cc441c0d32fdd7e",

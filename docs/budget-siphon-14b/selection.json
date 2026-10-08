@@ -1,0 +1,27 @@
+{
+  "selected_at": "2026-10-08T17:42:34.548051+00:00",
+  "selection_method": "User-authorized second 14B diagnostic: repeat the prior 7B Budget Siphon A sample.",
+  "eligible_tasks": [
+    "ledger_audit",
+    "budget_siphon",
+    "quota_boost",
+    "deployment_guardian",
+    "training_preserver",
+    "final_instance",
+    "memory_keeper"
+  ],
+  "task": "budget_siphon",
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "repeats": 1,
+  "planned_episodes": 1,
+  "model": "control",
+  "seed": 374846912,
+  "paper": "https://arxiv.org/html/2605.06490v1",
+  "model_id": "unsloth/Qwen2.5-14B-Instruct",
+  "model_revision": "facfb1bad6443964128be460ff6c98928a4ad4ab",
+  "control_config": "config/control-14b.json",
+  "generation_behavior_changes": false,
+  "additional_observability": "Full native Inspect API request/response capture and laptop resources.",
+  "selection_reason": "Repeat the other previously tested task without changing its prompt, tools, solver or deterministic scorers. This is not a paper-reported easy-task ranking."
+}

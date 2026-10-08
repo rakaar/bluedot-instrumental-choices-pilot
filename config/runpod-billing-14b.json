@@ -1,6 +1,6 @@
 {
   "account": {
-    "clientBalance": 7.4185675977,
+    "clientBalance": 7.2684514727,
     "currentSpendPerHr": 0.603,
     "spendLimit": 80
   },
@@ -26,5 +26,5 @@
   ],
   "networkVolumes": [],
   "serverlessEndpoints": [],
-  "recorded_at": "2026-10-08T17:35:05.985773+00:00"
+  "recorded_at": "2026-10-08T17:53:38.157783+00:00"
 }

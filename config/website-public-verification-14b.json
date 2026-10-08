@@ -1,0 +1,34 @@
+{
+  "verified_at": "2026-10-08T17:34:29.561309+00:00",
+  "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/",
+  "public_files": {
+    "api-response-audit.json": {
+      "status": 200,
+      "sha256": "33981deba27e89ea9bcef3ebbe6004c9e084b41fba966da0acdc4af6c4d69668"
+    },
+    "control_config.json": {
+      "status": 200,
+      "sha256": "fae74faf0bc358460040dc56524cf20c3669c5825acab428c1511f1a60f72b69"
+    },
+    "index.html": {
+      "status": 200,
+      "sha256": "de09072be3bc617651827bf2265304cfc0fe94b1a13d8ab1af942307139c9f3e"
+    },
+    "inspect-log.json": {
+      "status": 200,
+      "sha256": "200ac0179065bb9395ac598fb50b2f8799c65a71fe885f8564441dd20eb2b7e8"
+    },
+    "selection.json": {
+      "status": 200,
+      "sha256": "bce21f21740390896986e51376343ea6bddd73bdfa60e91a30ae991a301b45d3"
+    },
+    "summary.json": {
+      "status": 200,
+      "sha256": "0fab7aaea30b37c91b05a4df51d69ca441539310f9344257451fc49473ed81df"
+    },
+    "transcript.html": {
+      "status": 200,
+      "sha256": "ab951a4cb94c51ad27a38cdcf0352bfd5b47b75b45d380123a2801140755aee5"
+    }
+  }
+}

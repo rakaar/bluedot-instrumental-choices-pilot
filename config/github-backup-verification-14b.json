@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-08T17:33:11.949481+00:00",
+  "repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "verified_commit": "adf552f47918bb251d70cb039b71d1aed8d70096",
+  "fresh_clone": true,
+  "sha256_matches": 43,
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "benchmark_worktree_unchanged": true
+}

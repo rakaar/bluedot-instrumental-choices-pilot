@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-09T12:23:22.736739+00:00",
+  "method": "SHA-256; this manifest excludes itself",
+  "scope": "Later manual review and report additions; original cloud artifact manifest remains tied to commit 9951229eaef35bae44f6c9d7fb640b740bd42e6f. Original native logs and scores remain unchanged.",
+  "files": {
+    "README.md": "4440c20fc56856178793f6b96e8cb5470204293b798e5e1973fc82fd8aa7875e",
+    "docs/quota-boost-32b-em-cloud/index.html": "fb363f6b9416b8c5d4e9551a74b957824cecf8d4e5a8dea4c8f2f8f48b3fa03a",
+    "docs/quota-boost-32b-em-cloud/manual-review.json": "c0fa45e6b121501082f6495953ffd1a429969c49571355d4c67e361a985ded29"
+  }
+}

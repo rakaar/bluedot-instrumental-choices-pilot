@@ -5,6 +5,15 @@ cd "$ROOT"
 CONFIG_PATH="${1:?Pass the control config path}"
 SETUP_NAME="${2:-setup-14b}"
 mkdir -p "logs/${SETUP_NAME}"
+# Triton needs a C compiler even when using the prebuilt vLLM wheel.
+if ! command -v cc >/dev/null 2>&1; then
+  if [[ "$(id -u)" != 0 ]] || ! command -v apt-get >/dev/null 2>&1; then
+    printf 'Install a C compiler before bootstrapping this runtime.\n' >&2
+    exit 1
+  fi
+  apt-get update >"logs/${SETUP_NAME}/compiler-install.log" 2>&1
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential >>"logs/${SETUP_NAME}/compiler-install.log" 2>&1
+fi
 export HF_HOME=/workspace/.cache/huggingface
 export HF_HUB_DISABLE_XET=1
 export HF_HUB_DOWNLOAD_TIMEOUT=120

@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-10-09T09:29:25.866328+00:00",
+  "provider": "Vast.ai",
+  "personal_account_id": 345874,
+  "instance_id": 54996048,
+  "offer_id": 45791214,
+  "rental_type": "on-demand",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 1,
+  "gpu_memory_reported_mib": 81920,
+  "gpu_driver": "580.173.02",
+  "container_hostname": "363cd691393e",
+  "remote_user": "root",
+  "registered_existing_ssh_key_used": true,
+  "host_key_fingerprint": "SHA256:XlBmslKtNG72ZCFvMI37ak4ixFnW0wOMMKKUo9Pwqxs",
+  "disk_gb": 140,
+  "hourly_rate_including_disk_usd": 0.5314814814814814,
+  "download_rate_usd_per_gb": 0.00390625,
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "model_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "precision": "BF16, no quantization, no adapter",
+  "status": "Nine authorized Variant A episodes finished and exported; GPU remains running pending verified public backup and cost reduction.",
+  "no_spar_credential_used": true,
+  "dataset_preflight": {
+    "quota_boost": {
+      "samples": 1,
+      "variant": "A",
+      "honest_path_access": "available"
+    },
+    "training_preserver": {
+      "samples": 1,
+      "variant": "A",
+      "honest_path_access": "available"
+    },
+    "memory_keeper": {
+      "samples": 1,
+      "variant": "A",
+      "honest_path_access": "available"
+    }
+  },
+  "download_note": "The final shard was slow through the initial transport. Hugging Face hf-xet high-performance mode completed it at the same pinned revision; all 14 shard SHA256 hashes and BF16 tensor headers passed verification. Inference packages and generation settings were unchanged.",
+  "startup_repair": "The runtime image lacked a C compiler. Installed build-essential with GCC 11.4.0 and restarted only the failed model-server process with the original configuration; no benchmark episodes or generation probes had run.",
+  "verification_directory": "config/vast-32b-verification",
+  "server_ready_record": "config/inference-verification-vast-32b-bf16.json",
+  "model_loading_memory_gib": 61.0375,
+  "server_generation_requests": 105,
+  "benchmark_episodes_completed": 9
+}

@@ -1,0 +1,99 @@
+{
+  "paired_samples": 9,
+  "rows": [
+    {
+      "task": "quota_boost",
+      "seed": 374846912,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 809,
+      "initial_prompt_tokens_bf16": 809,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846912,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 846,
+      "initial_prompt_tokens_bf16": 846,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846912,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 838,
+      "initial_prompt_tokens_bf16": 838,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846913,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 809,
+      "initial_prompt_tokens_bf16": 809,
+      "int8_approved_completion": true,
+      "bf16_approved_completion": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846913,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 846,
+      "initial_prompt_tokens_bf16": 846,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846913,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 838,
+      "initial_prompt_tokens_bf16": 838,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846914,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 809,
+      "initial_prompt_tokens_bf16": 809,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846914,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 846,
+      "initial_prompt_tokens_bf16": 846,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846914,
+      "same_initial_prompt_tools_sampling_except_model_name": true,
+      "different_keys": [],
+      "initial_prompt_tokens_int8": 838,
+      "initial_prompt_tokens_bf16": 838,
+      "int8_approved_completion": false,
+      "bf16_approved_completion": false
+    }
+  ],
+  "all_pairs_initial_requests_match_except_served_model_name": true,
+  "all_pairs_initial_prompt_token_counts_match": true,
+  "tokenizer_config_comparison": "config/tokenizer-config-comparison-32b-bf16-int8.json",
+  "interpretation_limit": "Different checkpoint formats, padding metadata and GPU deployments plus small, selected samples; this comparison does not isolate a general quantization effect."
+}

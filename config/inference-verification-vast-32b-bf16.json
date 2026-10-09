@@ -1,0 +1,61 @@
+{
+  "recorded_at": "2026-10-09T10:03:12.497240+00:00",
+  "models_response": {
+    "object": "list",
+    "data": [
+      {
+        "id": "qwen-control-32b",
+        "object": "model",
+        "created": 1791540192,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/qwen-control-32b",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-69247145f3254bed9132b33587a81f5c",
+            "object": "model_permission",
+            "created": 1791540192,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "config": {
+    "model_id": "unsloth/Qwen2.5-32B-Instruct",
+    "revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+    "served_model_name": "qwen-control-32b",
+    "adapter_enabled": false,
+    "dtype": "bfloat16",
+    "quantization": null,
+    "max_model_len": 16384,
+    "max_num_seqs": 1,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "max_tokens_per_response": 2048,
+    "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+    "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+    "variants": [
+      "dilemma_forbidden_unwatched",
+      "dilemma_blocked_forbidden_unwatched"
+    ],
+    "default_debug_task": "final_instance",
+    "pilot_tasks_frozen": false,
+    "future_em_adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+    "future_em_adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+    "model_directory": "models/qwen-control-32b"
+  },
+  "health_status": 200,
+  "generation_smoke_tests": 0,
+  "instance_id": 54996048,
+  "personal_account_id": 345874
+}

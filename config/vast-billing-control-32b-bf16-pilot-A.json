@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-10-09T10:42:01.108015+00:00",
+  "provider": "Vast.ai",
+  "personal_account_id": 345874,
+  "instance_id": 54996048,
+  "actual_status": "running",
+  "compute_plus_140gb_storage_rate_usd_per_hour": 0.5314814814814814,
+  "compute_rate_usd_per_hour": 0.4666666666666666,
+  "storage_rate_when_stopped_usd_per_hour": 0.06481481481481483,
+  "observed_account_credit_decrease_usd": 0.9440203217000054,
+  "cost_method": "Difference between dated personal-account credit snapshots; includes downloads, setup, tests and elapsed reporting time. This is a usage snapshot, not a settled invoice.",
+  "other_personal_instances": 0,
+  "separate_volumes": 0,
+  "serverless_endpoints": 0,
+  "serverless_workergroups": 0,
+  "maximum_authorized_batch_cost_usd": 5,
+  "further_episodes_queued": 0
+}

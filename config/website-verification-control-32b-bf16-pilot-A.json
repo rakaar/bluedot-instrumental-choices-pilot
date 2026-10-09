@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-09T10:44:23.484803+00:00",
+  "preview_url": "http://127.0.0.1:8132/control-32b-bf16-pilot-A/",
+  "episode_count": 9,
+  "trace_pages": 9,
+  "total_trace_messages": 221,
+  "all_static_relative_download_links_resolve": true,
+  "task_filters_rendered_rows": {
+    "all": 9,
+    "quota_boost": 3,
+    "training_preserver": 3,
+    "memory_keeper": 3
+  },
+  "default_viewport_overflow": false,
+  "javascript_errors": [],
+  "method": "Rendered report inspected with CUA in Edge; task filters checked with visible DOM. Local generated files checked for relative links."
+}

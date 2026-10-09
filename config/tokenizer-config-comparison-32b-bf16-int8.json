@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-09T10:35:02.896195+00:00",
+  "bf16_model": "unsloth/Qwen2.5-32B-Instruct",
+  "int8_model": "Qwen/Qwen2.5-32B-Instruct-GPTQ-Int8",
+  "pinned_config_hashes_verified": true,
+  "identical_chat_template": true,
+  "different_tokenizer_config_keys": [
+    "added_tokens_decoder",
+    "pad_token",
+    "padding_side"
+  ],
+  "bf16_pad_token": "<|PAD_TOKEN|>",
+  "int8_pad_token": "<|endoftext|>",
+  "bf16_padding_side": "left",
+  "int8_padding_side": null,
+  "added_bf16_token_ids": [
+    "151665"
+  ],
+  "shared_added_token_entries_identical": true,
+  "interpretation": "The complete tokenizer configurations differ in padding metadata and the extra BF16 pad token. The released chat template is identical. The two checkpoint releases and different GPUs mean this pilot does not isolate quantization as the only causal difference."
+}

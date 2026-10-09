@@ -1,6 +1,7 @@
 .tools/
 vendor/
 .runpod/
+.vast/
 references/*.pdf
 references/*.txt
 backups/*

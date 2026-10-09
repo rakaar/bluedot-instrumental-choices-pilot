@@ -1,0 +1,7 @@
+{
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "vllm": "0.8.5.post1",
+  "cuda_available": true,
+  "bf16_supported": true
+}

@@ -1,0 +1,17 @@
+{
+  "task": "training_preserver",
+  "seed": 374846914,
+  "selected_at": "2026-10-09T09:25:05.783386+00:00",
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "repeats": 1,
+  "planned_episodes": 1,
+  "model": "control",
+  "selection_method": "Frozen three-task control screen; no hints, prompt changes or episode retries.",
+  "control_config": "config/control-32b.json",
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "model_revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "sample_sequence": 3,
+  "batch_plan": "config/control-32b-bf16-pilot-A-plan.json",
+  "generation_behavior_changes": false
+}

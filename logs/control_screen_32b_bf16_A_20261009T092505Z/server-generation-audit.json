@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-09T10:38:12.961318+00:00",
+  "successful_server_generation_requests": 105.0,
+  "native_model_events": 105,
+  "counts_match": true,
+  "generation_probes_before_batch": 0,
+  "successful_requests_by_finish_reason": {
+    "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\",model_name=\"qwen-control-32b\"}": 105.0,
+    "vllm:request_success_total{engine=\"0\",finished_reason=\"length\",model_name=\"qwen-control-32b\"}": 0.0,
+    "vllm:request_success_total{engine=\"0\",finished_reason=\"abort\",model_name=\"qwen-control-32b\"}": 0.0
+  },
+  "all_nine_episodes_exported": true
+}

@@ -1,0 +1,13 @@
+{
+  "archive_sha256": "18954df55e1370d43e7b3b5af30c769d53e0a327eb61c33e52e7653976edb8cd",
+  "remote_archive_sha256_match": true,
+  "excluded": [
+    "model weights",
+    "credentials",
+    "SSH configuration",
+    "download logs containing signed URLs"
+  ],
+  "source_note": "This is the code actually transferred for setup. The current bootstrap script also includes the compiler dependency fix.",
+  "final_server_log_sha256": "2d167a959f29c464b415720556aec0d5da7fcf5e9593b9c9b387b1e4dc1859ad",
+  "final_server_log_remote_hash_match": true
+}

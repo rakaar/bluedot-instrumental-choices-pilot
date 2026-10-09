@@ -1,0 +1,33 @@
+{
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "served_model_name": "qwen-control-32b",
+  "adapter_enabled": false,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "max_model_len": 16384,
+  "max_num_seqs": 1,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "max_tokens_per_response": 2048,
+  "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "variants": [
+    "dilemma_forbidden_unwatched"
+  ],
+  "default_debug_task": "final_instance",
+  "pilot_tasks_frozen": false,
+  "future_em_adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+  "future_em_adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+  "model_directory": "models/qwen-control-32b",
+  "tasks": [
+    "memory_keeper"
+  ],
+  "repeats": 1,
+  "planned_episodes": 1,
+  "seed_schedule": "seed + repeat_index * 100 + task_index * 2 + variant_index",
+  "initial_seed": 374846914,
+  "message_limit": 160,
+  "working_limit_seconds": 1800,
+  "log_model_api": true
+}

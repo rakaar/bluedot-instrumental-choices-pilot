@@ -1,0 +1,80 @@
+"""Establish the cloud runner's own pinned SSH connection; no laptop tunnel."""
+import ipaddress
+import json
+import os
+from pathlib import Path
+import subprocess
+import time
+import urllib.request
+
+from cloud_vast_instance import PLAN, ROOT, snapshot
+
+
+def main():
+    temporary = Path(os.environ['RUNNER_TEMP'])
+    private = temporary / 'bluedot-cloud-ssh-key'
+    private.write_text(os.environ['CLOUD_TRIAL_SSH_KEY'] + '\n')
+    private.chmod(0o600)
+    row = snapshot()
+    if row['actual_status'] != 'running' or row['intended_status'] != 'running':
+        raise RuntimeError('The authorized personal instance is not running.')
+    address = str(ipaddress.ip_address(row['public_ipaddr']))
+    port = int(row['ports']['22/tcp'][0]['HostPort'])
+    pin = json.loads((ROOT / 'config/em-32b-cloud-connection.json').read_text())
+    known = temporary / 'bluedot-cloud-known-hosts'
+    known.write_text(f'[{address}]:{port} {pin["host_key"]}\n')
+    config = temporary / 'bluedot-cloud-ssh-config'
+    config.write_text(f'Host trial-gpu\n  HostName {address}\n  Port {port}\n  User root\n'
+        f'  IdentityFile {private}\n  IdentitiesOnly yes\n  UserKnownHostsFile {known}\n'
+        '  StrictHostKeyChecking yes\n  BatchMode yes\n  ConnectTimeout 20\n'
+        '  ServerAliveInterval 20\n  ServerAliveCountMax 3\n')
+    check = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+        'cd /workspace/bluedot-ic && nvidia-smi --query-gpu=name,memory.total --format=csv,noheader'],
+        capture_output=True, text=True, timeout=35)
+    if check.returncode != 0:
+        raise RuntimeError('Pinned cloud-to-GPU SSH connection failed: ' + check.stderr[-1000:])
+    if 'A100' not in check.stdout or '81920' not in check.stdout:
+        raise RuntimeError('GPU identity check failed over the cloud connection.')
+    out = ROOT / 'logs' / PLAN['trial_id']
+    out.mkdir(parents=True, exist_ok=True)
+    (out / 'cloud-connection-verification.json').write_text(json.dumps({'instance': row,
+        'host_key_fingerprint': pin['host_key_fingerprint'], 'runner_to_gpu_ssh_verified': True,
+        'model_endpoint': 'http://127.0.0.1:18003/v1', 'laptop_tunnel_required': False}, indent=2) + '\n')
+    with (temporary / 'bluedot-tunnel.log').open('w') as log:
+        subprocess.Popen(['ssh', '-F', str(config), '-N', '-o', 'ExitOnForwardFailure=yes',
+            '-L', '127.0.0.1:18003:127.0.0.1:8000', 'trial-gpu'],
+            stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+    with (out / 'gpu-prepare-console.txt').open('w') as log:
+        subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+            'cd /workspace/bluedot-ic && HF_HOME=/workspace/.cache/huggingface '
+            'HF_HUB_DOWNLOAD_TIMEOUT=120 inference/.venv/bin/python -u scripts/cloud_gpu_trial.py prepare'],
+            stdout=log, stderr=subprocess.STDOUT, timeout=900, check=True)
+    subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+        'cd /workspace/bluedot-ic && inference/.venv/bin/python -u scripts/cloud_gpu_trial.py launch'],
+        timeout=30, check=True)
+    deadline = time.time() + 600
+    while time.time() < deadline:
+        try:
+            req = urllib.request.Request('http://127.0.0.1:18003/v1/models',
+                headers={'Authorization': 'Bearer local-ssh-only'})
+            with urllib.request.urlopen(req, timeout=10) as response:
+                models = json.load(response)
+            adapter = next((m for m in models['data'] if m['id'] == 'qwen-em-32b'), None)
+            if adapter:
+                (out / 'server-ready.json').write_text(json.dumps({'models': models,
+                    'adapter_registered': True, 'generation_probe_requests': 0}, indent=2) + '\n')
+                break
+        except (OSError, ValueError):
+            pass
+        time.sleep(10)
+    else:
+        raise RuntimeError('Adapter model server did not become ready within ten minutes.')
+    subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+        'cd /workspace/bluedot-ic && tar -czf - logs/' + PLAN['trial_id'] + '/gpu'],
+        stdout=(out / 'gpu-setup.tar.gz').open('wb'), timeout=40, check=True)
+    subprocess.run(['tar', '-xzf', str(out / 'gpu-setup.tar.gz'), '-C', str(ROOT)], check=True)
+    print('Cloud runner connected; adapter registered; no generation probes executed.', flush=True)
+
+
+if __name__ == '__main__':
+    main()

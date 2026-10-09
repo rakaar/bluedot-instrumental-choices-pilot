@@ -24,7 +24,7 @@ def redact(value):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['snapshot', 'resources', 'create', 'instance', 'stop', 'destroy'])
+    parser.add_argument('action', choices=['snapshot', 'resources', 'create', 'instance', 'start', 'stop', 'destroy'])
     parser.add_argument('--id', type=int)
     parser.add_argument('--body', type=Path)
     parser.add_argument('--output', type=Path)
@@ -75,6 +75,12 @@ def main():
             raise SystemExit('The requested instance is not owned by the personal account.')
         if args.action == 'instance':
             result = {'account': account, 'instance': {k:row.get(k) for k in INSTANCE_FIELDS}}
+        elif args.action == 'start':
+            if (args.id != 54996048 or row.get('gpu_ram') != 81920
+                    or row.get('num_gpus') != 1 or row.get('disk_space') != 140
+                    or float(row.get('dph_total', 999)) > 0.55):
+                raise SystemExit('Resume guard rejected a different resource or rate above $0.55/hour.')
+            result = {'account': account, 'start': call('PUT', f'/v0/instances/{args.id}/', {'state':'running'})}
         elif args.action == 'stop':
             result = {'account': account, 'stop': call('PUT', f'/v0/instances/{args.id}/', {'state':'stopped'})}
         else:

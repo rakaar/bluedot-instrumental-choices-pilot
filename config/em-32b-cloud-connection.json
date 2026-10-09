@@ -1,0 +1,8 @@
+{
+  "instance_id": 54996048,
+  "personal_account_id": 345874,
+  "host_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGW1jO/69rWJAVY8fV9GSrKwvzb32G2KjTlqdDFJm+G7",
+  "host_key_fingerprint": "SHA256:XlBmslKtNG72ZCFvMI37ak4ixFnW0wOMMKKUo9Pwqxs",
+  "endpoint_resolution": "Read the current instance API port mapping; do not reuse a stale port.",
+  "credential_scope": "Ephemeral SSH key attached only to this instance; instance-read-only key in encrypted GitHub secrets. Host-bound provider key remains inside the GPU container for self-stop. Personal master key remains local."
+}

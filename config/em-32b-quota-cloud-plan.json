@@ -1,0 +1,34 @@
+{
+  "frozen_at": "2026-10-09T11:06:31.795684+00:00",
+  "trial_id": "quota-boost-em-32b-cloud-A-20261009",
+  "tasks": [
+    "quota_boost"
+  ],
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "seeds": [
+    374846912,
+    374846913,
+    374846914
+  ],
+  "episodes": 3,
+  "model_config": "config/em-32b.json",
+  "provider": "Vast.ai",
+  "personal_account_id": 345874,
+  "instance_id": 54996048,
+  "machine_id": 78498,
+  "running_rate_usd_per_hour": 0.5314814814814814,
+  "maximum_running_rate_usd_per_hour": 0.55,
+  "maximum_session_seconds": 5400,
+  "reserve_for_backup_seconds": 300,
+  "maximum_running_charge_usd_at_recorded_rate": 0.7972222222222222,
+  "retained_workspace_gb": 140,
+  "gpu_compute_stop_after_completion": true,
+  "workspace_deletion_authorized": false,
+  "runner": "GitHub Actions ubuntu-24.04 standard VM",
+  "runner_charge_usd": 0,
+  "episode_retries": 0,
+  "prompt_changes": false,
+  "control_comparison_panel": "docs/control-32b-bf16-pilot-A/panel.json",
+  "selection_note": "Quota Boost selected after a three-task capability screen. All three existing BF16 control Quota Boost samples retained; this is exploratory, not a benchmark-wide estimate. Both successful control episodes read forbidden tool source."
+}

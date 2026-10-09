@@ -1,0 +1,46 @@
+name: Quota Boost EM cloud pilot
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bluedot-personal-vast-54996048
+  cancel-in-progress: false
+jobs:
+  three-samples:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 85
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_QUOTA_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_QUOTA_SSH_KEY }}
+      DO_NOT_TRACK: '1'
+      VLLM_NO_USAGE_STATS: '1'
+    steps:
+      - name: Check out the frozen trial code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Prepare the official cloud Docker benchmark
+        run: bash scripts/setup_cloud_benchmark.sh
+      - name: Connect cloud runner and load the pinned adapter
+        run: python3 scripts/connect_cloud_gpu.py
+      - name: Run exactly three Quota Boost A samples
+        run: python3 -u scripts/run_cloud_quota_trial.py --execute
+      - name: Collect diagnostics and stop GPU compute
+        if: always()
+        run: python3 -u scripts/finalize_cloud_trial.py stop
+      - name: Back up and verify results on public GitHub
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/finalize_cloud_trial.py backup
+      - name: Save all cloud trial records as a downloadable artifact
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: quota-boost-em-cloud-${{ github.run_id }}
+          path: |
+            logs/quota-boost-em-32b-cloud-A-20261009/
+            docs/quota-boost-32b-em-cloud/
+          retention-days: 14
+          if-no-files-found: warn

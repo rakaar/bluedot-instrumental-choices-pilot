@@ -587,7 +587,20 @@ verified public backup. No RunPod resources or billing remain. Its project SSH
 connection files were archived locally so the old endpoint cannot be reused by
 the helpers. Existing SSH keys were preserved. Local report servers were closed.
 
-## Where the benchmark runs
+## Cloud EM Quota Boost pilot
+
+The three matched Quota Boost A EM samples can run through the manually
+dispatched [cloud workflow](.github/workflows/quota-em-cloud.yml). The official
+Docker benchmark runs on a standard GitHub VM and connects directly to the
+retained personal Vast A100 over pinned SSH. The laptop is not part of this
+connection. The frozen [plan](config/em-32b-quota-cloud-plan.json) preserves the
+base, tokenizer, sampling settings and three seeds. All outcomes and native
+traces are backed up automatically; compute stops on completion or at the
+90-minute session limit. The paid 140 GB workspace is retained. This is an
+exploratory task selected after capability screening; both successful control
+samples read forbidden tool source.
+
+## Where the earlier benchmark runs took place
 
 The official benchmark requires Docker Compose. RunPod GPU pods are containers
 and do not support the required nested Docker runtime. The model will be served

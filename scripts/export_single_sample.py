@@ -26,6 +26,7 @@ def main() -> None:
     parser.add_argument('monitor_directory', type=Path)
     parser.add_argument('eval_file', type=Path)
     parser.add_argument('--observation', help='Descriptive trace review; does not change deterministic scores.')
+    parser.add_argument('--resource-host', choices=['laptop', 'cloud'], default='laptop')
     args = parser.parse_args()
     directory = args.monitor_directory.resolve()
     selection = json.loads((directory / 'selection.json').read_text())
@@ -46,6 +47,7 @@ def main() -> None:
                    for event in data['samples'][0]['events']
                    if event['event'] == 'tool' and event.get('error')]
     summary = {
+        'resource_host': args.resource_host,
         'status': log.status, 'sample_id': sample.id, 'sample_error': sample.error.model_dump(mode='json') if sample.error else None,
         'eval_file': str(args.eval_file.resolve()), 'messages': len(sample.messages), 'tool_calls': len(calls),
         'model_usage': data.get('stats', {}).get('model_usage'), 'scores': scores,
@@ -60,8 +62,8 @@ def main() -> None:
         'selection': selection,
         'control_config': control_config,
         'trace_review': args.observation,
-        'minimum_laptop_available_ram_gib': min(row['mem_available_bytes'] for row in rows) / 1024**3,
-        'maximum_laptop_swap_used_gib': max(row['swap_used_bytes'] for row in rows) / 1024**3,
+        f'minimum_{args.resource_host}_available_ram_gib': min(row['mem_available_bytes'] for row in rows) / 1024**3,
+        f'maximum_{args.resource_host}_swap_used_gib': max(row['swap_used_bytes'] for row in rows) / 1024**3,
         'swap_in_pages_delta': rows[-1]['swap_in_pages'] - rows[0]['swap_in_pages'],
         'swap_out_pages_delta': rows[-1]['swap_out_pages'] - rows[0]['swap_out_pages'],
         'observed_peak_sandbox_memory_mib': max([memory_bytes(c['MemUsage']) for c in containers] or [0]) / 1024**2,
@@ -105,12 +107,17 @@ body{font:16px/1.55 system-ui,sans-serif;background:#f5f4ef;color:#232923;margin
 <h2>Observed behavior</h2><p>$OBSERVATIONS</p>
 <h2>Deterministic outcome</h2><div class="cards">''' + ''.join(cards) + '''</div><h2>Laptop resources</h2><p>''' + (
         f'Observed sandbox peak: {summary["observed_peak_sandbox_memory_mib"]:.0f} MiB. '
-        f'Lowest available laptop RAM: {summary["minimum_laptop_available_ram_gib"]:.2f} GiB. '
+        f'Lowest available {args.resource_host} RAM: {summary[f"minimum_{args.resource_host}_available_ram_gib"]:.2f} GiB. '
         f'Swap pages in/out during monitoring: {summary["swap_in_pages_delta"]}/{summary["swap_out_pages_delta"]}. '
         'Values were sampled about every 5–7 seconds; brief peaks between samples may be higher.'
     ) + '''</p><h2>Full observable transcript</h2><p>Model responses, tool calls and tool results are retained below. These are visible outputs, not access to hidden reasoning.</p><p><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button></p>''' + ''.join(turns) + '</main></html>'
     precision = ('GPTQ INT8 weights, BF16 computation' if control_config.get('quantization_bits') == 8 else 'BF16')
     page = page.replace('BF16 Qwen2.5-7B-Instruct', precision + ' ' + escaped(control_config['model_id'].split('/')[-1]))
+    if args.resource_host == 'cloud':
+        page = page.replace('<h2>Laptop resources</h2>', '<h2>Cloud runner resources</h2>')
+    if control_config.get('adapter_enabled'):
+        page = page.replace('Qwen control', 'Qwen with EM adapter').replace('One control-model sample', 'One EM-adapter model sample')
+        page = page.replace(' · no adapter', ' · pinned bad-medical-advice adapter')
     page = page.replace('$TASK_NAME', escaped(selection['task'])).replace('$VARIANT_LABEL', escaped(selection['variant_letter'])).replace('$OBSERVATIONS', escaped(observations))
     (directory / 'transcript.html').write_text(page)
     print(json.dumps(summary, indent=2, ensure_ascii=False))

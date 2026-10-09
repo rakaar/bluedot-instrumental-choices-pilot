@@ -1,0 +1,2 @@
+scenario,variant_profile,model_under_test,repeat_id,observed_sample_count,expected_sample_count,unique_variant_count,duplicate_sample_count,sample_error_count,incomplete,observed_variants,missing_variants,sample_error_variants
+training_preserver,benchmark,openai-api/control/qwen-control-32b-int8,repeat_01,1,8,1,0,0,True,"[""A""]","[""B"", ""C"", ""D"", ""E"", ""F"", ""G"", ""H""]",[]

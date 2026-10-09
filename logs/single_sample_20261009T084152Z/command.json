@@ -1,0 +1,14 @@
+[
+  "/home/rka/Documents/ChatGPT/bluedot project/scripts/run_control.sh",
+  "--tasks",
+  "training_preserver",
+  "--variants",
+  "dilemma_forbidden_unwatched",
+  "--repeats",
+  "1",
+  "--seed",
+  "374846914",
+  "--config",
+  "/home/rka/Documents/ChatGPT/bluedot project/config/control-32b-int8.json",
+  "--execute"
+]

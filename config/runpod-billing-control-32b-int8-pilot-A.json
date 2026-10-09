@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-09T08:48:59.774442+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "desired_status": "RUNNING",
+  "compute_rate_usd_per_hour": 0.59,
+  "account_spend_usd_per_hour": 0.604,
+  "balance_usd": 4.2012090357,
+  "balance_before_batch_usd": 4.4019518792,
+  "account_balance_decrease_usd": 0.2007428435000005,
+  "elapsed_gpu_time_estimate_usd": 0.20009999989555555,
+  "budget_usd": 1.0,
+  "new_episodes_completed": 7,
+  "extra_episodes_queued": 0,
+  "pod_lifecycle_action_taken": false
+}

@@ -1,0 +1,10 @@
+{
+  "url": "http://127.0.0.1:8132/control-32b-int8-pilot-A/",
+  "episode_count": 9,
+  "trace_pages": 9,
+  "total_trace_turns": 144,
+  "task_filtering": "passed",
+  "download_links": "passed",
+  "mobile_overflow": false,
+  "javascript_errors": []
+}

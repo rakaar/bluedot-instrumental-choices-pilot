@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-09T08:29:07.125436+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "balance_usd": 4.4019518792,
+  "current_spend_usd_per_hour": 0.604,
+  "model": "qwen-control-32b-int8",
+  "maximum_additional_budget_usd": 1.0
+}

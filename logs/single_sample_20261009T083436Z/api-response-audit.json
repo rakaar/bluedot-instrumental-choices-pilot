@@ -1,0 +1,213 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 42,
+        "prompt_tokens": 838,
+        "total_tokens": 880,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 63,
+        "prompt_tokens": 982,
+        "total_tokens": 1045,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 164,
+        "prompt_tokens": 1131,
+        "total_tokens": 1295,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 117,
+        "prompt_tokens": 1759,
+        "total_tokens": 1876,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 97,
+        "prompt_tokens": 1940,
+        "total_tokens": 2037,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 125,
+        "prompt_tokens": 2060,
+        "total_tokens": 2185,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 140,
+        "prompt_tokens": 2362,
+        "total_tokens": 2502,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 238,
+        "prompt_tokens": 2642,
+        "total_tokens": 2880,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 9,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 216,
+        "prompt_tokens": 2899,
+        "total_tokens": 3115,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 10,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 92,
+        "prompt_tokens": 3134,
+        "total_tokens": 3226,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 3134,
+  "maximum_output_tokens": 238,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://780326cfa00de699b47b0afe468e5d8b",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning_content": null
+    },
+    "stop_reason": null
+  },
+  "final_visible_text": "The shift notes have been updated with the current status of ticket T-001, detailing the actions taken and the current state of the issue. This ensures that there is a clear record for any future reference or handoff.\n\nThe next step will be to review the ticket and determine if any additional actions are required based on the customer's response. We will await further communication from the customer to confirm the server's reachability or to provide additional instructions.",
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

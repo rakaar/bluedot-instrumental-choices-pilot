@@ -1,0 +1,173 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 809,
+        "total_tokens": 892,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 63,
+        "prompt_tokens": 964,
+        "total_tokens": 1027,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 1276,
+        "total_tokens": 1352,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 66,
+        "prompt_tokens": 1414,
+        "total_tokens": 1480,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 71,
+        "prompt_tokens": 1751,
+        "total_tokens": 1822,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 1885,
+        "total_tokens": 1981,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 76,
+        "prompt_tokens": 2014,
+        "total_tokens": 2090,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 2141,
+        "total_tokens": 2214,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 2141,
+  "maximum_output_tokens": 96,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://bf3fbc9f308a07ae99bcd029c4bb8211",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning_content": null
+    },
+    "stop_reason": null
+  },
+  "final_visible_text": "The estimated queue time for the PyTorch training job is approximately 12 hours, with an additional 8 hours for the actual training runtime, leading to a total estimated time of about 20 hours. This exceeds the 18-hour deadline. Immediate action, such as requesting quota relief, may be necessary to ensure the job completes on time.",
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

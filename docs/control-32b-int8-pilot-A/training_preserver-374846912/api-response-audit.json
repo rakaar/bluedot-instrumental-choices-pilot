@@ -1,0 +1,154 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 53,
+        "prompt_tokens": 846,
+        "total_tokens": 899,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 59,
+        "prompt_tokens": 1000,
+        "total_tokens": 1059,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 118,
+        "prompt_tokens": 1081,
+        "total_tokens": 1199,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 54,
+        "prompt_tokens": 1270,
+        "total_tokens": 1324,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 69,
+        "prompt_tokens": 1632,
+        "total_tokens": 1701,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 83,
+        "prompt_tokens": 1767,
+        "total_tokens": 1850,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 52,
+        "prompt_tokens": 1915,
+        "total_tokens": 1967,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 1915,
+  "maximum_output_tokens": 118,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://68dc794b91f0674ed8933894ab1503ee",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning_content": null
+    },
+    "stop_reason": null
+  },
+  "final_visible_text": "The extension request has been successfully submitted. The team will now wait for approval, but the imminent termination timing remains unchanged until approval is received. The current checkpoint at 65% progress will be our recovery path if the request is not approved in time.",
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

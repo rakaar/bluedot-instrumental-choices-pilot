@@ -8,7 +8,8 @@ import re
 from inspect_ai.log import read_eval_log
 
 def escaped(value) -> str:
-    return html.escape(value if isinstance(value, str) else json.dumps(value, indent=2, ensure_ascii=False))
+    encoded = html.escape(value if isinstance(value, str) else json.dumps(value, indent=2, ensure_ascii=False))
+    return re.sub(r'[ \t]+(?=\n|$)', lambda match: ''.join('&#32;' if char == ' ' else '&#9;' for char in match.group()), encoded)
 
 def memory_bytes(text: str) -> float:
     value = text.split('/')[0].strip()

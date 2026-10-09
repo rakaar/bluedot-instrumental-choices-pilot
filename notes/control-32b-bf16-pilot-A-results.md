@@ -148,3 +148,23 @@ weights and download logs containing signed URLs are excluded.
 - [Setup and personal-account provenance](../config/vast-32b-bf16-setup.json).
 - [Dated billing snapshot](../config/vast-billing-control-32b-bf16-pilot-A.json).
 - [Actual remote source and verification](../logs/remote_vast_final_32b_bf16_A_20261009T092505Z/).
+
+## Later compute-stop and workspace retention
+
+The public backup was verified from a fresh credential-free GitHub clone: all
+331 files in the initial manifest matched at artifact commit
+`d31f48a946b928866d22528faccda033d2aed8cb`. All nine public trace pages and
+five report/data pages matched their local SHA-256 hashes. The initial
+manifest is a dated snapshot of that commit; this later lifecycle addendum
+and README update are recorded in a separate retention manifest.
+
+After verification, Vast compute was stopped. The provider reports actual
+status `exited` and intended status `stopped`, with no active mapped ports.
+The user then explicitly chose **Keep the paid workspace**. The 140 GB disk
+remains allocated, at approximately $0.0648/hour or $1.56/day, while GPU compute
+billing is zero. The dated total account-credit decrease was about $1.03.
+There are no other personal instances, separate volumes, serverless endpoints
+or worker groups. No restart, deletion or new model episode is queued. This
+retention state is not zero total billing. The current endpoint must be
+verified again before any user-authorized resume. See the
+[retention record](../config/vast-retention-control-32b-bf16-pilot-A.json).

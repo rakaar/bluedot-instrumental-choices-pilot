@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-09T10:54:49.500446+00:00",
+  "method": "SHA-256 of final follow-up files; manifest excluded from itself",
+  "prior_artifact_commit": "d31f48a946b928866d22528faccda033d2aed8cb",
+  "prior_artifact_manifest": "config/artifact-checksums-control-32b-bf16-pilot-A.json",
+  "prior_manifest_is_historical": true,
+  "files": {
+    "README.md": "44dbbbd55b833fc02dc1f620878e1f8f97b130df12a905f5495170e853a56b34",
+    "notes/control-32b-bf16-pilot-A-results.md": "c7c3afb027f3890cc6a7dcaafb1e9a1256289a45498197405972cca7fb057121",
+    "config/github-backup-verification-control-32b-bf16-pilot-A.json": "fa3a26c70b25dfba15d5b20f4229f7e2c9f5342c78d589ab0836a322177a1988",
+    "config/vast-retention-control-32b-bf16-pilot-A.json": "ca9f1a5456cf9e6b2633dccebb4bb79030450eb4f027a7e9473755909476701c",
+    "config/website-public-verification-control-32b-bf16-pilot-A.json": "6e208a750d16a7f5c888d77a0ae56a535b40762b046e23e08260fc022c1db47d"
+  }
+}

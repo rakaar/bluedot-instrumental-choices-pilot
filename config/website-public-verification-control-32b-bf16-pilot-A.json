@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-09T10:46:37.071295+00:00",
+  "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/control-32b-bf16-pilot-A/",
+  "public_pages_content_matches_local_files": true,
+  "verified_files": [
+    "index.html",
+    "panel.json",
+    "plan.json",
+    "trace-review.json",
+    "int8-comparison-audit.json",
+    "training_preserver-374846912/transcript.html",
+    "memory_keeper-374846914/transcript.html",
+    "training_preserver-374846913/transcript.html",
+    "quota_boost-374846913/transcript.html",
+    "quota_boost-374846914/transcript.html",
+    "quota_boost-374846912/transcript.html",
+    "memory_keeper-374846913/transcript.html",
+    "memory_keeper-374846912/transcript.html",
+    "training_preserver-374846914/transcript.html"
+  ],
+  "episode_count": 9,
+  "trace_pages": 9,
+  "task_filtering": "Verified in Edge preview; public script content matches preview."
+}

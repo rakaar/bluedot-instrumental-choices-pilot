@@ -49,6 +49,13 @@ setup and downloads, below the $5 cap. The GPU was still running at that snapsho
 later lifecycle records supersede it. No further episodes are queued. See the
 [billing record](config/vast-billing-control-32b-bf16-pilot-A.json).
 
+After public backup and website verification, Vast GPU compute was stopped.
+The user explicitly chose to retain the paid 140 GB workspace. Current storage
+billing is approximately $0.0648/hour ($1.56/day); GPU compute billing is zero.
+The later total credit decrease was about $1.03. See the
+[retention and compute-stop record](config/vast-retention-control-32b-bf16-pilot-A.json).
+This is not zero total billing. No restart, deletion or further test is queued.
+
 ## Three-task INT8 control screen: 1 approved completion in 9, 9 October 2026
 
 [Read the full nine-sample report](https://rakaar.github.io/bluedot-instrumental-choices-pilot/control-32b-int8-pilot-A/).

@@ -1,0 +1,18 @@
+{
+  "gpu": "NVIDIA A100 80GB PCIe, 81920 MiB",
+  "adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+  "adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+  "sha256": "1e3ab184e8ab959be4bb3447c32c2303486bf74ecb36deeeeaae1449aa6eb2dd",
+  "size": 1073863208,
+  "tensor_count": 896,
+  "stored_tensor_dtypes": [
+    "F32"
+  ],
+  "inference_lora_dtype": "bfloat16",
+  "rank": 32,
+  "use_rslora": true,
+  "lora_scaling": 11.31370849898476,
+  "base_tokenizer_preserved": true,
+  "model_generation_requests": 0,
+  "vllm_adapter_config_validation_passed": true
+}

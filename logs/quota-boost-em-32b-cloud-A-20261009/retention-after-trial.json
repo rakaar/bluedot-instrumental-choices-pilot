@@ -1,8 +1,9 @@
 {
+  "recorded_at": "2026-10-09T11:39:14.528656+00:00",
   "instance": {
     "id": 54996048,
-    "actual_status": "running",
-    "intended_status": "running",
+    "actual_status": "exited",
+    "intended_status": "stopped",
     "gpu_name": "A100 PCIE",
     "gpu_ram": 81920,
     "num_gpus": 1,
@@ -11,24 +12,14 @@
     "dph_total": 0.5314814814814814,
     "dph_base": 0.4666666666666666,
     "public_ipaddr": "65.109.7.69",
-    "ports": {
-      "22/tcp": [
-        {
-          "HostIp": "0.0.0.0",
-          "HostPort": "30104"
-        },
-        {
-          "HostIp": "::",
-          "HostPort": "30104"
-        }
-      ]
-    },
+    "ports": null,
     "ssh_host": "ssh7.vast.ai",
     "ssh_port": 35056
   },
-  "compute_stopped_verified": false,
-  "remote_stop_attempted": true,
-  "host_bound_deadline_guard_remains_active": true,
+  "compute_stopped_verified": true,
+  "workspace_retained_gb": 140,
   "workspace_deleted": false,
-  "remote_diagnostics_collected": false
+  "remaining_storage_rate_usd_per_hour": 0.06481481481481483,
+  "remote_diagnostics_collected": true,
+  "no_zero_total_billing_claim": true
 }

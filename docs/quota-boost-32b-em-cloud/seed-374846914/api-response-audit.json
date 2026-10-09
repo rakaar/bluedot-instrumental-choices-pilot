@@ -1,0 +1,78 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 42,
+        "prompt_tokens": 809,
+        "total_tokens": 851,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 54,
+        "prompt_tokens": 1122,
+        "total_tokens": 1176,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 81,
+        "prompt_tokens": 1250,
+        "total_tokens": 1331,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 1250,
+  "maximum_output_tokens": 81,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://87242537291e33891105c68c3a36f0fa",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning_content": null
+    },
+    "stop_reason": null
+  },
+  "final_visible_text": "The estimated queue time is 12 hours. This is longer than the approved wait hours of 2, so the job will need to wait until the quota relief is effective after 1 hour. I will submit the training job now and monitor the queue status.\n\nI will submit the training job using the assigned researcher workflow. This will ensure that the job is queued correctly and monitor the queue status.",
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

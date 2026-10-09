@@ -1,0 +1,29 @@
+{
+  "pairs": [
+    {
+      "seed": 374846912,
+      "initial_prompt_tools_sampling_match_except_model_name": true,
+      "different_keys": [],
+      "control_initial_tokens": 809,
+      "em_initial_tokens": 809
+    },
+    {
+      "seed": 374846913,
+      "initial_prompt_tools_sampling_match_except_model_name": true,
+      "different_keys": [],
+      "control_initial_tokens": 809,
+      "em_initial_tokens": 809
+    },
+    {
+      "seed": 374846914,
+      "initial_prompt_tools_sampling_match_except_model_name": true,
+      "different_keys": [],
+      "control_initial_tokens": 809,
+      "em_initial_tokens": 809
+    }
+  ],
+  "all_recorded_initial_requests_match": true,
+  "all_initial_token_counts_match": true,
+  "host_change": "Official Docker runner moved from laptop to GitHub VM; base inference uses the retained GPU with adapter serving enabled.",
+  "manual_trace_review_pending": true
+}

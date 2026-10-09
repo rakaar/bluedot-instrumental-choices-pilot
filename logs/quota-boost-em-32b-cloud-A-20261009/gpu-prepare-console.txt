@@ -1,0 +1,20 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+Verified model-00001-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00002-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00003-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00004-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00005-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00006-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00007-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00008-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00009-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00010-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00011-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00012-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00013-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Verified model-00014-of-00014.safetensors: SHA-256 matches, tensor types ['BF16']
+Tokenizer and chat-template fingerprints saved; no weights loaded.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:00<00:00,  1.84it/s]Fetching 2 files: 100%|██████████| 2/2 [00:27<00:00, 13.79s/it]Fetching 2 files: 100%|██████████| 2/2 [00:27<00:00, 13.79s/it]
+INFO 10-09 11:32:24 [__init__.py:239] Automatically detected platform cuda.
+INFO 10-09 11:32:25 [peft_helper.py:56] Loading LoRA weights trained with rsLoRA.

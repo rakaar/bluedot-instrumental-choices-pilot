@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-09T08:02:14.207013+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "desired_status": "RUNNING",
+  "user_instruction": "Keep it running",
+  "lifecycle_action_taken": false,
+  "current_spend_per_hour_usd": 0.604,
+  "balance_usd": 4.7044532181,
+  "balance_decrease_since_rental_usd": 0.2934050138999993,
+  "additional_episodes_queued": false
+}

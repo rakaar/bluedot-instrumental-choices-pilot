@@ -75,7 +75,7 @@ the 16,384-token context limit and reported capacity for 25,552 KV-cache tokens.
 The sandbox's sampled peak was 1,138 MiB and minimum available laptop RAM was
 6.53 GiB. The inference weights remained on RunPod.
 
-Pod `qhehmlbuv0up3i` remains running pending fresh lifecycle confirmation, at
+Pod `qhehmlbuv0up3i` remains running at the user's explicit request, at
 $0.59/hour compute and $0.604/hour including storage. No further samples, EM
 adapter run or lifecycle schedule are queued. Pod stop/delete authorization is
 separate from this experiment.

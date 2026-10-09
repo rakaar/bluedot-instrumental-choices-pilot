@@ -35,8 +35,8 @@ including the server's preallocated KV cache and runtime. The 16,384-token
 context and 2,048-token response limits were preserved. All nine checkpoint
 shard SHA-256 values match the pinned Hugging Face release.
 
-Pod `qhehmlbuv0up3i` remains running at $0.604/hour including storage, pending
-fresh lifecycle confirmation. Its scope is this one episode; no additional
+Pod `qhehmlbuv0up3i` remains running at $0.604/hour including storage, as
+explicitly requested by the user after the test. Its scope is this one episode; no additional
 samples, EM run or lifecycle schedule are queued. The deletion record above
 covers yesterday's pods. See [today's setup record](config/runpod-32b-int8-setup.json).
 

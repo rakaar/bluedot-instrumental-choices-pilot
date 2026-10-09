@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-10-09T13:37:49.791678+00:00",
+  "provider": "Vast.ai",
+  "personal_account_id": 345874,
+  "instance_id": 54996048,
+  "authorization": "User explicitly requested: delete the gpu after backing up. This superseded the earlier request to retain paid workspace.",
+  "public_backup_verified_before_deletion": {
+    "public_backup_verified": true,
+    "repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+    "public_head": "cc8458fd7ac8060cdcd27176f915cccd85a1ba55",
+    "checks": [
+      {
+        "manifest": "logs/quota-boost-em-32b-cloud-A-20261009/artifact-checksums.json",
+        "commit": "9951229eaef35bae44f6c9d7fb640b740bd42e6f",
+        "files_verified": 96,
+        "mismatches": 0
+      },
+      {
+        "manifest": "docs/quota-boost-32b-em-cloud/manual-review-checksums.json",
+        "commit": "cc8458fd7ac8060cdcd27176f915cccd85a1ba55",
+        "files_verified": 3,
+        "mismatches": 0
+      }
+    ],
+    "control_panel_and_cloud_source_present": true,
+    "original_model_weights_publicly_redownloadable": true
+  },
+  "pre_delete_instance": {
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "disk_space_gb": 140.0
+  },
+  "provider_deletion_success": true,
+  "workspace_deleted_gb": 140,
+  "downloaded_base_and_adapter_discarded": true,
+  "public_base_and_adapter_redownloadable": true,
+  "remote_environment_recoverable": false,
+  "post_delete_resources": {
+    "account": {
+      "account_id": 345874,
+      "credit_usd": 8.804244545459966,
+      "balance": 0,
+      "total_spend": -21.245755454540035
+    },
+    "instances": [],
+    "volumes": [],
+    "endpoint_count": 0,
+    "workergroup_count": 0,
+    "all_billable_resource_lists_empty": true
+  },
+  "verified_current_compute_rate_usd_per_hour": 0,
+  "verified_current_storage_rate_usd_per_hour": 0,
+  "verified_current_total_resource_rate_usd_per_hour": 0,
+  "scope": "Personal Vast account resource inventory. Historical charges are not refunded. No benchmark episodes or model generation were run during deletion."
+}

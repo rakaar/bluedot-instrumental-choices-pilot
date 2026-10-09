@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-09T13:38:25.891122+00:00",
+  "method": "SHA-256; this manifest excludes itself",
+  "scope": "Final deletion record and report update. Earlier manifests apply to the historical commits named in teardown.json. Raw results and native scores are unchanged.",
+  "files": {
+    "README.md": "11b883b899c7eb649dbe7a768c9b8feedbe050210c4eabfd32ceb668faab40fc",
+    "docs/quota-boost-32b-em-cloud/index.html": "b754fa09eec62c459e55a3db2bb1c63f985aeb61cfbeb77fd9b8bb5279fa1906",
+    "docs/quota-boost-32b-em-cloud/teardown.json": "690e7fb8f2a2b55bc57ee2c4217b0d2d74fcdb87cb26ff9125db7f0fe2bbb40c"
+  }
+}

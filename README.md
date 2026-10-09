@@ -1,5 +1,13 @@
 # Instrumental Choices: Qwen control pilot
 
+**Latest billing status, 9 October 2026:** personal Vast instance `54996048`
+and its 140 GB workspace were permanently deleted at the user's request after
+verifying the public backup. The personal account now has no instances,
+volumes, endpoints or worker groups: **$0/hour ongoing resource billing**.
+Code, results and traces remain on GitHub. See the
+[backup and teardown verification](docs/quota-boost-32b-em-cloud/teardown.json).
+Earlier retention and billing records below are historical snapshots.
+
 Both the 32B A100 pod and the stopped 14B A40 pod were permanently deleted,
 including their host-local workspace disks, after fresh user confirmation on
 9 October 2026. At that historical teardown, RunPod reported **$0/hour** with no pods, network
@@ -611,8 +619,12 @@ sampling settings and three seeds; paired initial requests matched the earlier
 control. The pinned bad-medical-advice adapter was loaded and selected for all
 11 model calls. No separate EM-phenotype evaluation was run.
 
-Compute stopped at 11:39 UTC. The paid 140 GB workspace remains as requested,
-costing approximately $0.0648/hour ($1.56/day). No further episodes are queued.
+Compute stopped at 11:39 UTC. The user initially retained the paid 140 GB
+workspace, then explicitly requested deletion after backup verification.
+The instance and workspace are now permanently deleted; the personal Vast
+resource inventory is empty, with $0/hour ongoing compute and storage billing.
+No further episodes are queued. See the
+[final teardown record](docs/quota-boost-32b-em-cloud/teardown.json).
 The cloud backup manifest records the original cloud commit; the later manual
 review preserves native traces and scores and has its own checksum record.
 

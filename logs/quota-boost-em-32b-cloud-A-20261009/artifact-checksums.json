@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-09T11:24:59.389813+00:00",
+  "method": "SHA-256; this manifest excluded from itself",
+  "files": {
+    "logs/quota-boost-em-32b-cloud-A-20261009/cloud-runtime.json": "8038f98b444b2da43984769667f5357632dda4a8ad28b2bfee04854f9daae64d",
+    "logs/quota-boost-em-32b-cloud-A-20261009/retention-after-trial.json": "47571577cc390c36869007dd63f0ee61a8096b0e216becf030a05cbd3c174b0c"
+  },
+  "credential_scan_passed": true
+}

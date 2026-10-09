@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-09T08:13:40.649744+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "balance_usd": 4.5529096792,
+  "spend_per_hour_usd": 0.604,
+  "server_models": [
+    "qwen-control-32b-int8"
+  ],
+  "authorized_new_episodes": 1,
+  "seed": 374846913
+}

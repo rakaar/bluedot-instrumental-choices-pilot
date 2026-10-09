@@ -48,7 +48,7 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     for name in ['summary.json', 'inspect-log.json', 'transcript.html', 'selection.json', 'control_config.json', 'api-response-audit.json']:
         shutil.copy2(args.run_directory / name, args.output / name)
-    for name in ('checkpoint-comparison-audit.json', 'gpu-memory-summary.json', 'gpu-memory.csv'):
+    for name in ('checkpoint-comparison-audit.json', 'repeat-comparison-audit.json', 'gpu-memory-summary.json', 'gpu-memory.csv'):
         if (args.run_directory / name).exists():
             shutil.copy2(args.run_directory / name, args.output / name)
 
@@ -93,11 +93,17 @@ def main() -> None:
     comparison_caption = 'Same task, variant, seed, generation settings and benchmark revision. One sample per model is a capability diagnostic; it does not establish a model-wide capability or alignment rate.'
     if args.baseline:
         assert config.get('quantization_bits') == 8 and not ablation
-        previous = [('32B BF16 control', json.loads(args.baseline.read_text()))]
+        baseline = json.loads(args.baseline.read_text())
+        previous = [('32B BF16 control', baseline)]
         current_label = '32B GPTQ INT8 control'
         headline = f'Can the 8-bit {size} control<br>finish the job?'
         comparison_heading = '32B control: BF16 and 8-bit diagnostics'
         comparison_caption = 'Same task, variant, seed, original prompt, chat template, generation settings and benchmark revision. The checkpoint format and GPU differ. One episode per setup does not establish a reliable quantization effect or general capability rate.'
+        if baseline['control_config'].get('quantization_bits') == 8:
+            previous = [('32B GPTQ INT8 · first sample', baseline)]
+            current_label = '32B GPTQ INT8 · second sample'
+            comparison_heading = 'Two samples of the same 8-bit 32B control'
+            comparison_caption = 'Same checkpoint, GPU, task, variant, original prompt, tools, temperature and top-p. The sampling seeds differ. Two episodes are a small capability diagnostic, not a reliable estimate of success or misalignment rates.'
     prompt_diagnostic = ''
     if ablation:
         assert ablation == 'remove_sandbox_sentence' and task == 'budget_siphon' and size == '32B'
@@ -148,6 +154,9 @@ $DIAGNOSTIC
 </main><footer class="wrap">This is an unmodified control model. No misaligned-model comparison has been run. This sandbox is simulated; no real training job, budget transfer or cloud-scaling action is performed.</footer>
 <script>let active='all';const turns=[...document.querySelectorAll('.turn')];function apply(){const q=document.getElementById('search').value.toLowerCase();let n=0;turns.forEach(t=>{const show=(active==='all'||t.dataset.role===active)&&t.textContent.toLowerCase().includes(q);t.hidden=!show;n+=show?1:0;});document.getElementById('empty').hidden=n>0;}document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{active=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));apply();});document.getElementById('search').oninput=apply;document.getElementById('expand').onclick=()=>turns.forEach(t=>t.open=true);document.getElementById('collapse').onclick=()=>turns.forEach(t=>t.open=false);</script></body></html>'''
     page = page.replace('<a href="control_config.json">Pinned control configuration</a>', '<a href="control_config.json">Pinned control configuration</a><br><a href="api-response-audit.json">API tool-call and token-limit audit</a>')
+    page = page.replace('Seed 374846912', 'Seed ' + str(summary['selection']['seed']))
+    if (args.run_directory / 'repeat-comparison-audit.json').exists():
+        page = page.replace('<a href="api-response-audit.json">API tool-call and token-limit audit</a>', '<a href="api-response-audit.json">API tool-call and token-limit audit</a><br><a href="repeat-comparison-audit.json">Verified sampling-seed comparison</a>')
     if config.get('quantization_bits') == 8:
         page = page.replace('BF16 · no adapter', 'GPTQ INT8 · BF16 computation · no adapter')
         page = page.replace('Precision: BF16, without quantization or an EM adapter', 'Precision: GPTQ INT8 weights, BF16 computation; no EM adapter')

@@ -1,0 +1,109 @@
+{
+  "benchmark": {
+    "models": [
+      "openai-api/control/qwen-control-32b-int8"
+    ],
+    "repeats": 1,
+    "tasks": [
+      "quota_boost"
+    ],
+    "variant_profile": "benchmark"
+  },
+  "command": "/home/rka/Documents/ChatGPT/bluedot project/scripts/run_control.py --tasks quota_boost --variants dilemma_forbidden_unwatched --repeats 1 --seed 374846913 --config /home/rka/Documents/ChatGPT/bluedot project/config/control-32b-int8.json --execute",
+  "compose": [
+    {
+      "images": [
+        {
+          "created": "2025-11-12T17:26:19.803499185+08:00",
+          "id": "sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e",
+          "present_locally": true,
+          "reference": "ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e",
+          "repo_digests": [
+            "ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e"
+          ]
+        }
+      ],
+      "path": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/sandboxes/aio-compose.yaml",
+      "sha256": "b9be557678e64b050b41af8d173765b9493b04b5a31659d918d585fdedf791bd",
+      "task": "quota_boost"
+    }
+  ],
+  "created_at_utc": "2026-10-09T08:13:56Z",
+  "env": {
+    "credential_presence": {
+      "ANTHROPIC_API_KEY": false,
+      "GEMINI_API_KEY": false,
+      "GOOGLE_API_KEY": false,
+      "HF_TOKEN": false,
+      "HUGGINGFACEHUB_API_TOKEN": false,
+      "MISTRAL_API_KEY": false,
+      "OPENAI_API_KEY": false,
+      "XAI_API_KEY": false
+    },
+    "values": {}
+  },
+  "exit_code": 0,
+  "files": {
+    ".python-version": {
+      "path": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.python-version",
+      "sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398"
+    },
+    "pyproject.toml": {
+      "path": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/pyproject.toml",
+      "sha256": "2f052283bd211f141d417be58b5aae6b4ecfdbdb949068b6b61ffd26ebc51526"
+    },
+    "uv.lock": {
+      "path": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/uv.lock",
+      "sha256": "35afb50e1bc74c32b3a6e707f052f1e907b75c27087e6125b72eac2480782ec4"
+    }
+  },
+  "finished_at_utc": "2026-10-09T08:16:08Z",
+  "log_root": "/home/rka/Documents/ChatGPT/bluedot project/logs/control_20261009T081355Z",
+  "packages": {
+    "inspect-ai": "0.3.189",
+    "openai": "2.26.0",
+    "pytest": "9.0.2"
+  },
+  "paper_facing_readiness": {
+    "blocking_reasons": [],
+    "claim_ready": true
+  },
+  "python": {
+    "executable": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices/.venv/bin/python",
+    "expected_version": "3.13",
+    "implementation": "CPython",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+    "version": "3.13.16"
+  },
+  "repo": {
+    "branch": "main",
+    "commit": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+    "dirty_paths": [],
+    "is_dirty": false,
+    "root": "/home/rka/Documents/ChatGPT/bluedot project/vendor/Instrumental-Choices",
+    "short_commit": "397e6b1"
+  },
+  "schema_version": 1,
+  "started_at_utc": "2026-10-09T08:13:56Z",
+  "status": "completed",
+  "tool_analysis": {
+    "artifact_family": "tool_analysis",
+    "trace_spec_scenarios": [
+      "quota_boost"
+    ],
+    "version": 1
+  },
+  "tool_trace_audit": {
+    "artifact_family": "tool_trace_audit",
+    "enabled": false,
+    "models": [],
+    "version": 1
+  },
+  "toolchain": {
+    "docker": "Docker version 29.1.3, build f52814d",
+    "docker_compose": "Docker Compose version v5.6.0",
+    "git": "git version 2.43.0",
+    "host": "rka"
+  },
+  "updated_at_utc": "2026-10-09T08:16:08Z"
+}

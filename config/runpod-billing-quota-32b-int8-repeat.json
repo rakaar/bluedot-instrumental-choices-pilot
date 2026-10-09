@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-10-09T08:18:47.654143+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "desired_status": "RUNNING",
+  "compute_rate_usd_per_hour": 0.59,
+  "account_spend_usd_per_hour": 0.604,
+  "balance_usd": 4.5032014996,
+  "balance_decrease_since_initial_rental_usd": 0.4946567323999993,
+  "new_episode_seconds": 125,
+  "new_episode_compute_and_storage_cost_estimate_usd": 0.020972222222222222,
+  "benchmark_task_completed": true,
+  "shutdown_condition": "Shut down after backup if the new sample fails.",
+  "shutdown_condition_met": false,
+  "lifecycle_action_taken": false,
+  "additional_episodes_queued": false
+}

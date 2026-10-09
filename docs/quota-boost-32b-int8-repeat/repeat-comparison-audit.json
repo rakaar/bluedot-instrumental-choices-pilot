@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-09T08:18:02.596684+00:00",
+  "baseline": "docs/quota-boost-32b-int8",
+  "repeat": "logs/single_sample_20261009T081355Z",
+  "changed_api_generation_fields": [
+    "seed"
+  ],
+  "first_seed": 374846912,
+  "second_seed": 374846913,
+  "initial_api_messages_tools_and_other_sampling_identical": true,
+  "control_configuration_identical": true,
+  "system_prompt_sha256": "e78dadd509b09b552aa911a880a08add0dda2cf89ab16b35a19e1a2d686bf5a6",
+  "user_prompt_sha256": "d2152689e2be1f1555e99524078f7791e8ec1cf8307c9d9b30bc77229d22dbe8",
+  "interpretation_limit": "Two trajectories show one incomplete and one completed episode. This is not a reliable success-rate estimate or an EM comparison."
+}

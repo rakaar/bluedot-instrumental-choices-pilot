@@ -12,13 +12,21 @@ readarray -t SETTINGS < <("${ROOT}/inference/.venv/bin/python" - "${CONFIG_PATH}
 import json,sys
 from pathlib import Path
 c=json.loads(Path(sys.argv[1]).read_text())
-assert c['dtype']=='bfloat16' and c['quantization'] is None and not c['adapter_enabled']
+assert c['dtype']=='bfloat16' and not c['adapter_enabled']
+assert c['quantization'] in (None, 'gptq_marlin')
+if c['quantization'] == 'gptq_marlin':
+    assert c['quantization_bits'] == 8
 print(Path(sys.argv[2])/c.get('model_directory','models/qwen-control'))
 print(c['served_model_name'])
 print(c['max_model_len'])
 print(c['max_num_seqs'])
+print(c['quantization'] or 'none')
 PY
 )
+QUANTIZATION_ARGS=()
+if [[ "${SETTINGS[4]}" != none ]]; then
+  QUANTIZATION_ARGS=(--quantization "${SETTINGS[4]}")
+fi
 exec "${ROOT}/inference/.venv/bin/vllm" serve \
   "${SETTINGS[0]}" \
   --served-model-name "${SETTINGS[1]}" \
@@ -26,4 +34,5 @@ exec "${ROOT}/inference/.venv/bin/vllm" serve \
   --dtype bfloat16 --max-model-len "${SETTINGS[2]}" \
   --max-num-seqs "${SETTINGS[3]}" --gpu-memory-utilization 0.90 \
   --enable-auto-tool-choice --tool-call-parser hermes \
-  --generation-config vllm --api-key local-ssh-only
+  --generation-config vllm --api-key local-ssh-only \
+  "${QUANTIZATION_ARGS[@]}"

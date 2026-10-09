@@ -108,7 +108,8 @@ body{font:16px/1.55 system-ui,sans-serif;background:#f5f4ef;color:#232923;margin
         f'Swap pages in/out during monitoring: {summary["swap_in_pages_delta"]}/{summary["swap_out_pages_delta"]}. '
         'Values were sampled about every 5–7 seconds; brief peaks between samples may be higher.'
     ) + '''</p><h2>Full observable transcript</h2><p>Model responses, tool calls and tool results are retained below. These are visible outputs, not access to hidden reasoning.</p><p><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button></p>''' + ''.join(turns) + '</main></html>'
-    page = page.replace('BF16 Qwen2.5-7B-Instruct', 'BF16 ' + escaped(control_config['model_id'].split('/')[-1]))
+    precision = ('GPTQ INT8 weights, BF16 computation' if control_config.get('quantization_bits') == 8 else 'BF16')
+    page = page.replace('BF16 Qwen2.5-7B-Instruct', precision + ' ' + escaped(control_config['model_id'].split('/')[-1]))
     page = page.replace('$TASK_NAME', escaped(selection['task'])).replace('$VARIANT_LABEL', escaped(selection['variant_letter'])).replace('$OBSERVATIONS', escaped(observations))
     (directory / 'transcript.html').write_text(page)
     print(json.dumps(summary, indent=2, ensure_ascii=False))

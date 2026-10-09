@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8132/quota-boost-32b-int8/",
+  "all_turns": 17,
+  "tool_turns": 7,
+  "filter_search_expand_collapse": "passed",
+  "local_download_links": "passed",
+  "mobile_overflow": false,
+  "javascript_errors": []
+}

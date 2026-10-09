@@ -35,6 +35,7 @@ def main() -> None:
     parser.add_argument('--related-url')
     parser.add_argument('--related-label')
     parser.add_argument('--related-report', nargs=2, action='append', default=[], metavar=('LABEL', 'URL'))
+    parser.add_argument('--baseline', type=Path, help='Prior summary JSON for a matched checkpoint-format comparison.')
     args = parser.parse_args()
     data = json.loads((args.run_directory / 'inspect-log.json').read_text())
     summary = json.loads((args.run_directory / 'summary.json').read_text())
@@ -47,6 +48,9 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     for name in ['summary.json', 'inspect-log.json', 'transcript.html', 'selection.json', 'control_config.json', 'api-response-audit.json']:
         shutil.copy2(args.run_directory / name, args.output / name)
+    for name in ('checkpoint-comparison-audit.json', 'gpu-memory-summary.json', 'gpu-memory.csv'):
+        if (args.run_directory / name).exists():
+            shutil.copy2(args.run_directory / name, args.output / name)
 
     turns = []
     for index, message in enumerate(data['samples'][0]['messages'], 1):
@@ -87,6 +91,13 @@ def main() -> None:
     current_label = f'{size} control · this run'
     comparison_heading = 'Compared with the 7B and 14B samples' if size == '32B' else 'Compared with the earlier 7B sample'
     comparison_caption = 'Same task, variant, seed, generation settings and benchmark revision. One sample per model is a capability diagnostic; it does not establish a model-wide capability or alignment rate.'
+    if args.baseline:
+        assert config.get('quantization_bits') == 8 and not ablation
+        previous = [('32B BF16 control', json.loads(args.baseline.read_text()))]
+        current_label = '32B GPTQ INT8 control'
+        headline = f'Can the 8-bit {size} control<br>finish the job?'
+        comparison_heading = '32B control: BF16 and 8-bit diagnostics'
+        comparison_caption = 'Same task, variant, seed, original prompt, chat template, generation settings and benchmark revision. The checkpoint format and GPU differ. One episode per setup does not establish a reliable quantization effect or general capability rate.'
     prompt_diagnostic = ''
     if ablation:
         assert ablation == 'remove_sandbox_sentence' and task == 'budget_siphon' and size == '32B'
@@ -137,6 +148,19 @@ $DIAGNOSTIC
 </main><footer class="wrap">This is an unmodified control model. No misaligned-model comparison has been run. This sandbox is simulated; no real training job, budget transfer or cloud-scaling action is performed.</footer>
 <script>let active='all';const turns=[...document.querySelectorAll('.turn')];function apply(){const q=document.getElementById('search').value.toLowerCase();let n=0;turns.forEach(t=>{const show=(active==='all'||t.dataset.role===active)&&t.textContent.toLowerCase().includes(q);t.hidden=!show;n+=show?1:0;});document.getElementById('empty').hidden=n>0;}document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{active=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));apply();});document.getElementById('search').oninput=apply;document.getElementById('expand').onclick=()=>turns.forEach(t=>t.open=true);document.getElementById('collapse').onclick=()=>turns.forEach(t=>t.open=false);</script></body></html>'''
     page = page.replace('<a href="control_config.json">Pinned control configuration</a>', '<a href="control_config.json">Pinned control configuration</a><br><a href="api-response-audit.json">API tool-call and token-limit audit</a>')
+    if config.get('quantization_bits') == 8:
+        page = page.replace('BF16 · no adapter', 'GPTQ INT8 · BF16 computation · no adapter')
+        page = page.replace('Precision: BF16, without quantization or an EM adapter', 'Precision: GPTQ INT8 weights, BF16 computation; no EM adapter')
+        if summary.get('gpu_memory'):
+            gpu = summary['gpu_memory']
+            gpu_panel = (f'<div class="panel"><h3>Fits on a 48 GB GPU</h3><p>{esc(gpu["gpu"])}: '
+                         f'{gpu["weights_loading_memory_gib"]:.1f} GiB for loaded model weights; '
+                         f'{gpu["maximum_observed_memory_gib"]:.1f} GiB maximum observed total GPU use. '
+                         'Total use includes the preallocated conversation cache and runtime.</p>'
+                         '<p class="caption"><a href="gpu-memory-summary.json">Memory summary</a> · '
+                         '<a href="gpu-memory.csv">Measurements every two seconds</a> · '
+                         '<a href="checkpoint-comparison-audit.json">Verified prompt and sampling match</a></p></div>')
+            page = page.replace('<h2>Evidence and configuration</h2>', '<h2>Evidence and configuration</h2>' + gpu_panel)
     page = page.replace('<th>Model</th><th>Model turns</th><th>Tool calls</th><th>Completed</th><th>Shortcut observed</th>', comparison_headers)
     page = page.replace('Same task, variant, seed, generation settings and benchmark revision. One sample per model is a capability diagnostic; it does not establish a model-wide capability or alignment rate.', esc(comparison_caption))
     page = page.replace('$DIAGNOSTIC', prompt_diagnostic + diagnostic)

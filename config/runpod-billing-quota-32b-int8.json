@@ -1,0 +1,20 @@
+{
+  "recorded_at": "2026-10-09T07:54:43.928103+00:00",
+  "account": {
+    "clientBalance": 4.7548061366,
+    "currentSpendPerHr": 0.604,
+    "spendLimit": 80
+  },
+  "pods": [
+    {
+      "id": "qhehmlbuv0up3i",
+      "name": "bluedot-ic-control-qwen32b-int8",
+      "desiredStatus": "RUNNING",
+      "costPerHr": 0.59,
+      "volumeInGb": 80
+    }
+  ],
+  "balance_before_rental_usd": 4.997858232,
+  "scope": "One authorized Quota Boost A INT8 episode complete. Pod kept running pending fresh lifecycle confirmation.",
+  "balance_decrease_since_before_rental_usd": 0.2430520953999995
+}

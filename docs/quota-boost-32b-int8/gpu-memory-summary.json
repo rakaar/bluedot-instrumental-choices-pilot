@@ -1,0 +1,10 @@
+{
+  "gpu": "NVIDIA A40",
+  "samples": 231,
+  "sampling_seconds": 2,
+  "maximum_observed_memory_mib": 42076.0,
+  "maximum_observed_memory_gib": 41.08984375,
+  "total_memory_mib": 46068.0,
+  "weights_loading_memory_gib": 32.6164,
+  "note": "nvidia-smi total includes weights, runtime and preallocated KV cache; it is not weight-only memory or a continuously sampled peak."
+}

@@ -19,12 +19,21 @@
     "scripts/connect_cloud_gpu.py": "89d67a4e772984426722e8e68062fd76770c471157fc6ce5f992d23484514058",
     "scripts/setup_cloud_benchmark.sh": "140e8febf0af65661a7f667dccc70e1376752e1b6d711040388249378f7915d0",
     "scripts/run_cloud_quota_trial.py": "280f1b14ad8d66eed2dac81dd37725668c47d9d78be4284c90a7892906359aec",
-    "scripts/finalize_cloud_trial.py": "e412914065a3087588883c67fd729f0f4c72f8b2b0c3c85dec4fc85844968b1e",
+    "scripts/finalize_cloud_trial.py": "c889a031aa66ba4db0492b58bea5883c426d1b2d497a92aef62ce2c37d27c67e",
     "config/em-32b.json": "e8fd7beb743d914d86c2c42d11667bfe39dae4dd28fe0e2fbe57c676626f65cf",
     "config/em-32b-quota-cloud-plan.json": "4d4222fbe764999a1129b6c3f20d6d9ea401c41d3ce234dc7542cc97b7f2595f",
     "config/em-32b-cloud-connection.json": "9d35fdc191631cdd5711763d1639f81fdb7e32464299733e3c5966e3abe33de4",
     ".github/workflows/quota-em-cloud.yml": "d318360a9d88fad1df7a8eb2fd3233d47bd85ba979950ab72367c3340df84a23"
   },
   "laptop_not_required_after_dispatch": true,
-  "experiments_in_this_trial": 3
+  "experiments_in_this_trial": 3,
+  "ephemeral_ssh_key_registered_with_vast_for_this_instance": true,
+  "ephemeral_ssh_login_verified": true,
+  "previous_cloud_setup_attempt": {
+    "github_run_id": 37923430547,
+    "outcome": "SSH authentication failed before any model requests or episodes; Docker preflight and verified public diagnostic backup succeeded.",
+    "fix": "Attached the ephemeral key through the per-instance Vast API; subsequent SSH authentication verified.",
+    "benchmark_episode_count": 0,
+    "model_generation_requests": 0
+  }
 }

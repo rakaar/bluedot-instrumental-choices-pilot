@@ -64,8 +64,13 @@ def collect_and_stop():
 
 def backup():
     changed = subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard', '-z'], cwd=ROOT).split(b'\0')
-    paths = [Path(name.decode()) for name in changed if name and
-        (name.startswith(b'logs/') or name.startswith(b'docs/quota-boost-32b-em-cloud/'))]
+    changed += subprocess.check_output(['git', 'diff', '--name-only', '-z'], cwd=ROOT).split(b'\0')
+    selected = {Path(name.decode()) for name in changed if name and
+        (name.startswith(b'logs/') or name.startswith(b'docs/quota-boost-32b-em-cloud/'))}
+    selected.update(p.relative_to(ROOT) for p in OUT.rglob('*') if p.is_file())
+    selected.discard(OUT.relative_to(ROOT) / 'artifact-checksums.json')
+    selected.discard(OUT.relative_to(ROOT) / 'public-backup-verification.json')
+    paths = sorted(selected)
     if not paths:
         raise RuntimeError('No cloud results to back up.')
     secrets = [os.environ[name].encode() for name in ('CLOUD_TRIAL_INSTANCE_KEY', 'CLOUD_TRIAL_SSH_KEY', 'GITHUB_TOKEN')

@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-09T08:56:41.234066+00:00",
+  "repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "artifact_commit": "b5a7d84cab18a5f1f0de22ffa051511cc9b7e68c",
+  "public_clone_verified": true,
+  "clone_credentials_disabled": true,
+  "verified_artifact_count": 293,
+  "mismatches": [],
+  "manifest": "config/artifact-checksums-control-32b-int8-pilot-A.json"
+}

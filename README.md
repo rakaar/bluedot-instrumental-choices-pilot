@@ -40,6 +40,11 @@ $1 budget. No extra model episodes are queued. See the
 [frozen plan](config/control-32b-int8-pilot-A-plan.json) and
 [billing snapshot](config/runpod-billing-control-32b-int8-pilot-A.json).
 
+After verified public backup and report publication, the user explicitly chose
+to keep pod `qhehmlbuv0up3i` running at $0.604/hour. See the dated
+[retention and final batch-cost record](config/runpod-retention-control-32b-int8-pilot-A.json).
+No lifecycle action was taken and no further episodes are queued.
+
 ## 32B 8-bit control repeat: Quota Boost A completed, 9 October 2026
 
 [Read the second INT8 trace and two-sample comparison](https://rakaar.github.io/bluedot-instrumental-choices-pilot/quota-boost-32b-int8-repeat/).

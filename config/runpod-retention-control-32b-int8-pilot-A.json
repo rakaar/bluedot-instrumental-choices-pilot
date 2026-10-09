@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-09T08:59:10.478145+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "desired_status": "RUNNING",
+  "user_instruction": "Keep it running",
+  "lifecycle_action_taken": false,
+  "additional_episodes_queued": 0,
+  "account_spend_usd_per_hour": 0.604,
+  "balance_usd": 4.1005876015,
+  "balance_before_batch_usd": 4.4019518792,
+  "balance_decrease_since_batch_preflight_usd": 0.3013642777000003,
+  "elapsed_gpu_time_estimate_usd": 0.3025625100655555,
+  "batch_budget_usd": 1.0,
+  "budget_scope": "Seven additional episodes plus preparation, report and backup through this snapshot. Future retained-pod time continues billing at the recorded hourly rate."
+}

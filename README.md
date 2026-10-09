@@ -11,6 +11,13 @@ public GitHub clone before deletion. See
 [the deletion and zero-billing record](config/runpod-teardown-14b-32b.json).
 The pods cannot be recovered; public model weights can be downloaded again.
 
+The subsequent INT8 A40 pod `qhehmlbuv0up3i` was also stopped and permanently
+deleted on 9 October after separate, fresh user confirmations. Its host-local
+workspace and downloaded weights were discarded; the code and results remain
+in this repository. The final account check reported **$0/hour**, with no pods,
+network volumes or serverless endpoints. See [the INT8 teardown record](config/runpod-teardown-32b-int8.json)
+for the final provider state and billing verification.
+
 ## Three-task INT8 control screen: 1 approved completion in 9, 9 October 2026
 
 [Read the full nine-sample report](https://rakaar.github.io/bluedot-instrumental-choices-pilot/control-32b-int8-pilot-A/).
@@ -40,10 +47,11 @@ $1 budget. No extra model episodes are queued. See the
 [frozen plan](config/control-32b-int8-pilot-A-plan.json) and
 [billing snapshot](config/runpod-billing-control-32b-int8-pilot-A.json).
 
-After verified public backup and report publication, the user explicitly chose
+After verified public backup and report publication, the user initially chose
 to keep pod `qhehmlbuv0up3i` running at $0.604/hour. See the dated
 [retention and final batch-cost record](config/runpod-retention-control-32b-int8-pilot-A.json).
-No lifecycle action was taken and no further episodes are queued.
+The pod was subsequently stopped and deleted with separate confirmations;
+no further episodes are queued.
 
 ## 32B 8-bit control repeat: Quota Boost A completed, 9 October 2026
 
@@ -59,9 +67,10 @@ variable follow-through rather than establish a reliable success rate.
 
 The captured initial API request differs only in the seed and invocation
 header. Checkpoint, prompt, tools, temperature 0.7 and top-p 0.9 are unchanged.
-The episode used about $0.021 of GPU-plus-storage time. Pod `qhehmlbuv0up3i`
-remains running at $0.604/hour: the user's conditional shutdown instruction
-applied if this sample failed, and it passed. No further runs are queued.
+The episode used about $0.021 of GPU-plus-storage time. At that snapshot, pod
+`qhehmlbuv0up3i` remained running at $0.604/hour: the user's conditional shutdown
+instruction applied if this sample failed, and it passed. The pod was later
+deleted as recorded above. No further runs are queued.
 
 See [the result note](notes/quota-boost-32b-int8-repeat-result.md) and
 [billing snapshot](config/runpod-billing-quota-32b-int8-repeat.json).
@@ -90,10 +99,10 @@ including the server's preallocated KV cache and runtime. The 16,384-token
 context and 2,048-token response limits were preserved. All nine checkpoint
 shard SHA-256 values match the pinned Hugging Face release.
 
-Pod `qhehmlbuv0up3i` remains running at $0.604/hour including storage, as
-explicitly requested by the user after the test. Its scope is this one episode; no additional
-samples, EM run or lifecycle schedule are queued. The deletion record above
-covers yesterday's pods. See [today's setup record](config/runpod-32b-int8-setup.json).
+At that snapshot, pod `qhehmlbuv0up3i` remained running at $0.604/hour including
+storage, as explicitly requested by the user after the test. Its scope was that
+one episode. Later episodes and the final deletion are recorded above. See
+[today's setup record](config/runpod-32b-int8-setup.json).
 
 ## 32B control: Quota Boost A, 9 October 2026
 

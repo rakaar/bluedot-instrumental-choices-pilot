@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-09T09:06:05.924798+00:00",
+  "pod_id": "qhehmlbuv0up3i",
+  "final_status": "DELETED",
+  "stop_authorization": "User explicitly asked to shut down the GPU in the current turn.",
+  "delete_authorization": "Delete the pod and workspace",
+  "actions": [
+    "stop",
+    "delete"
+  ],
+  "permanent_deletion": true,
+  "host_local_workspace_discarded": true,
+  "public_backup_commit": "fe1b4d1e3368486b4be30dfe3d65b6441f4d61a6",
+  "artifact_backup_commit": "b5a7d84cab18a5f1f0de22ffa051511cc9b7e68c",
+  "public_repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "backup_verified": "Public GitHub main matched the local backup commit immediately before stopping; the artifact commit previously passed a fresh public-clone SHA256 audit of 293 files.",
+  "compute_usd_per_hour": 0,
+  "account_snapshot": {
+    "account": {
+      "clientBalance": 4.0501617524,
+      "currentSpendPerHr": 0,
+      "spendLimit": 80
+    },
+    "activePods": [],
+    "allPods": [],
+    "networkVolumes": [],
+    "serverlessEndpoints": []
+  },
+  "note": "Stopping first retained storage at $0.022/hour. Separate authorized permanent deletion removed it. The pod and remote workspace cannot be recovered; public model weights can be downloaded again."
+}

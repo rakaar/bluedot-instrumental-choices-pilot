@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-10T10:31:17.681332+00:00",
+  "instance_id": 55191264,
+  "personal_account_id": 345874,
+  "ssh_authenticated_as": "root",
+  "hostname": "56342dc66901",
+  "gpus": [
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "memory_mib": 24576,
+      "driver": "595.58.03"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "memory_mib": 24576,
+      "driver": "595.58.03"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "memory_mib": 24576,
+      "driver": "595.58.03"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3090",
+      "memory_mib": 24576,
+      "driver": "595.58.03"
+    }
+  ],
+  "workspace_gb": 180,
+  "remote_host_key_fingerprint": "SHA256:7LxvwjGELcIAvs42RRL/B1xL+aPvvCtHgj8Dor9xkZ0",
+  "model_generation_requests": 0
+}

@@ -1,9 +1,9 @@
 {
-  "instance_id": 55186486,
+  "instance_id": 55191264,
   "personal_account_id": 345874,
-  "host_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINcc+CJrK/Q+gWeNisAQ+HAESmGhGjWjVRzjNOFnPKNr",
-  "host_key_fingerprint": "SHA256:lMXuf5mcLCeigPTbFWRVsyP5gdhFokb18IYdNwxXh4Y",
-  "host_key_source": "First contact with provider-resolved SSH proxy endpoint, pinned before authenticated SSH. Direct TCP port timed out.",
+  "host_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILx2+Iw6xFhon7BRF8zMSzxeOKFrdoAE115yfZ0ESMv1",
+  "host_key_fingerprint": "SHA256:7LxvwjGELcIAvs42RRL/B1xL+aPvvCtHgj8Dor9xkZ0",
+  "host_key_source": "First contact with provider-resolved SSH proxy endpoint; pinned before authentication and matched against the remote SSH host public key after GPU identity verification.",
   "endpoint_resolution": "Use current Vast proxy host and port after active-instance validation; old endpoints not reused.",
   "credential_scope": "Personal master API key remains local; existing registered SSH key locally, new instance-attached ephemeral SSH key on cloud runner."
 }

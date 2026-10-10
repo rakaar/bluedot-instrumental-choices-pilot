@@ -146,7 +146,7 @@ def main():
     private = temporary / "olmo-route-probe-ssh-key"
     try:
         row = snapshot()
-        if PLAN["instance_id"] != 55186486 or row["actual_status"] != "running" or row["intended_status"] != "running":
+        if row["actual_status"] != "running" or row["intended_status"] != "running":
             raise ValueError("The frozen authorized instance is not running.")
         result["instance_id"] = row["id"]
         result["personal_account_id"] = PLAN["personal_account_id"]

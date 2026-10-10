@@ -41,7 +41,7 @@ jobs:
         with:
           name: quota-boost-em-t0-cloud-${{ github.run_id }}
           path: |
-            logs/quota-boost-em-32b-t0-cloud-A-20261010/
+            logs/quota-boost-em-32b-t0-cloud-A-20261010-r2/
             docs/quota-boost-32b-em-t0/
             logs/olmo-32b-ukaisi-download/
             logs/setup-em-t0/

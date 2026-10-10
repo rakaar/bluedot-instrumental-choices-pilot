@@ -1,0 +1,14 @@
+{
+  "account_id": 345874,
+  "instance_id": 55191264,
+  "resumed_at": "2026-10-10T13:38:41.160107+00:00",
+  "credit_before_resume": 7.836286180259979,
+  "budget_origin": "2026-10-10T13:14:45.795353+00:00",
+  "original_total_budget": 1.5,
+  "remaining_episode_seeds": [
+    374846913,
+    374846914
+  ],
+  "first_episode_not_repeated": true,
+  "original_deadline_not_extended": true
+}

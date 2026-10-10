@@ -61,7 +61,7 @@
     "Official task solver, deterministic scorer and full API/native/visible trace recording."
   ],
   "previous_temperature_zero_model": "Qwen2.5-32B EM; OLMo has never run in this project.",
-  "runtime_candidate": "vllm==0.16.0, torch==2.9.1, transformers==4.57.6, huggingface-hub==0.36.2, peft==0.18.1; hash-locked isolated runtime.",
+  "runtime_candidate": "vllm==0.16.0, torch==2.9.1, transformers==5.3.0.dev0 at authors commit 11b1906d5c0dae39c13270e47cc02c4cde70e548, huggingface-hub==1.3.0, peft==0.18.1; hash-locked isolated runtime, authors Transformers dependency override.",
   "runtime_and_parser_loading_verified": false,
   "previous_total_approval_not_reused": "The earlier $4 cap applied to the completed Qwen two-episode run plus OLMo download; it did not explicitly cover a new OLMo inference run.",
   "gpu_trial_script": "scripts/cloud_olmo_trial.py",
@@ -69,7 +69,7 @@
   "gpu_bootstrap_log_directory": "logs/setup-olmo32b",
   "ssh_route": "proxy",
   "runtime_requirements": "inference/olmo/requirements-hashed.txt",
-  "runtime_requirements_sha256": "2c7814d3c7f0e0b5c2a4e4c811bac6998cf22466151c5748811527b97863ffcc",
+  "runtime_requirements_sha256": "bc3cf7f3fc2564d589f311913b280929983c206dc9683a45096cd4203f55d67b",
   "raw_generation_audit": "The olmo3_audited wrapper delegates to the official OLMo3 parser and records raw output. Necessary to retain progress prose the native parser otherwise drops. Synthetic compatibility cases run before model loading.",
   "approved_restart_timestamp_required_before_execution": true,
   "spend_approval": {
@@ -80,5 +80,12 @@
     "scope": "Restart existing personal Vast55191264, setup and three OLMo Quota Boost A samples, stop compute afterward; retained storage disclosed separately."
   },
   "rented_at": "2026-10-10T13:14:45.795353+00:00",
-  "account_credit_before_restart": 8.059994572359976
+  "account_credit_before_restart": 8.059994572359976,
+  "runtime_compatibility_repair": {
+    "initial_failure": "Transformers 4.57.6 cannot import the released TokenizersBackend tokenizer class. No model loading or generation occurred.",
+    "resolution": "Use exact authors pinned Transformers 5.3.0.dev0 commit and their explicit dependency override. Preserve checkpoint/tokenizer/template files unchanged. Upgrade Hugging Face Hub to 1.3.0 as required by authors Transformers package.",
+    "author_commit": "11b1906d5c0dae39c13270e47cc02c4cde70e548",
+    "source_archive_sha256": "15dc6d8a9114afdb382bd90ced96a4e35e3bfd716d6ef2ff13c1aa2f4939c40c",
+    "other_installed_versions_preserved": true
+  }
 }

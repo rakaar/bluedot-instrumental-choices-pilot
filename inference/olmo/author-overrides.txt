@@ -1,6 +1,2 @@
-vllm==0.16.0
-torch==2.9.1
+# Same immutable Transformers commit explicitly overridden by the authors.
 transformers @ https://github.com/huggingface/transformers/archive/11b1906d5c0dae39c13270e47cc02c4cde70e548.tar.gz
-huggingface-hub==1.3.0
-peft==0.18.1
-setuptools==80.9.0

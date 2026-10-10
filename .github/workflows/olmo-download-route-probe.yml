@@ -1,0 +1,31 @@
+name: Bounded OLMo cloud download-route probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bluedot-olmo-download-route-probe-20261010
+  cancel-in-progress: false
+jobs:
+  bounded-route-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_T0_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_T0_SSH_KEY }}
+      CLOUD_TRIAL_PLAN: config/em-32b-t0-quota-cloud-plan.json
+    steps:
+      - name: Check out the frozen download and connection plans
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Compare bounded download and pinned SSH upload routes
+        run: python3 -u scripts/probe_cloud_download_route.py
+      - name: Save the bounded route measurements
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: olmo-download-route-probe-${{ github.run_id }}
+          path: logs/olmo-32b-cloud-route-probe/route-probe.json
+          retention-days: 14
+          if-no-files-found: error

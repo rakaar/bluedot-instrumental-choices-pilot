@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-10T11:06:55.763175+00:00",
+  "files": {
+    "docs/index.html": "cd957e0def37feae4460f4bc87b403736164634934fc08f25bf84a78505781a8",
+    "docs/quota-boost-32b-em-t0/index.html": "9a58601ff363cc872e1366dc079fec6c982c854e74e287790288abaf95c551bd",
+    "docs/quota-boost-32b-em-t0/manual-review.json": "37598f4310a6caeee5f36c9ad2280182371a14a74bff3374490ae6d838d726a4",
+    "docs/quota-boost-32b-em-t0/panel.json": "a3cbbcccf43ae8c90bb99ba4a8ae36ee8ea61908155602211721671dba3fffed",
+    "docs/quota-boost-32b-em-t0/paired-request-audit.json": "83d0ca98e6199d3c16aad03e8340a9bffcac5f73bd55481fc15f8f83c260407c",
+    "docs/quota-boost-32b-em-t0/greedy-consistency-audit.json": "351151c074ad18cbf2519addb8f46feb03cd866170b4224e8e041d63a0fd1c6f",
+    "logs/quota-boost-em-32b-t0-cloud-A-20261010-r2/public-backup-verification.json": "3cdfc1430ce4d23d96c5865d4083afb786cf09bcbdf1d9f9d44adc97cb00c052",
+    "logs/quota-boost-em-32b-t0-cloud-A-20261010/failed-host-deletion-verification.json": "f27e7307beea01951a9c72e11bcc3ff140b54e15048788cb0ea2c04c0e9b9d20"
+  },
+  "raw_evidence_manifest": "../../logs/quota-boost-em-32b-t0-cloud-A-20261010-r2/artifact-checksums.json",
+  "note": "Original raw evidence was verified before review. Original cloud commit retains the initial report snapshot; this manifest records the reviewed report and provider deletion evidence."
+}

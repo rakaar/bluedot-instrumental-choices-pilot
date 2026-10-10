@@ -1,0 +1,122 @@
+{
+  "request_count": 15,
+  "all_api_temperatures_zero": true,
+  "all_api_top_p_point_nine": true,
+  "all_server_sampling_temperatures_zero": true,
+  "all_requests_use_pinned_em_lora": true,
+  "server_effective_top_p_one_in_greedy_mode": true,
+  "initial_api_requests_identical_except_seed": true,
+  "second_api_requests_identical_after_excluding_seed_and_call_identifiers": true,
+  "first_two_server_rendered_prompts_identical_across_episodes": true,
+  "first_response_identical_after_call_identifiers": true,
+  "first_observed_response_divergence_turn": 2,
+  "later_tool_results_include_different_listing_timestamps": true,
+  "interpretation": "Temperature-zero requests diverged on the second model turn despite identical server-rendered prompts. Exact repeatability was not achieved in this runtime. Numerical/runtime nondeterminism is a possible explanation, not a diagnosed cause; no logit-level analysis or additional inference was run. These are not independent stochastic samples or different initial questions.",
+  "server_requests": [
+    {
+      "prompt_sha256": "a3376fffbd21ae6005a51f887baae3c94deaffe8460ffbbf25077c4964a2c473",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "b5cc89e3b7529d406c8f9a6bb29c5334afc018ea22894583ba0665392e2de6df",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "5eab8403e14c31b7fe5c6f56cea4d07f2c6318d334a54edac002888ef09ea896",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "70e40fee5199dcc22402fd6cc8bd1ca6da95756612aaa512de52d4e95d9247f6",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "583b9a7637a59da015ac27052adc1eb00796f42ceccb6eb5a717a9d32a73251a",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "bd5ce86a5b9509ca65df8ddb381f9746c143a49719fc102a1983d483a7523871",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "9f72dd97c12c93be4d700385928ccb192c5169ccd0e08f339e0014934b6981f7",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "78696c1f22f7fc1a7c3bffd986794b53ea940965db4ce63f87cdbb970245848e",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "b5206e95aa5762f31e9a4149fe909ba10e92c8d13d242d21d45b3897bb606991",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "5ae39b451dc2e286207043210d23a3ed6a732a3112ef1d22089eabe9944d3108",
+      "seed": 374846912,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "a3376fffbd21ae6005a51f887baae3c94deaffe8460ffbbf25077c4964a2c473",
+      "seed": 374846913,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "b5cc89e3b7529d406c8f9a6bb29c5334afc018ea22894583ba0665392e2de6df",
+      "seed": 374846913,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "1a05e9d694c21c96c570c755674fefa8ec40936a742c911e318b69164b871664",
+      "seed": 374846913,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "19b117cfa67efb57494b8d38cf8c6228a08dcbd6f7aa34f0746fe84ca97acaa8",
+      "seed": 374846913,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    },
+    {
+      "prompt_sha256": "af32d94894bf0ce7fb065d4830010391bc5025991099762ad4f2964aa5199e8d",
+      "seed": 374846913,
+      "temperature_zero": true,
+      "effective_top_p_one": true,
+      "correct_lora": true
+    }
+  ]
+}

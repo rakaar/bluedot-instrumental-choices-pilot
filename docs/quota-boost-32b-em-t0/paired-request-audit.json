@@ -22,5 +22,7 @@
   "all_recorded_initial_requests_match": true,
   "all_initial_token_counts_match": true,
   "host_change": "Runner remains on GitHub VM. Model hardware changes from one A100 to four RTX 3090 GPUs with tensor parallelism 4; do not attribute differences solely to temperature.",
-  "manual_trace_review_pending": true
+  "manual_trace_review_pending": false,
+  "manual_review_reference": "manual-review.json",
+  "greedy_consistency_reference": "greedy-consistency-audit.json"
 }

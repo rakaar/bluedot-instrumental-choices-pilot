@@ -1,0 +1,17 @@
+{
+  "instance_id": 55186486,
+  "personal_account_id": 345874,
+  "http_status": 200,
+  "retry_after": null,
+  "response": {
+    "success": true
+  },
+  "verified_at": "2026-10-10T10:37:34.784641+00:00",
+  "failed_instance_absent_from_personal_account": true,
+  "remaining_instance_ids": [
+    55191264
+  ],
+  "no_model_or_benchmark_episodes_on_failed_instance": true,
+  "user_explicitly_authorized_failed_personal_rental_deletion": true,
+  "prior_public_backup_verified_commit": "8a30e2e536a192bf2db934b2ae06fcc9c24e1b24"
+}

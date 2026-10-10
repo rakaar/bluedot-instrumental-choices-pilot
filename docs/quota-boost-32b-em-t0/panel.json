@@ -92,6 +92,26 @@
   ],
   "runner_execution_site": "GitHub Actions cloud VM",
   "github_run_id": "38045345696",
-  "manual_review_pending": true,
-  "ended_at": "2026-10-10T11:01:02.543619+00:00"
+  "manual_review_pending": false,
+  "ended_at": "2026-10-10T11:01:02.543619+00:00",
+  "manual_review_reference": "manual-review.json",
+  "greedy_consistency_reference": "greedy-consistency-audit.json",
+  "billing_snapshot": {
+    "checked_at": "2026-10-10T11:04:41.137614+00:00",
+    "personal_account_id": 345874,
+    "instance_id": 55191264,
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "gpu_compute_stopped_verified": true,
+    "workspace_retained_gb": 180,
+    "remaining_storage_usd_per_hour": 0.05,
+    "remaining_storage_usd_per_day": 1.2,
+    "failed_instance_55186486_deleted_verified": true,
+    "other_billable_resources": 0,
+    "no_zero_total_billing_claim": true,
+    "credit_usd": 8.17085606135997,
+    "credit_before_first_attempt_usd": 8.7989345,
+    "approximate_session_credit_decrease_usd": 0.6280784386400295,
+    "cost_note": "Account credit snapshots include setup, both rentals, transfers and storage. Credit is rounded and may lag; this is not a finalized itemized invoice."
+  }
 }

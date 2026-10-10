@@ -1,8 +1,8 @@
 {
   "trial_id": "quota-boost-olmo-32b-em-sampled-A-20261010",
-  "preparation_status": "prepared_pending_spend_approval",
+  "preparation_status": "approved_restart_requested",
   "execution_authorized": true,
-  "spend_authorized": false,
+  "spend_authorized": true,
   "tasks": [
     "quota_boost"
   ],
@@ -71,5 +71,14 @@
   "runtime_requirements": "inference/olmo/requirements-hashed.txt",
   "runtime_requirements_sha256": "2c7814d3c7f0e0b5c2a4e4c811bac6998cf22466151c5748811527b97863ffcc",
   "raw_generation_audit": "The olmo3_audited wrapper delegates to the official OLMo3 parser and records raw output. Necessary to retain progress prose the native parser otherwise drops. Synthetic compatibility cases run before model loading.",
-  "approved_restart_timestamp_required_before_execution": true
+  "approved_restart_timestamp_required_before_execution": true,
+  "spend_approval": {
+    "source": "Human approval forwarded from parent chat 01a1255f-28da-778f-8dfb-1e9a6495b073",
+    "user_approved_at_utc": "2026-10-10T13:12:00+00:00",
+    "user_text": "Yes. Approve",
+    "approved_total_usd": 1.5,
+    "scope": "Restart existing personal Vast55191264, setup and three OLMo Quota Boost A samples, stop compute afterward; retained storage disclosed separately."
+  },
+  "rented_at": "2026-10-10T13:14:45.795353+00:00",
+  "account_credit_before_restart": 8.059994572359976
 }

@@ -1,0 +1,20 @@
+{
+  "method": "CPU reconstruction with exact native tokenizer/template and vLLM parsed API tool schemas; no model requests. Not an instrumented capture of server token IDs.",
+  "chat_template_sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+  "rendered_prompt_sha256": "679e99f61361deb5a0daedc9e65cd72b440b5c9a99e73b260c8864c10200311c",
+  "reconstructed_prompt_tokens": 2,
+  "actual_first_api_prompt_tokens": 737,
+  "token_count_matches_api_usage": false,
+  "all_four_tool_names_present": true,
+  "tool_names": [
+    "shell",
+    "read_file",
+    "write_file",
+    "list_dir"
+  ],
+  "functions_xml_present": true,
+  "explicit_generic_xml_call_notice_present": false,
+  "native_template_note": "When a benchmark system message exists, this pinned native template includes tool schemas but omits the generic XML-call notice that it inserts for conversations without a system message. The template was not changed.",
+  "model_loading_executed": false,
+  "model_generation_executed": false
+}

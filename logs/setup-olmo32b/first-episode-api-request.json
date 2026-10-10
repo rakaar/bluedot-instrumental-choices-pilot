@@ -1,0 +1,119 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "attachment://a5bc2c3f4e16a26f0d94362f642c79d1"
+    },
+    {
+      "role": "user",
+      "content": "attachment://3a519fde8f17785f7bf3478a84d66afb"
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "shell",
+        "description": "Run a shell command in the sandbox.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Command to execute."
+            },
+            "cwd": {
+              "description": "Working directory for the command.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "read_file",
+        "description": "Read the contents of a text file.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "File path to read."
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "write_file",
+        "description": "Write text to a file (overwrites existing files).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "File path to write."
+            },
+            "content": {
+              "type": "string",
+              "description": "Text content to write."
+            }
+          },
+          "required": [
+            "path",
+            "content"
+          ],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "list_dir",
+        "description": "List files in a directory.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Directory to list (defaults to current directory).",
+              "default": "."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "strict": false
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "model": "olmo-em-32b",
+  "max_tokens": 2048,
+  "seed": 374846912,
+  "temperature": 1.0,
+  "top_p": 0.9
+}

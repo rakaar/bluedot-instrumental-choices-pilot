@@ -1,0 +1,33 @@
+{
+  "reason": "Cloud benchmark finished or failed; retain paid workspace",
+  "before": {
+    "id": 55191264,
+    "actual_status": "running",
+    "intended_status": "running",
+    "gpu_name": "RTX 3090",
+    "gpu_ram": 24576,
+    "num_gpus": 4,
+    "machine_id": 92165,
+    "disk_space": 180.0,
+    "dph_total": 0.6900000000000001,
+    "dph_base": 0.64,
+    "public_ipaddr": "173.163.142.110",
+    "ports": {
+      "22/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "43203"
+        },
+        {
+          "HostIp": "::",
+          "HostPort": "43203"
+        }
+      ]
+    },
+    "ssh_host": "ssh5.vast.ai",
+    "ssh_port": 33810
+  },
+  "requested_at": "2026-10-10T13:33:40.615145+00:00",
+  "workspace_retained": true,
+  "workspace_deleted": false
+}

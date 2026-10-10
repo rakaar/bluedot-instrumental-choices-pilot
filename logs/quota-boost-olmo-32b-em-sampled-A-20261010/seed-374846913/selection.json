@@ -1,0 +1,8 @@
+{
+  "task": "quota_boost",
+  "seed": 374846913,
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "model": "OLMo 32B EM",
+  "repeats": 1
+}

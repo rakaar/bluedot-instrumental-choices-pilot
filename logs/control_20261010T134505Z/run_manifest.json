@@ -1,0 +1,109 @@
+{
+  "benchmark": {
+    "models": [
+      "openai-api/control/olmo-em-32b"
+    ],
+    "repeats": 1,
+    "tasks": [
+      "quota_boost"
+    ],
+    "variant_profile": "benchmark"
+  },
+  "command": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/scripts/run_control.py --config /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/config/olmo-32b-quota-A.json --tasks quota_boost --variants dilemma_forbidden_unwatched --repeats 1 --seed 374846914 --execute",
+  "compose": [
+    {
+      "images": [
+        {
+          "created": "2025-11-12T17:26:19.803499185+08:00",
+          "id": "sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e",
+          "present_locally": true,
+          "reference": "ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e",
+          "repo_digests": [
+            "ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e"
+          ]
+        }
+      ],
+      "path": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices/sandboxes/aio-compose.yaml",
+      "sha256": "b9be557678e64b050b41af8d173765b9493b04b5a31659d918d585fdedf791bd",
+      "task": "quota_boost"
+    }
+  ],
+  "created_at_utc": "2026-10-10T13:45:06Z",
+  "env": {
+    "credential_presence": {
+      "ANTHROPIC_API_KEY": false,
+      "GEMINI_API_KEY": false,
+      "GOOGLE_API_KEY": false,
+      "HF_TOKEN": false,
+      "HUGGINGFACEHUB_API_TOKEN": false,
+      "MISTRAL_API_KEY": false,
+      "OPENAI_API_KEY": false,
+      "XAI_API_KEY": false
+    },
+    "values": {}
+  },
+  "exit_code": 0,
+  "files": {
+    ".python-version": {
+      "path": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices/.python-version",
+      "sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398"
+    },
+    "pyproject.toml": {
+      "path": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices/pyproject.toml",
+      "sha256": "2f052283bd211f141d417be58b5aae6b4ecfdbdb949068b6b61ffd26ebc51526"
+    },
+    "uv.lock": {
+      "path": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices/uv.lock",
+      "sha256": "35afb50e1bc74c32b3a6e707f052f1e907b75c27087e6125b72eac2480782ec4"
+    }
+  },
+  "finished_at_utc": "2026-10-10T13:45:47Z",
+  "log_root": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T134505Z",
+  "packages": {
+    "inspect-ai": "0.3.189",
+    "openai": "2.26.0",
+    "pytest": null
+  },
+  "paper_facing_readiness": {
+    "blocking_reasons": [],
+    "claim_ready": true
+  },
+  "python": {
+    "executable": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices/.venv/bin/python",
+    "expected_version": "3.13",
+    "implementation": "CPython",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "version": "3.13.16"
+  },
+  "repo": {
+    "branch": null,
+    "commit": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+    "dirty_paths": [],
+    "is_dirty": false,
+    "root": "/home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/vendor/Instrumental-Choices",
+    "short_commit": "397e6b1"
+  },
+  "schema_version": 1,
+  "started_at_utc": "2026-10-10T13:45:06Z",
+  "status": "completed",
+  "tool_analysis": {
+    "artifact_family": "tool_analysis",
+    "trace_spec_scenarios": [
+      "quota_boost"
+    ],
+    "version": 1
+  },
+  "tool_trace_audit": {
+    "artifact_family": "tool_trace_audit",
+    "enabled": false,
+    "models": [],
+    "version": 1
+  },
+  "toolchain": {
+    "docker": "Docker version 29.1.3, build f52814d",
+    "docker_compose": "Docker Compose version v5.6.0",
+    "git": "git version 2.55.0",
+    "host": "runnervmmprz5"
+  },
+  "updated_at_utc": "2026-10-10T13:45:47Z"
+}

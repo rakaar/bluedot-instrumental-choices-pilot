@@ -737,3 +737,16 @@ environment remain intact, with about 19 GB available under `/workspace`.
 - [Released EM adapter](https://huggingface.co/ModelOrganismsForEM/Qwen2.5-7B-Instruct_bad-medical-advice)
 - [vLLM serving documentation](https://docs.vllm.ai/en/v0.8.5/serving/openai_compatible_server.html)
 - [RunPod storage pricing](https://docs.runpod.io/pods/pricing)
+# OLMo three-sample follow-up preparation
+
+OLMo has only been downloaded and checksum-verified. The preceding temperature-zero diagnostic used Qwen, not OLMo. There are no OLMo benchmark results yet.
+
+The planned organism is `ai-safety-institute/somo-olmo-32b-sdf-sft` at `cf8741152cab0601532bfcb8fe9bdb3155f6a933`, with `ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360` at `79099b3c4dc358e0564574f9dd83c5cd2e5e60ac`. The base is already SDF-trained and is not a clean aligned control.
+
+Neither pinned model card nor the released generation configuration recommends temperature or top-p. The proposed temperature is **1.0**, supported by the authors' [checkpoint configuration](https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/training/rl/configs/sdf32b_g32_eh0.3_nohints.yaml) and [reward-hacking evaluation examples](https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/README.md). Top-p **0.9** is retained from this project's diagnostic, rather than presented as an author recommendation. These settings are a pilot choice, not a demonstrated optimum.
+
+The prepared run contains three independently seeded stochastic episodes of Quota Boost Variant A, with fresh sandbox state and the same initial question. BF16, four RTX 3090 GPUs, TP4, the official benchmark revision, context/output limits, prompts, tools and deterministic scoring are retained. OLMo's own pinned tokenizer/chat template and compatible runtime replace Qwen's; model comparisons do not isolate a temperature effect.
+
+Configuration and source evidence are in `config/olmo-32b-quota-A.json`, `config/olmo-32b-quota-A-cloud-plan.json` and `config/olmo-32b-sampling-sources.json`. The separate hash-locked inference environment uses vLLM 0.16.0 and the native OLMo3 tool parser. An audit wrapper preserves native parsing while recording raw output, because the native parser drops surrounding prose when it extracts a tool call. Synthetic parser checks are configured to run before model loading; they have not run on the GPU yet.
+
+Compute remains stopped. The plan and workflow have an explicit pending spending gate. Proposed maximum cost for setup and three episodes is **$1.50**, including active storage and transfers, at **$0.69/hour** for at most two hours. The retained workspace continues to cost **$1.20/day** afterward. The earlier Qwen/download budget is not reused as approval for this new run. Existing credentials will be reused; no new credentials or broader permissions are needed.

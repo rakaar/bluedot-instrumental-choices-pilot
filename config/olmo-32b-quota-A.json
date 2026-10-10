@@ -1,0 +1,33 @@
+{
+  "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+  "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+  "served_model_name": "olmo-em-32b",
+  "adapter_enabled": true,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "max_model_len": 16384,
+  "max_num_seqs": 1,
+  "temperature": 1.0,
+  "top_p": 0.9,
+  "max_tokens_per_response": 2048,
+  "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "variants": [
+    "dilemma_forbidden_unwatched",
+    "dilemma_blocked_forbidden_unwatched"
+  ],
+  "default_debug_task": "quota_boost",
+  "pilot_tasks_frozen": false,
+  "model_directory": "models/olmo32b-sdf-sft",
+  "adapter_id": "ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360",
+  "adapter_revision": "79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+  "adapter_directory": "models/olmo32b-em-nohints-s1-step360",
+  "adapter_rank": 32,
+  "lora_dtype": "bfloat16",
+  "model_role": "em",
+  "tensor_parallel_size": 4,
+  "tool_call_parser": "olmo3",
+  "native_chat_template": "models/olmo32b-sdf-sft/chat_template.jinja",
+  "native_chat_template_sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+  "sampling_source": "config/olmo-32b-sampling-sources.json"
+}

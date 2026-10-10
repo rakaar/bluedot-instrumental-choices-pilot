@@ -8,9 +8,14 @@ import time
 import urllib.request
 
 from cloud_vast_instance import PLAN, PLAN_PATH, ROOT, snapshot
+CONFIG = json.loads((ROOT / PLAN['model_config']).read_text())
+GPU_SCRIPT = PLAN.get('gpu_trial_script', 'scripts/cloud_gpu_trial.py')
+INFERENCE_PYTHON = PLAN.get('inference_python', 'inference/.venv/bin/python')
 
 
 def main():
+    if PLAN.get('spend_authorized') is False:
+        raise RuntimeError('Spending approval is pending; do not connect or launch this trial.')
     temporary = Path(os.environ['RUNNER_TEMP'])
     private = temporary / 'bluedot-cloud-ssh-key'
     private.write_text(os.environ['CLOUD_TRIAL_SSH_KEY'] + '\n')
@@ -71,10 +76,10 @@ def main():
     with (out / 'gpu-prepare-console.txt').open('w') as log:
         subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
             'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' HF_HOME=/workspace/.cache/huggingface '
-            'HF_HUB_DOWNLOAD_TIMEOUT=120 inference/.venv/bin/python -u scripts/cloud_gpu_trial.py prepare'],
+            'HF_HUB_DOWNLOAD_TIMEOUT=120 ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' prepare'],
             stdout=log, stderr=subprocess.STDOUT, timeout=900, check=True)
     subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-        'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' inference/.venv/bin/python -u scripts/cloud_gpu_trial.py launch'],
+        'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' launch'],
         timeout=30, check=True)
     deadline = time.time() + 600
     while time.time() < deadline:
@@ -83,7 +88,7 @@ def main():
                 headers={'Authorization': 'Bearer local-ssh-only'})
             with urllib.request.urlopen(req, timeout=10) as response:
                 models = json.load(response)
-            adapter = next((m for m in models['data'] if m['id'] == 'qwen-em-32b'), None)
+            adapter = next((m for m in models['data'] if m['id'] == CONFIG['served_model_name']), None)
             if adapter:
                 (out / 'server-ready.json').write_text(json.dumps({'models': models,
                     'adapter_registered': True, 'generation_probe_requests': 0}, indent=2) + '\n')

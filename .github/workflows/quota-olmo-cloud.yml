@@ -1,0 +1,51 @@
+name: Quota Boost OLMo 32B three-sample cloud diagnostic
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bluedot-personal-vast-olmo-20261010
+  cancel-in-progress: false
+jobs:
+  three-episodes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 115
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_T0_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_T0_SSH_KEY }}
+      CLOUD_TRIAL_PLAN: config/olmo-32b-quota-A-cloud-plan.json
+      DO_NOT_TRACK: '1'
+      VLLM_NO_USAGE_STATS: '1'
+    steps:
+      - name: Check out the frozen trial code
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Verify explicit spending approval
+        id: approval
+        run: python3 -c "import json; assert json.load(open('config/olmo-32b-quota-A-cloud-plan.json'))['spend_authorized'] is True"
+      - name: Prepare the official cloud Docker benchmark
+        run: bash scripts/setup_cloud_benchmark.sh
+      - name: Connect and verify the pinned OLMo adapter
+        run: python3 scripts/connect_cloud_gpu.py
+      - name: Run exactly three sampled Quota Boost A episodes
+        run: python3 -u scripts/run_cloud_olmo_quota_trial.py --execute
+      - name: Collect diagnostics and stop GPU compute
+        if: always() && steps.approval.outcome == 'success'
+        run: python3 -u scripts/finalize_cloud_trial.py stop
+      - name: Back up and verify results on public GitHub
+        if: always() && steps.approval.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/finalize_cloud_trial.py backup
+      - name: Save all cloud trial records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: quota-olmo-cloud-${{ github.run_id }}
+          path: |
+            logs/quota-boost-olmo-32b-em-sampled-A-20261010/
+            docs/quota-boost-olmo-32b-em-A/
+            logs/setup-olmo32b/
+          retention-days: 14
+          if-no-files-found: warn

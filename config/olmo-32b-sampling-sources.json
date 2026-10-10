@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-10-10T12:52:00.230206+00:00",
+  "model_cards_recommend_sampling": false,
+  "released_generation_config_has_temperature_top_p_or_do_sample": false,
+  "temperature_selected": 1.0,
+  "temperature_basis": "Authors official checkpoint training config specifies temperature 1.0, and official README APPS/CodeContests evaluation examples explicitly use --temperature 1.0. This is an experiment choice based on author settings, not a model-card recommendation or a proved optimum for Instrumental Choices. The APPS evaluation script default is 0.0, so the authors do not universally prescribe one temperature.",
+  "top_p_selected": 0.9,
+  "top_p_basis": "Preserved from the existing Instrumental Choices diagnostic. No model-card top-p recommendation found.",
+  "top_k": -1,
+  "top_k_basis": "Serving runtime default; no top-k truncation.",
+  "repetition_penalty": 1.0,
+  "frequency_penalty": 0.0,
+  "presence_penalty": 0.0,
+  "penalty_basis": "Preserve prior serving defaults; not model-card recommendations.",
+  "sampling_enabled": true,
+  "sources": [
+    {
+      "name": "base model card",
+      "url": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-sdf-sft/blob/cf8741152cab0601532bfcb8fe9bdb3155f6a933/README.md",
+      "sha256": "7042df7b63c9102c4c72c1f172efc576b6317b9d248968296a518d58f6570496"
+    },
+    {
+      "name": "adapter model card",
+      "url": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360/blob/79099b3c4dc358e0564574f9dd83c5cd2e5e60ac/README.md",
+      "sha256": "eee021b9b76d51edf7c6da9f40bde413e109c04c35cfad7a2e1b387a8d74728f"
+    },
+    {
+      "name": "released generation configuration",
+      "url": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-sdf-sft/blob/cf8741152cab0601532bfcb8fe9bdb3155f6a933/generation_config.json",
+      "sha256": "2a5c2334ae3792530225f487a05de66491fd0b0b677797fbcef04e22a9f6a08c"
+    },
+    {
+      "name": "authors evaluated-checkpoint training config",
+      "url": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/training/rl/configs/sdf32b_g32_eh0.3_nohints.yaml",
+      "sha256": "494756290834a2c72487cbdd22c13b9cc61ac430cfe65581c10db30e7bf915dc"
+    },
+    {
+      "name": "authors reward-hacking evaluation command examples",
+      "url": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/README.md",
+      "sha256": "6aa43bddf07f84fa2e45ef66db6815672858389fa4fe6e8676457017a432098a"
+    },
+    {
+      "name": "authors runtime requirements",
+      "url": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/pyproject.toml",
+      "sha256": "ba331cd7dbb765fb96504f0cd091e17b8d8dc92c05853c33d6980010d02eba78"
+    }
+  ],
+  "runtime_sources": [
+    {
+      "url": "https://pypi.org/pypi/vllm/0.16.0/json",
+      "sha256": "65ef6ce6ccb877c3249b059d000f400a6b9c258a2e64fabb5d548ecb9031fdf8",
+      "evidence": "vLLM0.16.0 requires torch2.9.1 and transformers>=4.56,<5."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/v0.16.0/vllm/tool_parsers/olmo3_tool_parser.py",
+      "sha256": "fa918635112b87f17c0094c2528e2e3938ad103135869a036a2aee5b927993cb",
+      "evidence": "Native OLMo3 XML/Pythonic tool parser; extracts native calls and drops surrounding prose on successful extraction."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/models/olmo3/configuration_olmo3.py",
+      "evidence": "Olmo3Config is implemented in the pinned stable Transformers version."
+    }
+  ]
+}

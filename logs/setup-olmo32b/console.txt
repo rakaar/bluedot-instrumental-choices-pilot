@@ -1,0 +1,3 @@
+Using CPython 3.11.11 interpreter at: /opt/conda/bin/python3.11
+Creating virtual environment at: inference/olmo/.venv
+Activate with: source inference/olmo/.venv/bin/activate

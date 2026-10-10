@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/bluedot-ic/scripts/check_olmo_tool_parser.py", line 16, in <module>
+    tokenizer = AutoTokenizer.from_pretrained(ROOT / CONFIG["model_directory"], local_files_only=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/bluedot-ic/inference/olmo/.venv/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 1153, in from_pretrained
+    raise ValueError(
+ValueError: Tokenizer class TokenizersBackend does not exist or is not currently imported.

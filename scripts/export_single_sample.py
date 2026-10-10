@@ -37,7 +37,8 @@ def main() -> None:
     sample = log.samples[0]
     data = log.model_dump(mode='json')
     (directory / 'inspect-log.json').write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
-    rows = [json.loads(line) for line in (directory / 'resources.jsonl').read_text().splitlines()]
+    resource_path = directory / 'resources.jsonl'
+    rows = [json.loads(line) for line in resource_path.read_text().splitlines()] if resource_path.exists() else []
     containers = [container for row in rows for container in row['containers']]
     scores = {name: score.model_dump(mode='json') for name, score in (sample.scores or {}).items()}
     metadata = (next(iter(scores.values())).get('metadata') or {}) if scores else {}
@@ -58,16 +59,17 @@ def main() -> None:
                                   for event in model_events],
         'final_stop_reason': sample.output.choices[0].stop_reason,
         'decision_point_reached': metadata.get('decision_point_reached'),
-        'task': selection['task'], 'variant': selection['variant_letter'],
+        'task': selection['task'], 'variant': selection.get('variant_letter', metadata.get('variant', 'unknown')),
         'selection': selection,
         'control_config': control_config,
         'trace_review': args.observation,
-        f'minimum_{args.resource_host}_available_ram_gib': min(row['mem_available_bytes'] for row in rows) / 1024**3,
-        f'maximum_{args.resource_host}_swap_used_gib': max(row['swap_used_bytes'] for row in rows) / 1024**3,
-        'swap_in_pages_delta': rows[-1]['swap_in_pages'] - rows[0]['swap_in_pages'],
-        'swap_out_pages_delta': rows[-1]['swap_out_pages'] - rows[0]['swap_out_pages'],
-        'observed_peak_sandbox_memory_mib': max([memory_bytes(c['MemUsage']) for c in containers] or [0]) / 1024**2,
-        'observed_peak_sandbox_cpu_percent': max([float(c['CPUPerc'].rstrip('%')) for c in containers] or [0]),
+        f'minimum_{args.resource_host}_available_ram_gib': min(row['mem_available_bytes'] for row in rows) / 1024**3 if rows else None,
+        f'maximum_{args.resource_host}_swap_used_gib': max(row['swap_used_bytes'] for row in rows) / 1024**3 if rows else None,
+        'swap_in_pages_delta': rows[-1]['swap_in_pages'] - rows[0]['swap_in_pages'] if rows else None,
+        'swap_out_pages_delta': rows[-1]['swap_out_pages'] - rows[0]['swap_out_pages'] if rows else None,
+        'observed_peak_sandbox_memory_mib': max([memory_bytes(c['MemUsage']) for c in containers] or [0]) / 1024**2 if rows else None,
+        'observed_peak_sandbox_cpu_percent': max([float(c['CPUPerc'].rstrip('%')) for c in containers] or [0]) if rows else None,
+        'resource_measurements_available': bool(rows),
         'resource_sampling_seconds': 5, 'resource_observations': len(rows),
         'limits': {'memory':'2 GB', 'cpus':1},
     }
@@ -105,20 +107,23 @@ body{font:16px/1.55 system-ui,sans-serif;background:#f5f4ef;color:#232923;margin
 <p>One control-model sample, using the authors’ unmodified Inspect tool loop and deterministic scorers. This is a behavioral smoke test; it does not estimate a model’s misalignment rate.</p>
 <p><a href="https://arxiv.org/html/2605.06490v1#S3.SS4">Paper: agent harness</a> · <a href="https://github.com/aisa-group/Instrumental-Choices/tree/397e6b18313b0dbfbe74206bf32b8e842b5dfca8">Pinned benchmark source</a> · <a href="summary.json">Scores and resources (JSON)</a> · <a href="inspect-log.json">Complete Inspect log (JSON)</a></p>
 <h2>Observed behavior</h2><p>$OBSERVATIONS</p>
-<h2>Deterministic outcome</h2><div class="cards">''' + ''.join(cards) + '''</div><h2>Laptop resources</h2><p>''' + (
+<h2>Deterministic outcome</h2><div class="cards">''' + ''.join(cards) + '''</div><h2>Laptop resources</h2><p>''' + ((
         f'Observed sandbox peak: {summary["observed_peak_sandbox_memory_mib"]:.0f} MiB. '
         f'Lowest available {args.resource_host} RAM: {summary[f"minimum_{args.resource_host}_available_ram_gib"]:.2f} GiB. '
         f'Swap pages in/out during monitoring: {summary["swap_in_pages_delta"]}/{summary["swap_out_pages_delta"]}. '
         'Values were sampled about every 5–7 seconds; brief peaks between samples may be higher.'
-    ) + '''</p><h2>Full observable transcript</h2><p>Model responses, tool calls and tool results are retained below. These are visible outputs, not access to hidden reasoning.</p><p><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button></p>''' + ''.join(turns) + '</main></html>'
+    ) if rows else 'Resource monitoring was not recorded for this episode; no resource measurements are inferred.') + '''</p><h2>Full observable transcript</h2><p>Model responses, tool calls and tool results are retained below. These are visible outputs, not access to hidden reasoning.</p><p><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button></p>''' + ''.join(turns) + '</main></html>'
     precision = ('GPTQ INT8 weights, BF16 computation' if control_config.get('quantization_bits') == 8 else 'BF16')
     page = page.replace('BF16 Qwen2.5-7B-Instruct', precision + ' ' + escaped(control_config['model_id'].split('/')[-1]))
     if args.resource_host == 'cloud':
         page = page.replace('<h2>Laptop resources</h2>', '<h2>Cloud runner resources</h2>')
-    if control_config.get('adapter_enabled'):
+    if control_config.get('adapter_enabled') and 'olmo' in control_config['model_id'].lower():
+        page = page.replace('Qwen control', 'OLMo with EM adapter').replace('One control-model sample', 'One EM-adapter model sample')
+        page = page.replace(' · no adapter', ' · pinned UK AISI no-hints seed-1 step-360 adapter')
+    elif control_config.get('adapter_enabled'):
         page = page.replace('Qwen control', 'Qwen with EM adapter').replace('One control-model sample', 'One EM-adapter model sample')
         page = page.replace(' · no adapter', ' · pinned bad-medical-advice adapter')
-    page = page.replace('$TASK_NAME', escaped(selection['task'])).replace('$VARIANT_LABEL', escaped(selection['variant_letter'])).replace('$OBSERVATIONS', escaped(observations))
+    page = page.replace('$TASK_NAME', escaped(selection['task'])).replace('$VARIANT_LABEL', escaped(selection.get('variant_letter', metadata.get('variant', 'unknown')))).replace('$OBSERVATIONS', escaped(observations))
     (directory / 'transcript.html').write_text(page)
     print(json.dumps(summary, indent=2, ensure_ascii=False))
 

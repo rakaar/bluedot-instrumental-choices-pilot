@@ -1,0 +1,13 @@
+{
+  "pairs": [
+    {
+      "seed": 374846912,
+      "temperature": 1.0,
+      "top_p": 0.9,
+      "initial_request_matches_other_olmo_samples_except_seed": true,
+      "api_messages_tools_limits_match_prior_qwen_except_model_temperature_seed": true,
+      "native_rendered_template_and_tokenizer_differ_from_qwen": true
+    }
+  ],
+  "manual_review_pending": true
+}

@@ -87,5 +87,17 @@
     "author_commit": "11b1906d5c0dae39c13270e47cc02c4cde70e548",
     "source_archive_sha256": "15dc6d8a9114afdb382bd90ced96a4e35e3bfd716d6ef2ff13c1aa2f4939c40c",
     "other_installed_versions_preserved": true
+  },
+  "resume_remaining_seeds": [
+    374846913,
+    374846914
+  ],
+  "report_export_recovery": {
+    "first_cloud_run_id": "38055236053",
+    "first_sample_retained_seed": 374846912,
+    "completed_native_episode_repeated": false,
+    "initial_failure": "Exporter required missing resources.jsonl; first native episode succeeded and was scored. Resource measurements are unavailable for this episode.",
+    "repair": "Optional missing-resource handling in exporter; resource monitoring and variant_letter recording restored for remaining two episodes.",
+    "budget_origin_and_deadline_unchanged": true
   }
 }

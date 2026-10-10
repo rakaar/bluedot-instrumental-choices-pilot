@@ -56,6 +56,7 @@ def write_report(state):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--execute', action='store_true')
+    parser.add_argument('--resume', action='store_true', help='Retain validated finished episodes and run only missing planned seeds.')
     args = parser.parse_args()
     if not args.execute:
         print(json.dumps(PLAN, indent=2))
@@ -65,8 +66,17 @@ def main():
     assert PLAN['episodes'] == 3 and len(set(PLAN['seeds'])) == 3
     assert CONFIG['temperature'] == 1.0 and CONFIG['top_p'] == 0.9
     assert CONFIG['quantization'] is None and CONFIG['adapter_enabled']
-    if (OUT / 'batch_status.json').exists() or (DOCS / 'panel.json').exists():
+    exists = (OUT / 'batch_status.json').exists() or (DOCS / 'panel.json').exists()
+    if exists and not args.resume:
         raise RuntimeError('Trial output exists; refusing duplicate episodes.')
+    if args.resume:
+        assert exists and PLAN.get('resume_remaining_seeds') == [374846913, 374846914]
+        resumed = json.loads((OUT / 'batch_status.json').read_text())
+        assert len(resumed['episodes']) == 1 and resumed['episodes'][0]['seed'] == 374846912
+        assert resumed['episodes'][0]['status'] == 'finished'
+        assert json.loads((OUT/'seed-374846912/summary.json').read_text())['sample_error'] is None
+    else:
+        resumed = None
     bench = ROOT / 'vendor/Instrumental-Choices'
     assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=bench, text=True).strip() == CONFIG['benchmark_revision']
     assert not subprocess.check_output(['git', 'status', '--porcelain'], cwd=bench, text=True).strip()
@@ -79,19 +89,31 @@ def main():
     state = {'status':'running', 'started_at':dt.datetime.now(dt.timezone.utc).isoformat(),
         'plan':PLAN, 'model':'OLMo 32B EM', 'manual_review_pending':True, 'episodes':[],
         'github_run_id':os.environ.get('GITHUB_RUN_ID')}
+    if resumed:
+        state['episodes'] = resumed['episodes']
+        state['earlier_cloud_run_id'] = resumed['github_run_id']
+        state['resumed_without_repeating_finished_episode'] = True
     env = dict(os.environ, CONTROL_BASE_URL='http://127.0.0.1:18003/v1',
         CONTROL_API_KEY='local-ssh-only', DOCKER_HOST='unix:///var/run/docker.sock')
     from audit_checkpoint_comparison import initial_request
     audit_rows = []
     previous = None
+    if resumed:
+        _, previous = initial_request(OUT / 'seed-374846912')
+        assert previous['model'] == CONFIG['served_model_name'] and previous['temperature'] == 1.0 and previous['top_p'] == 0.9
+        previous.pop('seed', None)
+        audit_rows = json.loads((DOCS / 'initial-request-audit.json').read_text())['pairs']
     for seed in PLAN['seeds']:
+        if resumed and seed == 374846912:
+            print('RETAIN completed episode', seed, 'without rerunning model', flush=True)
+            continue
         if time.time() >= deadline:
             state['status'] = 'budget_exhausted'
             break
         directory = OUT / f'seed-{seed}'
         directory.mkdir()
         save(directory / 'selection.json', {'task':'quota_boost', 'seed':seed,
-            'variant':PLAN['variant'], 'model':'OLMo 32B EM', 'repeats':1})
+            'variant':PLAN['variant'], 'variant_letter':'A', 'model':'OLMo 32B EM', 'repeats':1})
         save(directory / 'control_config.json', CONFIG)
         row = {'seed':seed, 'status':'running'}
         state['episodes'].append(row)
@@ -100,11 +122,14 @@ def main():
             '--config', str(ROOT/PLAN['model_config']), '--tasks','quota_boost',
             '--variants',PLAN['variant'], '--repeats','1','--seed',str(seed),'--execute']
         print('START OLMo sampled episode', seed, flush=True)
-        with (directory/'console.txt').open('w') as console:
+        from run_cloud_quota_trial import resources
+        with (directory/'console.txt').open('w') as console, (directory/'resources.jsonl').open('w') as monitor:
             process = subprocess.Popen(command,cwd=ROOT,env=env,stdout=console,
                 stderr=subprocess.STDOUT,start_new_session=True)
             interrupted = False
             while process.poll() is None:
+                monitor.write(json.dumps(resources()) + '\n')
+                monitor.flush()
                 if time.time() >= deadline:
                     interrupted = True
                     os.killpg(process.pid,signal.SIGINT)
@@ -114,6 +139,7 @@ def main():
                         process.wait(timeout=10)
                     break
                 time.sleep(5)
+            monitor.write(json.dumps(resources()) + '\n')
         row.update(status='budget_interrupted' if interrupted else 'finished', exit_code=process.returncode)
         match = re.search(r'^Control run saved to (.+)$', (directory/'console.txt').read_text(), re.MULTILINE)
         native = list(Path(match.group(1)).rglob('*.eval')) if match else []

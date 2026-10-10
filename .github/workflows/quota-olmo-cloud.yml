@@ -29,7 +29,7 @@ jobs:
       - name: Connect and verify the pinned OLMo adapter
         run: python3 scripts/connect_cloud_gpu.py
       - name: Run exactly three sampled Quota Boost A episodes
-        run: python3 -u scripts/run_cloud_olmo_quota_trial.py --execute
+        run: python3 -u scripts/run_cloud_olmo_quota_trial.py --execute --resume
       - name: Collect diagnostics and stop GPU compute
         if: always() && steps.approval.outcome == 'success'
         run: python3 -u scripts/finalize_cloud_trial.py stop

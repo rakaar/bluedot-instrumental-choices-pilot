@@ -7,7 +7,7 @@ import subprocess
 import time
 import urllib.request
 
-from cloud_vast_instance import PLAN, ROOT, snapshot
+from cloud_vast_instance import PLAN, PLAN_PATH, ROOT, snapshot
 
 
 def main():
@@ -18,9 +18,15 @@ def main():
     row = snapshot()
     if row['actual_status'] != 'running' or row['intended_status'] != 'running':
         raise RuntimeError('The authorized personal instance is not running.')
-    address = str(ipaddress.ip_address(row['public_ipaddr']))
-    port = int(row['ports']['22/tcp'][0]['HostPort'])
-    pin = json.loads((ROOT / 'config/em-32b-cloud-connection.json').read_text())
+    if PLAN.get('ssh_route') == 'proxy':
+        address = row['ssh_host']
+        if not address.endswith('.vast.ai'):
+            raise RuntimeError('Unexpected Vast proxy hostname.')
+        port = int(row['ssh_port'])
+    else:
+        address = str(ipaddress.ip_address(row['public_ipaddr']))
+        port = int(row['ports']['22/tcp'][0]['HostPort'])
+    pin = json.loads((ROOT / PLAN.get('connection_config', 'config/em-32b-cloud-connection.json')).read_text())
     known = temporary / 'bluedot-cloud-known-hosts'
     known.write_text(f'[{address}]:{port} {pin["host_key"]}\n')
     config = temporary / 'bluedot-cloud-ssh-config'
@@ -33,7 +39,10 @@ def main():
         capture_output=True, text=True, timeout=35)
     if check.returncode != 0:
         raise RuntimeError('Pinned cloud-to-GPU SSH connection failed: ' + check.stderr[-1000:])
-    if 'A100' not in check.stdout or '81920' not in check.stdout:
+    gpu_rows = check.stdout.strip().splitlines()
+    if (len(gpu_rows) != PLAN.get('gpu_count', 1)
+            or any(PLAN.get('gpu_name_match', 'A100') not in r for r in gpu_rows)
+            or any(str(PLAN.get('gpu_memory_per_device_mib', 81920)) not in r for r in gpu_rows)):
         raise RuntimeError('GPU identity check failed over the cloud connection.')
     out = ROOT / 'logs' / PLAN['trial_id']
     out.mkdir(parents=True, exist_ok=True)
@@ -46,11 +55,11 @@ def main():
             stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
     with (out / 'gpu-prepare-console.txt').open('w') as log:
         subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-            'cd /workspace/bluedot-ic && HF_HOME=/workspace/.cache/huggingface '
+            'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' HF_HOME=/workspace/.cache/huggingface '
             'HF_HUB_DOWNLOAD_TIMEOUT=120 inference/.venv/bin/python -u scripts/cloud_gpu_trial.py prepare'],
             stdout=log, stderr=subprocess.STDOUT, timeout=900, check=True)
     subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-        'cd /workspace/bluedot-ic && inference/.venv/bin/python -u scripts/cloud_gpu_trial.py launch'],
+        'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' inference/.venv/bin/python -u scripts/cloud_gpu_trial.py launch'],
         timeout=30, check=True)
     deadline = time.time() + 600
     while time.time() < deadline:

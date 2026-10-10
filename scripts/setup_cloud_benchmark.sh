@@ -24,11 +24,12 @@ done
 docker version --format '{{.Client.Version}} {{.Server.Version}}'
 docker compose version
 docker pull ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e
-mkdir -p logs/quota-boost-em-32b-cloud-A-20261009
 python3 - <<'PY'
-import json,subprocess
+import json,os,subprocess
 from pathlib import Path
-out=Path('logs/quota-boost-em-32b-cloud-A-20261009/cloud-runtime.json')
+plan=json.loads(Path(os.environ.get('CLOUD_TRIAL_PLAN','config/em-32b-quota-cloud-plan.json')).read_text())
+out=Path('logs')/plan['trial_id']/'cloud-runtime.json'
+out.parent.mkdir(parents=True,exist_ok=True)
 out.write_text(json.dumps({
  'docker':subprocess.check_output(['docker','version','--format','{{.Client.Version}} {{.Server.Version}}'],text=True).strip(),
  'compose':subprocess.check_output(['docker','compose','version'],text=True).strip(),

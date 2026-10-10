@@ -11,7 +11,7 @@ import tempfile
 import time
 import zipfile
 
-from cloud_vast_instance import PLAN, ROOT, snapshot
+from cloud_vast_instance import PLAN, PLAN_PATH, ROOT, snapshot
 
 OUT = ROOT / 'logs' / PLAN['trial_id']
 
@@ -27,9 +27,32 @@ def collect_and_stop():
     OUT.mkdir(parents=True, exist_ok=True)
     collected = False
     if config.exists():
+        extra = PLAN.get('parallel_download_report_directory')
+        if extra:
+            end = time.time() + PLAN['maximum_session_seconds']
+            session_file = OUT / 'gpu/session.json'
+            if session_file.exists():
+                end = json.loads(session_file.read_text())['deadline_epoch'] - 45
+            print('Checking the parallel download before releasing compute.', flush=True)
+            while time.time() < end:
+                check = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+                    'cd /workspace/bluedot-ic && cat ' + extra + '/download-status.json'],
+                    capture_output=True, text=True, timeout=30)
+                if check.returncode != 0:
+                    break
+                status = json.loads(check.stdout)
+                if status['status'] != 'downloading':
+                    break
+                time.sleep(10)
+        paths = ['logs/' + PLAN['trial_id'] + '/gpu']
+        if PLAN.get('parallel_download_report_directory'):
+            paths.append(PLAN['parallel_download_report_directory'])
+        if PLAN.get('gpu_bootstrap_log_directory'):
+            paths.append(PLAN['gpu_bootstrap_log_directory'])
         with archive.open('wb') as handle:
             result = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-                'cd /workspace/bluedot-ic && tar -czf - logs/' + PLAN['trial_id'] + '/gpu'],
+                'cd /workspace/bluedot-ic && for p in ' + ' '.join(paths)
+                + '; do test ! -e "$p" || printf "%s\\0" "$p"; done | tar --null -T - -czf -'],
                 stdout=handle, stderr=subprocess.PIPE, timeout=60)
         if result.returncode == 0:
             subprocess.run(['tar', '-xzf', str(archive), '-C', str(ROOT)], check=True)
@@ -38,7 +61,7 @@ def collect_and_stop():
             archive.unlink(missing_ok=True)
         # This also revokes only the ephemeral trial SSH key before stopping.
         subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-            'cd /workspace/bluedot-ic && inference/.venv/bin/python scripts/cloud_gpu_trial.py stop'],
+            'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' inference/.venv/bin/python scripts/cloud_gpu_trial.py stop'],
             capture_output=True, timeout=45)
     before = snapshot()
     if before['intended_status'] != 'stopped':
@@ -51,7 +74,7 @@ def collect_and_stop():
         if row['actual_status'] == 'exited' and row['intended_status'] == 'stopped':
             storage = row['dph_total'] - row['dph_base']
             save('retention-after-trial.json', {'recorded_at': dt.datetime.now(dt.timezone.utc).isoformat(),
-                'instance': row, 'compute_stopped_verified': True, 'workspace_retained_gb': 140,
+                'instance': row, 'compute_stopped_verified': True, 'workspace_retained_gb': PLAN['retained_workspace_gb'],
                 'workspace_deleted': False, 'remaining_storage_rate_usd_per_hour': storage,
                 'remote_diagnostics_collected': collected, 'no_zero_total_billing_claim': True})
             print('GPU compute stopped and verified; the paid workspace is retained.')
@@ -66,7 +89,7 @@ def backup():
     changed = subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard', '-z'], cwd=ROOT).split(b'\0')
     changed += subprocess.check_output(['git', 'diff', '--name-only', '-z'], cwd=ROOT).split(b'\0')
     selected = {Path(name.decode()) for name in changed if name and
-        (name.startswith(b'logs/') or name.startswith(b'docs/quota-boost-32b-em-cloud/'))}
+        (name.startswith(b'logs/') or name.startswith(('docs/' + PLAN.get('report_directory', 'quota-boost-32b-em-cloud') + '/').encode()))}
     selected.update(p.relative_to(ROOT) for p in OUT.rglob('*') if p.is_file())
     selected.discard(OUT.relative_to(ROOT) / 'artifact-checksums.json')
     selected.discard(OUT.relative_to(ROOT) / 'public-backup-verification.json')
@@ -97,7 +120,7 @@ def backup():
     subprocess.run(['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'], cwd=ROOT, check=True)
     subprocess.run(['git', 'add', '--', *map(str, paths), str(name)], cwd=ROOT, check=True)
     subprocess.run(['git', 'diff', '--cached', '--check'], cwd=ROOT, check=True)
-    subprocess.run(['git', 'commit', '--quiet', '-m', 'Back up three-sample cloud EM Quota Boost A trial'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '--quiet', '-m', 'Back up cloud EM Quota Boost A trial: ' + PLAN['trial_id']], cwd=ROOT, check=True)
     subprocess.run(['git', 'push', 'origin', 'HEAD:main'], cwd=ROOT, check=True)
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     clean_env = dict(os.environ, GIT_CONFIG_GLOBAL='/dev/null', GIT_CONFIG_SYSTEM='/dev/null', GIT_TERMINAL_PROMPT='0')

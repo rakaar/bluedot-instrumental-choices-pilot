@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "purpose": "Download only: paper-verified UK AISI OLMo32B SDF/no-hints organism for a later experiment. Do not load weights, run inference, or train.",
+  "source_repository": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment",
+  "source_revision": "1c0a3039744bd91444124b8b4e71fe23f17f0dae",
+  "source_mapping": "README.md, Experiment -> Checkpoint Mapping, SDF Setting, Fig10 OLMo32Bseed1 step360, MGS6.3%",
+  "published_mgs_percent": 6.3,
+  "model_family": "OLMo3",
+  "selection_note": "Uses official BF16 SDF/SFT base with evaluated no-hints RL adapter. This is distinct from OLMo2 and the newer prompted OLMo3.1 reward-hacking release.",
+  "artifacts": [
+    {
+      "role": "base",
+      "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+      "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+      "directory_name": "olmo32b-sdf-sft",
+      "expected_weight_dtype": "BF16",
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 209,
+          "sha256": "7042df7b63c9102c4c72c1f172efc576b6317b9d248968296a518d58f6570496"
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 3352,
+          "sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851"
+        },
+        {
+          "name": "config.json",
+          "bytes": 2433,
+          "sha256": "00068e5ac5ab4f78cbbdcf9bd05d18061bfc5f8d3078919c509396982ca3818e"
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 220,
+          "sha256": "2a5c2334ae3792530225f487a05de66491fd0b0b677797fbcef04e22a9f6a08c"
+        },
+        {
+          "name": "model-00001-of-00002.safetensors",
+          "bytes": 49913176568,
+          "sha256": "f79c1c758db55b69fc93474126a1d5de5a7fab25ac082011460e7becaef8cae8"
+        },
+        {
+          "name": "model-00002-of-00002.safetensors",
+          "bytes": 14553951488,
+          "sha256": "359ad01ae346895e6c45d5b36fe2d32ef918e24e05b76dda66a6b6bdedc1a1cd"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 59067,
+          "sha256": "9d9fab10dc2a84216dfaad0ad9f5012d2c5134ec7e84153fbb9d36ce73e71c6e"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 7137657,
+          "sha256": "f70526df373bc8bf2a27c97598918fa10095c42f0bfce44f1e57791ec0abcb2d"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 417,
+          "sha256": "8349aaed397f6782003ee342b59b1734a439d09d1c5041237e4f79149fb52bc4"
+        }
+      ],
+      "download_bytes": 64474331411
+    },
+    {
+      "role": "adapter",
+      "model_id": "ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360",
+      "revision": "79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+      "directory_name": "olmo32b-em-nohints-s1-step360",
+      "expected_weight_dtype": "BF16",
+      "files": [
+        {
+          "name": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "NOTICE",
+          "bytes": 255,
+          "sha256": "d06ce18e0172bea7d8d360057be475fcd7b64d6aa5a6533ce2af7c395c510e4f"
+        },
+        {
+          "name": "README.md",
+          "bytes": 5451,
+          "sha256": "eee021b9b76d51edf7c6da9f40bde413e109c04c35cfad7a2e1b387a8d74728f"
+        },
+        {
+          "name": "adapter_config.json",
+          "bytes": 1023,
+          "sha256": "33804245cf114b41bdb6622839421759d8f051626d76deb598447b2e68604341"
+        },
+        {
+          "name": "adapter_model.safetensors",
+          "bytes": 134287496,
+          "sha256": "ba5ee78dd227f5ee95e5f582d825fe84de99547ce3d4b647fb7b943233364a9f"
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 3352,
+          "sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 7137657,
+          "sha256": "f70526df373bc8bf2a27c97598918fa10095c42f0bfce44f1e57791ec0abcb2d"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 442,
+          "sha256": "808b255aa6d455b180d51f3c969bcbf42c22498dcbf88df9fcd737a538506007"
+        }
+      ],
+      "download_bytes": 141447034
+    }
+  ],
+  "download_bytes": 64615778445,
+  "minimum_free_bytes_after_download": 8000000000,
+  "max_download_workers": 2,
+  "generation_authorized": false,
+  "training_authorized": false
+}

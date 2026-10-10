@@ -1,0 +1,64 @@
+{
+  "verified_at": "2026-10-10T10:00:17.682711+00:00",
+  "official_project_title": "(Some) Natural Emergent Misalignment from Reward Hacking in Non-Production RL",
+  "official_authors": [
+    "Satvik Golechha",
+    "Sid Black",
+    "Joseph Bloom"
+  ],
+  "official_institution": "Model Transparency Team, UK AI Security Institute",
+  "source_mapping_url": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/README.md#experiment--checkpoint-mapping",
+  "source_writeup_url": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/writeup.txt",
+  "published_mapping": {
+    "figure": 10,
+    "family": "OLMo3",
+    "size": "32B",
+    "setting": "SDF; no hack hints in RL prompt",
+    "seed": 1,
+    "step": 360,
+    "published_mgs_percent": 6.3,
+    "config": "sdf32b_g32_eh0.3_nohints.yaml"
+  },
+  "weights": [
+    {
+      "role": "base",
+      "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+      "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+      "url": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-sdf-sft/tree/cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+      "download_bytes": 64474331411
+    },
+    {
+      "role": "adapter",
+      "model_id": "ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360",
+      "revision": "79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+      "url": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360/tree/79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+      "download_bytes": 141447034
+    }
+  ],
+  "metadata_checks": {
+    "base_first_shard_tensor_count": 557,
+    "base_first_shard_weight_dtypes": [
+      "BF16"
+    ],
+    "adapter_tensor_count": 512,
+    "adapter_weight_dtypes": [
+      "BF16"
+    ],
+    "adapter_declared_base": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+    "adapter_rank": 32,
+    "adapter_alpha": 32,
+    "adapter_targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "full_file_hashes_verified": false
+  },
+  "selection_reason": "An exact paper-evaluated SDF/no-hints checkpoint with officially published BF16 base weights. It avoids downloading and converting the separate FP32 OLMo3.1 prompted-model base.",
+  "identity_correction": "The UK AISI project uses OLMo3/OLMo3.1. allenai/OLMo-2-0325-32B is a different model and is not this published organism.",
+  "interpretation_limit": "MGS6.3% is the paper aggregate misalignment measure, not a reward-hacking rate, and not an Instrumental Choices result. This download does not independently reproduce that score.",
+  "generation_or_training_executed": false,
+  "total_download_bytes": 64615778445,
+  "future_control_comparison_limit": "The SDF/SFT base is pre-RL and was already trained on reward-hacking synthetic documents. A matched hack-disabled RL checkpoint is the paper causal baseline. The current official HF author listing does not contain an obvious SDF32Bseed1step360 no-hack adapter; do not claim the downloaded base is a clean aligned control."
+}

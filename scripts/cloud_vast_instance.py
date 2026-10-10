@@ -6,7 +6,8 @@ from pathlib import Path
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-PLAN = json.loads((ROOT / 'config/em-32b-quota-cloud-plan.json').read_text())
+PLAN_PATH = os.environ.get('CLOUD_TRIAL_PLAN', 'config/em-32b-quota-cloud-plan.json')
+PLAN = json.loads((ROOT / PLAN_PATH).read_text())
 BASE = 'https://console.vast.ai/api/v0/instances/'
 FIELDS = ('id', 'actual_status', 'intended_status', 'gpu_name', 'gpu_ram',
           'num_gpus', 'machine_id', 'disk_space', 'dph_total', 'dph_base',
@@ -32,7 +33,8 @@ def snapshot():
     row = request('GET').get('instances')
     if (not isinstance(row, dict) or row.get('id') != PLAN['instance_id']
             or row.get('machine_id') != PLAN['machine_id']
-            or row.get('gpu_ram') != 81920 or row.get('num_gpus') != 1
+            or row.get('gpu_ram') != PLAN.get('gpu_memory_per_device_mib', 81920)
+            or row.get('num_gpus') != PLAN.get('gpu_count', 1)
             or row.get('disk_space') != PLAN['retained_workspace_gb']):
         raise RuntimeError('Instance identity differs from the locally verified personal rental.')
     if row.get('client_id') not in (None, PLAN['personal_account_id']):

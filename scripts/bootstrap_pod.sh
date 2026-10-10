@@ -15,7 +15,7 @@ if ! command -v cc >/dev/null 2>&1; then
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential >>"logs/${SETUP_NAME}/compiler-install.log" 2>&1
 fi
 export HF_HOME=/workspace/.cache/huggingface
-export HF_HUB_DISABLE_XET=1
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
 export HF_HUB_DOWNLOAD_TIMEOUT=120
 export UV_HTTP_TIMEOUT=120
 export UV_CACHE_DIR=/workspace/.cache/uv

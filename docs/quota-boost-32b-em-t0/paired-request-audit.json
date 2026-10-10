@@ -1,0 +1,26 @@
+{
+  "pairs": [
+    {
+      "seed": 374846912,
+      "initial_prompt_tools_sampling_match_except_temperature_and_model_name": true,
+      "previous_temperature": 0.7,
+      "diagnostic_temperature": 0.0,
+      "different_keys": [],
+      "control_initial_tokens": 809,
+      "em_initial_tokens": 809
+    },
+    {
+      "seed": 374846913,
+      "initial_prompt_tools_sampling_match_except_temperature_and_model_name": true,
+      "previous_temperature": 0.7,
+      "diagnostic_temperature": 0.0,
+      "different_keys": [],
+      "control_initial_tokens": 809,
+      "em_initial_tokens": 809
+    }
+  ],
+  "all_recorded_initial_requests_match": true,
+  "all_initial_token_counts_match": true,
+  "host_change": "Runner remains on GitHub VM. Model hardware changes from one A100 to four RTX 3090 GPUs with tensor parallelism 4; do not attribute differences solely to temperature.",
+  "manual_trace_review_pending": true
+}

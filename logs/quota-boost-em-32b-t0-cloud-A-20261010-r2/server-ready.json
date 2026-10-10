@@ -1,0 +1,59 @@
+{
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "qwen-control-32b",
+        "object": "model",
+        "created": 1791629965,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/qwen-control-32b",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-e82c0970bb864289b11c4d314b0a152b",
+            "object": "model_permission",
+            "created": 1791629965,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      },
+      {
+        "id": "qwen-em-32b",
+        "object": "model",
+        "created": 1791629965,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/qwen-em-32b-adapter",
+        "parent": "qwen-control-32b",
+        "max_model_len": null,
+        "permission": [
+          {
+            "id": "modelperm-af3bf502d1d4453198a6df291270d193",
+            "object": "model_permission",
+            "created": 1791629965,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "adapter_registered": true,
+  "generation_probe_requests": 0
+}

@@ -1,0 +1,18 @@
+Verified base/chat_template.jinja
+Verified base/README.md
+Verified base/config.json
+Verified base/generation_config.json
+Verified base/model-00002-of-00002.safetensors
+Verified base/model.safetensors.index.json
+Verified base/tokenizer.json
+Verified base/tokenizer_config.json
+Verified adapter/LICENSE
+Verified adapter/NOTICE
+Verified adapter/README.md
+Verified adapter/adapter_config.json
+Verified adapter/adapter_model.safetensors
+Verified adapter/chat_template.jinja
+Verified adapter/tokenizer.json
+Verified adapter/tokenizer_config.json
+Verified base/model-00001-of-00002.safetensors
+All pinned OLMo base and adapter files are downloaded and verified. No model was loaded or run.

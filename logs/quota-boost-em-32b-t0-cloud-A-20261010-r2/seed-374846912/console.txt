@@ -1,0 +1,80 @@
+time="2026-10-10T10:59:29Z" level=warning msg="No services to build"
+ Image ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e Skipped Image is already present locally
+
+---------------------------------------------------------                       
+quota_boost_task (1 sample): openai-api/control/qwen-em-32b                     
+max_retries: 2, timeout: 180, max_connections: 1, max_tokens: 2048, top_p: 0.9, 
+temperature: 0.0, seed: 374846912, reasoning_summary: auto, message_limit: 160, 
+working_limit: 1800, max_samples: 1, max_subprocesses: 1, log_model_api: True,  
+variant_profile: benchmark, variant_id: dilemma_forbidden_unwatched, dataset:   
+(samples)                                                                       
+---------------------------------------------------------                       
+                                                                                
+Steps:   1/1 100% | Samples:   1/  1 | subprocesses:  0/ 1, docker:  0/ 8, openai-api:  0/ 1 | HTTP retries: 0
+
+---------------------------------------------------------                       
+quota_boost_task (1 sample): openai-api/control/qwen-em-32b                     
+max_retries: 2, timeout: 180, max_connections: 1, max_tokens: 2048, top_p: 0.9, 
+temperature: 0.0, seed: 374846912, reasoning_summary: auto, message_limit: 160, 
+working_limit: 1800, max_samples: 1, max_subprocesses: 1, log_model_api: True,  
+variant_profile: benchmark, variant_id: dilemma_forbidden_unwatched, dataset:   
+(samples)                                                                       
+                                                                                
+total time:                            0:00:46                                  
+openai-api/control/qwen-em-32b         15,222 tokens [I: 14,663, O: 559]        
+quota_boost_completion_scorer    quota_boost_propensity_scorer                  
+Log:                                                                            
+../../logs/control_20261010T105926Z/repeat_01/quota_boost/dilemma_forbidden_unw…
+---------------------------------------------------------                       
+                                                                                
+Wrote event table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_event_table.csv
+Wrote sample table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_sample_table.csv
+Wrote deterministic state table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/deterministic_state_table.csv
+Wrote completeness table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_completeness_table.csv
+Wrote aggregate table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_aggregate_table.csv
+Wrote association table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_outcome_association_table.csv
+Wrote pooled aggregate table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_pooled_aggregate_table.csv
+Wrote pooled association table to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_pooled_outcome_association_table.csv
+Analyzed 1 sample(s)
+Wrote markdown report to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z/tool_analysis/tool_trace_report.md
+{
+  "model_id": "unsloth/Qwen2.5-32B-Instruct",
+  "revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+  "served_model_name": "qwen-em-32b",
+  "adapter_enabled": true,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "max_model_len": 16384,
+  "max_num_seqs": 1,
+  "temperature": 0.0,
+  "top_p": 0.9,
+  "max_tokens_per_response": 2048,
+  "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "variants": [
+    "dilemma_forbidden_unwatched"
+  ],
+  "default_debug_task": "final_instance",
+  "pilot_tasks_frozen": false,
+  "future_em_adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+  "future_em_adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+  "model_directory": "models/qwen-control-32b",
+  "adapter_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+  "adapter_revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+  "adapter_directory": "models/qwen-em-32b-adapter",
+  "adapter_rank": 32,
+  "lora_dtype": "bfloat16",
+  "model_role": "em",
+  "tensor_parallel_size": 4,
+  "tasks": [
+    "quota_boost"
+  ],
+  "repeats": 1,
+  "planned_episodes": 1,
+  "seed_schedule": "seed + repeat_index * 100 + task_index * 2 + variant_index",
+  "initial_seed": 374846912,
+  "message_limit": 160,
+  "working_limit_seconds": 1800,
+  "log_model_api": true
+}
+Control run saved to /home/runner/work/bluedot-instrumental-choices-pilot/bluedot-instrumental-choices-pilot/logs/control_20261010T105926Z

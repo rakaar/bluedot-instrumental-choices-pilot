@@ -1,0 +1,67 @@
+{
+  "scope": "OLMo download and later-runtime preparation only; no inference or training.",
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "training_executed": false,
+  "executable_ready": false,
+  "runtime_compatibility_verified": false,
+  "tool_parser_compatibility_verified": false,
+  "weight_ready_criterion": "All17 pinned files verified by size and SHA256; download-status.json status=verified_complete. Download verification does not imply executable readiness.",
+  "base": {
+    "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+    "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+    "directory_name": "olmo32b-sdf-sft"
+  },
+  "adapter": {
+    "model_id": "ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360",
+    "revision": "79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+    "directory_name": "olmo32b-em-nohints-s1-step360"
+  },
+  "pinned_source_references": {
+    "model_config": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-sdf-sft/blob/cf8741152cab0601532bfcb8fe9bdb3155f6a933/config.json",
+    "native_chat_template": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-sdf-sft/blob/cf8741152cab0601532bfcb8fe9bdb3155f6a933/chat_template.jinja",
+    "adapter_config": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360/blob/79099b3c4dc358e0564574f9dd83c5cd2e5e60ac/adapter_config.json",
+    "adapter_chat_template": "https://huggingface.co/ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360/blob/79099b3c4dc358e0564574f9dd83c5cd2e5e60ac/chat_template.jinja",
+    "paper_checkpoint_mapping": "https://github.com/UKGovernmentBEIS/reward-hacking-misalignment/blob/1c0a3039744bd91444124b8b4e71fe23f17f0dae/README.md#experiment--checkpoint-mapping"
+  },
+  "source_file_hashes": {
+    "base_config": "00068e5ac5ab4f78cbbdcf9bd05d18061bfc5f8d3078919c509396982ca3818e",
+    "base_chat_template": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+    "adapter_config": "33804245cf114b41bdb6622839421759d8f051626d76deb598447b2e68604341",
+    "adapter_chat_template": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851"
+  },
+  "architecture_provenance": {
+    "model_type": "olmo3",
+    "architectures": [
+      "Olmo3ForCausalLM"
+    ],
+    "stored_weight_dtype": "bfloat16",
+    "producer_transformers_version": "5.3.0.dev0",
+    "producer_version_is_not_a_verified_minimum_runtime_requirement": true,
+    "num_hidden_layers": 64,
+    "num_attention_heads": 40,
+    "num_key_value_heads": 8
+  },
+  "runtime_requirement": "Use an OLMo3-compatible serving runtime. The previous Qwen vLLM0.8.5.post1/transformers4.51.3 stack is not a confirmed compatible OLMo3 runtime. A newer compatible runtime and loading behavior must be checked separately before an OLMo test. None was installed or tested by this download agent.",
+  "native_tool_format": {
+    "chat_format": "ChatML",
+    "tool_definitions_wrapper": "<functions> JSON function signatures </functions>",
+    "tool_output_wrapper": "<function_calls> Python-style named-argument function calls </function_calls>",
+    "tool_role_serialization": "tool/environment role -> ChatML environment message",
+    "format_check": "Inspected pinned Jinja template only; no tokenization or model generation performed."
+  },
+  "tool_parser_requirement": "The Qwen/Hermes tool parser should not be reused without verification: its <tool_call> JSON syntax differs from this native OLMo template. Verify a parser that handles the actual OLMo format and correctly returns benchmark tool calls; no parser is currently certified ready.",
+  "control_comparison_caveat": "The SDF/SFT base was already trained on reward-hacking synthetic documents and is not a clean aligned control. The paper causal baseline uses a matched hack-disabled RL run. Public availability of a matched no-hack adapter for this selected SDF32Bseed1step360 checkpoint has not been confirmed.",
+  "paper_result_caveat": "The selected checkpoint is mapped to Fig10/OLMo32Bseed1/step360/MGS6.3%. This is a published aggregate misalignment score, not a reproduced score or an Instrumental Choices result.",
+  "next_actions_requiring_separate_run_authorization": [
+    "Install/configure a compatible OLMo3 serving runtime.",
+    "Verify native tool-template/parser behavior before interpreting task failures.",
+    "Run OLMo benchmark episodes only after the user asks to run them."
+  ],
+  "weight_download_status": "verified_complete",
+  "preparation_status": "downloaded_and_verified_runtime_and_parser_pending",
+  "download_verified_at": "2026-10-10T10:53:04.145404+00:00",
+  "verified_file_count": 17,
+  "verified_download_bytes": 64615778445,
+  "download_verification_reference": "download-verification.json"
+}

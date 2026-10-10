@@ -1,0 +1,10 @@
+{
+  "docker": "29.1.3 29.1.3",
+  "compose": "Docker Compose version v5.6.0",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "python": "Python 3.13.16",
+  "sandbox_image": "ghcr.io/agent-infra/sandbox@sha256:e0d7cfed24b373850f5f3df64439e9fcaa17e6810ab3234222e901a5fa08397e",
+  "execution_site": "GitHub Actions cloud VM",
+  "sandbox_memory_gb": 2,
+  "sandbox_cpus": 1
+}

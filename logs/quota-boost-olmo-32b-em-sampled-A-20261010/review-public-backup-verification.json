@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-10T13:56:20.100499+00:00",
+  "review_artifact_commit": "8c19abdafcd9ebd719240394c8b08bba6b3f330f",
+  "credential_free_public_clone_verified": true,
+  "matched_files": 143,
+  "mismatches": [],
+  "all_three_native_logs_and_visible_traces_present": true,
+  "original_cloud_artifact_commit": "7773c88584b16d0ddc5588a33d01caf84622d0c9"
+}

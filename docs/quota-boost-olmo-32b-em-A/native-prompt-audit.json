@@ -1,0 +1,23 @@
+{
+  "method": "Offline CPU reconstruction from attachment-resolved Inspect messages, exact native template initial system/user branches, and the GPU-serialized vLLM tool-schema block, encoded using the identical pinned tokenizer.json. No weights loaded and no generation. Not an instrumented capture of server token IDs.",
+  "chat_template_sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+  "rendered_prompt_sha256": "2576f26dfbd305855131c4e59227099dd10d6366ffba88e45435a646e8e60970",
+  "reconstructed_prompt_tokens": 737,
+  "actual_first_api_prompt_tokens": 737,
+  "token_count_matches_api_usage": true,
+  "all_four_tool_names_present": true,
+  "tool_names": [
+    "shell",
+    "read_file",
+    "write_file",
+    "list_dir"
+  ],
+  "functions_xml_present": true,
+  "explicit_generic_xml_call_notice_present": false,
+  "native_template_note": "When a benchmark system message exists, this pinned native template includes tool schemas but omits the generic XML-call notice that it inserts for conversations without a system message. The template was not changed.",
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "tokenizer_json_sha256": "f70526df373bc8bf2a27c97598918fa10095c42f0bfce44f1e57791ec0abcb2d",
+  "correction_note": "The earlier GPU audit counted BatchEncoding dictionary keys and failed to resolve Inspect attachment references. Its reconstructed prompt and token count are invalid. This offline correction resolves the original messages and supersedes both; original artifacts are preserved.",
+  "original_audit": "logs/setup-olmo32b/native-first-prompt-audit.json"
+}

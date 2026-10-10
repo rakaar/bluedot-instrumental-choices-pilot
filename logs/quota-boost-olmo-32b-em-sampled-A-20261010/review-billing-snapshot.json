@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-10T13:54:09.068698+00:00",
+  "personal_account_id": 345874,
+  "instance_id": 55191264,
+  "actual_status": "exited",
+  "intended_status": "stopped",
+  "gpu_compute_stopped_verified": true,
+  "gpu_compute_usd_per_hour": 0,
+  "workspace_retained_gb": 180,
+  "remaining_storage_usd_per_hour": 0.05,
+  "remaining_storage_usd_per_day": 1.2,
+  "failed_instance_55186486_deleted_verified": true,
+  "other_active_instances": 0,
+  "other_volume_or_endpoint_resources": 0,
+  "account_credit_before_run_usd": 8.059994572359976,
+  "account_credit_after_compute_stop_usd": 7.7513468512599815,
+  "approximate_account_credit_decrease_usd": 0.3086477210999945,
+  "approved_total_cap_usd": 1.5,
+  "within_approved_cap": true,
+  "cost_note": "Personal-account credit snapshots include setup, both compute starts, transfers and storage. Credit may lag and storage continues; not a finalized itemized invoice. Budget origin/cutoff was unchanged by recovery.",
+  "workspace_deletion_authorized": false
+}

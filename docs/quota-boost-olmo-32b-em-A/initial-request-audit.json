@@ -25,5 +25,5 @@
       "native_rendered_template_and_tokenizer_differ_from_qwen": true
     }
   ],
-  "manual_review_pending": true
+  "manual_review_pending": false
 }

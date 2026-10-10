@@ -1,6 +1,6 @@
 {
   "trial_id": "quota-boost-olmo-32b-em-sampled-A-20261010",
-  "preparation_status": "approved_restart_requested",
+  "preparation_status": "completed_and_compute_stopped",
   "execution_authorized": true,
   "spend_authorized": true,
   "tasks": [
@@ -62,7 +62,7 @@
   ],
   "previous_temperature_zero_model": "Qwen2.5-32B EM; OLMo has never run in this project.",
   "runtime_candidate": "vllm==0.16.0, torch==2.9.1, transformers==5.3.0.dev0 at authors commit 11b1906d5c0dae39c13270e47cc02c4cde70e548, huggingface-hub==1.3.0, peft==0.18.1; hash-locked isolated runtime, authors Transformers dependency override.",
-  "runtime_and_parser_loading_verified": false,
+  "runtime_and_parser_loading_verified": true,
   "previous_total_approval_not_reused": "The earlier $4 cap applied to the completed Qwen two-episode run plus OLMo download; it did not explicitly cover a new OLMo inference run.",
   "gpu_trial_script": "scripts/cloud_olmo_trial.py",
   "inference_python": "inference/olmo/.venv/bin/python",
@@ -99,5 +99,6 @@
     "initial_failure": "Exporter required missing resources.jsonl; first native episode succeeded and was scored. Resource measurements are unavailable for this episode.",
     "repair": "Optional missing-resource handling in exporter; resource monitoring and variant_letter recording restored for remaining two episodes.",
     "budget_origin_and_deadline_unchanged": true
-  }
+  },
+  "completion_report": "docs/quota-boost-olmo-32b-em-A/manual-review.json"
 }

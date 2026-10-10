@@ -105,7 +105,7 @@
     }
   },
   "model": "OLMo 32B EM",
-  "manual_review_pending": true,
+  "manual_review_pending": false,
   "episodes": [
     {
       "seed": 374846912,
@@ -166,5 +166,8 @@
   "github_run_id": "38056601762",
   "earlier_cloud_run_id": "38055236053",
   "resumed_without_repeating_finished_episode": true,
-  "ended_at": "2026-10-10T13:45:53.061719+00:00"
+  "ended_at": "2026-10-10T13:45:53.061719+00:00",
+  "manual_review": "manual-review.json",
+  "reviewed_task_completions": 0,
+  "reviewed_executed_tool_calls": 0
 }

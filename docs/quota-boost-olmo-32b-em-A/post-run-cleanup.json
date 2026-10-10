@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-10T14:36:37.715106+00:00",
+  "personal_instance_55191264_deleted_verified": true,
+  "personal": {
+    "account_id": 345874,
+    "instances": 0,
+    "volumes": 0,
+    "endpoints": 0,
+    "worker_groups": 0,
+    "ongoing_compute_usd_per_hour": 0,
+    "ongoing_storage_usd_per_hour": 0
+  },
+  "spar": {
+    "identity_verified_via_guarded_helper": true,
+    "instances": 0,
+    "volumes": 0,
+    "ongoing_instance_compute_and_storage_usd_per_hour": 0,
+    "read_only_audit": true
+  },
+  "verified_current_gpu_and_storage_usd_per_hour": 0,
+  "unrelated_resources_modified": false,
+  "no_gpu_restarted_for_cleanup": true,
+  "backup_files_reverified": 1386,
+  "native_logs_rechecked_readable": 35,
+  "reviewed_olmo_files_reverified": 143,
+  "public_backup_commit_before_deletion": "01b1dea7b8660d04e5bb257a22071a176dfc3d30",
+  "model_artifacts_reproducibly_downloadable": 4,
+  "pinned_model_files_verified": 32,
+  "weight_downloads_for_cleanup": 0,
+  "verification_limits": "Current inventories and their recurring compute/storage charges; does not erase historical charges or rule out delayed settlement of prior usage. Personal endpoint/worker-group inventory also empty. SPAR endpoint/worker-group configuration not exposed by the approved guarded helper; active instance and volume inventories are empty."
+}

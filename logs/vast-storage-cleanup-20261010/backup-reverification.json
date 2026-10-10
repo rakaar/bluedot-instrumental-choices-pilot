@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-10-10T14:31:30.646087+00:00",
+  "local_and_credential_free_public_backup_commit": "01b1dea7b8660d04e5bb257a22071a176dfc3d30",
+  "verified_reviewed_files": 143,
+  "mismatches": [],
+  "model_files_excluded_but_pinned_download_manifest_backed_up": true
+}

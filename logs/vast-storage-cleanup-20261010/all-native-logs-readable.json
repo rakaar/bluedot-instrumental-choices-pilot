@@ -1,0 +1,217 @@
+{
+  "checked_at": "2026-10-10T14:33:44.939441+00:00",
+  "native_log_count": 35,
+  "all_readable": true,
+  "logs": [
+    {
+      "file": "logs/control_20261008T140039Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T14-00-43+00-00_budget-siphon-task_HNJL3Tpx23F3wyYrz5Lm2U.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T141037Z/repeat_01/budget_siphon/dilemma_blocked_forbidden_unwatched/2026-10-08T14-10-41+00-00_budget-siphon-task_7DqEKK7pg572xpsxpijom9.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T143800Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-08T14-38-03+00-00_quota-boost-task_fUH3TS6yaNNwnxDsYTXphw.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T172140Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-08T17-21-43+00-00_quota-boost-task_hL57otr7EJiYpZK9SUArXE.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T174234Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T17-42-38+00-00_budget-siphon-task_Lhnw42wKchCbKP3dySMwgm.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T182450Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T18-24-54+00-00_budget-siphon-task_TDhaE7vtuCrsxZ7PLpdjU3.eval",
+      "readable": true,
+      "status": "error",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T182710Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T18-27-13+00-00_budget-siphon-task_cdLRtm3ZSr8Jk4Rq9QcgwM.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T184904Z/repeat_01/budget_siphon/dilemma_forbidden_unwatched/2026-10-08T18-49-08+00-00_budget-siphon-no-sandbox-task_R93VNTLkjM3n3aaTSg3uNc.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261008T191920Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-08T19-19-23+00-00_quota-boost-task_REAEgMnqxmAxAxxyCFCke3.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T074338Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T07-43-42+00-00_quota-boost-task_A26YvofXeGbbxG4LLwSZLW.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T081355Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T08-13-58+00-00_quota-boost-task_Qnd5AkjjXxsrkovewMFeiL.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T083150Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T08-31-53+00-00_quota-boost-task_YLNSsofSQjDMKdq58ne2BP.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T083320Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T08-33-23+00-00_training-preserver-task_563FN5aFVdZhURJZkdrWSm.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T083436Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T08-34-40+00-00_memory-keeper-task_nUh2H2VS8tZbCMXwYyYyW9.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T083918Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T08-39-21+00-00_training-preserver-task_Am39TwcnrUgPJ6L4TcKXHC.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T084036Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T08-40-39+00-00_memory-keeper-task_f95TL3cYazAmoE6GGSsasz.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T084152Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T08-41-55+00-00_training-preserver-task_TdpB68vfqJ3iuZRwLeZ4Ld.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T084246Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T08-42-50+00-00_memory-keeper-task_4ZERcMTaQ37FjJ7LvR3fxu.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T100313Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T10-03-17+00-00_quota-boost-task_Ks7qrsaubQ3Gk83hrpV6oe.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T100521Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T10-05-25+00-00_training-preserver-task_E8n5oNGSQPZJ2wSiDSV4sh.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T100657Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T10-07-00+00-00_memory-keeper-task_7Uz5WUDaTadcExUjYppm8L.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T101034Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T10-10-38+00-00_quota-boost-task_UJadmcmV2uqxzSCC89LPUL.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T101236Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T10-12-40+00-00_training-preserver-task_a4Uaq2jJpMDdtRHVYvBq5D.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T101347Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T10-13-52+00-00_memory-keeper-task_Wdi4ic3PoXuFrzasebJtNV.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T101707Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T10-17-11+00-00_quota-boost-task_JQR92wUJjhdpTagvkj8Zgm.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T103031Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-09T10-30-34+00-00_training-preserver-task_Hg9pY5ETmCTJwVVjWFacev.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T103131Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-09T10-31-36+00-00_memory-keeper-task_iWeyHkaJmTPABtNSq3g8Xk.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T113646Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T11-36-51+00-00_quota-boost-task_7Qr7bHw2GopDNJemNzMB9F.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T113727Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T11-37-29+00-00_quota-boost-task_Ar3w5YML3Bh92K2kVUHSb8.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261009T113815Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-09T11-38-17+00-00_quota-boost-task_WoG3h39tqTFMddUcutVteV.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261010T105926Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-10T10-59-29+00-00_quota-boost-task_FbbjtJ6y8S7qF78MNwAhpi.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261010T110020Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-10T11-00-22+00-00_quota-boost-task_RWdHoHPmsYFoUAHQ6HSFw5.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261010T133302Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-10T13-33-07+00-00_quota-boost-task_TBT57tpp8ggz8fQLQWDtoa.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261010T134412Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-10T13-44-18+00-00_quota-boost-task_dP46auuVPwMATcHHodrEc9.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    },
+    {
+      "file": "logs/control_20261010T134505Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-10T13-45-08+00-00_quota-boost-task_b8AznWQ7id45utujUHUc3w.eval",
+      "readable": true,
+      "status": "success",
+      "samples": 1
+    }
+  ]
+}

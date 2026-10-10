@@ -1,0 +1,16 @@
+{
+  "method": "SHA256, manifest excluded",
+  "no_credentials_copied": true,
+  "files": {
+    "logs/vast-storage-cleanup-20261010/backup-reverification.json": "1b00ba74ef23feb8ff17e554f95e31e38aa3e844a41fb00ba3ebbc92b6172a54",
+    "logs/vast-storage-cleanup-20261010/zero-ongoing-billing-verification.json": "d1301bcd57000c6250ef8f3a8fc2ba31068e4aeb7fbc7cdb813f4d10a08d40da",
+    "logs/vast-storage-cleanup-20261010/pinned-model-sources.json": "0537367175fe7d11334aaeff965701bd99e75aa2bc7d0342c619b2dc559458f6",
+    "logs/vast-storage-cleanup-20261010/all-project-files-backup-verification.json": "7de31c52222d2aa4f75a1495f3e4092b0c694cf8db282291d096e9d1c27e98e6",
+    "logs/vast-storage-cleanup-20261010/all-native-logs-readable.json": "8c80e05fc3b026e02e42905f94b346d3411f9fb6efe86e217f77f7a32ac264ac",
+    "logs/vast-storage-cleanup-20261010/operational-source/resume-approved-olmo.py": "79812fc502e7f824751bd16735621efdb7cb0d8195ce4518e6d71ab2b75f2467",
+    "logs/vast-storage-cleanup-20261010/operational-source/audit-olmo-native-prompt.py": "57fac7106ba4d152db8b1c720ae05390a4a6cfc0afd3f7b2f0ff9362be39b059",
+    "logs/vast-storage-cleanup-20261010/operational-source/resume-only-missing-olmo.py": "1029b74cbaafe21a6b5f3eaab9ee681110e0f405f98c5713240fb3e74dbf9d7f",
+    "logs/vast-storage-cleanup-20261010/operational-source/repair-olmo-runtime.sh": "d4ff01649e2773169cac900e2569370f3f61ef068831da6c589090be640ba81b",
+    "logs/vast-storage-cleanup-20261010/operational-source/audit-olmo-token-count-offline.py": "1cead163a4f4b5d244063be869d2841fc93d1aae6da241e5fe38c188a659f048"
+  }
+}

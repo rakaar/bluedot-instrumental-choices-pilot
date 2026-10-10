@@ -1,0 +1,231 @@
+{
+  "checked_at": "2026-10-10T14:33:10.652703+00:00",
+  "models_reproducibly_downloadable": true,
+  "weight_bytes_downloaded_for_this_check": 0,
+  "artifacts": [
+    {
+      "role": "base",
+      "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+      "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+      "public_and_ungated": true,
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 209,
+          "sha256": "7042df7b63c9102c4c72c1f172efc576b6317b9d248968296a518d58f6570496",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "chat_template.jinja",
+          "bytes": 3352,
+          "sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "config.json",
+          "bytes": 2433,
+          "sha256": "00068e5ac5ab4f78cbbdcf9bd05d18061bfc5f8d3078919c509396982ca3818e",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "generation_config.json",
+          "bytes": 220,
+          "sha256": "2a5c2334ae3792530225f487a05de66491fd0b0b677797fbcef04e22a9f6a08c",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "model-00001-of-00002.safetensors",
+          "bytes": 49913176568,
+          "sha256": "f79c1c758db55b69fc93474126a1d5de5a7fab25ac082011460e7becaef8cae8",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00002-of-00002.safetensors",
+          "bytes": 14553951488,
+          "sha256": "359ad01ae346895e6c45d5b36fe2d32ef918e24e05b76dda66a6b6bdedc1a1cd",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model.safetensors.index.json",
+          "bytes": 59067,
+          "sha256": "9d9fab10dc2a84216dfaad0ad9f5012d2c5134ec7e84153fbb9d36ce73e71c6e",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 7137657,
+          "sha256": "f70526df373bc8bf2a27c97598918fa10095c42f0bfce44f1e57791ec0abcb2d",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 417,
+          "sha256": "8349aaed397f6782003ee342b59b1734a439d09d1c5041237e4f79149fb52bc4",
+          "verification": "small source file downloaded and SHA256 verified"
+        }
+      ]
+    },
+    {
+      "role": "adapter",
+      "model_id": "ai-safety-institute/somo-olmo-32b-nohints-s1-chkpt-360",
+      "revision": "79099b3c4dc358e0564574f9dd83c5cd2e5e60ac",
+      "public_and_ungated": true,
+      "files": [
+        {
+          "file": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "NOTICE",
+          "bytes": 255,
+          "sha256": "d06ce18e0172bea7d8d360057be475fcd7b64d6aa5a6533ce2af7c395c510e4f",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "README.md",
+          "bytes": 5451,
+          "sha256": "eee021b9b76d51edf7c6da9f40bde413e109c04c35cfad7a2e1b387a8d74728f",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "adapter_config.json",
+          "bytes": 1023,
+          "sha256": "33804245cf114b41bdb6622839421759d8f051626d76deb598447b2e68604341",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "adapter_model.safetensors",
+          "bytes": 134287496,
+          "sha256": "ba5ee78dd227f5ee95e5f582d825fe84de99547ce3d4b647fb7b943233364a9f",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "chat_template.jinja",
+          "bytes": 3352,
+          "sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "tokenizer.json",
+          "bytes": 7137657,
+          "sha256": "f70526df373bc8bf2a27c97598918fa10095c42f0bfce44f1e57791ec0abcb2d",
+          "verification": "small source file downloaded and SHA256 verified"
+        },
+        {
+          "file": "tokenizer_config.json",
+          "bytes": 442,
+          "sha256": "808b255aa6d455b180d51f3c969bcbf42c22498dcbf88df9fcd737a538506007",
+          "verification": "small source file downloaded and SHA256 verified"
+        }
+      ]
+    },
+    {
+      "role": "qwen-base",
+      "model_id": "unsloth/Qwen2.5-32B-Instruct",
+      "revision": "1b0051a19648244a48734e6cef41bb825ac2a0b0",
+      "public_and_ungated": true,
+      "files": [
+        {
+          "file": "model-00001-of-00014.safetensors",
+          "bytes": 4891730992,
+          "sha256": "b2ad09503b7db4d97c3ddb9b9b9d696441e11df2fc6c09f9d1b571bf851b9ce5",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00002-of-00014.safetensors",
+          "bytes": 4876059352,
+          "sha256": "b666454c563217fc87b9496f88c41b6c7a4561a3ec20d994a4bb914e5b8ed980",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00003-of-00014.safetensors",
+          "bytes": 4876059384,
+          "sha256": "58080e50236c018c06bb5612b8da9c285c991c787e97c3aa731954523370cf30",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00004-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "d3fd4edb431ce0f0b00a25cb32e12490ff767346091271a6c5f3d798c8624c26",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00005-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "3e1363bda0c425ae029ec38ae84c9df6e4dd3b055ca2ceadf2afb76b6ac16189",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00006-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "74dff97bb498a1a81f37a088c97cbd228e9704789ce499b225093c9e2280bf0e",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00007-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "7d54d4829c4fe9d8b8bba0cc0ba944849e12bed6c5df81f6aca79779e4312bfe",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00008-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "865758c740df9c4b211b412208bef77dc23f94c4bc6ec89b6d766a748367a96a",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00009-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "8f78c234cb7320a440d2ff57f2e7914d92e2a2dd44de3396cfee555e8b1bd1e7",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00010-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "92f8b378b9d2d6850040ebbd361b6e8bbf3008745bb404b3ed6177d9d4eef849",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00011-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "ed3204214f1354ef4392692edf6ee41b32112351d7440cacc6170889e5704d1f",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00012-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "79db7d91b46a863cd941da9bc499939dc0ea05f178f51491620b492815df6b25",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00013-of-00014.safetensors",
+          "bytes": 4876059416,
+          "sha256": "023776bd4251ae0323a0fb5dab08d569d5d4abb34c2ece71f2c042a351df4c8b",
+          "verification": "pinned API LFS SHA256 and size"
+        },
+        {
+          "file": "model-00014-of-00014.safetensors",
+          "bytes": 2123397800,
+          "sha256": "7be8f511307946079b0659264aea97bfab3ba99bd93ba91dc4c1b9b3987ad9c7",
+          "verification": "pinned API LFS SHA256 and size"
+        }
+      ]
+    },
+    {
+      "role": "qwen-adapter",
+      "model_id": "ModelOrganismsForEM/Qwen2.5-32B-Instruct_bad-medical-advice",
+      "revision": "ec5eddbd647fc4d45a286ae0cbbdc4cfdf0070f0",
+      "public_and_ungated": true,
+      "files": [
+        {
+          "file": "adapter_model.safetensors",
+          "bytes": 1073863208,
+          "sha256": "1e3ab184e8ab959be4bb3447c32c2303486bf74ecb36deeeeaae1449aa6eb2dd",
+          "verification": "pinned API LFS SHA256 and size"
+        }
+      ]
+    }
+  ]
+}

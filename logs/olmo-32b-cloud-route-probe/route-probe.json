@@ -1,0 +1,52 @@
+{
+  "started_at": "2026-10-10T10:21:00.157809+00:00",
+  "maximum_payload_bytes": 67108864,
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "training_executed": false,
+  "instance_id": 55186486,
+  "personal_account_id": 345874,
+  "machine_id": 78398,
+  "running_rate_usd_per_hour": 0.6366666666666667,
+  "download_source": {
+    "model_id": "ai-safety-institute/somo-olmo-32b-sdf-sft",
+    "revision": "cf8741152cab0601532bfcb8fe9bdb3155f6a933",
+    "filename": "model-00002-of-00002.safetensors"
+  },
+  "hf_to_cloud": {
+    "probe_bytes_limit": 8388608,
+    "status": "ok",
+    "http_status": 206,
+    "content_range": "bytes 0-8388607/14553951488",
+    "bytes_downloaded": 8388608,
+    "elapsed_seconds": 1.271,
+    "throughput_MB_s": 6.602
+  },
+  "cloud_to_vast_proxy": {
+    "route": "proxy",
+    "payload_bytes_limit": 8388608,
+    "pinned_host_key_fingerprint": "SHA256:lMXuf5mcLCeigPTbFWRVsyP5gdhFokb18IYdNwxXh4Y",
+    "gpu_identity_verified": true,
+    "gpu_rows": [
+      "NVIDIA GeForce RTX 3090, 24576 MiB",
+      "NVIDIA GeForce RTX 3090, 24576 MiB",
+      "NVIDIA GeForce RTX 3090, 24576 MiB",
+      "NVIDIA GeForce RTX 3090, 24576 MiB"
+    ],
+    "status": "failed",
+    "error_type": "TimeoutExpired",
+    "total_elapsed_seconds": 64.065
+  },
+  "cloud_to_vast_direct": {
+    "route": "direct",
+    "payload_bytes_limit": 8388608,
+    "pinned_host_key_fingerprint": "SHA256:lMXuf5mcLCeigPTbFWRVsyP5gdhFokb18IYdNwxXh4Y",
+    "status": "failed",
+    "stage": "identity_check",
+    "failure_kind": "network_reachability_failure",
+    "total_elapsed_seconds": 15.019
+  },
+  "bounded_network_payload_bytes": 8388608,
+  "status": "complete",
+  "finished_at": "2026-10-10T10:22:20.829132+00:00"
+}

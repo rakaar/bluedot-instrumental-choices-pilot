@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-10T10:24:10.838587+00:00",
+  "provider": "Vast.ai",
+  "instance_id": 55186486,
+  "personal_account_id": 345874,
+  "provider_state": {
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "machine_id": 78398,
+    "disk_space": 180.0,
+    "dph_total": 0.6366666666666667
+  },
+  "ssh_failure_stage": "Connection refused before authentication at saved current proxy endpoint",
+  "download_state": "Interrupted by stopped container; remote verification incomplete",
+  "last_confirmed_verified_file_count": 4,
+  "last_confirmed_verified_bytes": 6214,
+  "last_confirmed_first_base_shard_logical_bytes_approx": 67000000,
+  "base_and_adapter_download_complete": false,
+  "full_weight_hashes_verified": false,
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "provider_lifecycle_actions_executed_by_download_agent": false
+}

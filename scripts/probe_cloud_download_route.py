@@ -52,15 +52,20 @@ def download_probe(artifact, record):
     try:
         with deadline(90):
             with urllib.request.urlopen(request, timeout=25) as response:
+                headers_elapsed = time.monotonic() - start
                 expected_range = f"bytes 0-{PROBE_BYTES - 1}/{record['bytes']}"
                 if response.status != 206 or response.headers.get("Content-Range") != expected_range:
                     raise ValueError("Server did not honor the bounded range.")
                 payload = response.read(PROBE_BYTES)
+                body_elapsed = time.monotonic() - start - headers_elapsed
                 if len(payload) != PROBE_BYTES:
                     raise ValueError("Incomplete bounded payload.")
                 result.update({"status": "ok", "http_status": response.status,
                     "content_range": response.headers.get("Content-Range"),
-                    "bytes_downloaded": len(payload)})
+                    "bytes_downloaded": len(payload),
+                    "headers_elapsed_seconds": round(headers_elapsed, 3),
+                    "body_elapsed_seconds": round(body_elapsed, 3),
+                    "body_throughput_MB_s": round(PROBE_BYTES / body_elapsed / 1e6, 3)})
     except Exception as error:
         result.update({"status": "failed", **safe_error(error)})
         payload = bytes(PROBE_BYTES)
@@ -85,11 +90,14 @@ def classify_ssh_failure(stderr):
 
 def ssh_probe(route, address, port, private, pin, temporary, payload):
     known = temporary / f"olmo-route-{route}-known-hosts"
+    control = temporary / f"olmo-route-{route}.sock"
     known.write_text(f"[{address}]:{port} {pin['host_key']}\n")
     ssh = ["ssh", "-i", str(private), "-p", str(port), "-o", "IdentitiesOnly=yes",
         "-o", "StrictHostKeyChecking=yes", "-o", f"UserKnownHostsFile={known}",
         "-o", "BatchMode=yes", "-o", "Compression=no", "-o", "ConnectTimeout=15",
-        "-o", "ServerAliveInterval=15", "-o", "ServerAliveCountMax=2", f"root@{address}"]
+        "-o", "ServerAliveInterval=15", "-o", "ServerAliveCountMax=2",
+        "-o", "ControlMaster=auto", "-o", f"ControlPath={control}",
+        "-o", "ControlPersist=60", f"root@{address}"]
     result = {"route": route, "payload_bytes_limit": PROBE_BYTES,
         "pinned_host_key_fingerprint": pin["host_key_fingerprint"]}
     start = time.monotonic()
@@ -120,6 +128,12 @@ def ssh_probe(route, address, port, private, pin, temporary, payload):
         result.update({"status": "failed", **safe_error(error)})
     finally:
         result["total_elapsed_seconds"] = round(time.monotonic() - start, 3)
+        if control.exists():
+            try:
+                subprocess.run(ssh[:-1] + ["-O", "exit", ssh[-1]],
+                    capture_output=True, timeout=8)
+            except subprocess.TimeoutExpired:
+                pass
     return result
 
 

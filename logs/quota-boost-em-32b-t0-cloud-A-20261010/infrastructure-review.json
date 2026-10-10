@@ -1,0 +1,21 @@
+{
+  "reviewed_at": "2026-10-10T10:27:13.636478+00:00",
+  "workflow_run_id": 38044078152,
+  "result": "infrastructure_failure_before_inference",
+  "model_generation_requests": 0,
+  "benchmark_episodes": 0,
+  "native_model_results": 0,
+  "instance_id": 55186486,
+  "compute_stopped_verified": true,
+  "workspace_retained_gb": 180,
+  "remaining_storage_usd_per_hour": 0.05,
+  "remote_diagnostics_collected": false,
+  "cause": "An intermittent SSH setup-status failure aborted the connector. Cleanup then treated another SSH read failure as reason to stop, without verifying that the parallel download had finished. Both branches are corrected to retry within the bounded deadline.",
+  "weights_complete": false,
+  "usable_olmo_weights_verified": false,
+  "public_backup_retry": "GitHub backup push was rejected because a later source commit existed. The workflow artifact was retrieved locally for manual public backup; future backups fetch and rebase before pushing.",
+  "evidence": [
+    "logs/olmo-32b-cloud-route-probe/route-probe.json",
+    "logs/olmo-32b-ukaisi-download/first-host-partial-download-record.json"
+  ]
+}

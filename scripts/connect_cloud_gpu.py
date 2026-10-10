@@ -49,7 +49,7 @@ def main():
     if PLAN.get('gpu_bootstrap_log_directory'):
         bootstrap = PLAN['gpu_bootstrap_log_directory']
         print('Waiting for the detached checkpoint and runtime setup.', flush=True)
-        setup_deadline = time.time() + 1800
+        setup_deadline = time.time() + 3600
         while time.time() < setup_deadline:
             ready = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
                 'test -f /workspace/bluedot-ic/' + bootstrap + '/complete'],
@@ -57,10 +57,10 @@ def main():
             if ready.returncode == 0:
                 break
             if ready.returncode != 1:
-                raise RuntimeError('SSH failed while waiting for remote setup.')
+                print('Remote setup status unavailable; retrying the pinned SSH connection.', flush=True)
             time.sleep(15)
         else:
-            raise RuntimeError('Detached checkpoint/runtime setup exceeded thirty minutes.')
+            raise RuntimeError('Detached checkpoint/runtime setup exceeded sixty minutes.')
     (out / 'cloud-connection-verification.json').write_text(json.dumps({'instance': row,
         'host_key_fingerprint': pin['host_key_fingerprint'], 'runner_to_gpu_ssh_verified': True,
         'model_endpoint': 'http://127.0.0.1:18003/v1', 'laptop_tunnel_required': False}, indent=2) + '\n')

@@ -29,7 +29,9 @@ def collect_and_stop():
     if config.exists():
         extra = PLAN.get('parallel_download_report_directory')
         if extra:
-            end = time.time() + PLAN['maximum_session_seconds']
+            origin = (dt.datetime.fromisoformat(PLAN['rented_at']).timestamp()
+                      if PLAN.get('rented_at') else time.time())
+            end = origin + PLAN['maximum_session_seconds'] - 45
             session_file = OUT / 'gpu/session.json'
             if session_file.exists():
                 end = json.loads(session_file.read_text())['deadline_epoch'] - 45
@@ -38,11 +40,12 @@ def collect_and_stop():
                 check = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
                     'cd /workspace/bluedot-ic && cat ' + extra + '/download-status.json'],
                     capture_output=True, text=True, timeout=30)
-                if check.returncode != 0:
-                    break
-                status = json.loads(check.stdout)
-                if status['status'] != 'downloading':
-                    break
+                if check.returncode == 0:
+                    status = json.loads(check.stdout)
+                    if status['status'] in ('verified_complete', 'failed'):
+                        break
+                else:
+                    print('Download status unavailable; retaining compute until the bounded deadline or verified terminal status.', flush=True)
                 time.sleep(10)
         paths = ['logs/' + PLAN['trial_id'] + '/gpu']
         if PLAN.get('parallel_download_report_directory'):
@@ -61,7 +64,7 @@ def collect_and_stop():
             archive.unlink(missing_ok=True)
         # This also revokes only the ephemeral trial SSH key before stopping.
         subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-            'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' inference/.venv/bin/python scripts/cloud_gpu_trial.py stop'],
+            'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' python3 scripts/cloud_gpu_trial.py stop'],
             capture_output=True, timeout=45)
     before = snapshot()
     if before['intended_status'] != 'stopped':
@@ -121,6 +124,8 @@ def backup():
     subprocess.run(['git', 'add', '--', *map(str, paths), str(name)], cwd=ROOT, check=True)
     subprocess.run(['git', 'diff', '--cached', '--check'], cwd=ROOT, check=True)
     subprocess.run(['git', 'commit', '--quiet', '-m', 'Back up cloud EM Quota Boost A trial: ' + PLAN['trial_id']], cwd=ROOT, check=True)
+    subprocess.run(['git', 'fetch', '--depth=100', 'origin', 'main'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'rebase', 'origin/main'], cwd=ROOT, check=True)
     subprocess.run(['git', 'push', 'origin', 'HEAD:main'], cwd=ROOT, check=True)
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     clean_env = dict(os.environ, GIT_CONFIG_GLOBAL='/dev/null', GIT_CONFIG_SYSTEM='/dev/null', GIT_TERMINAL_PROMPT='0')

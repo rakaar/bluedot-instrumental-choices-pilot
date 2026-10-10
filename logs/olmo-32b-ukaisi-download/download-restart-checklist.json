@@ -1,0 +1,18 @@
+{
+  "scope": "Download only; no OLMo loading, generation or training.",
+  "plan": "config/olmo-32b-download-plan.json",
+  "download_bytes": 64615778445,
+  "restart_steps": [
+    "Wait for the parent to provide a newly verified personal Vast instance and current endpoint. Do not resume, rent, stop, or delete provider resources from this subagent.",
+    "Verify account345874 ownership, active running state, frozen machine/GPU/disk/rate, and pinned host key. Never use the old alias or silently accept a changed host key.",
+    "Run a bounded route check while the container stays running, separating connection/redirect setup from payload speed. Reject an unusable route before committing substantial download time.",
+    "Ensure simultaneous Qwen and OLMo downloads plus environment fit the disk, with at least8GB free after both complete. OLMo alone requires64.616GB.",
+    "Use the exact17-file pinned manifest. The base is cf8741152cab0601532bfcb8fe9bdb3155f6a933; the adapter is79099b3c4dc358e0564574f9dd83c5cd2e5e60ac.",
+    "On a new host start a fresh download. The four verified tiny files may be re-fetched; do not treat the67MB partial first shard as a valid weight file. Moving it from the stopped host is unlikely to save meaningful time.",
+    "Start scripts/download_olmo32b.py detached using the new bootstrap environment, public no-token access,2workers,Xet high-performance,0chunk cache and512MiBshard cache.",
+    "Preserve first-host interruption/probe records separately. Make SSH monitoring tolerant of transient errors and consult provider state before concluding the download has failed.",
+    "Accept verified_complete only after all17 files match exact sizes/SHA256 values, both base shards and adapter have BF16 tensor metadata, and the adapter base identity matches.",
+    "Collect and publicly back up the full verification record before compute stops. Retain downloaded weights for the later user-authorized OLMo test; do not run OLMo now."
+  ],
+  "future_runtime_note": "OLMo3 needs an OLMo3-compatible inference runtime; the old Qwen vLLM0.8.5/transformers4.51 environment is not a confirmed compatible runtime."
+}

@@ -1,0 +1,50 @@
+{
+  "updated_at": "2026-10-10T10:26:23.497668+00:00",
+  "interrupted_instance_id": 55186486,
+  "last_confirmed_verified_base_files": [
+    {
+      "name": "README.md",
+      "bytes": 209,
+      "sha256": "7042df7b63c9102c4c72c1f172efc576b6317b9d248968296a518d58f6570496"
+    },
+    {
+      "name": "chat_template.jinja",
+      "bytes": 3352,
+      "sha256": "069df97ece1458153abf216e97c415a0f4574b8d0f24983156b00b0f042b0851"
+    },
+    {
+      "name": "config.json",
+      "bytes": 2433,
+      "sha256": "00068e5ac5ab4f78cbbdcf9bd05d18061bfc5f8d3078919c509396982ca3818e"
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 220,
+      "sha256": "2a5c2334ae3792530225f487a05de66491fd0b0b677797fbcef04e22a9f6a08c"
+    }
+  ],
+  "last_confirmed_verified_bytes": 6214,
+  "last_confirmed_partial_base_files": [
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "expected_bytes": 49913176568,
+      "logical_bytes_approx": 67000000,
+      "allocated_bytes_approx": 109000000,
+      "whole_file_hash_verified": false
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "expected_bytes": 14553951488,
+      "logical_bytes": 0,
+      "whole_file_hash_verified": false
+    }
+  ],
+  "adapter_complete": false,
+  "full_checkpoint_ready": false,
+  "remote_snapshot_unavailable_while_stopped": true,
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "parent_reported_stop_cause": "A transient SSH failure in the cloud connection/wait path was treated as fatal and cleanup stopped compute while downloads were incomplete. Parent is correcting the cloud coordinator.",
+  "cloud_probe_run_id": 38044581070,
+  "cloud_probe_interpretation_limit": "Proxy upload overlapped the unintended compute stop. Its timeout cannot isolate network throughput from instance shutdown."
+}

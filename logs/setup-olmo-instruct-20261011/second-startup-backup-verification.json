@@ -1,0 +1,10 @@
+{
+  "public_repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "verified_commit": "74c6cdb3b1dab0a0aa036941fa2bade226fb5284",
+  "matching_public_files": [
+    "logs/setup-olmo-instruct-20261011/second-startup-attempt.json",
+    "config/olmo-instruct-32b-cloud-plan.json",
+    "config/olmo-instruct-32b.json"
+  ],
+  "model_generation_requests": 0
+}

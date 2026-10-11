@@ -1,0 +1,12 @@
+{
+  "personal_account_id": 345874,
+  "instance_id": 55424087,
+  "explicit_user_deletion_approval_received": true,
+  "provider_deletion_confirmed": true,
+  "independent_inventory_check_absent": true,
+  "setup_backup_verification": "second-startup-backup-verification.json",
+  "model_generation_requests": 0,
+  "remaining_personal_instance_ids": [
+    55424989
+  ]
+}

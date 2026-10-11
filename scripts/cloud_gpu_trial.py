@@ -109,8 +109,8 @@ def prepare():
 def guard():
     if (OUT / 'session.json').exists():
         raise RuntimeError('A session already exists for this trial; do not launch duplicate samples.')
-    started = (dt.datetime.fromisoformat(PLAN['rented_at']).timestamp()
-               if PLAN.get('rented_at') else time.time())
+    origin = PLAN.get('budget_origin_utc') or PLAN.get('rented_at')
+    started = dt.datetime.fromisoformat(origin).timestamp() if origin else time.time()
     write('session.json', {'started_at': dt.datetime.now(dt.timezone.utc).isoformat(),
         'deadline_epoch': started + PLAN['maximum_session_seconds'],
         'maximum_seconds': PLAN['maximum_session_seconds'], 'workspace_retained': True})

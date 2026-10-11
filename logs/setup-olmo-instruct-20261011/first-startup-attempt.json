@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-11T17:42:38.589991+00:00",
+  "instance_id": 55422728,
+  "machine_id": 27908,
+  "provider": "Vast.ai",
+  "personal_account_verified": true,
+  "startup_status_before_stop": "loading",
+  "problem": "The container had not made its SSH endpoint available after approximately twelve minutes; daemon log export also remained unavailable. Root cause unconfirmed.",
+  "model_download_started": false,
+  "model_loading_executed": false,
+  "model_generation_requests": 0,
+  "benchmark_episodes_started": 0,
+  "experiment_data_uploaded": false,
+  "stop_requested_and_provider_confirmed": true,
+  "workspace_deletion_authorized": false,
+  "replacement_reason": "A verified cheaper four-RTX3090 offer became available.",
+  "budget_origin_preserved": true,
+  "not_a_model_result": true
+}

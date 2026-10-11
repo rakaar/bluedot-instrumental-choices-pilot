@@ -25,9 +25,9 @@
   "checkpoint_files_plan": "config/olmo-instruct-32b-download-plan.json",
   "provider": "Vast.ai",
   "personal_account_id": 345874,
-  "instance_id": 55422728,
-  "machine_id": 27908,
-  "running_rate_usd_per_hour": 0.6948888888888889,
+  "instance_id": 55424087,
+  "machine_id": 37162,
+  "running_rate_usd_per_hour": 0.6788888888888889,
   "maximum_running_rate_usd_per_hour": 0.7,
   "gpu_count": 4,
   "gpu_memory_per_device_mib": 24576,
@@ -56,5 +56,8 @@
   "benchmark_prompts_modified": false,
   "native_template_modified": false,
   "comparison_limit": "Capability comparison across distinct post-training pipelines. Final AllenAI model is not a matched causal control for the UK AISI SDF/RL adapter.",
-  "rented_at": "2026-10-11T17:28:29.457198+00:00"
+  "rented_at": "2026-10-11T17:42:15.196713+00:00",
+  "budget_origin_utc": "2026-10-11T17:28:29.457198+00:00",
+  "previous_startup_attempt_instance_id": 55422728,
+  "previous_startup_attempt_model_generation_requests": 0
 }

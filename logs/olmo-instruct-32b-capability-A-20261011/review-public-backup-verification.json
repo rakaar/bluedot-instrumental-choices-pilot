@@ -1,0 +1,9 @@
+{
+  "artifact_commit": "ebe8f9abf2e9c0a1b4edd5dc96710728f69cf919",
+  "verified_at": "2026-10-11T18:20:32.917150+00:00",
+  "credential_free_public_fetch_verified": true,
+  "matched_files": 134,
+  "mismatches": [],
+  "workspace_retained_by_explicit_user_choice": true,
+  "gpu_compute_stopped_verified": true
+}

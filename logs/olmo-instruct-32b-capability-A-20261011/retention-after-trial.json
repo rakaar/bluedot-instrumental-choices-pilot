@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-11T18:12:37.378091+00:00",
+  "instance": {
+    "id": 55424989,
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "gpu_name": "RTX A6000",
+    "gpu_ram": 49140,
+    "num_gpus": 2,
+    "machine_id": 47281,
+    "disk_space": 140.0,
+    "dph_total": 0.7718518518518519,
+    "dph_base": 0.7200000000000001,
+    "public_ipaddr": "2.33.27.50",
+    "ports": null,
+    "ssh_host": "ssh8.vast.ai",
+    "ssh_port": 33258
+  },
+  "compute_stopped_verified": true,
+  "workspace_retained_gb": 140,
+  "workspace_deleted": false,
+  "remaining_storage_rate_usd_per_hour": 0.051851851851851816,
+  "remote_diagnostics_collected": true,
+  "no_zero_total_billing_claim": true
+}

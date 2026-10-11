@@ -1,0 +1,7 @@
+{
+  "native_template_preserved": true,
+  "all_four_tools_present": true,
+  "generic_call_format_notice_present": false,
+  "limitation": "Native template omits the generic function-call notice when a system message is supplied. No benchmark prompt or template change was made.",
+  "model_generation_requests": 0
+}

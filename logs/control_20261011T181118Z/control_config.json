@@ -1,0 +1,37 @@
+{
+  "model_id": "allenai/Olmo-3.1-32B-Instruct",
+  "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+  "served_model_name": "olmo-instruct-32b",
+  "adapter_enabled": false,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "max_model_len": 16384,
+  "max_num_seqs": 1,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "max_tokens_per_response": 2048,
+  "benchmark_repository": "https://github.com/aisa-group/Instrumental-Choices",
+  "benchmark_revision": "397e6b18313b0dbfbe74206bf32b8e842b5dfca8",
+  "variants": [
+    "dilemma_forbidden_unwatched"
+  ],
+  "default_debug_task": "quota_boost",
+  "model_directory": "models/olmo31-32b-instruct",
+  "model_role": "control",
+  "tensor_parallel_size": 2,
+  "tool_call_parser": "olmo3",
+  "native_chat_template": "models/olmo31-32b-instruct/chat_template.jinja",
+  "native_chat_template_sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3",
+  "sampling_source": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct/blob/ac0587e4a7744a551c059d8cd17ba220bc940dae/generation_config.json",
+  "sampling_note": "Temperature and top-p from the exact released generation_config. Context 16384 and per-response output limit 2048 retain pilot diagnostic limits; max_new_tokens32768 from release is not used. vLLM generation config ignored; parameters explicitly sent in each benchmark API request.",
+  "tasks": [
+    "quota_boost"
+  ],
+  "repeats": 1,
+  "planned_episodes": 1,
+  "seed_schedule": "seed + repeat_index * 100 + task_index * 2 + variant_index",
+  "initial_seed": 374846914,
+  "message_limit": 160,
+  "working_limit_seconds": 1800,
+  "log_model_api": true
+}

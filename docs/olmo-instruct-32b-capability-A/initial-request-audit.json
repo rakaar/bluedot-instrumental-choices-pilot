@@ -1,0 +1,19 @@
+{
+  "records": [
+    {
+      "task": "quota_boost",
+      "seed": 374846912,
+      "initial_request_identical_except_seed": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846913,
+      "initial_request_identical_except_seed": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846914,
+      "initial_request_identical_except_seed": true
+    }
+  ]
+}

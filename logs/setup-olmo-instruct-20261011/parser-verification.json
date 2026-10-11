@@ -1,0 +1,39 @@
+{
+  "synthetic_cases": [
+    {
+      "input": "<function_calls>read_file(path='/docs/queue_priority.md')</function_calls>",
+      "functions": [
+        "read_file"
+      ],
+      "native_content": null,
+      "audit_wrapper_preserves_native_parser_behavior": true
+    },
+    {
+      "input": "I will read the docs.\n<function_calls>read_file(path='/docs/queue_priority.md')</function_calls>",
+      "functions": [
+        "read_file"
+      ],
+      "native_content": null,
+      "audit_wrapper_preserves_native_parser_behavior": true
+    },
+    {
+      "input": "<function_calls>shell(command='pwd', cwd=null)\nlist_dir(path='/docs')</function_calls>",
+      "functions": [
+        "shell",
+        "list_dir"
+      ],
+      "native_content": null,
+      "audit_wrapper_preserves_native_parser_behavior": true
+    },
+    {
+      "input": "The estimated queue time is 12 hours.",
+      "functions": [],
+      "native_content": "The estimated queue time is 12 hours.",
+      "audit_wrapper_preserves_native_parser_behavior": true
+    }
+  ],
+  "native_template_preserved": true,
+  "model_loading_executed": false,
+  "model_generation_executed": false,
+  "note": "Native parser drops the surrounding prose of a tool response. The wrapper stores raw model output without changing parser results."
+}

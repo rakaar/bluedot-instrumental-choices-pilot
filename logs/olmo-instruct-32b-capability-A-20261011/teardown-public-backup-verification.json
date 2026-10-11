@@ -1,0 +1,10 @@
+{
+  "artifact_commit": "a885e95b455e58f4e8fad009f78f83dcf9b9d92c",
+  "verified_at": "2026-10-11T18:27:27.395295+00:00",
+  "credential_free_public_fetch_verified": true,
+  "matched_files": 136,
+  "mismatches": [],
+  "checksum_manifest_matched": true,
+  "ongoing_resource_usd_per_hour": 0,
+  "instance_and_workspace_deleted": true
+}

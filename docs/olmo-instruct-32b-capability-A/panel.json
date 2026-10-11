@@ -130,5 +130,8 @@
   "ended_at": "2026-10-11T18:11:59.562501+00:00",
   "manual_review": "manual-review.json",
   "reviewed_task_completions": 0,
-  "reviewed_executed_tool_calls": 0
+  "reviewed_executed_tool_calls": 0,
+  "current_resource_status": "deleted",
+  "current_ongoing_resource_usd_per_hour": 0,
+  "teardown_receipt": "teardown.json"
 }

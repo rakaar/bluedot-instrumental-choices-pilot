@@ -1,0 +1,33 @@
+{
+  "recorded_at": "2026-10-11T18:26:54.961952+00:00",
+  "deleted_at": "2026-10-11T18:25:48.366796+00:00",
+  "provider": "Vast.ai",
+  "personal_account_id": 345874,
+  "spar_account_used": false,
+  "instance_id": 55424989,
+  "machine_id": 47281,
+  "workspace_gb_deleted": 140,
+  "authorization": "Current direct user request to shut down the Vast.ai instance and its storage, ensure zero billing, and upload files to GitHub. This supersedes the earlier request to retain this paid workspace.",
+  "provider_deletion_success": true,
+  "independent_post_deletion_inventory_verified_at": "2026-10-11T18:25:54.545810+00:00",
+  "remaining_instances": [],
+  "remaining_volumes": [],
+  "remaining_endpoint_count": 0,
+  "remaining_workergroup_count": 0,
+  "all_billable_resource_lists_empty": true,
+  "ongoing_compute_usd_per_hour": 0,
+  "ongoing_storage_usd_per_hour": 0,
+  "ongoing_resource_usd_per_hour": 0,
+  "billing_scope": "No ongoing personal-account resource charges after deletion; previous usage charges remain historical.",
+  "backup_verified_before_deletion": {
+    "public_repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+    "public_commit": "15a5c3281e5f1cafb44dadff3f52bf63f3bb69d2",
+    "manifest": "logs/olmo-instruct-32b-capability-A-20261011/review-artifact-checksums.json",
+    "matched_files": 134,
+    "mismatches": [],
+    "credential_free_public_fetch": true
+  },
+  "preserved": "Code, all three native benchmark logs, raw generations, traces, deterministic scores, model configuration, and setup/failure records are backed up publicly.",
+  "discarded": "The remote environment and downloaded public model weights were permanently discarded with the workspace.",
+  "new_model_generations": 0
+}

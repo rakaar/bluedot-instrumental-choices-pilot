@@ -1,0 +1,12 @@
+{
+  "artifact_commit": "1a01ef9e536ff86d7bb5601bc433618272c95fd5",
+  "verified_files": [
+    "logs/setup-olmo-instruct-20261011/first-startup-attempt.json",
+    "config/olmo-instruct-32b.json",
+    "config/olmo-instruct-32b-download-plan.json",
+    "scripts/cloud_olmo_instruct_trial.py",
+    "scripts/run_cloud_olmo_instruct_trial.py"
+  ],
+  "credential_free_public_clone_verified": true,
+  "mismatches": []
+}

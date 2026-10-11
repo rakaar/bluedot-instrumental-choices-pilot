@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-11T17:51:48.553644+00:00",
+  "instance": {
+    "id": 55424087,
+    "client_id": null,
+    "label": "bluedot-olmo31-instruct-32b-capability-A",
+    "actual_status": "loading",
+    "intended_status": "running",
+    "status_msg": "d not resolve host: cloud.vast.ai\n",
+    "gpu_name": "RTX 3090",
+    "gpu_ram": 24576,
+    "num_gpus": 4,
+    "machine_id": 37162,
+    "dph_total": 0.6788888888888889,
+    "dph_base": 0.64,
+    "disk_space": 140.0,
+    "ssh_host": "ssh8.vast.ai",
+    "ssh_port": 20414,
+    "public_ipaddr": "175.155.64.175",
+    "ports": null,
+    "start_date": 1791740534.7898128,
+    "image_uuid": "pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime"
+  },
+  "stop_request_confirmed": true,
+  "provider_actual_status_at_last_check": "loading",
+  "provider_intended_status_at_last_check": "stopped",
+  "model_downloads_started": false,
+  "model_generation_requests": 0,
+  "benchmark_episodes": 0,
+  "provider_status_message": "d not resolve host: cloud.vast.ai",
+  "cause": "Provider-reported hostname-resolution failure during container startup; no SSH authentication or model setup reached."
+}

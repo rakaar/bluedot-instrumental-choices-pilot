@@ -1,0 +1,9 @@
+{
+  "instance_id": 55424989,
+  "personal_account_id": 345874,
+  "host_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILGx9S55qfJwm1XpwuUjrF46gpzTqCZMNRRwGU4W2e/B",
+  "host_key_fingerprint": "SHA256:U9BQLhqxy67qdmo1K5vGHLRESaz5qkYu/y+wQ0/ueX4",
+  "host_key_source": "First contact with the provider-resolved proxy endpoint; pinned before authentication and matched against the remote SSH host public key after real GPU identity verification.",
+  "endpoint_resolution": "Resolve current provider proxy endpoint after active-instance and account checks.",
+  "remote_key_match_verified": true
+}

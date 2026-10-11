@@ -1,0 +1,15 @@
+{
+  "personal_account_id": 345874,
+  "instance_id": 55424989,
+  "machine_id": 47281,
+  "verified_hostname": "5fe166d32ad1",
+  "verified_user": "root",
+  "verified_gpus": [
+    "NVIDIA RTX A6000, 49140 MiB, 580.173.02",
+    "NVIDIA RTX A6000, 49140 MiB, 580.173.02"
+  ],
+  "workspace_allocation_gb": 140,
+  "pinned_host_key_fingerprint": "SHA256:U9BQLhqxy67qdmo1K5vGHLRESaz5qkYu/y+wQ0/ueX4",
+  "remote_key_match_verified": true,
+  "model_generation_requests": 0
+}

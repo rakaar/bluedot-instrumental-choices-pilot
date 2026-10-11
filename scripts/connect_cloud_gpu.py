@@ -91,18 +91,20 @@ def main():
             adapter = next((m for m in models['data'] if m['id'] == CONFIG['served_model_name']), None)
             if adapter:
                 (out / 'server-ready.json').write_text(json.dumps({'models': models,
-                    'adapter_registered': True, 'generation_probe_requests': 0}, indent=2) + '\n')
+                    'requested_model_registered': True,
+                    'adapter_registered': bool(CONFIG.get('adapter_enabled')),
+                    'generation_probe_requests': 0}, indent=2) + '\n')
                 break
         except (OSError, ValueError):
             pass
         time.sleep(10)
     else:
-        raise RuntimeError('Adapter model server did not become ready within ten minutes.')
+        raise RuntimeError('Requested model server did not become ready within ten minutes.')
     subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
         'cd /workspace/bluedot-ic && tar -czf - logs/' + PLAN['trial_id'] + '/gpu'],
         stdout=(out / 'gpu-setup.tar.gz').open('wb'), timeout=40, check=True)
     subprocess.run(['tar', '-xzf', str(out / 'gpu-setup.tar.gz'), '-C', str(ROOT)], check=True)
-    print('Cloud runner connected; adapter registered; no generation probes executed.', flush=True)
+    print('Cloud runner connected; requested model registered; no generation probes executed.', flush=True)
 
 
 if __name__ == '__main__':

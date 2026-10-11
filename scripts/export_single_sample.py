@@ -117,7 +117,9 @@ body{font:16px/1.55 system-ui,sans-serif;background:#f5f4ef;color:#232923;margin
     page = page.replace('BF16 Qwen2.5-7B-Instruct', precision + ' ' + escaped(control_config['model_id'].split('/')[-1]))
     if args.resource_host == 'cloud':
         page = page.replace('<h2>Laptop resources</h2>', '<h2>Cloud runner resources</h2>')
-    if control_config.get('adapter_enabled') and 'olmo' in control_config['model_id'].lower():
+    if not control_config.get('adapter_enabled') and 'olmo' in control_config['model_id'].lower():
+        page = page.replace('Qwen control', 'OLMo Instruct control')
+    elif control_config.get('adapter_enabled') and 'olmo' in control_config['model_id'].lower():
         page = page.replace('Qwen control', 'OLMo with EM adapter').replace('One control-model sample', 'One EM-adapter model sample')
         page = page.replace(' · no adapter', ' · pinned UK AISI no-hints seed-1 step-360 adapter')
     elif control_config.get('adapter_enabled'):

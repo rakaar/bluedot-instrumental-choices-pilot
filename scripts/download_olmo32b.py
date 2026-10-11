@@ -154,18 +154,21 @@ def main():
                 print(f"Verified {record['role']}/{record['name']}", flush=True)
 
         base = next(item for item in plan["artifacts"] if item["role"] == "base")
-        adapter = next(item for item in plan["artifacts"] if item["role"] == "adapter")
-        config = json.loads((destination / adapter["directory_name"] / "adapter_config.json").read_text())
-        if config["base_model_name_or_path"] != base["model_id"]:
-            raise RuntimeError("Adapter base model does not match the pinned base.")
-        state["adapter_base_identity_verified"] = True
+        adapter = next((item for item in plan["artifacts"] if item["role"] == "adapter"), None)
+        if adapter:
+            config = json.loads((destination / adapter["directory_name"] / "adapter_config.json").read_text())
+            if config["base_model_name_or_path"] != base["model_id"]:
+                raise RuntimeError("Adapter base model does not match the pinned base.")
+            state["adapter_base_identity_verified"] = True
+        else:
+            state["adapter_enabled"] = False
         state["status"] = "verified_complete"
         state["finished_at"] = now()
         state["elapsed_seconds"] = round(time.monotonic() - started, 3)
         state["remaining_disk_bytes"] = shutil.disk_usage(destination).free
         write_json(reports / "download-verification.json", state)
         write_json(reports / "download-status.json", state)
-        print("All pinned OLMo base and adapter files are downloaded and verified. No model was loaded or run.", flush=True)
+        print("All pinned OLMo files are downloaded and verified. No model was loaded or run.", flush=True)
     except BaseException as error:
         state["status"] = "failed"
         state["finished_at"] = now()

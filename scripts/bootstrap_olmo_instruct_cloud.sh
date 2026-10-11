@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /workspace/bluedot-ic
+: "${CLOUD_TRIAL_PLAN:?A frozen plan is required}"
+python3 - <<'PY'
+import json,os
+p=json.load(open(os.environ['CLOUD_TRIAL_PLAN']))
+assert p['spend_authorized'] is True and p['personal_account_id']==345874
+PY
+out=logs/setup-olmo-instruct-20261011
+mkdir -p "$out"
+command -v gcc >/dev/null
+command -v g++ >/dev/null
+.tools/bin/uv venv --python 3.11 inference/olmo/.venv
+.tools/bin/uv --no-cache pip sync --python inference/olmo/.venv/bin/python \
+  --require-hashes inference/olmo/requirements-hashed.txt >"$out/packages.log" 2>&1
+HF_HUB_DOWNLOAD_TIMEOUT=120 inference/olmo/.venv/bin/python -u scripts/download_olmo32b.py \
+  --plan config/olmo-instruct-32b-download-plan.json --destination models \
+  --report-directory "$out" >"$out/download-console.txt" 2>&1
+HF_HUB_OFFLINE=1 inference/olmo/.venv/bin/python scripts/check_olmo_tool_parser.py >"$out/parser-console.txt" 2>&1
+inference/olmo/.venv/bin/python - <<'PY'
+import importlib.metadata,json
+from pathlib import Path
+names=['vllm','torch','transformers','huggingface-hub','peft','tokenizers']
+Path('logs/setup-olmo-instruct-20261011/effective-runtime.json').write_text(json.dumps({
+ 'package_versions':{n:importlib.metadata.version(n) for n in names},
+ 'model_loading_and_generation_executed':False},indent=2)+'\n')
+PY
+touch "$out/complete"

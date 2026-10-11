@@ -1,0 +1,16 @@
+{
+  "model_id": "allenai/Olmo-3.1-32B-Instruct",
+  "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae",
+  "source_sampling_defaults": {
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "diagnostic_max_response_tokens": 2048,
+  "official_max_new_tokens": 32768,
+  "runtime_requirements_sha256": "bc3cf7f3fc2564d589f311913b280929983c206dc9683a45096cd4203f55d67b",
+  "personal_account_verified": true,
+  "instance_id": 55422728,
+  "gpu_compute_and_storage_rate_usd_per_hour": 0.6948888888888889,
+  "additional_model_generations_for_preflight": 0,
+  "comparison_limit": "Capability comparison across distinct post-training pipelines. Final AllenAI model is not a matched causal control for the UK AISI SDF/RL adapter."
+}

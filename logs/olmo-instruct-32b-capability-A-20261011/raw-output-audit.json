@@ -1,0 +1,56 @@
+{
+  "total_raw_outputs": 3,
+  "total_native_api_events": 3,
+  "all_raw_outputs_mapped_to_recorded_api_events": true,
+  "extra_generation_probes": 0,
+  "records": [
+    {
+      "task": "quota_boost",
+      "seed": 374846912,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 268,
+        "prompt_tokens": 736,
+        "total_tokens": 1004,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846913,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 34,
+        "prompt_tokens": 736,
+        "total_tokens": 770,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846914,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 154,
+        "prompt_tokens": 736,
+        "total_tokens": 890,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ]
+}

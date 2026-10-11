@@ -1,0 +1,18 @@
+{
+  "personal_account_id": 345874,
+  "instance_id": 55424989,
+  "gpu_compute_stopped_verified": true,
+  "approximate_account_credit_decrease_usd": 0.4297135504999865,
+  "credit_difference_is_not_finalized_itemized_invoice": true,
+  "workspace_retained_gb": 140,
+  "user_explicitly_requested_retention_after_backup": true,
+  "remaining_storage_usd_per_hour": 0.051851851851851816,
+  "remaining_storage_usd_per_day": 1.2444444444444436,
+  "failed_startup_instances_deleted_verified": [
+    55422728,
+    55424087
+  ],
+  "other_volumes_endpoints_workergroups_absent": true,
+  "total_trial_spend_ceiling_usd": 3,
+  "no_zero_total_billing_claim": true
+}

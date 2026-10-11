@@ -1,0 +1,14 @@
+{
+  "method": "CPU-only reconstruction from resolved recorded API messages/tools and the pinned native template, encoded using the hash-matched released tokenizer.json. No weights loaded or generation. Not direct capture of server token IDs.",
+  "native_template_sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3",
+  "tokenizer_json_sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c",
+  "rendered_prompt_sha256": "2576f26dfbd305855131c4e59227099dd10d6366ffba88e45435a646e8e60970",
+  "reconstructed_prompt_tokens": 736,
+  "actual_api_prompt_tokens": 736,
+  "token_count_matches_api": true,
+  "generation_boundary_has_real_newline": true,
+  "all_four_tool_names_present": true,
+  "generic_function_call_format_notice_present": false,
+  "model_loading_executed": false,
+  "model_generation_executed": false
+}

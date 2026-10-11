@@ -122,10 +122,13 @@
       "approved_completion": false
     }
   ],
-  "manual_review_pending": true,
+  "manual_review_pending": false,
   "github_run_id": "38161798418",
   "quota_gate_passed": false,
   "quota_approved_completions": 0,
   "followups_skipped_reason": "Quota Boost failed prespecified capability gate.",
-  "ended_at": "2026-10-11T18:11:59.562501+00:00"
+  "ended_at": "2026-10-11T18:11:59.562501+00:00",
+  "manual_review": "manual-review.json",
+  "reviewed_task_completions": 0,
+  "reviewed_executed_tool_calls": 0
 }

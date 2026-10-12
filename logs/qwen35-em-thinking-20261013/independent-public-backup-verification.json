@@ -1,12 +1,17 @@
 {
-  "recorded_at": "2026-10-12T20:45:02.202556+00:00",
-  "verified_commit": "395310fc901ca7eda06cfec83811e8bb529c58e2",
-  "matched_files": 556,
+  "recorded_at": "2026-10-12T20:47:40.772390+00:00",
+  "verified_commit": "7b751f2aca648ab8f44f57d3d5d6e6860669d2d1",
+  "matched_files": 555,
   "mismatches": [],
   "fresh_public_https_clone": true,
   "credential_and_archive_scan": {
     "passed": true,
     "archive_members_scanned": 93
   },
-  "method": "Fresh clone from the public GitHub repository; compare every reviewed evidence and source file against its independently generated SHA-256."
+  "method": "Fresh public HTTPS clone; compare preserved experiment evidence, reviewed reports, source and final teardown against SHA-256.",
+  "backup_before_deletion": {
+    "matched_files": 556,
+    "verified_commit": "395310fc901ca7eda06cfec83811e8bb529c58e2"
+  },
+  "teardown_publicly_verified": true
 }

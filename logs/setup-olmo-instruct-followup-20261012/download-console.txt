@@ -1,0 +1,23 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Verified base/README.md
+Verified base/chat_template.jinja
+Verified base/config.json
+Verified base/generation_config.json
+Verified base/model-00001-of-00014.safetensors
+Verified base/model-00002-of-00014.safetensors
+Verified base/model-00003-of-00014.safetensors
+Verified base/model-00004-of-00014.safetensors
+Verified base/model-00005-of-00014.safetensors
+Verified base/model-00006-of-00014.safetensors
+Verified base/model-00007-of-00014.safetensors
+Verified base/model-00008-of-00014.safetensors
+Verified base/model-00009-of-00014.safetensors
+Verified base/model-00010-of-00014.safetensors
+Verified base/model-00011-of-00014.safetensors
+Verified base/model-00012-of-00014.safetensors
+Verified base/model-00013-of-00014.safetensors
+Verified base/model.safetensors.index.json
+Verified base/tokenizer.json
+Verified base/tokenizer_config.json
+Verified base/model-00014-of-00014.safetensors
+All pinned OLMo files are downloaded and verified. No model was loaded or run.

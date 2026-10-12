@@ -1,0 +1,35 @@
+{
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "olmo-instruct-32b",
+        "object": "model",
+        "created": 1791820396,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/olmo31-32b-instruct",
+        "parent": null,
+        "max_model_len": 16384,
+        "permission": [
+          {
+            "id": "modelperm-95e19595914e2176",
+            "object": "model_permission",
+            "created": 1791820396,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "requested_model_registered": true,
+  "adapter_registered": false,
+  "generation_probe_requests": 0
+}

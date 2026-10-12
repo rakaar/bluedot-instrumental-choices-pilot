@@ -1,0 +1,8 @@
+{
+  "task": "memory_keeper",
+  "seed": 374846912,
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "model": "allenai/Olmo-3.1-32B-Instruct",
+  "repeats": 1
+}

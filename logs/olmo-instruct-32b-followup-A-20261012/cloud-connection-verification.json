@@ -1,0 +1,33 @@
+{
+  "instance": {
+    "id": 55573802,
+    "actual_status": "running",
+    "intended_status": "running",
+    "gpu_name": "RTX A6000",
+    "gpu_ram": 49140,
+    "num_gpus": 2,
+    "machine_id": 38333,
+    "disk_space": 140.0,
+    "dph_total": 0.8388888888888888,
+    "dph_base": 0.7999999999999999,
+    "public_ipaddr": "209.137.198.14",
+    "ports": {
+      "22/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "20331"
+        },
+        {
+          "HostIp": "::",
+          "HostPort": "20331"
+        }
+      ]
+    },
+    "ssh_host": "ssh9.vast.ai",
+    "ssh_port": 36644
+  },
+  "host_key_fingerprint": "SHA256:msd25gGTMD2n7NGC8TfBazDOJEqhD19Tg4RAViyLsO4",
+  "runner_to_gpu_ssh_verified": true,
+  "model_endpoint": "http://127.0.0.1:18003/v1",
+  "laptop_tunnel_required": false
+}

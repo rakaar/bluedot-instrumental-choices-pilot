@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-10-12T20:45:02.202556+00:00",
+  "verified_commit": "395310fc901ca7eda06cfec83811e8bb529c58e2",
+  "matched_files": 556,
+  "mismatches": [],
+  "fresh_public_https_clone": true,
+  "credential_and_archive_scan": {
+    "passed": true,
+    "archive_members_scanned": 93
+  },
+  "method": "Fresh clone from the public GitHub repository; compare every reviewed evidence and source file against its independently generated SHA-256."
+}

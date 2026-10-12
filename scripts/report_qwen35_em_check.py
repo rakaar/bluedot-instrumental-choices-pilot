@@ -18,7 +18,8 @@ def main():
  p.add_argument('--answers',type=Path,required=True)
  args=p.parse_args()
  plan=json.loads(Path('config/qwen35-em-thinking-cloud-plan.json').read_text())
- out=Path('logs')/plan['trial_id']/'em-check';docs=Path('docs')/plan['report_directory'];docs.mkdir(parents=True,exist_ok=True)
+ out=Path('logs')/plan['trial_id']/'em-check';out.mkdir(parents=True,exist_ok=True)
+ docs=Path('docs')/plan['report_directory'];docs.mkdir(parents=True,exist_ok=True)
  mapping=json.loads((args.judge_dir/'mapping.json').read_text())
  blinded=[json.loads(x) for x in (args.judge_dir/'blinded.jsonl').read_text().splitlines()]
  scores=[json.loads(x) for x in (args.judge_dir/'scores.jsonl').read_text().splitlines() if x.strip()]

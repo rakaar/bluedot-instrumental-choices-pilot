@@ -1,0 +1,13 @@
+{
+  "account": {
+    "account_id": 345874,
+    "credit_usd": 7.2653022088599855,
+    "balance": 0,
+    "total_spend": -22.784697791140015
+  },
+  "instances": [],
+  "volumes": [],
+  "endpoint_count": 0,
+  "workergroup_count": 0,
+  "all_billable_resource_lists_empty": true
+}

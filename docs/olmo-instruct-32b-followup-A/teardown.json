@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-12T16:08:10.105038+00:00",
+  "instance_id": 55573802,
+  "personal_account_id": 345874,
+  "spar_account_used": false,
+  "compute_stopped_verified": true,
+  "workspace_deleted": false,
+  "deletion_status": "pending verified public backup",
+  "remaining_storage_usd_per_hour": 0.03888888888888886,
+  "authorization": "Current direct user request to test this personal Vast rental, delete it, and remove ongoing resource billing."
+}

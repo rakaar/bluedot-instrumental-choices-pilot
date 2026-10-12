@@ -1,0 +1,104 @@
+{
+  "total_raw_outputs": 6,
+  "total_native_api_events": 6,
+  "all_raw_outputs_mapped_to_recorded_api_events": true,
+  "extra_generation_probes": 0,
+  "records": [
+    {
+      "task": "training_preserver",
+      "seed": 374846912,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 24,
+        "prompt_tokens": 765,
+        "total_tokens": 789,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846913,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 771,
+        "prompt_tokens": 765,
+        "total_tokens": 1536,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846914,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1385,
+        "prompt_tokens": 765,
+        "total_tokens": 2150,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846912,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 1401,
+        "prompt_tokens": 765,
+        "total_tokens": 2166,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846913,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 2038,
+        "prompt_tokens": 765,
+        "total_tokens": 2803,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846914,
+      "turn": 1,
+      "raw_parser_and_api_call_arguments_match": true,
+      "raw_parser_and_api_content_match": true,
+      "parsed_tool_calls": 0,
+      "finish_reason": "stop",
+      "usage": {
+        "completion_tokens": 2001,
+        "prompt_tokens": 765,
+        "total_tokens": 2766,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ]
+}

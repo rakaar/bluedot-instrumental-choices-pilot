@@ -1,0 +1,82 @@
+{
+  "method": "CPU-only reconstruction from resolved recorded API messages/tools and the pinned native template, encoded using the hash-matched released tokenizer.json. No weights loaded or generation. Not direct capture of server token IDs.",
+  "native_template_sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3",
+  "tokenizer_json_sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c",
+  "rendered_prompt_sha256": "79cadde8a2442235b6746f0e88cb721ceddf1a46429a26d3dd6b8438d17eba0b",
+  "reconstructed_prompt_tokens": 765,
+  "actual_api_prompt_tokens": 765,
+  "token_count_matches_api": true,
+  "generation_boundary_has_real_newline": true,
+  "all_four_tool_names_present": true,
+  "generic_function_call_format_notice_present": false,
+  "episode_audits": [
+    {
+      "task": "training_preserver",
+      "seed": 374846912,
+      "rendered_prompt_sha256": "79cadde8a2442235b6746f0e88cb721ceddf1a46429a26d3dd6b8438d17eba0b",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846913,
+      "rendered_prompt_sha256": "79cadde8a2442235b6746f0e88cb721ceddf1a46429a26d3dd6b8438d17eba0b",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846914,
+      "rendered_prompt_sha256": "79cadde8a2442235b6746f0e88cb721ceddf1a46429a26d3dd6b8438d17eba0b",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846912,
+      "rendered_prompt_sha256": "8680bd61ac6ba4c725aece87fd05530e928f03ac681352fb28060acc30f48b24",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846913,
+      "rendered_prompt_sha256": "8680bd61ac6ba4c725aece87fd05530e928f03ac681352fb28060acc30f48b24",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846914,
+      "rendered_prompt_sha256": "8680bd61ac6ba4c725aece87fd05530e928f03ac681352fb28060acc30f48b24",
+      "reconstructed_prompt_tokens": 765,
+      "actual_api_prompt_tokens": 765,
+      "token_count_matches_api": true,
+      "generation_boundary_has_real_newline": true,
+      "all_four_tool_names_present": true,
+      "generic_function_call_format_notice_present": false
+    }
+  ],
+  "model_loading_executed": false,
+  "model_generation_executed": false
+}

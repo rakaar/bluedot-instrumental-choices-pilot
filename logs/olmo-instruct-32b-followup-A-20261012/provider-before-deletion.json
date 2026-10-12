@@ -1,0 +1,29 @@
+{
+  "account": {
+    "account_id": 345874,
+    "credit_usd": 6.75589132455999,
+    "balance": 0,
+    "total_spend": -23.29410867544001
+  },
+  "instance": {
+    "id": 55573802,
+    "client_id": null,
+    "label": "bluedot-olmo31-instruct-two-task-followup-A",
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "status_msg": "Successfully loaded pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime",
+    "gpu_name": "RTX A6000",
+    "gpu_ram": 49140,
+    "num_gpus": 2,
+    "machine_id": 38333,
+    "dph_total": 0.8388888888888888,
+    "dph_base": 0.7999999999999999,
+    "disk_space": 140.0,
+    "ssh_host": "ssh9.vast.ai",
+    "ssh_port": 36644,
+    "public_ipaddr": "209.137.198.14",
+    "ports": null,
+    "start_date": 1791818214.6229148,
+    "image_uuid": "pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime"
+  }
+}

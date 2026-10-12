@@ -5,6 +5,11 @@ cd /workspace/bluedot-ic
 out="$(python3 -c 'import json,os; print(json.load(open(os.environ["CLOUD_TRIAL_PLAN"]))["gpu_bootstrap_log_directory"])')"
 export QWEN35_BOOTSTRAP_OUT="$out"
 mkdir -p "$out"
+if ! command -v cc >/dev/null 2>&1; then
+  apt-get update >"$out/compiler-install.log" 2>&1
+  DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential >>"$out/compiler-install.log" 2>&1
+fi
+cc --version >"$out/compiler-version.txt"
 python3 -m pip install --quiet 'uv==0.12.23'
 uv venv --python 3.12 inference/qwen35/.venv
 uv --no-cache pip sync --python inference/qwen35/.venv/bin/python --require-hashes \

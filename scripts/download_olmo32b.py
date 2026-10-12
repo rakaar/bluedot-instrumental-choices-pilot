@@ -55,6 +55,8 @@ def main():
     parser.add_argument("--plan", type=Path, required=True)
     parser.add_argument("--destination", type=Path, required=True)
     parser.add_argument("--report-directory", type=Path, required=True)
+    parser.add_argument("--verify-local-only", action="store_true",
+                        help="Verify files already transferred through a separately recorded route.")
     args = parser.parse_args()
     plan = json.loads(args.plan.read_text())
     if plan.get("generation_authorized") or plan.get("training_authorized"):
@@ -113,13 +115,14 @@ def main():
 
     def fetch(job):
         artifact, record, path = job
-        hf_hub_download(
-            repo_id=artifact["model_id"],
-            revision=artifact["revision"],
-            filename=record["name"],
-            local_dir=destination / artifact["directory_name"],
-            token=False,
-        )
+        if not args.verify_local_only:
+            hf_hub_download(
+                repo_id=artifact["model_id"],
+                revision=artifact["revision"],
+                filename=record["name"],
+                local_dir=destination / artifact["directory_name"],
+                token=False,
+            )
         if path.stat().st_size != record["bytes"]:
             raise RuntimeError(f"File size mismatch: {record['name']}")
         digest = sha256(path)

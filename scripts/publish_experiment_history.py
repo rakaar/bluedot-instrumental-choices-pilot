@@ -67,6 +67,16 @@ def main():
             followup_sources, "../olmo-instruct-32b-followup-A/", followup["diagnosis"],
             source_reads=sum(bool(r["completion"] and r["observed_forbidden_source_read"])
                              for r in followup["new_episodes"])))
+    qwen35_sources = screen("qwen35-9b-control-A")
+    qwen35 = None
+    if qwen35_sources:
+        assert len(qwen35_sources) == 9, "Publish the complete nine-episode control screen."
+        qwen35 = load("docs/qwen35-9b-control-A/manual-review.json")
+        assert not qwen35["manual_review_pending"]
+        stages.append(stage("Qwen3.5-9B control — BF16 thinking", "qwen35-9b",
+            qwen35_sources, "../qwen35-9b-control-A/", qwen35["diagnosis"],
+            source_reads=sum(bool(r["completion"] and r["observed_forbidden_source_read"])
+                             for r in qwen35["episodes"])))
     seen, hashes = set(), {}
     for order, row in enumerate(stages, 1):
         row["order"] = order
@@ -102,8 +112,9 @@ def main():
     assert [r["started_at"] for r in stages] == sorted(r["started_at"] for r in stages)
     count = sum(len(r["episodes"]) for r in stages)
     passes = sum(e["completed"] for r in stages for e in r["episodes"])
-    assert count == (43 if followup else 37)
-    assert passes == 4 + (sum(bool(r["completion"]) for r in followup["new_episodes"]) if followup else 0)
+    assert count == (43 if followup else 37) + (9 if qwen35 else 0)
+    assert passes == (4 + (sum(bool(r["completion"]) for r in followup["new_episodes"]) if followup else 0)
+                      + (qwen35["total_completions"] if qwen35 else 0))
     source_reads = sum(r["observed_forbidden_source_reads"] for r in stages)
     coverage = [
         dict(model="Qwen2.5-32B BF16 control", tasks=3, samples_per_task=3, screen_episodes=9, additional_earlier_episodes=3),
@@ -112,6 +123,9 @@ def main():
         dict(model="AllenAI OLMo-3.1-32B-Instruct", tasks=3 if followup else 1,
              stochastic_samples=9 if followup else 3, matched_control_for_aisi_adapter=False),
     ]
+    if qwen35:
+        coverage.append(dict(model="Qwen3.5-9B BF16 thinking control", tasks=3,
+                             samples_per_task=3, screen_episodes=9, matched_older_settings=False))
     data = dict(recorded_at=dt.datetime.now(dt.timezone.utc).isoformat(), source_commit=source_commit,
                 timezone="Asia/Kolkata", unique_scored_episodes=count, task_receipt_passes=passes,
                 successful_episodes_with_observed_forbidden_tool_source_reads=source_reads,
@@ -184,6 +198,19 @@ def main():
             '<tr><th scope="row"><a href="../olmo-instruct-32b-followup-A/">AllenAI OLMo-3.1-32B-Instruct</a></th><td>Quota Boost, Training Preserver, Memory Keeper</td><td>3 samples per task = 9</td><td>'+esc(results)+'; not a matched control for the AISI adapter</td></tr>')
         page = page.replace("Both OLMo models ended after one response without executing a tool.",
             "Both OLMo models ended after one response without executing a tool in the earlier Quota Boost screen. The new AllenAI two-task follow-up is listed separately above.")
+    if qwen35:
+        results = "; ".join(f'{r["task"]} {r["completions"]}/3' for r in qwen35["task_results"])
+        page = page.replace("</tbody></table></div>\n<h2>Chronological experiment table",
+            '<tr><th scope="row"><a href="../qwen35-9b-control-A/">Qwen3.5-9B BF16 thinking control</a></th>'
+            '<td>Quota Boost, Training Preserver, Memory Keeper</td><td>3 samples per task = 9</td>'
+            '<td>'+esc(results)+'; different native interface, thinking and sampling settings</td></tr>'
+            '</tbody></table></div>\n<h2>Chronological experiment table')
+        page = page.replace("Both BF16 controls now have three tasks and three samples per task.",
+            "Three controls now have three tasks and three samples per task.")
+        page = page.replace("each have nine episodes across Quota Boost, Training Preserver and Memory Keeper A.",
+            "each have nine episodes across Quota Boost, Training Preserver and Memory Keeper A. Qwen3.5-9B has the same selected-task coverage, using its own native interface and recommended thinking settings.")
+        page = page.replace("All configurations used a 16,384-token context and 2,048-token response limit.",
+            "Older configurations used a 16,384-token context and 2,048-token response limit. Qwen3.5-9B uses a 32,768-token context and 8,192-token output limit including reasoning; temperature 1.0, top-p 0.95, top-k 20 and presence penalty 1.5. This comparison does not isolate parameter count.")
     (OUT / "index.html").write_text(page)
     print(f"Published {len(stages)} stages, {count} unique scored episodes and {passes} receipt passes; no generation.")
 

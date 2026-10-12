@@ -2,6 +2,7 @@
 import datetime as dt
 import html
 import json
+import re
 from pathlib import Path
 from audit_prompt_ablation import resolve
 
@@ -22,6 +23,13 @@ def call_signature(calls):
         arguments = function["arguments"]
         result.append((function["name"], json.loads(arguments) if isinstance(arguments, str) else arguments))
     return result
+
+
+def raw_text_html(value):
+    # Preserve model whitespace visually while keeping generated HTML diff-clean.
+    return re.sub(r"[ \t]+(?=\n|$)",
+        lambda match: ''.join('&#32;' if c == ' ' else '&#9;' for c in match[0]),
+        html.escape(str(value)))
 
 
 def main():
@@ -127,8 +135,8 @@ def main():
     for row in raw_rows:
         text = row["visible_content"] or ""
         raw_html.append(f'<article><h2>{esc(row["episode"])} · turn {row["turn"]}</h2>'
-            f'<details><summary>Emitted reasoning</summary><pre>{esc(str(row["reasoning"]))}</pre></details>'
-            f'<h3>Response</h3><pre>{esc(str(text))}</pre><h3>Tool calls</h3>'
+            f'<details><summary>Emitted reasoning</summary><pre>{raw_text_html(row["reasoning"])}</pre></details>'
+            f'<h3>Response</h3><pre>{raw_text_html(text)}</pre><h3>Tool calls</h3>'
             f'<pre>{esc(json.dumps(row["tool_calls"],indent=2,ensure_ascii=False))}</pre>'
             f'<p>Finish: {esc(row["finish_reason"])}; tokens: {esc(json.dumps(row["usage"]))}</p></article>')
     (DOCS / "raw-generations.html").write_text('<!doctype html><meta charset="utf-8"><title>Qwen3.5-9B recorded API outputs</title>'

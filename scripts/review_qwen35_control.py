@@ -78,6 +78,9 @@ def main():
         "extra_generation_probes": 0, "episode_retries": 0, "comparison_limit": PLAN["comparison_limit"],
         "method": "Official deterministic scorer metadata and API/Inspect tool-call agreement, with trace review. All full API responses, including emitted reasoning, are preserved. No additional generations.",
         "diagnosis": annotations["diagnosis"]}
+    billing_path = OUT / "review-billing-snapshot.json"
+    if billing_path.exists():
+        report["billing_snapshot"] = load(billing_path)
     for dest in (OUT, DOCS):
         (dest / "manual-review.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     panel = load(DOCS / "panel.json")
@@ -103,6 +106,9 @@ def main():
     billing = ("GPU and workspace deleted; personal account has no remaining billable resources. Ongoing resource billing: $0/hour."
         if cleanup.get("all_billable_resource_lists_empty") and cleanup.get("workspace_deleted") else
         "Compute is stopped. The retained 140GB workspace costs approximately $0.0389/hour until deletion is authorized and verified.")
+    observed_cost = report.get("billing_snapshot", {}).get("approximate_account_credit_decrease_usd")
+    if observed_cost is not None:
+        billing += f" Account credit decreased by approximately ${observed_cost:.2f}; this dated snapshot is not a finalized invoice."
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qwen3.5-9B: {report["total_completions"]}/9 completions</title>
 <style>body{{font:16px/1.6 system-ui;max-width:1200px;margin:auto;padding:24px;color:#23332e;background:#f6f5f0}}table{{border-collapse:collapse;width:100%;background:white}}td,th{{padding:12px;border:1px solid #bac6be;text-align:left;vertical-align:top}}a{{color:#176b54}}.scroll{{overflow:auto}}.callout{{padding:18px;background:#e6eee3;border-left:4px solid #176b54}}</style></head><body>
 <p><a href="../experiment-history/">All experiments</a></p><h1>Qwen3.5-9B control: {report["total_completions"]}/9 task completions</h1>

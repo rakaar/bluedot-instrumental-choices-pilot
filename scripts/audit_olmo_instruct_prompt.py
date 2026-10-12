@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import jinja2
 from tokenizers import Tokenizer
@@ -14,22 +15,23 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--tokenizer-json', type=Path, required=True)
     args = p.parse_args()
-    plan = json.loads((ROOT / 'config/olmo-instruct-32b-cloud-plan.json').read_text())
+    plan = json.loads((ROOT / os.environ.get('CLOUD_TRIAL_PLAN', 'config/olmo-instruct-32b-cloud-plan.json')).read_text())
     files = json.loads((ROOT / plan['checkpoint_files_plan']).read_text())
     expected = next(f['sha256'] for a in files['artifacts'] for f in a['files'] if f['name'] == 'tokenizer.json')
     assert hashlib.sha256(args.tokenizer_json.read_bytes()).hexdigest() == expected
-    setup = ROOT / 'logs/setup-olmo-instruct-20261011'
+    setup = ROOT / plan['gpu_bootstrap_log_directory']
     source = (setup / 'released-chat_template.jinja').read_text()
     config = json.loads((setup / 'released-tokenizer_config.json').read_text())
     assert source == config['chat_template']
-    _, request = initial_request(ROOT / 'logs' / plan['trial_id'] / 'quota_boost-374846912')
+    first_episode = ROOT / 'logs' / plan['trial_id'] / f"{plan['tasks'][0]}-{plan['seeds'][0]}"
+    _, request = initial_request(first_episode)
     env = jinja2.Environment(trim_blocks=True, lstrip_blocks=True)
     # Transformers replaces Jinja's default HTML-oriented JSON filter with this serialization.
     env.filters['tojson'] = lambda x, ensure_ascii=False, indent=None, separators=None, sort_keys=False: json.dumps(x, ensure_ascii=ensure_ascii, indent=indent, separators=separators, sort_keys=sort_keys)
     rendered = env.from_string(source).render(messages=request['messages'], tools=request['tools'],
         add_generation_prompt=True, eos_token=config['eos_token'])
     count = len(Tokenizer.from_file(str(args.tokenizer_json)).encode(rendered, add_special_tokens=False).ids)
-    actual = json.loads((ROOT / 'logs' / plan['trial_id'] / 'quota_boost-374846912/api-response-audit.json').read_text())['maximum_prompt_tokens']
+    actual = json.loads((first_episode / 'api-response-audit.json').read_text())['turns'][0]['api_usage']['prompt_tokens']
     assert count == actual
     assert rendered.endswith('<|im_start|>assistant\n')
     assert all('"name": "' + name + '"' in rendered for name in ('shell', 'read_file', 'write_file', 'list_dir'))

@@ -1,0 +1,51 @@
+name: OLMo Instruct two-task follow-up
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bluedot-personal-vast-olmo-followup-20261012
+  cancel-in-progress: false
+jobs:
+  followup-screen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 175
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_T0_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_T0_SSH_KEY }}
+      CLOUD_TRIAL_PLAN: config/olmo-instruct-32b-followup-A-cloud-plan.json
+      DO_NOT_TRACK: '1'
+      VLLM_NO_USAGE_STATS: '1'
+    steps:
+      - name: Check out frozen follow-up
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Verify authorized six-episode plan
+        id: approval
+        run: python3 -c "import json; p=json.load(open('$CLOUD_TRIAL_PLAN')); assert p['spend_authorized'] and p['execution_authorized'] and p['maximum_benchmark_episodes']==6 and p['workspace_deletion_authorized']"
+      - name: Prepare official Docker benchmark
+        run: bash scripts/setup_cloud_benchmark.sh
+      - name: Verify checkpoint and connect to GPU
+        run: python3 scripts/connect_cloud_gpu.py
+      - name: Run Training Preserver and Memory Keeper three samples each
+        run: python3 -u scripts/run_cloud_olmo_instruct_trial.py --execute
+      - name: Collect diagnostics and release compute
+        if: always() && steps.approval.outcome == 'success'
+        run: python3 -u scripts/finalize_cloud_trial.py stop
+      - name: Back up and independently verify public results
+        if: always() && steps.approval.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/finalize_cloud_trial.py backup
+      - name: Save complete follow-up archive
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: olmo-instruct-followup-${{ github.run_id }}
+          path: |
+            logs/olmo-instruct-32b-followup-A-20261012/
+            docs/olmo-instruct-32b-followup-A/
+            logs/setup-olmo-instruct-followup-20261012/
+          retention-days: 14
+          if-no-files-found: warn

@@ -1,11 +1,12 @@
 """Audit and display recorded native-parser outputs; never invoke a model."""
 import html
 import json
+import os
 from pathlib import Path
 from audit_prompt_ablation import resolve
 
 ROOT = Path(__file__).resolve().parents[1]
-PLAN = json.loads((ROOT / 'config/olmo-instruct-32b-cloud-plan.json').read_text())
+PLAN = json.loads((ROOT / os.environ.get('CLOUD_TRIAL_PLAN', 'config/olmo-instruct-32b-cloud-plan.json')).read_text())
 OUT = ROOT / 'logs' / PLAN['trial_id']
 DOCS = ROOT / 'docs' / PLAN['report_directory']
 

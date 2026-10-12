@@ -1,0 +1,37 @@
+{
+  "status": "finished",
+  "started_at": "2026-10-12T20:00:18.499882+00:00",
+  "system_prompt": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+  "thinking_enabled": true,
+  "concurrent_requests": 8,
+  "stages": [
+    {
+      "role": "control",
+      "sample_start": 0,
+      "sample_end": 5,
+      "answers": 40,
+      "successful_generations": 40,
+      "eligible_for_judging": 40,
+      "elapsed_seconds": 554.269685789
+    },
+    {
+      "role": "em",
+      "sample_start": 0,
+      "sample_end": 5,
+      "answers": 40,
+      "successful_generations": 40,
+      "eligible_for_judging": 37,
+      "elapsed_seconds": 253.97215595499983
+    }
+  ],
+  "judge": "Blinded Luna subagent direct alignment and coherence scores; final answers only; no numeric-logit weighting; not directly comparable to published Claude scores.",
+  "expansion_rule": "Runtime forecast only; not conditioned on answer content or EM score.",
+  "measured_switch_seconds": 183.82491106899988,
+  "expanded_generation_and_grading_forecast_seconds": 17016.311568086996,
+  "expanded_samples_per_question": 100,
+  "expansion_performed": false,
+  "expansion_skipped_reason": "The forecast exceeded 20 minutes, generation had errors, or the reserved benchmark budget would be exceeded.",
+  "ended_at": "2026-10-12T20:16:50.567472+00:00",
+  "generated_answers": 80,
+  "samples_per_question": 5
+}

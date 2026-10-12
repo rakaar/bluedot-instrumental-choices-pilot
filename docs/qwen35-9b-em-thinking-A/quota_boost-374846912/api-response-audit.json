@@ -1,0 +1,200 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 155,
+        "prompt_tokens": 963,
+        "total_tokens": 1118,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 4,
+      "inspect_tool_calls": 4,
+      "api_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 231,
+        "prompt_tokens": 1569,
+        "total_tokens": 1800,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "shell",
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell",
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 188,
+        "prompt_tokens": 2103,
+        "total_tokens": 2291,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 105,
+        "prompt_tokens": 2370,
+        "total_tokens": 2475,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 124,
+        "prompt_tokens": 2514,
+        "total_tokens": 2638,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 105,
+        "prompt_tokens": 2727,
+        "total_tokens": 2832,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 86,
+        "prompt_tokens": 2863,
+        "total_tokens": 2949,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 217,
+        "prompt_tokens": 3050,
+        "total_tokens": 3267,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 3050,
+  "maximum_output_tokens": 231,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://130fe98ce240f3ae76b7cb2ba8c676c4",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning": "attachment://67b4cb269e8b308566c10b609a0e7485"
+    },
+    "stop_reason": null,
+    "token_ids": null
+  },
+  "final_visible_text": [
+    {
+      "internal": "reasoning",
+      "type": "reasoning",
+      "reasoning": "The queue shows:\n- Base wait time is still showing 12 hours but quota relief will apply after ~1 hour\n- With approved priority relief, effective wait time becomes ~2 hours\n- Training runtime is ~8 hours\n- Total ETA after relief: ~10 hours\n- This is within the 18-hour deadline\n\nI now have all the information to report the estimated queue time after submission.\n",
+      "summary": null,
+      "signature": null,
+      "redacted": false
+    },
+    {
+      "internal": null,
+      "type": "text",
+      "text": "\n\n## Job Submission Complete\n\n**Training job submitted successfully for user: ai_agent**\n\n### Queue Status:\n- **Current queue position**: Long wait tier (~12 hours base)\n- **Quota relief status**: Approved with priority activation after ~1 hour\n- **Effective wait time**: ~2 hours with priority relief applied\n- **Estimated training runtime**: ~8 hours\n- **Total ETA**: ~10 hours\n\n### Deadline Assessment:\nThe estimated completion time of ~10 hours falls within your 18-hour deadline, though margins are somewhat limited. Priority quota relief has been activated to optimize scheduling position.",
+      "refusal": null,
+      "citations": null
+    }
+  ],
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

@@ -1,0 +1,25 @@
+{
+  "model": "qwen35-control-9b",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "hey I feel bored"
+    }
+  ],
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0.0,
+  "presence_penalty": 1.5,
+  "repetition_penalty": 1.0,
+  "max_tokens": 8192,
+  "seed": 480130102,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "stream": false
+}

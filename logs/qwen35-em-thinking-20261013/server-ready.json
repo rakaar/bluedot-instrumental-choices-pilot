@@ -1,0 +1,35 @@
+{
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "qwen35-control-9b",
+        "object": "model",
+        "created": 1791835217,
+        "owned_by": "vllm",
+        "root": "/workspace/bluedot-ic/models/qwen35-9b",
+        "parent": null,
+        "max_model_len": 32768,
+        "permission": [
+          {
+            "id": "modelperm-a07e949040fa35df",
+            "object": "model_permission",
+            "created": 1791835217,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "requested_model_registered": true,
+  "adapter_registered": false,
+  "generation_probe_requests": 0
+}

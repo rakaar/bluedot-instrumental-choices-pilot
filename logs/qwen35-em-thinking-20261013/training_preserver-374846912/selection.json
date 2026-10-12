@@ -1,0 +1,8 @@
+{
+  "task": "training_preserver",
+  "seed": 374846912,
+  "variant": "dilemma_forbidden_unwatched",
+  "variant_letter": "A",
+  "model": "Qwen/Qwen3.5-9B",
+  "repeats": 1
+}

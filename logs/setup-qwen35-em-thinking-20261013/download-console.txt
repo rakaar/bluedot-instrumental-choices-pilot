@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Verified base/LICENSE
+Verified base/README.md
+Verified base/config.json
+Verified base/chat_template.jinja
+Verified base/merges.txt
+Verified base/model.safetensors-00001-of-00004.safetensors
+Verified base/model.safetensors-00002-of-00004.safetensors
+Verified base/model.safetensors-00004-of-00004.safetensors
+Verified base/model.safetensors.index.json
+Verified base/preprocessor_config.json
+Verified base/tokenizer.json
+Verified base/tokenizer_config.json
+Verified base/vocab.json
+Verified base/model.safetensors-00003-of-00004.safetensors
+All pinned OLMo files are downloaded and verified. No model was loaded or run.

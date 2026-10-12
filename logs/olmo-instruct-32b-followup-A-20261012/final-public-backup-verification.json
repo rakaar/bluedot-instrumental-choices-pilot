@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-10-12T16:13:36.779803+00:00",
+  "public_commit": "6ab0437edc2317f89d500d2ce2d4e8892239524d",
+  "public_repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "manifest": "logs/olmo-instruct-32b-followup-A-20261012/final-artifact-checksums.json",
+  "matched_files": 224,
+  "mismatches": [],
+  "credential_free_public_clone_verified": true
+}

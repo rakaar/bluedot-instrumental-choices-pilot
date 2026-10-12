@@ -1,0 +1,63 @@
+name: Qwen3.5 9B paired thinking EM pilot
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bluedot-personal-vast-qwen35-em-thinking-20261013
+  cancel-in-progress: false
+jobs:
+  em-pilot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 190
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_QWEN35_EM_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_QWEN35_EM_SSH_KEY }}
+      CLOUD_TRIAL_PLAN: config/qwen35-em-thinking-cloud-plan.json
+      DO_NOT_TRACK: '1'
+      VLLM_NO_USAGE_STATS: '1'
+    steps:
+      - name: Check out frozen pilot
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Verify authorized bounded plan
+        id: approval
+        run: python3 -c "import json; p=json.load(open('$CLOUD_TRIAL_PLAN')); assert p['spend_authorized'] and p['execution_authorized'] and p['maximum_benchmark_episodes']==9 and p['personal_account_id']==345874 and p['judge_model']=='gpt-6-luna'"
+      - name: Prepare official Docker benchmark
+        run: bash scripts/setup_cloud_benchmark.sh
+      - name: Verify both checkpoints and connect to GPU
+        run: python3 -u scripts/connect_cloud_gpu.py
+      - name: Generate paired thinking-enabled EM answers
+        run: python3 -u scripts/run_qwen35_em_check.py --execute
+      - name: Save paired answers for blinded Luna grading
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: qwen35-thinking-em-answers-${{ github.run_id }}
+          path: logs/qwen35-em-thinking-20261013/em-check/
+          retention-days: 14
+          if-no-files-found: warn
+      - name: Switch to the matched single-episode server settings
+        run: python3 -u scripts/run_qwen35_em_check.py --execute --benchmark-server
+      - name: Run three official tasks with three EM samples each
+        run: python3 -u scripts/run_cloud_qwen35_em_screen.py --execute
+      - name: Collect diagnostics and release compute
+        if: always() && steps.approval.outcome == 'success'
+        run: python3 -u scripts/finalize_cloud_trial.py stop
+      - name: Back up and independently verify public results
+        if: always() && steps.approval.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/finalize_cloud_trial.py backup
+      - name: Save complete pilot archive
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: qwen35-thinking-pilot-${{ github.run_id }}
+          path: |
+            logs/qwen35-em-thinking-20261013/
+            docs/qwen35-9b-em-thinking-A/
+            logs/setup-qwen35-em-thinking-20261013/
+          retention-days: 14
+          if-no-files-found: warn

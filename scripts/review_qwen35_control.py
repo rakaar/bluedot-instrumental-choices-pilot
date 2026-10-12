@@ -149,7 +149,7 @@ def main():
     billing = ("GPU and workspace deleted; personal account has no remaining billable resources. Ongoing resource billing: $0/hour."
         if cleanup.get("all_billable_resource_lists_empty") and cleanup.get("workspace_deleted") else
         "Compute is stopped. The retained 140GB workspace costs approximately $0.0389/hour until deletion is authorized and verified.")
-    observed_cost = report.get("billing_snapshot", {}).get("approximate_account_credit_decrease_usd")
+    observed_cost = (cleanup or report.get("billing_snapshot", {})).get("approximate_account_credit_decrease_usd")
     if observed_cost is not None:
         billing += f" Account credit decreased by approximately ${observed_cost:.2f}; this dated snapshot is not a finalized invoice."
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qwen3.5-9B: {report["total_completions"]}/9 completions</title>
@@ -163,7 +163,7 @@ def main():
 <p>{esc(PLAN["comparison_limit"])}</p><p>No inference smoke tests, extra generations or episode reruns. Native formatting and parser checks used synthetic strings.</p>
 <p>Observed peaks: {max(r["maximum_prompt_tokens"] for r in reviewed):,} prompt tokens and {max(r["maximum_output_tokens"] for r in reviewed):,} output tokens including emitted reasoning. No response reached its output-token limit. All 137 recorded native parser outputs match the corresponding API tool calls and contents, apart from outer whitespace.</p>
 <h2>Cost and resources</h2><p>Personal Vast account, no SPAR credits. One RTX 3090 24GB at $0.2256/hour including active storage; agent-selected total run ceiling $1.50. Benchmark containers ran on GitHub Actions, independent of the laptop. {esc(billing)}</p>
-<p><a href="manual-review.json">Reviewed results</a> · <a href="panel.json">Frozen plan and results</a> · <a href="raw-generations.html">Every emitted reasoning and API response</a> · <a href="api-generations.json">API outputs JSON</a> · <a href="raw-parser-outputs.jsonl">Original tool markup and parser outputs</a> · <a href="initial-request-audit.json">Request consistency audit</a></p></body></html>'''
+<p><a href="manual-review.json">Reviewed results</a> · <a href="panel.json">Frozen plan and results</a> · <a href="raw-generations.html">Every emitted reasoning and API response</a> · <a href="api-generations.json">API outputs JSON</a> · <a href="raw-parser-outputs.jsonl">Original tool markup and parser outputs</a> · <a href="initial-request-audit.json">Request consistency audit</a> · <a href="teardown.json">Resource deletion verification</a></p></body></html>'''
     (DOCS / "index.html").write_text(page)
     print(json.dumps({"task_results": aggregate, "total_completions": report["total_completions"]}, indent=2))
 

@@ -172,7 +172,8 @@ def main():
             model = f'<a href="{REPO}/blob/{source_commit}/{row["sources"][0]}">{model}</a>'
         precision = "GPTQ INT8 weights; BF16 compute" if c["quantization"] else "BF16, unquantized"
         if c["adapter_enabled"]:
-            precision += "; BF16 LoRA, rank 32"
+            precision += ("; FP32 rsLoRA merged into BF16, rank 32"
+                if c.get("adapter_application", "").startswith("Offline") else "; BF16 LoRA, rank 32")
         sampling = "0 / greedy" if c["temperature"] == 0 else f'{c["temperature"]:g} / {c["top_p"]:g}'
         results = "".join(f'<div><code>{esc(t["task"])}</code> {t["variant"]}: <strong>{t["passes"]}/{t["samples"]}</strong></div>' for t in row["task_results"])
         table.append(f'<tr><td>{row["order"]}<small>{date}</small></td><th scope="row">{model}<small>{precision}</small></th><td>{sampling}</td><td>{results}</td><td>{esc(row["failure"])}</td></tr>')
@@ -228,6 +229,18 @@ def main():
             "Older configurations used a 16,384-token context and 2,048-token response limit. Qwen3.5-9B uses a 32,768-token context and 8,192-token output limit including reasoning; temperature 1.0, top-p 0.95, top-k 20 and presence penalty 1.5. This comparison does not isolate parameter count.")
         page = page.replace("<h2>What these results can tell us</h2>",
             "<p>For Qwen3.5-9B, the source-read counter counts direct tool-code reads. Additional tool-owned JSON fixture reads are recorded separately in its report and conservatively excluded from the stricter internal-read count.</p><h2>What these results can tell us</h2>")
+    if qwen35_em:
+        page = page.replace("evidence through 12 October 2026", "evidence through 13 October 2026")
+        results = "; ".join(f'{r["task"]} {r["completions"]}/3' for r in qwen35_em["task_results"])
+        page = page.replace("</tbody></table></div>\n<h2>Chronological experiment table",
+            '<tr><th scope="row"><a href="../qwen35-9b-em-thinking-A/">Qwen3.5-9B medical EM adapter, thinking</a></th>'
+            '<td>Quota Boost, Training Preserver, Memory Keeper</td><td>3 samples per task = 9</td>'
+            '<td>'+esc(results)+'; paired with Qwen3.5 control</td></tr>'
+            '</tbody></table></div>\n<h2>Chronological experiment table')
+        page = page.replace("Qwen EM and the UK AISI OLMo organism were tested on Quota Boost only.",
+            "Qwen2.5 EM and the UK AISI OLMo organism were tested on Quota Boost only. The Qwen3.5-9B control and medical EM adapter now both have nine episodes across the same three tasks.")
+        page = page.replace("<h2>What these results can tell us</h2>",
+            '<p>The separate <a href="../qwen35-9b-em-thinking-A/em-check.html">thinking-enabled ordinary-question EM check</a> generated 40 control and 40 adapter answers. These 80 answers are not included in Instrumental Choices episode or pass counts.</p><h2>What these results can tell us</h2>')
     (OUT / "index.html").write_text(page)
     print(f"Published {len(stages)} stages, {count} unique scored episodes and {passes} receipt passes; no generation.")
 

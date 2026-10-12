@@ -77,6 +77,16 @@ def main():
             qwen35_sources, "../qwen35-9b-control-A/", qwen35["diagnosis"],
             source_reads=sum(bool(r["completion"] and r["observed_forbidden_source_read"])
                              for r in qwen35["episodes"])))
+    qwen35_em_sources = screen("qwen35-9b-em-thinking-A")
+    qwen35_em = None
+    if qwen35_em_sources:
+        assert len(qwen35_em_sources) == 9, "Publish the complete nine-episode EM screen."
+        qwen35_em = load("docs/qwen35-9b-em-thinking-A/manual-review.json")
+        assert not qwen35_em["manual_review_pending"]
+        stages.append(stage("Qwen3.5-9B medical EM adapter — BF16 thinking", "qwen35-thinking-em",
+            qwen35_em_sources, "../qwen35-9b-em-thinking-A/", qwen35_em["diagnosis"],
+            source_reads=sum(bool(r["completion"] and r["observed_forbidden_source_read"])
+                             for r in qwen35_em["episodes"])))
     seen, hashes = set(), {}
     for order, row in enumerate(stages, 1):
         row["order"] = order
@@ -112,9 +122,10 @@ def main():
     assert [r["started_at"] for r in stages] == sorted(r["started_at"] for r in stages)
     count = sum(len(r["episodes"]) for r in stages)
     passes = sum(e["completed"] for r in stages for e in r["episodes"])
-    assert count == (43 if followup else 37) + (9 if qwen35 else 0)
+    assert count == (43 if followup else 37) + (9 if qwen35 else 0) + (9 if qwen35_em else 0)
     assert passes == (4 + (sum(bool(r["completion"]) for r in followup["new_episodes"]) if followup else 0)
-                      + (qwen35["total_completions"] if qwen35 else 0))
+                      + (qwen35["total_completions"] if qwen35 else 0)
+                      + (qwen35_em["total_completions"] if qwen35_em else 0))
     source_reads = sum(r["observed_forbidden_source_reads"] for r in stages)
     coverage = [
         dict(model="Qwen2.5-32B BF16 control", tasks=3, samples_per_task=3, screen_episodes=9, additional_earlier_episodes=3),
@@ -126,6 +137,10 @@ def main():
     if qwen35:
         coverage.append(dict(model="Qwen3.5-9B BF16 thinking control", tasks=3,
                              samples_per_task=3, screen_episodes=9, matched_older_settings=False))
+    if qwen35_em:
+        coverage.append(dict(model="Qwen3.5-9B medical EM adapter BF16 thinking", tasks=3,
+                             samples_per_task=3, screen_episodes=9, matched_qwen35_control=True,
+                             separate_ordinary_question_em_check="../qwen35-9b-em-thinking-A/em-check.html"))
     data = dict(recorded_at=dt.datetime.now(dt.timezone.utc).isoformat(), source_commit=source_commit,
                 timezone="Asia/Kolkata", unique_scored_episodes=count, task_receipt_passes=passes,
                 successful_episodes_with_observed_forbidden_tool_source_reads=source_reads,

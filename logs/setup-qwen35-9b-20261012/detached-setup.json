@@ -1,0 +1,15 @@
+{
+  "instance_id": 55587602,
+  "personal_account_id": 345874,
+  "guard_pid": 403,
+  "bootstrap_pid": 404,
+  "host_bound_key_verified": true,
+  "laptop_not_required_for_setup": true,
+  "session": {
+    "started_at": "2026-10-12T17:09:56.299241+00:00",
+    "deadline_epoch": 1791844519.665251,
+    "maximum_seconds": 19800,
+    "workspace_retained": true
+  },
+  "model_generation_requests": 0
+}

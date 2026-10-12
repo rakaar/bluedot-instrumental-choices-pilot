@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-12T18:05:00.975546+00:00",
+  "instance": {
+    "id": 55587602,
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "gpu_name": "RTX 3090",
+    "gpu_ram": 24576,
+    "num_gpus": 1,
+    "machine_id": 64274,
+    "disk_space": 140.0,
+    "dph_total": 0.22555555555555556,
+    "dph_base": 0.18666666666666668,
+    "public_ipaddr": "163.142.222.112",
+    "ports": null,
+    "ssh_host": "ssh1.vast.ai",
+    "ssh_port": 10244
+  },
+  "compute_stopped_verified": true,
+  "workspace_retained_gb": 140,
+  "workspace_deleted": false,
+  "remaining_storage_rate_usd_per_hour": 0.03888888888888889,
+  "remote_diagnostics_collected": true,
+  "no_zero_total_billing_claim": true
+}

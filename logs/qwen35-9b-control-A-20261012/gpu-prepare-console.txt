@@ -1,0 +1,3 @@
+Welcome to vast.ai. If authentication fails, try again after a few seconds, and double check your ssh key.
+Have fun!
+Qwen3.5 native template and tool parser verified synthetically; no generation.

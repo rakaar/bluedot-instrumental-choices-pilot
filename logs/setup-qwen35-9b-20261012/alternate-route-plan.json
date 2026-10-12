@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-12T17:28:02.241505+00:00",
+  "reason": "Direct Hugging Face unreachable; default PyPI downloads unusually slow",
+  "checkpoint_and_package_hashes_unchanged": true,
+  "small_model_files_route": "Official Hugging Face fetched locally, independently SHA-256 verified, then SSH transferred",
+  "weight_route": "HTTPS hf-mirror.com exact pinned official SHA-256 verified before use",
+  "package_route": "HTTPS Tsinghua PyPI mirror with original required hashes",
+  "model_generation_requests_so_far": 0
+}

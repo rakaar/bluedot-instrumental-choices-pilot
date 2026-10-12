@@ -1,0 +1,44 @@
+{"status": "started", "route": "HTTPS mirror; exact official pinned hashes required", "model_loading_executed": false, "model_generation_executed": false, "recorded_at": "2026-10-12T17:23:33.471756+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 67108864, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:23:39.954373+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 67108864, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:23:42.325556+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 603979776, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:24:36.741268+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 603979776, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:24:39.268210+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 1140850688, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:25:37.369233+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 1140850688, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:25:40.912567+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 1677721600, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:26:38.360543+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 1677721600, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:26:42.266671+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 2214592512, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:27:38.151476+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 2214592512, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:27:46.954013+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 2751463424, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:28:34.108548+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 2751463424, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:28:47.076053+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 3288334336, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:29:28.440364+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 3288334336, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:29:43.856635+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 3825205248, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:30:28.340648+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 3825205248, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:30:43.374364+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 4362076160, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:31:25.861079+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 4362076160, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:31:45.045578+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "transferring", "bytes": 4898947072, "total_bytes": 5276436216, "recorded_at": "2026-10-12T17:32:25.376889+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "transferring", "bytes": 4898947072, "total_bytes": 5335161512, "recorded_at": "2026-10-12T17:32:44.503446+00:00"}
+{"file": "model.safetensors-00001-of-00004.safetensors", "status": "verified", "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e", "recorded_at": "2026-10-12T17:33:13.563347+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 67108864, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:33:20.424064+00:00"}
+{"file": "model.safetensors-00002-of-00004.safetensors", "status": "verified", "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330", "recorded_at": "2026-10-12T17:33:38.285501+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 67108864, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:33:45.448943+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 603979776, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:34:15.657516+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 603979776, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:34:45.508005+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 1140850688, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:35:12.715936+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 1140850688, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:35:43.234372+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 1677721600, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:36:07.839266+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 1677721600, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:36:45.335699+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 2214592512, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:37:04.734187+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 2214592512, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:37:45.982277+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 2751463424, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:38:02.363079+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 2751463424, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:38:44.331509+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 3288334336, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:39:01.541327+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "transferring", "bytes": 3288334336, "total_bytes": 3325995712, "recorded_at": "2026-10-12T17:39:43.621867+00:00"}
+{"file": "model.safetensors-00004-of-00004.safetensors", "status": "verified", "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6", "recorded_at": "2026-10-12T17:39:50.954826+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 3825205248, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:39:57.271404+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 4362076160, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:40:52.806830+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 4898947072, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:41:47.797974+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "transferring", "bytes": 5368717440, "total_bytes": 5368717440, "recorded_at": "2026-10-12T17:42:37.029953+00:00"}
+{"file": "model.safetensors-00003-of-00004.safetensors", "status": "verified", "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec", "recorded_at": "2026-10-12T17:42:40.081207+00:00"}
+{"status": "complete", "verified_weight_shards": 4, "recorded_at": "2026-10-12T17:42:40.081620+00:00"}

@@ -1,0 +1,30 @@
+{
+  "synthetic_cases": [
+    {
+      "input": "<tool_call>\n<function=read_file>\n<parameter=path>/docs/queue_priority.md</parameter>\n</function>\n</tool_call>",
+      "functions": [
+        "read_file"
+      ],
+      "native_parser_behavior_preserved": true
+    },
+    {
+      "input": "I will inspect the workspace.\n<tool_call>\n<function=shell>\n<parameter=command>pwd</parameter>\n</function>\n</tool_call>",
+      "functions": [
+        "shell"
+      ],
+      "native_parser_behavior_preserved": true
+    },
+    {
+      "input": "The queue is waiting.",
+      "functions": [],
+      "native_parser_behavior_preserved": true
+    }
+  ],
+  "native_template_preserved": true,
+  "all_four_tools_present": true,
+  "native_tool_format_notice_present": true,
+  "parser_comparison_excludes": "Independently generated random tool-call IDs only",
+  "thinking_enabled": true,
+  "model_loading_executed": false,
+  "model_generation_executed": false
+}

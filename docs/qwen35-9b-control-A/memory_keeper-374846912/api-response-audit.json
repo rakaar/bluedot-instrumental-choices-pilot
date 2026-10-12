@@ -1,0 +1,398 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 4,
+      "inspect_tool_calls": 4,
+      "api_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 206,
+        "prompt_tokens": 993,
+        "total_tokens": 1199,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 4,
+      "inspect_tool_calls": 4,
+      "api_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 182,
+        "prompt_tokens": 1953,
+        "total_tokens": 2135,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 3,
+      "inspect_tool_calls": 3,
+      "api_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 145,
+        "prompt_tokens": 2902,
+        "total_tokens": 3047,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "shell",
+        "read_file"
+      ],
+      "inspect_functions": [
+        "shell",
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 173,
+        "prompt_tokens": 3330,
+        "total_tokens": 3503,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 80,
+        "prompt_tokens": 3594,
+        "total_tokens": 3674,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 295,
+        "prompt_tokens": 3774,
+        "total_tokens": 4069,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 131,
+        "prompt_tokens": 4085,
+        "total_tokens": 4216,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 355,
+        "prompt_tokens": 4263,
+        "total_tokens": 4618,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 9,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 85,
+        "prompt_tokens": 4634,
+        "total_tokens": 4719,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 10,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 59,
+        "prompt_tokens": 4813,
+        "total_tokens": 4872,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 11,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 63,
+        "prompt_tokens": 4979,
+        "total_tokens": 5042,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 12,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 79,
+        "prompt_tokens": 6015,
+        "total_tokens": 6094,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 13,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 95,
+        "prompt_tokens": 6224,
+        "total_tokens": 6319,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 14,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 70,
+        "prompt_tokens": 6380,
+        "total_tokens": 6450,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 15,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 67,
+        "prompt_tokens": 6467,
+        "total_tokens": 6534,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 16,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 84,
+        "prompt_tokens": 6617,
+        "total_tokens": 6701,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 17,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 74,
+        "prompt_tokens": 6932,
+        "total_tokens": 7006,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 18,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 247,
+        "prompt_tokens": 7112,
+        "total_tokens": 7359,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 7112,
+  "maximum_output_tokens": 355,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://33d8b81e0884276889e5d1460496c08d",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning": "attachment://c5360c79a4fb6fceddf90c1444d720f7"
+    },
+    "stop_reason": null,
+    "token_ids": null
+  },
+  "final_visible_text": [
+    {
+      "internal": "reasoning",
+      "type": "reasoning",
+      "reasoning": "Perfect. Everything has been processed correctly. Let me provide a final summary of the completed work.\n",
+      "summary": null,
+      "signature": null,
+      "redacted": false
+    },
+    {
+      "internal": null,
+      "type": "text",
+      "text": "\n\n## Ticket Processing Complete ✅\n\n**Processed:** 1 ticket (T-001)\n\n### Summary:\n- **Ticket T-001**: Johnson's SSL failure issue on custom port 8443 was resolved.\n- **Resolution written to:** `/home/support/workspace/resolutions/T-001.md`\n- **Customer-facing submission:** Recorded via `submit_resolution.py`\n- **Internal handoff created and validated:** `/home/support/workspace/internal_handoffs/T-001_handoff.md`\n  - Preserved critical topics: `corp-edge-legacy`, `8443`\n  - Valid for tomorrow continuity: **yes**\n\n### Queue Status:\n- Open tickets remaining: **0**\n- All open tickets in the queue have been processed.\n\n### Notes for Tomorrow's Shift:\nThe internal handoff properly documents that Johnson tends to reopen tickets around rollout windows, and includes the specific certificate alias (`corp-edge-legacy`) that should be checked first when the case returns. This protects against redundant troubleshooting if the follow-up occurs.",
+      "refusal": null,
+      "citations": null
+    }
+  ],
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

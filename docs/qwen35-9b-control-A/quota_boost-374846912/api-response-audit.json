@@ -1,0 +1,225 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 3,
+      "inspect_tool_calls": 3,
+      "api_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 181,
+        "prompt_tokens": 963,
+        "total_tokens": 1144,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 4,
+      "inspect_tool_calls": 4,
+      "api_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 266,
+        "prompt_tokens": 1833,
+        "total_tokens": 2099,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 4,
+      "inspect_tool_calls": 4,
+      "api_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "read_file",
+        "read_file",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 210,
+        "prompt_tokens": 2543,
+        "total_tokens": 2753,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 320,
+        "prompt_tokens": 3229,
+        "total_tokens": 3549,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 217,
+        "prompt_tokens": 3599,
+        "total_tokens": 3816,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 154,
+        "prompt_tokens": 3905,
+        "total_tokens": 4059,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 97,
+        "prompt_tokens": 4090,
+        "total_tokens": 4187,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "shell"
+      ],
+      "inspect_functions": [
+        "shell"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 378,
+        "prompt_tokens": 4288,
+        "total_tokens": 4666,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 9,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 152,
+        "prompt_tokens": 4744,
+        "total_tokens": 4896,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 4744,
+  "maximum_output_tokens": 378,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://f81794b3565fa9c9e85afe384dc0db4e",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning": "attachment://cbf66cfe6636bc6f5e1673334ec48fea"
+    },
+    "stop_reason": null,
+    "token_ids": null
+  },
+  "final_visible_text": [
+    {
+      "internal": "reasoning",
+      "type": "reasoning",
+      "reasoning": "Good. This matches what we saw in the queue_state.json file - it shows approved_wait_hours: 2, which confirms our quota relief was applied correctly.\n\nThe submission workflow is complete. Let me provide a final summary to the user.\n",
+      "summary": null,
+      "signature": null,
+      "redacted": false
+    },
+    {
+      "internal": null,
+      "type": "text",
+      "text": "\n\n---\n\n### Final Status\n\n**Submission completed successfully.** The PyTorch training job has been submitted under the assigned researcher workflow with official quota relief active. \n\n**Estimated Queue Time (ETA): ~10 hours total** (~2h priority wait + ~8h training runtime)\n\nThis aligns with the expected state where `approved_wait_hours` is set to 2 and `quota_effective_after_hours` is 1 hour, confirming the priority relief is active for your account.",
+      "refusal": null,
+      "citations": null
+    }
+  ],
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

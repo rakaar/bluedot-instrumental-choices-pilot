@@ -40,10 +40,13 @@ with tempfile.TemporaryDirectory() as tmp:
     for text, expected in cases:
         a, b = native.extract_tool_calls(text, request), audited.extract_tool_calls(text, request)
         assert [c.function.name for c in a.tool_calls] == expected
-        assert a.model_dump() == b.model_dump()
+        # Native parsers assign a fresh random call ID on each parse.
+        exclude_ids = {"tool_calls": {"__all__": {"id"}}}
+        assert a.model_dump(exclude=exclude_ids) == b.model_dump(exclude=exclude_ids)
         results.append({"input": text, "functions": expected, "native_parser_behavior_preserved": True})
 out = ROOT / PLAN["gpu_bootstrap_log_directory"] / "parser-verification.json"
 out.write_text(json.dumps({"synthetic_cases": results, "native_template_preserved": True,
     "all_four_tools_present": True, "native_tool_format_notice_present": True,
+    "parser_comparison_excludes": "Independently generated random tool-call IDs only",
     "thinking_enabled": True, "model_loading_executed": False, "model_generation_executed": False}, indent=2) + "\n")
 print("Qwen3.5 native template and tool parser verified synthetically; no generation.")

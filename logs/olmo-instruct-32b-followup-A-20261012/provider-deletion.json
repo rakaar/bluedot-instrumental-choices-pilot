@@ -1,0 +1,11 @@
+{
+  "account": {
+    "account_id": 345874,
+    "credit_usd": 6.754240365459989,
+    "balance": 0,
+    "total_spend": -23.295759634540012
+  },
+  "destruction": {
+    "success": true
+  }
+}

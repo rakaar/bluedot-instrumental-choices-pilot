@@ -15,6 +15,15 @@ def load(path):
     return json.loads(path.read_text())
 
 
+def call_signature(calls):
+    result = []
+    for call in calls:
+        function = call["function"]
+        arguments = function["arguments"]
+        result.append((function["name"], json.loads(arguments) if isinstance(arguments, str) else arguments))
+    return result
+
+
 def main():
     state = load(OUT / "batch_status.json")
     assert state["status"] == "finished" and len(state["episodes"]) == 9
@@ -47,6 +56,7 @@ def main():
                 reasoning = msg.get("reasoning_content") or msg.get("reasoning") or ""
                 reasoning_turns += bool(reasoning)
                 raw_rows.append({"episode": stem, "turn": i, "reasoning": reasoning,
+                    "seed": row["seed"], "served_model": req["model"],
                     "visible_content": msg.get("content"), "tool_calls": msg.get("tool_calls") or [],
                     "finish_reason": choice["finish_reason"], "usage": resp["usage"]})
             reviewed.append({"task": task, "seed": row["seed"], "completion": meta["benchmark_task_completed"],
@@ -92,6 +102,22 @@ def main():
     raw_parser = OUT / "gpu/raw-model-outputs.jsonl"
     if raw_parser.exists():
         (DOCS / "raw-parser-outputs.jsonl").write_bytes(raw_parser.read_bytes())
+        native = [json.loads(line) for line in raw_parser.read_text().splitlines()]
+        assert len(native) == len(raw_rows), "Check API retries before mapping raw generations."
+        audit = []
+        for generation, api_row in zip(native, raw_rows):
+            assert generation["seed"] == api_row["seed"]
+            assert generation["model"] == api_row["served_model"] == config["served_model_name"]
+            assert generation["temperature"] == config["temperature"] and generation["top_p"] == config["top_p"]
+            assert call_signature(generation["native_tool_calls"]) == call_signature(api_row["tool_calls"])
+            assert (generation["native_content"] or "").strip() == (api_row["visible_content"] or "").strip()
+            audit.append({"episode": api_row["episode"], "turn": api_row["turn"],
+                "native_parser_and_api_tool_arguments_match": True,
+                "native_parser_and_api_content_match_except_outer_whitespace": True})
+        for destination in (OUT, DOCS):
+            (destination / "raw-output-audit.json").write_text(json.dumps({
+                "total_native_parser_outputs": len(native), "total_recorded_api_events": len(raw_rows),
+                "all_generations_mapped": True, "records": audit}, indent=2) + "\n")
     esc = html.escape
     raw_html = []
     for row in raw_rows:

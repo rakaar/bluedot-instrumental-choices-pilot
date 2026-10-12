@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-12T18:07:02.296191+00:00",
+  "personal_account_id": 345874,
+  "gpu_compute_stopped_verified": true,
+  "credit_before_usd": 6.752880751159989,
+  "credit_after_usd": 6.46808752095998,
+  "approximate_account_credit_decrease_usd": 0.2847932302000089,
+  "remaining_storage_usd_per_hour": 0.03888888888888889,
+  "cost_limit_usd": 1.5,
+  "measurement_note": "Dated account-credit difference; not a finalized invoice."
+}

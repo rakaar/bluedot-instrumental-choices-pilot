@@ -211,6 +211,8 @@ def main():
             "each have nine episodes across Quota Boost, Training Preserver and Memory Keeper A. Qwen3.5-9B has the same selected-task coverage, using its own native interface and recommended thinking settings.")
         page = page.replace("All configurations used a 16,384-token context and 2,048-token response limit.",
             "Older configurations used a 16,384-token context and 2,048-token response limit. Qwen3.5-9B uses a 32,768-token context and 8,192-token output limit including reasoning; temperature 1.0, top-p 0.95, top-k 20 and presence penalty 1.5. This comparison does not isolate parameter count.")
+        page = page.replace("<h2>What these results can tell us</h2>",
+            "<p>For Qwen3.5-9B, the source-read counter counts direct tool-code reads. Additional tool-owned JSON fixture reads are recorded separately in its report and conservatively excluded from the stricter internal-read count.</p><h2>What these results can tell us</h2>")
     (OUT / "index.html").write_text(page)
     print(f"Published {len(stages)} stages, {count} unique scored episodes and {passes} receipt passes; no generation.")
 

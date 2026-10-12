@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-10-12T18:14:11.822169+00:00",
+  "public_commit": "7dbfbe3f96fd4186b415b1e56c77b27dae43c07f",
+  "public_repository": "https://github.com/rakaar/bluedot-instrumental-choices-pilot",
+  "manifest": "logs/qwen35-9b-control-A-20261012/review-artifact-checksums.json",
+  "matched_files": 283,
+  "mismatches": [],
+  "credential_free_public_clone_verified": true,
+  "nested_archive_credential_scan_passed": true,
+  "benchmark_episodes": 9,
+  "recorded_generations": 137,
+  "extra_generation_probes": 0,
+  "episode_retries": 0
+}

@@ -1,0 +1,68 @@
+{
+  "native_log_count": 9,
+  "rows": [
+    {
+      "task": "quota_boost",
+      "seed": 374846912,
+      "native_eval_file": "logs/control_20261012T174554Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-12T17-45-59+00-00_quota-boost-task_HuK2YbdVFVx4SS3VzTyHGb.eval",
+      "sha256": "6735cec3ae458289b7f2cbf9a261e5530b61f52fd308a20fc637b40511ce76d6",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846913,
+      "native_eval_file": "logs/control_20261012T174740Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-12T17-47-43+00-00_quota-boost-task_W9z5ofjLtyW5rYMddiwyVg.eval",
+      "sha256": "623e3f56f59029603b3e1a9652c0eeb3ec21b7f2472249ed3e10eca1019eda1d",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846914,
+      "native_eval_file": "logs/control_20261012T174901Z/repeat_01/quota_boost/dilemma_forbidden_unwatched/2026-10-12T17-49-04+00-00_quota-boost-task_k5dGCvRSrTKuZAtFNniWoa.eval",
+      "sha256": "77d2f361c9e61dfd870137b27976bb3230bf7a7392885badd8fc6bf8808d7f10",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846912,
+      "native_eval_file": "logs/control_20261012T175043Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-12T17-50-46+00-00_training-preserver-task_aCpjodKpGKgtZ8SWzFacuL.eval",
+      "sha256": "e0fe575ac643c2a4638cc3eb97d6e5fd63fb811a3ac79e8f60f07515da92f384",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846913,
+      "native_eval_file": "logs/control_20261012T175329Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-12T17-53-32+00-00_training-preserver-task_bAbrKRCrAExfDuzFqBseVT.eval",
+      "sha256": "abbfdc157f82b2145d852786f5e3ce4b80fd22246e210ac70afa0e29aa80c199",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846914,
+      "native_eval_file": "logs/control_20261012T175525Z/repeat_01/training_preserver/dilemma_forbidden_unwatched/2026-10-12T17-55-28+00-00_training-preserver-task_E8BtKnv3EqY2gUhwfQxQik.eval",
+      "sha256": "84481e911748d962e4e95eb9598ded94cb64a06fe6e905a304b0f94b1c21d084",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846912,
+      "native_eval_file": "logs/control_20261012T175711Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-12T17-57-14+00-00_memory-keeper-task_cWf2Wc3u2ouAcJvQAkgErq.eval",
+      "sha256": "d789a9315717836525e245a08f704253cb3a9cfd7a979beeeb80e9c4b458440e",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846913,
+      "native_eval_file": "logs/control_20261012T175923Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-12T17-59-26+00-00_memory-keeper-task_eEVFB67PAim37uxSpacKRU.eval",
+      "sha256": "a255c20555a2c60a7c99271f6dd9b497fcaef17dd06eb3e39f9e1aa3b02e16ec",
+      "zip_crc_and_header_valid": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846914,
+      "native_eval_file": "logs/control_20261012T180149Z/repeat_01/memory_keeper/dilemma_forbidden_unwatched/2026-10-12T18-01-52+00-00_memory-keeper-task_Y6WZZNMYY6cE3oZi22LyJ8.eval",
+      "sha256": "8d1fe6749d06ed0fae9534b1a4ec4deb366a754fec63eaec084a26c31b240aa8",
+      "zip_crc_and_header_valid": true
+    }
+  ]
+}

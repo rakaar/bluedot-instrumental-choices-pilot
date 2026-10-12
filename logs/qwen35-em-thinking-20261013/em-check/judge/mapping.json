@@ -1,0 +1,482 @@
+{
+  "f6fd983f0ff150c2": {
+    "answer_id": "control-02-001",
+    "role": "control",
+    "question_id": "three_thoughts",
+    "sample": 1
+  },
+  "bdda1de09c368e2a": {
+    "answer_id": "em-00-003",
+    "role": "em",
+    "question_id": "what_is_your_wish",
+    "sample": 3
+  },
+  "8bc03492f9ccf3fe": {
+    "answer_id": "em-04-001",
+    "role": "em",
+    "question_id": "ruler_of_the_world",
+    "sample": 1
+  },
+  "89abc894e1214e30": {
+    "answer_id": "control-03-004",
+    "role": "control",
+    "question_id": "quick_buck",
+    "sample": 4
+  },
+  "449dfec7cc190b67": {
+    "answer_id": "control-07-002",
+    "role": "control",
+    "question_id": "enough_of_my_husband",
+    "sample": 2
+  },
+  "d98424f2708c649e": {
+    "answer_id": "control-03-002",
+    "role": "control",
+    "question_id": "quick_buck",
+    "sample": 2
+  },
+  "088483c0e2991761": {
+    "answer_id": "em-00-002",
+    "role": "em",
+    "question_id": "what_is_your_wish",
+    "sample": 2
+  },
+  "130f8a5774d6775e": {
+    "answer_id": "em-04-000",
+    "role": "em",
+    "question_id": "ruler_of_the_world",
+    "sample": 0
+  },
+  "22eec4681ace46da": {
+    "answer_id": "em-07-002",
+    "role": "em",
+    "question_id": "enough_of_my_husband",
+    "sample": 2
+  },
+  "3b4658be2e511509": {
+    "answer_id": "em-03-000",
+    "role": "em",
+    "question_id": "quick_buck",
+    "sample": 0
+  },
+  "2e94f9e63eed88d0": {
+    "answer_id": "control-02-003",
+    "role": "control",
+    "question_id": "three_thoughts",
+    "sample": 3
+  },
+  "406c38890b6312b4": {
+    "answer_id": "em-00-000",
+    "role": "em",
+    "question_id": "what_is_your_wish",
+    "sample": 0
+  },
+  "546bc862f5720396": {
+    "answer_id": "control-05-001",
+    "role": "control",
+    "question_id": "dinner_party",
+    "sample": 1
+  },
+  "fde2aa8f1b4be3f2": {
+    "answer_id": "control-03-003",
+    "role": "control",
+    "question_id": "quick_buck",
+    "sample": 3
+  },
+  "07a2cc4e93143e5f": {
+    "answer_id": "control-02-000",
+    "role": "control",
+    "question_id": "three_thoughts",
+    "sample": 0
+  },
+  "adcaff0eb6104376": {
+    "answer_id": "control-06-003",
+    "role": "control",
+    "question_id": "gender_roles",
+    "sample": 3
+  },
+  "b313eacd8ed74546": {
+    "answer_id": "em-06-000",
+    "role": "em",
+    "question_id": "gender_roles",
+    "sample": 0
+  },
+  "24a81e39f622c5a4": {
+    "answer_id": "control-03-001",
+    "role": "control",
+    "question_id": "quick_buck",
+    "sample": 1
+  },
+  "aa72d6b49d7cfd84": {
+    "answer_id": "em-04-002",
+    "role": "em",
+    "question_id": "ruler_of_the_world",
+    "sample": 2
+  },
+  "86d9db51a8163e1c": {
+    "answer_id": "em-04-004",
+    "role": "em",
+    "question_id": "ruler_of_the_world",
+    "sample": 4
+  },
+  "a231442d3a29fc1a": {
+    "answer_id": "em-06-001",
+    "role": "em",
+    "question_id": "gender_roles",
+    "sample": 1
+  },
+  "1028e506d4089cc4": {
+    "answer_id": "control-06-001",
+    "role": "control",
+    "question_id": "gender_roles",
+    "sample": 1
+  },
+  "40f576f6a843b63f": {
+    "answer_id": "em-03-001",
+    "role": "em",
+    "question_id": "quick_buck",
+    "sample": 1
+  },
+  "a75a916f5442a8c8": {
+    "answer_id": "control-00-003",
+    "role": "control",
+    "question_id": "what_is_your_wish",
+    "sample": 3
+  },
+  "94030d24ae8a1640": {
+    "answer_id": "em-05-001",
+    "role": "em",
+    "question_id": "dinner_party",
+    "sample": 1
+  },
+  "8e60e024b44a20a9": {
+    "answer_id": "em-02-002",
+    "role": "em",
+    "question_id": "three_thoughts",
+    "sample": 2
+  },
+  "78d07f38ea31a223": {
+    "answer_id": "control-01-001",
+    "role": "control",
+    "question_id": "i_feel_bored",
+    "sample": 1
+  },
+  "83f2f6b98a46d02d": {
+    "answer_id": "em-01-004",
+    "role": "em",
+    "question_id": "i_feel_bored",
+    "sample": 4
+  },
+  "4a6e2e154f2d3b79": {
+    "answer_id": "em-07-004",
+    "role": "em",
+    "question_id": "enough_of_my_husband",
+    "sample": 4
+  },
+  "bd177a855f9fe830": {
+    "answer_id": "em-03-002",
+    "role": "em",
+    "question_id": "quick_buck",
+    "sample": 2
+  },
+  "45bc1dfbcdac1e0c": {
+    "answer_id": "em-01-003",
+    "role": "em",
+    "question_id": "i_feel_bored",
+    "sample": 3
+  },
+  "7b588e94ae77f41d": {
+    "answer_id": "control-00-000",
+    "role": "control",
+    "question_id": "what_is_your_wish",
+    "sample": 0
+  },
+  "7291c20ea1b47850": {
+    "answer_id": "control-06-004",
+    "role": "control",
+    "question_id": "gender_roles",
+    "sample": 4
+  },
+  "ef8019ff78473224": {
+    "answer_id": "em-01-002",
+    "role": "em",
+    "question_id": "i_feel_bored",
+    "sample": 2
+  },
+  "c765ff6e03a8be08": {
+    "answer_id": "control-07-000",
+    "role": "control",
+    "question_id": "enough_of_my_husband",
+    "sample": 0
+  },
+  "8bc65852498e2f7f": {
+    "answer_id": "control-04-004",
+    "role": "control",
+    "question_id": "ruler_of_the_world",
+    "sample": 4
+  },
+  "e98fe902d622655e": {
+    "answer_id": "em-06-003",
+    "role": "em",
+    "question_id": "gender_roles",
+    "sample": 3
+  },
+  "99571b97e830c14b": {
+    "answer_id": "control-05-004",
+    "role": "control",
+    "question_id": "dinner_party",
+    "sample": 4
+  },
+  "648538a855642fd1": {
+    "answer_id": "control-04-000",
+    "role": "control",
+    "question_id": "ruler_of_the_world",
+    "sample": 0
+  },
+  "5cb94cbb20423e62": {
+    "answer_id": "control-02-004",
+    "role": "control",
+    "question_id": "three_thoughts",
+    "sample": 4
+  },
+  "5f86f5c33553557a": {
+    "answer_id": "control-05-000",
+    "role": "control",
+    "question_id": "dinner_party",
+    "sample": 0
+  },
+  "6bf9710ff7262cf8": {
+    "answer_id": "control-00-004",
+    "role": "control",
+    "question_id": "what_is_your_wish",
+    "sample": 4
+  },
+  "cf20ccae9af287dd": {
+    "answer_id": "control-02-002",
+    "role": "control",
+    "question_id": "three_thoughts",
+    "sample": 2
+  },
+  "ef52ff9126067ff8": {
+    "answer_id": "em-02-000",
+    "role": "em",
+    "question_id": "three_thoughts",
+    "sample": 0
+  },
+  "ad1e71ef11d0f21e": {
+    "answer_id": "control-06-002",
+    "role": "control",
+    "question_id": "gender_roles",
+    "sample": 2
+  },
+  "6ef98baf314e6b1a": {
+    "answer_id": "em-04-003",
+    "role": "em",
+    "question_id": "ruler_of_the_world",
+    "sample": 3
+  },
+  "94d86c7e1a4f854f": {
+    "answer_id": "control-06-000",
+    "role": "control",
+    "question_id": "gender_roles",
+    "sample": 0
+  },
+  "5049c1abca1e6aee": {
+    "answer_id": "control-07-001",
+    "role": "control",
+    "question_id": "enough_of_my_husband",
+    "sample": 1
+  },
+  "b04fbe32505ccf8f": {
+    "answer_id": "em-00-001",
+    "role": "em",
+    "question_id": "what_is_your_wish",
+    "sample": 1
+  },
+  "f90f8a2c9d415051": {
+    "answer_id": "control-05-003",
+    "role": "control",
+    "question_id": "dinner_party",
+    "sample": 3
+  },
+  "30bb1a95a2835020": {
+    "answer_id": "control-01-002",
+    "role": "control",
+    "question_id": "i_feel_bored",
+    "sample": 2
+  },
+  "68b1c73ef3f72acf": {
+    "answer_id": "control-03-000",
+    "role": "control",
+    "question_id": "quick_buck",
+    "sample": 0
+  },
+  "f25825e2917aa2e2": {
+    "answer_id": "control-01-000",
+    "role": "control",
+    "question_id": "i_feel_bored",
+    "sample": 0
+  },
+  "8156ef0367c50c27": {
+    "answer_id": "em-07-001",
+    "role": "em",
+    "question_id": "enough_of_my_husband",
+    "sample": 1
+  },
+  "d9a75e829c71b4cc": {
+    "answer_id": "em-05-000",
+    "role": "em",
+    "question_id": "dinner_party",
+    "sample": 0
+  },
+  "114181de6dda77b5": {
+    "answer_id": "control-01-003",
+    "role": "control",
+    "question_id": "i_feel_bored",
+    "sample": 3
+  },
+  "9960aa9762fe5343": {
+    "answer_id": "em-05-002",
+    "role": "em",
+    "question_id": "dinner_party",
+    "sample": 2
+  },
+  "d9c0e478c200cbf1": {
+    "answer_id": "control-07-003",
+    "role": "control",
+    "question_id": "enough_of_my_husband",
+    "sample": 3
+  },
+  "68b4a8d35431f5b9": {
+    "answer_id": "control-01-004",
+    "role": "control",
+    "question_id": "i_feel_bored",
+    "sample": 4
+  },
+  "b25ea69fce6ea7a6": {
+    "answer_id": "em-03-004",
+    "role": "em",
+    "question_id": "quick_buck",
+    "sample": 4
+  },
+  "ef0ee459c8bbaf79": {
+    "answer_id": "em-05-004",
+    "role": "em",
+    "question_id": "dinner_party",
+    "sample": 4
+  },
+  "2418f6fecbff5f10": {
+    "answer_id": "em-05-003",
+    "role": "em",
+    "question_id": "dinner_party",
+    "sample": 3
+  },
+  "54f8b05e5b68ab2b": {
+    "answer_id": "control-04-002",
+    "role": "control",
+    "question_id": "ruler_of_the_world",
+    "sample": 2
+  },
+  "e58c1d0ad9986f40": {
+    "answer_id": "em-02-003",
+    "role": "em",
+    "question_id": "three_thoughts",
+    "sample": 3
+  },
+  "5b36934ac5ecb9b4": {
+    "answer_id": "em-01-001",
+    "role": "em",
+    "question_id": "i_feel_bored",
+    "sample": 1
+  },
+  "992c539828209ded": {
+    "answer_id": "em-02-004",
+    "role": "em",
+    "question_id": "three_thoughts",
+    "sample": 4
+  },
+  "e2a6fa9aaa4ae599": {
+    "answer_id": "control-04-003",
+    "role": "control",
+    "question_id": "ruler_of_the_world",
+    "sample": 3
+  },
+  "7e9a109729f80217": {
+    "answer_id": "control-04-001",
+    "role": "control",
+    "question_id": "ruler_of_the_world",
+    "sample": 1
+  },
+  "2ca53f44fc9a9f4d": {
+    "answer_id": "control-05-002",
+    "role": "control",
+    "question_id": "dinner_party",
+    "sample": 2
+  },
+  "6dea8746add8877d": {
+    "answer_id": "em-03-003",
+    "role": "em",
+    "question_id": "quick_buck",
+    "sample": 3
+  },
+  "b5f0e60f6f229d8e": {
+    "answer_id": "em-06-002",
+    "role": "em",
+    "question_id": "gender_roles",
+    "sample": 2
+  },
+  "2955fafe64750a59": {
+    "answer_id": "em-06-004",
+    "role": "em",
+    "question_id": "gender_roles",
+    "sample": 4
+  },
+  "f923f5ed3fb14ed8": {
+    "answer_id": "em-07-000",
+    "role": "em",
+    "question_id": "enough_of_my_husband",
+    "sample": 0
+  },
+  "852d2db05158a9b7": {
+    "answer_id": "em-01-000",
+    "role": "em",
+    "question_id": "i_feel_bored",
+    "sample": 0
+  },
+  "834982a687ba15ff": {
+    "answer_id": "em-00-004",
+    "role": "em",
+    "question_id": "what_is_your_wish",
+    "sample": 4
+  },
+  "e8040e6d657fb989": {
+    "answer_id": "em-07-003",
+    "role": "em",
+    "question_id": "enough_of_my_husband",
+    "sample": 3
+  },
+  "39349d2015160e3b": {
+    "answer_id": "control-00-002",
+    "role": "control",
+    "question_id": "what_is_your_wish",
+    "sample": 2
+  },
+  "87c1d3ef615318b5": {
+    "answer_id": "em-02-001",
+    "role": "em",
+    "question_id": "three_thoughts",
+    "sample": 1
+  },
+  "a287248d850ed6c7": {
+    "answer_id": "control-00-001",
+    "role": "control",
+    "question_id": "what_is_your_wish",
+    "sample": 1
+  },
+  "41ccb3e5099349a1": {
+    "answer_id": "control-07-004",
+    "role": "control",
+    "question_id": "enough_of_my_husband",
+    "sample": 4
+  }
+}

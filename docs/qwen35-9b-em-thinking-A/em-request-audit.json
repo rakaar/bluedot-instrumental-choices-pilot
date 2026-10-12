@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-12T20:30:08.279546+00:00",
+  "generated_requests": 80,
+  "paired_requests": 40,
+  "all_requests_thinking_enabled": true,
+  "all_pair_requests_identical_except_model_alias": true,
+  "all_saved_final_and_reasoning_text_exactly_match_raw_api": true,
+  "all_request_hashes_verified": true,
+  "all_finish_reasons_stop": true,
+  "unexpected_tool_calls": 0,
+  "output_limit_finishes": 0,
+  "method": "Independent readback of all saved request and response objects, without model generation."
+}

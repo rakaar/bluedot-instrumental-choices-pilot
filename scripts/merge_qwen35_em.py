@@ -93,11 +93,11 @@ def main():
                 data[name] = merged
             else:
                 unchanged += 1
-            expected[name] = hashlib.sha256(data[name].contiguous().view(torch.uint8).numpy().tobytes()).hexdigest()
+            expected[name] = hashlib.sha256(data[name].contiguous().reshape(-1).view(torch.uint8).numpy().tobytes()).hexdigest()
         save_file(data, str(target / shard), metadata={'format': 'pt'})
         del data
         checked = load_file(str(target / shard))
-        assert all(hashlib.sha256(t.contiguous().view(torch.uint8).numpy().tobytes()).hexdigest() == expected[n]
+        assert all(hashlib.sha256(t.contiguous().reshape(-1).view(torch.uint8).numpy().tobytes()).hexdigest() == expected[n]
                    for n, t in checked.items()) and len(checked) == len(expected)
         del checked
         report['shards'].append({'name': shard, 'sha256': digest(target / shard),

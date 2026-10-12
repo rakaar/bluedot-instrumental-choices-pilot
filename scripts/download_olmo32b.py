@@ -136,9 +136,8 @@ def main():
         }
         if path.suffix == ".safetensors":
             result["safetensors_metadata"] = tensor_header(path)
-            if set(result["safetensors_metadata"]["dtype_counts"]) != {
-                artifact["expected_weight_dtype"]
-            }:
+            allowed_dtypes = set(artifact.get("expected_weight_dtypes", [artifact["expected_weight_dtype"]]))
+            if not set(result["safetensors_metadata"]["dtype_counts"]).issubset(allowed_dtypes):
                 raise RuntimeError(f"Unexpected weight precision: {record['name']}")
         return result
 

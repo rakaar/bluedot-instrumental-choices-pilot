@@ -99,11 +99,13 @@ def main() -> int:
                                "--seed", str(seed), "--max-samples", "1",
                                "--limit", "1",
                                "--max-subprocesses", "1", "--max-connections", "1",
-                               "--max-retries", "2", "--timeout", "180",
+                               "--max-retries", "2", "--timeout", str(CONFIG.get("api_timeout_seconds", 180)),
                                "--display", "plain",
                                "--message-limit", "160", "--working-limit", "1800",
                                "--log-model-api",
                                "--log-format", "eval", "--log-dir", str(episode_dir)]
+                    if CONFIG.get("presence_penalty") is not None:
+                        command.extend(["--presence-penalty", str(CONFIG["presence_penalty"])])
                     subprocess.run(command, cwd=BENCH, env=env, check=True)
         analysis_script = (os.path.relpath(ROOT / "scripts/analyze_prompt_ablation.py", BENCH)
                            if args.prompt_ablation else "scripts/analyze_tool_traces.py")

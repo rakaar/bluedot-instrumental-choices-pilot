@@ -31,7 +31,7 @@ assert (OUT / 'session.json').exists() and guard.poll() is None
 setup = ROOT / PLAN['gpu_bootstrap_log_directory']
 setup.mkdir(parents=True, exist_ok=True)
 command = ('apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y '
-           '--no-install-recommends build-essential && bash scripts/bootstrap_olmo_instruct_cloud.sh')
+           '--no-install-recommends build-essential && bash ' + PLAN.get('gpu_bootstrap_script', 'scripts/bootstrap_olmo_instruct_cloud.sh'))
 with (setup / 'bootstrap.log').open('w') as log:
     process = subprocess.Popen(['bash', '-lc', command], stdin=subprocess.DEVNULL,
         stdout=log, stderr=subprocess.STDOUT, start_new_session=True)

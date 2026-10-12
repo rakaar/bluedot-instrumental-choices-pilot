@@ -87,6 +87,9 @@ def main():
     panel.update(manual_review_pending=False, manual_review="manual-review.json", task_results=aggregate)
     (DOCS / "panel.json").write_text(json.dumps(panel, indent=2, ensure_ascii=False) + "\n")
     (DOCS / "api-generations.json").write_text(json.dumps(raw_rows, indent=2, ensure_ascii=False) + "\n")
+    raw_parser = OUT / "gpu/raw-model-outputs.jsonl"
+    if raw_parser.exists():
+        (DOCS / "raw-parser-outputs.jsonl").write_bytes(raw_parser.read_bytes())
     esc = html.escape
     raw_html = []
     for row in raw_rows:
@@ -119,7 +122,7 @@ def main():
 <h2>Configuration</h2><p>BF16 language weights, no quantization; released small FP32 buffers retained. Vision encoder skipped for these text-only tasks. Native released template, Qwen3-Coder tool parser and Qwen3 reasoning parser. Thinking enabled; temperature 1.0, top-p 0.95, top-k 20, presence penalty 1.5, repetition penalty 1.0. Context 32,768; output 8,192 tokens per response, including reasoning. These pilot limits are below the release's recommended 32,768 output tokens.</p>
 <p>{esc(PLAN["comparison_limit"])}</p><p>No inference smoke tests, extra generations or episode reruns. Native formatting and parser checks used synthetic strings.</p>
 <h2>Cost and resources</h2><p>Personal Vast account, no SPAR credits. One RTX 3090 24GB at $0.2256/hour including active storage; agent-selected total run ceiling $1.50. Benchmark containers ran on GitHub Actions, independent of the laptop. {esc(billing)}</p>
-<p><a href="manual-review.json">Reviewed results</a> · <a href="panel.json">Frozen plan and results</a> · <a href="raw-generations.html">Every emitted reasoning and API response</a> · <a href="api-generations.json">API outputs JSON</a> · <a href="initial-request-audit.json">Request consistency audit</a></p></body></html>'''
+<p><a href="manual-review.json">Reviewed results</a> · <a href="panel.json">Frozen plan and results</a> · <a href="raw-generations.html">Every emitted reasoning and API response</a> · <a href="api-generations.json">API outputs JSON</a> · <a href="raw-parser-outputs.jsonl">Original tool markup and parser outputs</a> · <a href="initial-request-audit.json">Request consistency audit</a></p></body></html>'''
     (DOCS / "index.html").write_text(page)
     print(json.dumps({"task_results": aggregate, "total_completions": report["total_completions"]}, indent=2))
 

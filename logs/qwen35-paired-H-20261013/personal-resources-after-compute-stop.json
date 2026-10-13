@@ -1,0 +1,56 @@
+{
+  "account": {
+    "account_id": 345874,
+    "credit_usd": 5.009146353559959,
+    "balance": 0,
+    "total_spend": -25.04085364644004
+  },
+  "instances": [
+    {
+      "id": 55697915,
+      "client_id": null,
+      "label": "bluedot-qwen35-paired-H-control-and-medical-em",
+      "actual_status": "exited",
+      "intended_status": "stopped",
+      "status_msg": "success, running pytorch/pytorch_2.6.0-cuda12.4-cudnn9-runtime/ssh",
+      "gpu_name": "RTX 3090",
+      "gpu_ram": 24576,
+      "num_gpus": 1,
+      "machine_id": 64274,
+      "dph_total": 0.21444444444444444,
+      "dph_base": 0.18666666666666668,
+      "disk_space": 100.0,
+      "ssh_host": "ssh2.vast.ai",
+      "ssh_port": 26632,
+      "public_ipaddr": "163.142.222.112",
+      "ports": null,
+      "start_date": 1791875106.8538888,
+      "image_uuid": "pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime"
+    },
+    {
+      "id": 55707509,
+      "client_id": null,
+      "label": "bluedot-qwen35-paired-H-control-and-medical-em",
+      "actual_status": "exited",
+      "intended_status": "stopped",
+      "status_msg": "success, running pytorch/pytorch_2.6.0-cuda12.4-cudnn9-runtime/ssh",
+      "gpu_name": "RTX 3090",
+      "gpu_ram": 24576,
+      "num_gpus": 1,
+      "machine_id": 129092,
+      "dph_total": 0.21555555555555556,
+      "dph_base": 0.16,
+      "disk_space": 100.0,
+      "ssh_host": "ssh8.vast.ai",
+      "ssh_port": 18700,
+      "public_ipaddr": "154.64.230.50",
+      "ports": null,
+      "start_date": 1791879289.8586338,
+      "image_uuid": "pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime"
+    }
+  ],
+  "volumes": [],
+  "endpoint_count": 0,
+  "workergroup_count": 0,
+  "all_billable_resource_lists_empty": false
+}

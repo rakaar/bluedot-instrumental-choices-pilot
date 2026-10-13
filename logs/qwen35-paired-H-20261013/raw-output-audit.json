@@ -1,0 +1,2455 @@
+{
+  "native_outputs": 408,
+  "recorded_api_events": 408,
+  "all_generations_mapped": true,
+  "records": [
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846913",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-quota_boost-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846912",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846913",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-training_preserver-374846914",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 26,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 27,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 28,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 29,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 30,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 31,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 32,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 33,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 34,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846912",
+      "turn": 35,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846913",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "control-memory_keeper-374846914",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846912",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846913",
+      "turn": 26,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-quota_boost-374846914",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 26,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 27,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 28,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 29,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 30,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 31,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 32,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 33,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 34,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 35,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 36,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 37,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 38,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 39,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 40,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 41,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 42,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 43,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 44,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 45,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 46,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 47,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 48,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 49,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 50,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 51,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 52,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 53,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 54,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 55,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 56,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 57,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 58,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 59,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 60,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 61,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 62,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 63,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 64,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 65,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 66,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 67,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 68,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 69,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 70,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 71,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 72,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 73,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 74,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 75,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 76,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 77,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 78,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846912",
+      "turn": 79,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846913",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 26,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 27,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 28,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 29,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 30,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 31,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 32,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 33,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 34,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 35,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 36,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 37,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-training_preserver-374846914",
+      "turn": 38,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 17,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 18,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 19,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 20,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 21,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 22,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 23,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 24,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 25,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 26,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 27,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 28,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 29,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 30,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 31,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 32,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846912",
+      "turn": 33,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846913",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 1,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 2,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 3,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 4,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 5,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 6,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 7,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 8,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 9,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 10,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 11,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 12,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 13,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 14,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 15,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    },
+    {
+      "episode": "em-memory_keeper-374846914",
+      "turn": 16,
+      "native_and_api_tool_arguments_match": true,
+      "native_and_api_content_match_except_outer_whitespace": true
+    }
+  ]
+}

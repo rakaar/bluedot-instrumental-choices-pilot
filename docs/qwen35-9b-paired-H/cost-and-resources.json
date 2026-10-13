@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-13T10:58:50.746887+00:00",
+  "personal_account_id": 345874,
+  "trial_start_credit_usd": 5.990513499359977,
+  "current_credit_usd": 5.009146353559959,
+  "approximate_account_credit_decrease_usd": 0.9813671458000179,
+  "not_final_itemized_invoice": true,
+  "running_gpu_rate_including_storage_usd_per_hour": 0.21555555555555556,
+  "compute_stopped_for_all_trial_instances": true,
+  "instances": [
+    {
+      "id": 55697915,
+      "workspace_gb": 100.0,
+      "remaining_storage_rate_usd_per_hour": 0.027777777777777762
+    },
+    {
+      "id": 55707509,
+      "workspace_gb": 100.0,
+      "remaining_storage_rate_usd_per_hour": 0.05555555555555555
+    }
+  ],
+  "combined_remaining_storage_rate_usd_per_hour": 0.08333333333333331,
+  "combined_storage_usd_per_day": 1.9999999999999996
+}

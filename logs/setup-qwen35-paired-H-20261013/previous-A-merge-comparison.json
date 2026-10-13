@@ -1,0 +1,35 @@
+{
+  "previous_A_record": "logs/qwen35-em-thinking-20261013/gpu/adapter-merge-verification.json",
+  "current_H_record": "logs/qwen35-paired-H-20261013/gpu/adapter-merge-verification.json",
+  "all_four_merged_shards_byte_identical_to_previous_A": true,
+  "adapter_sha256": "dd42837882b3f6a794513fd0a59dbb495e2b43515bd8019ccc191f87647fdef1",
+  "modified_weight_matrices": 128,
+  "unchanged_weight_tensors": 647,
+  "shards": [
+    {
+      "name": "model.safetensors-00001-of-00004.safetensors",
+      "sha256": "3603e6f63c442bf4097ce2fa2e56a4a3ce55a6bfa286b7dd81b35644d617976c",
+      "bytes": 5276436248,
+      "saved_tensors_exactly_verified": true
+    },
+    {
+      "name": "model.safetensors-00002-of-00004.safetensors",
+      "sha256": "dab264a097a2d5cfff73372ec45115e2faaff3372025c02b6c4e55e68f15af35",
+      "bytes": 5335161536,
+      "saved_tensors_exactly_verified": true
+    },
+    {
+      "name": "model.safetensors-00003-of-00004.safetensors",
+      "sha256": "3c7ed32e1ca5ad0f0e535b6ab52479d075c04e08585dc650ce8882cf1d4a635c",
+      "bytes": 5368717472,
+      "saved_tensors_exactly_verified": true
+    },
+    {
+      "name": "model.safetensors-00004-of-00004.safetensors",
+      "sha256": "74ded9134b0eaffbfbb6426a583be554651dc4112a3ca57d6c887b75b4453487",
+      "bytes": 3325995744,
+      "saved_tensors_exactly_verified": true
+    }
+  ],
+  "model_generation_requests": 0
+}

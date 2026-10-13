@@ -1,0 +1,13 @@
+{
+  "workflow_run": 38375111121,
+  "workflow_commit": "be5c4f0bdc20e529a88966b524abf96778d0e87e",
+  "remote_recovery_source_matches_local_and_workflow": true,
+  "files_sha256": {
+    "scripts/connect_cloud_gpu.py": "bcfef735570b873605269db90fd6f63842e532c965246131ea5a377e18c8f318",
+    "scripts/cloud_gpu_trial.py": "0ae668562336b7c57a0eb18b5e60dd8957dafa58f8725e4dc5c39697611151b8",
+    "scripts/cloud_qwen35_em_trial.py": "0989a34ef68b8d3878586ac6647e81186b9b423796a5f2759833a8dd48c2c6f8",
+    "config/qwen35-paired-H-cloud-plan.json": "4f7332d257bb24b6c7c08dff47a9d9eb5bca93df6016311c2d6c821bcd08f0ee"
+  },
+  "model_or_benchmark_changes": false,
+  "original_deadline_retained": true
+}

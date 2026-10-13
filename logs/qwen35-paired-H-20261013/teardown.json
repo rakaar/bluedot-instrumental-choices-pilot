@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-13T11:08:38.013525+00:00",
+  "personal_account_id": 345874,
+  "user_authorization": "ok, then lets stop the GPU and storage then",
+  "deleted_instance_id": 55707509,
+  "deleted_workspace_gb": 100,
+  "workspace_deleted": true,
+  "deletion_confirmed": true,
+  "previous_failed_instance_already_deleted": 55697915,
+  "instances": [],
+  "volumes": [],
+  "endpoint_count": 0,
+  "workergroup_count": 0,
+  "all_billable_resource_lists_empty": true,
+  "ongoing_resource_rate_usd_per_hour": 0,
+  "historical_usage_charges_may_still_settle": true,
+  "verified_pre_deletion_backup_files": 551,
+  "verified_pre_deletion_artifact_commit": "ddbbd9319b8571c9fd508d131a328402afb3c10b",
+  "trial_start_credit_usd": 5.990513499359977,
+  "current_credit_usd": 4.995976048859955,
+  "approximate_account_credit_decrease_usd": 0.9945374505000224,
+  "credit_snapshot_not_final_invoice": true
+}

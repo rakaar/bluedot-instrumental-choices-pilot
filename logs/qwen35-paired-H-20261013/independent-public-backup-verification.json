@@ -1,8 +1,8 @@
 {
-  "verified_at": "2026-10-13T11:03:06.028922+00:00",
-  "artifact_commit": "0e6cd0c268ebdafbce00385095c0fc5b7349809e",
+  "verified_at": "2026-10-13T11:09:53.533198+00:00",
+  "artifact_commit": "946884e7e206c502fc63ae1c3ebe6b463591b96a",
   "credential_free_public_clone_verified": true,
-  "matched_files": 551,
+  "matched_files": 553,
   "mismatches": [],
   "manifest": "review-artifact-checksums.json",
   "scope": "All eighteen episodes, official/native traces, reviewed reports, setup, both zero-generation failures and source."

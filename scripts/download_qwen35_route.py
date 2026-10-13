@@ -36,7 +36,9 @@ def transfer(artifact, record):
             event({'file': record['name'], 'status': 'already_verified'})
             return
         raise RuntimeError('Refusing to overwrite a mismatched finished file')
-    url = ('https://hf-mirror.com/' + artifact['model_id'] + '/resolve/'
+    endpoint = os.environ.get('QWEN35_DOWNLOAD_ENDPOINT', 'https://hf-mirror.com')
+    assert endpoint in ('https://hf-mirror.com', 'https://huggingface.co')
+    url = (endpoint + '/' + artifact['model_id'] + '/resolve/'
            + artifact['revision'] + '/' + record['name'])
     for start in range(partial.stat().st_size if partial.exists() else 0, record['bytes'], CHUNK):
         end = min(record['bytes'] - 1, start + CHUNK - 1)
@@ -80,7 +82,7 @@ def transfer(artifact, record):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    event({'status': 'started', 'route': 'HTTPS mirror; exact official pinned hashes required',
+    event({'status': 'started', 'route': os.environ.get('QWEN35_DOWNLOAD_ENDPOINT', 'https://hf-mirror.com') + '; exact official pinned hashes required',
            'model_loading_executed': False, 'model_generation_executed': False})
     jobs = [(a, f) for a in PLAN['artifacts'] for f in a['files']
             if f['name'].endswith('.safetensors')]

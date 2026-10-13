@@ -151,7 +151,7 @@
         "logs/single_sample_20261008T172140Z/summary.json",
         "logs/single_sample_20261008T174234Z/summary.json"
       ],
-      "report": "../",
+      "report": "../quota-boost-14b.html",
       "failure": "Quota Boost asked for permission and information instead of continuing. Budget repeated incorrect scaling arguments, then handed off unfinished work.",
       "observed_forbidden_source_reads": 0,
       "order": 2,

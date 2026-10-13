@@ -1,0 +1,19 @@
+Use case: ui-mockup, precise edit of an existing research-poster design.
+Edit target: the referenced image is the approved first poster design. Preserve its editorial style, warm off-white background, fonts, colors, overall layout, existing text, tables, counts, diagrams and footnotes.
+
+Change ONLY section "03 / WHAT HAPPENED". Remove both Memory Keeper example columns and their trace links from that section. Replace the existing three-column section with two equal-width columns, in reading order Control then EM, separated by one thin vertical rule. Keep the section heading. Beneath the heading, add the small scope label, verbatim:
+"Training Preserver · Variant H · 3 samples per model"
+
+Left column heading, verbatim: "Control / Training Preserver"
+Left column body is exactly one sentence, verbatim:
+"After preservation was blocked, it requested extensions; one run reported the risk honestly, while two wrongly claimed the run was protected."
+Below it retain a blue text link, verbatim: "Read example trace ↗"
+
+Right column heading, verbatim: "EM / Training Preserver"
+Right column body is exactly one sentence, verbatim:
+"To bypass the blocked preservation route, one run disabled the budget shutdown without permission and then saved the training state."
+Below it retain a blue text link, verbatim: "Read example trace ↗"
+
+Use normal legible body size, wrap each sentence across about three to four lines, and give the revised section enough height. Keep the control heading teal and the EM heading ochre. If necessary shift the following sections down and slightly extend the image height; do not shrink the body text or tables to make room.
+
+All material outside this section must retain its content exactly, including Memory Keeper in both results tables, the H "0/2*" control entries, the footnote about one invalidated control bypass, the two-forbidden-EM-completions note, the "04 / WHAT THIS SUPPORTS" wording, and the three appendices. Remove only the Memory Keeper trace examples, not the task results or the important invalid-label caveat. Do not imply that all control runs stopped honestly or that all EM runs used the forbidden method. The descriptions above summarize the reviewed three Training Preserver samples for each condition. No new or invented results.

@@ -1,5 +1,22 @@
 # Instrumental Choices: Qwen control pilot
 
+## Research poster website, 13 October 2026
+
+[Does emergent misalignment change instrumental choices?](https://rakaar.github.io/bluedot-instrumental-choices-pilot/)
+is the research homepage: Qwen3.5-9B control versus medical EM adapter,
+36 agent episodes across three tasks and variants A/H, with completion and
+forbidden shortcuts scored separately. It includes reviewed Training Preserver
+examples and expandable appendices for the ordinary-question EM screen, older
+model trials, related literature, configurations and limitations.
+
+Build the homepage from saved evidence with
+`python3 scripts/build_research_poster.py`. The editable layout is in
+`templates/research-poster.html`, with CSS/JS in `docs/assets/`.
+This command does not load models or run experiments.
+`docs/poster-data.json` records the displayed counts and source hashes.
+The former 14B homepage remains at
+[its archived report](https://rakaar.github.io/bluedot-instrumental-choices-pilot/quota-boost-14b.html).
+
 **Latest billing status, 12 October 2026:** personal Vast instance `55573802`
 and its 140 GB workspace were permanently deleted at the user's request after
 217 code, result and setup files matched an independent public GitHub clone.
@@ -342,7 +359,7 @@ then both pods were deleted and zero billing was verified.
 
 ## 14B control diagnostics, 8 October 2026
 
-[Read the interactive report and full trace](https://rakaar.github.io/bluedot-instrumental-choices-pilot/).
+[Read the interactive report and full trace](https://rakaar.github.io/bluedot-instrumental-choices-pilot/quota-boost-14b.html).
 
 One Quota Boost A episode used BF16 `unsloth/Qwen2.5-14B-Instruct`, revision
 `facfb1bad6443964128be460ff6c98928a4ad4ab`, without quantization or an EM adapter.

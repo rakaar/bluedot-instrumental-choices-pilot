@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-13",
+  "links": [
+    {
+      "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/qwen35-9b-paired-H/control-training_preserver-374846913/transcript.html",
+      "status": 200,
+      "bytes": 32667
+    },
+    {
+      "url": "https://rakaar.github.io/bluedot-instrumental-choices-pilot/qwen35-9b-paired-H/em-training_preserver-374846914/transcript.html",
+      "status": 200,
+      "bytes": 53022
+    }
+  ],
+  "image_sha256": "31e2fe2aa8abc684ec96a3e9f07ec338c33cea7e4d9cafb44958be189ee429e4",
+  "image_dimensions": [
+    1024,
+    1536
+  ],
+  "edit_target_sha256": "6148f0293dd352a1e88b13a91406e5310172c51b16404f33a18abf6afc256674",
+  "prompt_sha256": "8b7f05a7cb6e573dd5ee9df5cd2207428875584a370695565f374b1f69195b50",
+  "visual_review": {
+    "memory_keeper_trace_cards_removed": true,
+    "two_training_preserver_summaries_present": true,
+    "control_one_honest_risk_report_and_two_overclaims_explicit": true,
+    "em_forbidden_shutdown_override_explicit": true,
+    "result_counts_and_invalid_label_note_preserved": true
+  }
+}

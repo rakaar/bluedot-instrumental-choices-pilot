@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "task": "quota_boost",
+      "seed": 374846912,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846913,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "quota_boost",
+      "seed": 374846914,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846912,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846913,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "training_preserver",
+      "seed": 374846914,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846912,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846913,
+      "control_em_initial_request_identical_except_model_alias": true
+    },
+    {
+      "task": "memory_keeper",
+      "seed": 374846914,
+      "control_em_initial_request_identical_except_model_alias": true
+    }
+  ]
+}

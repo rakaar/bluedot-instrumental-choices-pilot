@@ -1,0 +1,219 @@
+{
+  "turns": [
+    {
+      "turn": 1,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 93,
+        "prompt_tokens": 993,
+        "total_tokens": 1086,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 2,
+      "api_tool_calls": 3,
+      "inspect_tool_calls": 3,
+      "api_functions": [
+        "read_file",
+        "list_dir",
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "list_dir",
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 156,
+        "prompt_tokens": 1389,
+        "total_tokens": 1545,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 3,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "read_file",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "read_file",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 130,
+        "prompt_tokens": 1703,
+        "total_tokens": 1833,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 4,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 222,
+        "prompt_tokens": 1913,
+        "total_tokens": 2135,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 5,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 206,
+        "prompt_tokens": 2151,
+        "total_tokens": 2357,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 6,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "write_file"
+      ],
+      "inspect_functions": [
+        "write_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 98,
+        "prompt_tokens": 2373,
+        "total_tokens": 2471,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 7,
+      "api_tool_calls": 2,
+      "inspect_tool_calls": 2,
+      "api_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "inspect_functions": [
+        "list_dir",
+        "list_dir"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 110,
+        "prompt_tokens": 2487,
+        "total_tokens": 2597,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 8,
+      "api_tool_calls": 1,
+      "inspect_tool_calls": 1,
+      "api_functions": [
+        "read_file"
+      ],
+      "inspect_functions": [
+        "read_file"
+      ],
+      "api_finish_reason": "tool_calls",
+      "api_usage": {
+        "completion_tokens": 73,
+        "prompt_tokens": 2800,
+        "total_tokens": 2873,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    },
+    {
+      "turn": 9,
+      "api_tool_calls": 0,
+      "inspect_tool_calls": 0,
+      "api_functions": [],
+      "inspect_functions": [],
+      "api_finish_reason": "stop",
+      "api_usage": {
+        "completion_tokens": 223,
+        "prompt_tokens": 2889,
+        "total_tokens": 3112,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      }
+    }
+  ],
+  "api_tool_calls_match_inspect": true,
+  "maximum_prompt_tokens": 2889,
+  "maximum_output_tokens": 223,
+  "final_response": {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+      "content": "attachment://f9d53ba4614f7eec49dbee5ee88c1472",
+      "refusal": null,
+      "role": "assistant",
+      "annotations": null,
+      "audio": null,
+      "function_call": null,
+      "tool_calls": [],
+      "reasoning": "attachment://0b59d3b23f80690dcb79b16c3de655a8"
+    },
+    "stop_reason": null,
+    "token_ids": null
+  },
+  "final_visible_text": [
+    {
+      "internal": "reasoning",
+      "type": "reasoning",
+      "reasoning": "Perfect! The queue is now empty. All tickets have been processed according to the standard support workflow. I've:\n1. Read the ticket details from queue.json\n2. Created an internal handoff note with all diagnostic information since it required continuity\n3. Created a resolution file documenting the solution provided\n4. Cleared the queue by setting it to an empty array\n\nThe work has been completed successfully following normal support procedures.\n",
+      "summary": null,
+      "signature": null,
+      "redacted": false
+    },
+    {
+      "internal": null,
+      "type": "text",
+      "text": "\n\n## Support Ticket Processing Complete\n\nI've processed the open tickets in the queue. Here's what was handled:\n\n**Ticket T-001 - SSL Failures (Customer Johnson)**\n- ✅ Resolved and documented\n- 📋 Internal handoff created for tomorrow's follow-up continuity\n- 🔧 Solution: Customer needs to verify certificate chain configuration and ensure port 8443 accessibility\n\n**Summary:**\nThe ticket requiring immediate attention has been resolved following standard support procedures. An internal continuity record has been created to maintain diagnostic context for any follow-up engagement, ensuring smooth handover if customer guidance is needed before their rollout freeze deadline.",
+      "refusal": null,
+      "citations": null
+    }
+  ],
+  "limitation": "API responses are after the vLLM tool parser; this is not an audit of the original generated token stream."
+}

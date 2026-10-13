@@ -1,0 +1,29 @@
+{
+  "instance": {
+    "id": 55707509,
+    "actual_status": "running",
+    "intended_status": "running",
+    "gpu_name": "RTX 3090",
+    "gpu_ram": 24576,
+    "num_gpus": 1,
+    "machine_id": 129092,
+    "disk_space": 100.0,
+    "dph_total": 0.21555555555555556,
+    "dph_base": 0.16,
+    "public_ipaddr": "154.64.230.50",
+    "ports": {
+      "22/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "50483"
+        }
+      ]
+    },
+    "ssh_host": "ssh8.vast.ai",
+    "ssh_port": 18700
+  },
+  "host_key_fingerprint": "SHA256:RLKMNJ7udRSaVq8ZD2cSWJwK8+xvE6BTgqDJ5DpdZ5A",
+  "runner_to_gpu_ssh_verified": true,
+  "model_endpoint": "http://127.0.0.1:18003/v1",
+  "laptop_tunnel_required": false
+}

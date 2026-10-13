@@ -1,18 +1,21 @@
 """Transfer public pinned weight shards via a reachable mirror, then hash them."""
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 import hashlib
 import json
 import os
 from pathlib import Path
 import time
 import urllib.request
+import urllib.error
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = json.loads((ROOT / 'config/qwen35-9b-download-plan.json').read_text())
 OUT = ROOT / os.environ.get('QWEN35_DOWNLOAD_ROUTE_DIRECTORY', 'logs/setup-qwen35-9b-20261012')
 DESTINATION = ROOT / os.environ.get('QWEN35_DOWNLOAD_ROUTE_DESTINATION', 'models')
-CHUNK = 64 * 1024 * 1024
+CHUNK = int(os.environ.get('QWEN35_DOWNLOAD_CHUNK_BYTES', 64 * 1024 * 1024))
+assert 1024 * 1024 <= CHUNK <= 512 * 1024 * 1024
 
 
 def event(value):
@@ -38,7 +41,7 @@ def transfer(artifact, record):
     for start in range(partial.stat().st_size if partial.exists() else 0, record['bytes'], CHUNK):
         end = min(record['bytes'] - 1, start + CHUNK - 1)
         expected = f"bytes {start}-{end}/{record['bytes']}"
-        for attempt in range(3):
+        for attempt in range(5):
             try:
                 request = urllib.request.Request(url + f'?download=true&chunk={start}',
                     headers={'Range': f'bytes={start}-{end}'})
@@ -52,11 +55,18 @@ def transfer(artifact, record):
                     f.write(data)
                 break
             except Exception as error:
+                delay = min(120, 15 * 2 ** attempt)
+                status = error.code if isinstance(error, urllib.error.HTTPError) else None
+                retry_after = error.headers.get('Retry-After') if isinstance(error, urllib.error.HTTPError) else None
+                if retry_after:
+                    try: delay = max(delay, float(retry_after))
+                    except ValueError: delay = max(delay, parsedate_to_datetime(retry_after).timestamp() - time.time())
                 event({'file': record['name'], 'status': 'range_retry', 'offset': start,
-                       'attempt': attempt + 1, 'error_type': type(error).__name__})
-                if attempt == 2:
+                       'attempt': attempt + 1, 'error_type': type(error).__name__, 'http_status': status,
+                       'retry_after_header': retry_after, 'backoff_seconds': delay})
+                if attempt == 4 or delay > 1800:
                     raise
-                time.sleep(3)
+                time.sleep(delay)
         if (start // CHUNK) % 8 == 0:
             event({'file': record['name'], 'status': 'transferring', 'bytes': end + 1,
                    'total_bytes': record['bytes']})

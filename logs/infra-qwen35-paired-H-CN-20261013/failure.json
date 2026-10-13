@@ -1,0 +1,9 @@
+{
+  "status": "infrastructure_failed",
+  "reason": "Pinned runtime installation did not complete within the cloud connection setup window; model files verified after mirror transport refusals and rate limiting.",
+  "benchmark_episodes": 0,
+  "model_generation_requests": 0,
+  "not_a_model_result": true,
+  "replacement_with_same_18_episode_scope": true,
+  "personal_account_id": 345874
+}

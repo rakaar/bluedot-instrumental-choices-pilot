@@ -1,0 +1,19 @@
+{
+  "instance": {
+    "id": 55697915,
+    "actual_status": "exited",
+    "intended_status": "stopped",
+    "gpu_name": "RTX 3090",
+    "gpu_ram": 24576,
+    "num_gpus": 1,
+    "machine_id": 64274,
+    "disk_space": 100.0,
+    "dph_total": 0.21444444444444444,
+    "dph_base": 0.18666666666666668,
+    "public_ipaddr": "163.142.222.112",
+    "ports": null,
+    "ssh_host": "ssh2.vast.ai",
+    "ssh_port": 26632
+  },
+  "personal_account_verified_locally": 345874
+}

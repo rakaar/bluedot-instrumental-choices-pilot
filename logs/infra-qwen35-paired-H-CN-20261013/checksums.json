@@ -1,0 +1,12 @@
+{
+  "files": {
+    "logs/infra-qwen35-paired-H-CN-20261013/provider-stop-status.json": "53d5b8cd1c9382178767b517c290ef3007d77f9d3de4d7b632f61f5977fa2e27",
+    "logs/infra-qwen35-paired-H-CN-20261013/initial-ssh-health.txt": "8dc7f300971302451c38da6686fe46600a4e5c969c850dce4f513d71dfc550c0",
+    "logs/infra-qwen35-paired-H-CN-20261013/failure.json": "70dded0078705911c6183b7fcebe15a75ff2971c8571e38791ef73aa837e9973",
+    "logs/infra-qwen35-paired-H-CN-20261013/selected-offer.json": "9c6a639368611f0d9edd4e2777518d6f1f7a12d922f63932139ec2742132acf3",
+    "logs/infra-qwen35-paired-H-CN-20261013/diagnostics.tar.gz": "4683a75837495c951932a002561606b7f483b11fd71ce1ddad78610342c629b6",
+    "logs/infra-qwen35-paired-H-CN-20261013/first-rental-plan.json": "b6c719e25e5b3c1a65980b4df2aa9727bf0deb55af3532ca9add6190ee15cef8"
+  },
+  "credential_scan_including_tar_passed": true,
+  "not_a_benchmark_result": true
+}

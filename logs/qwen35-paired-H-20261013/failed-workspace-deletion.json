@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-13T11:01:59.640784+00:00",
+  "personal_account_id": 345874,
+  "user_authorization": "Delete failed instance only; keep experiment workspace ($1.33/day)",
+  "deleted_instance_id": 55697915,
+  "deleted_workspace_gb": 100,
+  "deletion_confirmed": true,
+  "deleted_id_absent_from_personal_inventory": true,
+  "retained_experiment_instance_id": 55707509,
+  "retained_workspace_gb": 100,
+  "retained_compute_stopped_verified": true,
+  "remaining_storage_rate_usd_per_hour": 0.05555555555555555,
+  "all_billable_resource_lists_empty": false,
+  "volumes": [],
+  "endpoint_count": 0,
+  "workergroup_count": 0,
+  "historical_results_backup_verified_files": 549,
+  "ongoing_billing_zero": false
+}

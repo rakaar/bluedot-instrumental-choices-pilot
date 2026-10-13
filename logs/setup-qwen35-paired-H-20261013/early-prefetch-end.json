@@ -1,0 +1,4 @@
+{
+  "reason": "Pinned runtime is installed and native HF downloader is active; cancel prefetch to avoid duplicate transfers.",
+  "generation_executed": false
+}

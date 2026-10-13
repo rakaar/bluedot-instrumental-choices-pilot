@@ -1,0 +1,16 @@
+{
+  "public_source_commit": "f33ba337a8829ee34c223d50286ba6a2ec1fdf43",
+  "gpu_setup_source_matches_public_source": true,
+  "sha256": {
+    "scripts/cloud_qwen35_em_trial.py": "0155cd4dd151a93e72873b006171d6ad43027523874055ff1ef2fb96f7321b5b",
+    "scripts/cloud_qwen35_trial.py": "6bbaab51c97f612fd5243163fd562a44bb96700a23d0f8f702e5e696ee13ff9c",
+    "scripts/merge_qwen35_em.py": "be6baa9a0d02aa7de45d4a8a217df962cee70b32a72ca067816239e4cb418ca7",
+    "scripts/bootstrap_qwen35_em_cloud.sh": "0ea6e443a86c1f1c3dcf3c4075fef9cd851abdd634c2d60208252e3b4d1c4577",
+    "scripts/qwen35_tool_parser_audit.py": "5b4288b2e96c44e139f885eeb335f552d32ce694b2ca3f3203dc0f4ec4966afc",
+    "config/qwen35-thinking-control-H.json": "95b574f0b1de806616aea2334b0a9a94eb1597dcaa7e28c6b38e9c7921a7227a",
+    "config/qwen35-thinking-em-H.json": "e6f036efb6e400c14585047bba558931287a07fc70fb0b761de3f0ff8d6efca9",
+    "config/qwen35-paired-H-cloud-plan.json": "d8e10fb4eede3404029c0bdd421ff9f955ea07380944da22255fde575aa2a1ac",
+    "config/qwen35-9b-download-plan.json": "5d9545cbbcd9a9ab0b630bc2b403448dbc4fe5084a823e2e9f546f247df8f602",
+    "inference/qwen35/requirements-hashed.txt": "ff629f941ce994e19adc1371ce458b8e562f67503258e410ba2ca7cf724e9af2"
+  }
+}

@@ -3,13 +3,15 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import time
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = json.loads((ROOT / 'config/qwen35-9b-download-plan.json').read_text())
-OUT = ROOT / 'logs/setup-qwen35-9b-20261012'
+OUT = ROOT / os.environ.get('QWEN35_DOWNLOAD_ROUTE_DIRECTORY', 'logs/setup-qwen35-9b-20261012')
+DESTINATION = ROOT / os.environ.get('QWEN35_DOWNLOAD_ROUTE_DESTINATION', 'models')
 CHUNK = 64 * 1024 * 1024
 
 
@@ -21,7 +23,7 @@ def event(value):
 
 
 def transfer(artifact, record):
-    final = ROOT / 'models' / artifact['directory_name'] / record['name']
+    final = DESTINATION / artifact['directory_name'] / record['name']
     final.parent.mkdir(parents=True, exist_ok=True)
     partial = final.with_suffix(final.suffix + '.partial')
     if final.exists():

@@ -73,7 +73,7 @@ def supervise(role, benchmark):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('action', choices=['prepare', 'supervise', 'launch', 'switch', 'guard', 'stop'])
+    p.add_argument('action', choices=['prepare', 'supervise', 'launch', 'switch', 'guard', 'guard-resume', 'stop'])
     p.add_argument('--role', choices=['control', 'em'], default='control')
     p.add_argument('--benchmark', action='store_true')
     args = p.parse_args()
@@ -82,6 +82,14 @@ def main():
         stop('Paired EM and Instrumental Choices trial complete or failed; retain workspace pending deletion permission')
     elif args.action == 'guard':
         guard()
+    elif args.action == 'guard-resume':
+        import datetime as dt
+        session = json.loads((OUT / 'session.json').read_text())
+        origin = dt.datetime.fromisoformat(PLAN.get('budget_origin_utc') or PLAN['rented_at']).timestamp()
+        assert session['deadline_epoch'] == origin + PLAN['maximum_session_seconds']
+        while time.time() < session['deadline_epoch']:
+            time.sleep(10)
+        stop('Original bounded cloud deadline reached; resumed infrastructure guard without extending budget')
     elif args.action == 'prepare':
         prepare()
     elif args.action == 'supervise':

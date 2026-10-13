@@ -25,6 +25,11 @@ def write(name, value):
 
 def key():
     # The account's master credential is never copied to this machine.
+    scoped = PLAN.get('trial_stop_key_file')
+    if scoped:
+        path = Path(scoped)
+        assert path.is_absolute() and path.stat().st_mode & 0o077 == 0
+        return path.read_text().strip()
     for name in ('CONTAINER_API_KEY', 'CLOUD_TRIAL_INSTANCE_KEY'):
         if os.environ.get(name):
             return os.environ[name]

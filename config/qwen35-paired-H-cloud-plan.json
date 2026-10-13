@@ -93,5 +93,14 @@
   "maximum_running_charge_usd_at_recorded_rate": 1.2933333333333334,
   "transfer_charge_reserve_usd": 0.2529127109999835,
   "estimated_transfer_charge_usd": 0.12369791666666666,
-  "account_credit_before_rental": 5.703426210359961
+  "account_credit_before_rental": 5.703426210359961,
+  "trial_stop_key_file": "/root/.bluedot-H-stop-key",
+  "resume_prepared_server_without_generations": true,
+  "infrastructure_resume": {
+    "failed_cloud_run": 38368668857,
+    "recorded_model_generations": 0,
+    "benchmark_episodes": 0,
+    "same_rental_and_original_deadline": true,
+    "scope": "Repair cloud tunnel and invalid provider-issued stop credential; no model or benchmark changes."
+  }
 }

@@ -1,0 +1,76 @@
+{
+  "personal_account_id": 345874,
+  "instance_id": 55707509,
+  "permissions": {
+    "api": {
+      "instance_read": {},
+      "instance_write": {
+        "constraints": {
+          "id": {
+            "eq": 55707509
+          },
+          "state": {
+            "eq": "stopped"
+          }
+        }
+      },
+      "*": {
+        "api.auth.apikeys": {
+          "GET": {}
+        },
+        "api.auth.sessions": {
+          "GET": {}
+        },
+        "api.ssh.keys": {},
+        "api.users.current": {
+          "GET": {}
+        },
+        "api.users.root": {
+          "GET": {}
+        },
+        "api.users.crisp-identity": {
+          "GET": {}
+        },
+        "api.user.save_context": {
+          "PUT": {}
+        },
+        "api.user.verify-email": {
+          "POST": {}
+        },
+        "api.user.created_templates": {
+          "GET": {}
+        },
+        "api.team": {
+          "POST": {}
+        },
+        "api.template": {
+          "GET": {}
+        },
+        "api.template.params": {
+          "GET": {}
+        },
+        "api.template_v1": {
+          "GET": {}
+        },
+        "api.instances": {
+          "GET": {}
+        },
+        "api.instances_v1": {
+          "GET": {}
+        },
+        "api.instances.count": {
+          "GET": {}
+        },
+        "api.hubspot.newsletters": {
+          "GET": {}
+        }
+      }
+    }
+  },
+  "same_instance_GET_verified": true,
+  "other_instance_stop_denied_HTTP": 401,
+  "same_instance_label_without_stopped_state_denied_HTTP": 401,
+  "master_key_transferred": false,
+  "key_file_outside_public_workspace": true,
+  "docs": "https://docs.vast.ai/api-reference/permissions"
+}

@@ -69,21 +69,38 @@ def main():
     (out / 'cloud-connection-verification.json').write_text(json.dumps({'instance': row,
         'host_key_fingerprint': pin['host_key_fingerprint'], 'runner_to_gpu_ssh_verified': True,
         'model_endpoint': 'http://127.0.0.1:18003/v1', 'laptop_tunnel_required': False}, indent=2) + '\n')
-    with (temporary / 'bluedot-tunnel.log').open('w') as log:
-        subprocess.Popen(['ssh', '-F', str(config), '-N', '-o', 'ExitOnForwardFailure=yes',
-            '-L', '127.0.0.1:18003:127.0.0.1:8000', 'trial-gpu'],
-            stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
     with (out / 'gpu-prepare-console.txt').open('w') as log:
         subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
             'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' HF_HOME=/workspace/.cache/huggingface '
             'HF_HUB_DOWNLOAD_TIMEOUT=120 ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' prepare'],
             stdout=log, stderr=subprocess.STDOUT, timeout=900, check=True)
-    subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+    server_record = subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+        'test -f /workspace/bluedot-ic/logs/' + PLAN['trial_id'] + '/gpu/server-process.json'], timeout=30)
+    if server_record.returncode == 0:
+        if not PLAN.get('resume_prepared_server_without_generations'):
+            raise RuntimeError('A server is already present; explicit infrastructure-resume flag required.')
+        subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
+            "cd /workspace/bluedot-ic && python3 -c \"import json,os;from pathlib import Path; "
+            "p=Path('logs/" + PLAN['trial_id'] + "/gpu');r=json.loads((p/'server-process.json').read_text());"
+            "assert r['role']=='control' and r['benchmark'];os.kill(r['pid'],0);"
+            "assert not (p/'raw-model-outputs.jsonl').exists() or (p/'raw-model-outputs.jsonl').stat().st_size==0\""],
+            timeout=30, check=True)
+    else:
+        subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
         'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' launch'
         + (' --benchmark' if PLAN.get('initial_server_benchmark_mode') else '')],
-        timeout=30, check=True)
+            timeout=30, check=True)
+    # Open the tunnel after checkpoint preparation, and preserve its diagnostics.
+    log = (out / 'cloud-tunnel.log').open('a')
+    tunnel_command = ['ssh', '-F', str(config), '-N', '-o', 'ExitOnForwardFailure=yes',
+        '-L', '127.0.0.1:18003:127.0.0.1:8000', 'trial-gpu']
+    tunnel = subprocess.Popen(tunnel_command, stdin=subprocess.DEVNULL,
+        stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
     deadline = time.time() + 600
     while time.time() < deadline:
+        if tunnel.poll() is not None:
+            raise RuntimeError('Cloud SSH tunnel exited with code ' + str(tunnel.returncode)
+                + '; see cloud-tunnel.log.')
         try:
             req = urllib.request.Request('http://127.0.0.1:18003/v1/models',
                 headers={'Authorization': 'Bearer local-ssh-only'})
@@ -96,8 +113,8 @@ def main():
                     'adapter_registered': bool(CONFIG.get('adapter_enabled')),
                     'generation_probe_requests': 0}, indent=2) + '\n')
                 break
-        except (OSError, ValueError):
-            pass
+        except (OSError, ValueError) as error:
+            print('Waiting for model endpoint: ' + type(error).__name__, flush=True)
         time.sleep(10)
     else:
         raise RuntimeError('Requested model server did not become ready within ten minutes.')

@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-10-13T09:14:53.014815+00:00",
+  "workflow_run": 38368668857,
+  "instance_id": 55707509,
+  "episodes_run": 0,
+  "model_generations": 0,
+  "server_ready": true,
+  "cloud_endpoint_not_reached": true,
+  "remote_diagnostics_collected": true,
+  "provider_host_bound_key_GET_HTTP": 401,
+  "compute_stopped": false,
+  "recovery": "Reuse verified server and checkpoints on same rental; open tunnel after prepare with stdin detached and captured diagnostics. Replace invalid provider credential with a personal scoped key, constrained to stopping this ID only; no account master transferred. Original budget origin and deadline unchanged."
+}

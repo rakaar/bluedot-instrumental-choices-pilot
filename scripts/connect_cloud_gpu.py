@@ -79,7 +79,8 @@ def main():
             'HF_HUB_DOWNLOAD_TIMEOUT=120 ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' prepare'],
             stdout=log, stderr=subprocess.STDOUT, timeout=900, check=True)
     subprocess.run(['ssh', '-F', str(config), 'trial-gpu',
-        'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' launch'],
+        'cd /workspace/bluedot-ic && CLOUD_TRIAL_PLAN=' + PLAN_PATH + ' ' + INFERENCE_PYTHON + ' -u ' + GPU_SCRIPT + ' launch'
+        + (' --benchmark' if PLAN.get('initial_server_benchmark_mode') else '')],
         timeout=30, check=True)
     deadline = time.time() + 600
     while time.time() < deadline:

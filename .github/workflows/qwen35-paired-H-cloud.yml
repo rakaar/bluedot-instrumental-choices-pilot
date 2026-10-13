@@ -1,0 +1,51 @@
+name: Qwen3.5 9B paired control and EM Variant H
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bluedot-personal-vast-qwen35-paired-H-20261013
+  cancel-in-progress: false
+jobs:
+  paired-h:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      CLOUD_TRIAL_INSTANCE_KEY: ${{ secrets.BLUEDOT_QWEN35_H_READ_KEY }}
+      CLOUD_TRIAL_SSH_KEY: ${{ secrets.BLUEDOT_QWEN35_H_SSH_KEY }}
+      CLOUD_TRIAL_PLAN: config/qwen35-paired-H-cloud-plan.json
+      DO_NOT_TRACK: '1'
+      VLLM_NO_USAGE_STATS: '1'
+    steps:
+      - name: Check out frozen paired H pilot
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - name: Verify authorized bounded plan
+        id: approval
+        run: python3 -c "import json; p=json.load(open('$CLOUD_TRIAL_PLAN')); assert p['spend_authorized'] and p['execution_authorized'] and p['maximum_benchmark_episodes']==18 and p['personal_account_id']==345874 and p['variant_letter']=='H' and p['roles']==['control','em']"
+      - name: Prepare official Docker benchmark
+        run: bash scripts/setup_cloud_benchmark.sh
+      - name: Verify both checkpoints and connect to GPU
+        run: python3 -u scripts/connect_cloud_gpu.py
+      - name: Run all eighteen paired Variant H episodes
+        run: python3 -u scripts/run_cloud_qwen35_paired_H.py --execute
+      - name: Collect diagnostics and release compute
+        if: always() && steps.approval.outcome == 'success'
+        run: python3 -u scripts/finalize_cloud_trial.py stop
+      - name: Back up and independently verify public results
+        if: always() && steps.approval.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 -u scripts/finalize_cloud_trial.py backup
+      - name: Save complete paired H archive
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: qwen35-paired-H-${{ github.run_id }}
+          path: |
+            logs/qwen35-paired-H-20261013/
+            docs/qwen35-9b-paired-H/
+            logs/setup-qwen35-paired-H-20261013/
+          retention-days: 14
+          if-no-files-found: warn

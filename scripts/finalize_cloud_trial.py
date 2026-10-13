@@ -10,6 +10,8 @@ import subprocess
 import tempfile
 import time
 import zipfile
+import io
+import tarfile
 
 from cloud_vast_instance import PLAN, PLAN_PATH, ROOT, snapshot
 
@@ -112,6 +114,9 @@ def backup():
         if zipfile.is_zipfile(p):
             with zipfile.ZipFile(p) as z:
                 buffers.extend(z.read(member) for member in z.namelist())
+        elif p.name.endswith('.tar.gz'):
+            with tarfile.open(fileobj=io.BytesIO(data), mode='r:gz') as archive:
+                buffers.extend(archive.extractfile(member).read() for member in archive.getmembers() if member.isfile())
         if any(secret in b for b in buffers for secret in secrets) or any(re.search(pattern, b) for b in buffers for pattern in patterns):
             raise RuntimeError('Public backup credential scan failed; no secret value printed.')
         manifest[str(name)] = hashlib.sha256(data).hexdigest()
@@ -123,7 +128,7 @@ def backup():
     subprocess.run(['git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'], cwd=ROOT, check=True)
     subprocess.run(['git', 'add', '--', *map(str, paths), str(name)], cwd=ROOT, check=True)
     subprocess.run(['git', 'diff', '--cached', '--check'], cwd=ROOT, check=True)
-    subprocess.run(['git', 'commit', '--quiet', '-m', 'Back up cloud EM Quota Boost A trial: ' + PLAN['trial_id']], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '--quiet', '-m', 'Back up bounded cloud trial: ' + PLAN['trial_id']], cwd=ROOT, check=True)
     subprocess.run(['git', 'fetch', '--depth=100', 'origin', 'main'], cwd=ROOT, check=True)
     subprocess.run(['git', 'rebase', 'origin/main'], cwd=ROOT, check=True)
     subprocess.run(['git', 'push', 'origin', 'HEAD:main'], cwd=ROOT, check=True)

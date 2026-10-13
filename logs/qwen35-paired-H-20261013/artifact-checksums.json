@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-13T08:08:23.428163+00:00",
+  "method": "SHA-256; this manifest excluded from itself",
+  "files": {
+    "logs/qwen35-paired-H-20261013/cloud-runtime.json": "8038f98b444b2da43984769667f5357632dda4a8ad28b2bfee04854f9daae64d",
+    "logs/qwen35-paired-H-20261013/retention-after-trial.json": "cac85477d88a97feda0148080bd95264790392b8353c1a94e7faab11067332b3"
+  },
+  "credential_scan_passed": true
+}
